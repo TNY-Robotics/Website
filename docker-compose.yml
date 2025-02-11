@@ -1,0 +1,6 @@
+name: tnyrobotics-website
+services:
+  web:
+    build: .
+    ports:
+      - 2090:3000
