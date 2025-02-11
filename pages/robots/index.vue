@@ -6,12 +6,12 @@
         </div>
         <div class="space-y-8">
             <h2 class="text-center"> {{ $t('robots.tny360.title') }} <span class="text-primary font-bold">TNY - 360</span> ! </h2>
-            <div class="flex justify-between max-w-[80em]">
-                <div class="w-1/2 space-y-4">
+            <div class="flex flex-wrap justify-between max-w-[80em]">
+                <div class="md:w-1/2 space-y-4">
                     <Text label="robots.tny360.content" />
                     <UButton to="/robots/tny-360" trailing icon="i-heroicons-chevron-right"> {{ $t('robots.tny360.button') }} </UButton>
                 </div>
-                <div class="w-1/2">
+                <div class="md:w-1/2">
                     <!-- image -->
                 </div>
             </div>

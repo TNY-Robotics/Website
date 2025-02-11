@@ -6,12 +6,12 @@
         </div>
         <div class="space-y-8">
             <h2 class="text-center"> {{ $t('apps.blockEditor.title') }} <span class="text-primary font-bold">Block Editor</span> ! </h2>
-            <div class="flex justify-between max-w-[80em]">
-                <div class="w-1/2 space-y-4">
+            <div class="flex flex-wrap justify-between max-w-[80em]">
+                <div class="md:w-1/2 space-y-4">
                     <Text label="apps.blockEditor.content" />
                     <UButton to="/apps/block-editor" trailing icon="i-heroicons-chevron-right"> {{ $t('apps.blockEditor.button') }} </UButton>
                 </div>
-                <div class="w-1/2">
+                <div class="md:w-1/2">
                     <!-- image -->
                 </div>
             </div>

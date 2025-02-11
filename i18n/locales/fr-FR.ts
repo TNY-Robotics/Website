@@ -17,7 +17,7 @@ export default defineI18nLocale(async (locale) => {
         },
         verbs: (await import('./fr-FR/verbs')).default,
         home: (await import('./fr-FR/home')).default,
-        about: (await import('./en-US/about')).default,
+        about: (await import('./fr-FR/about')).default,
         apps: (await import('./fr-FR/apps')).default,
         robots: (await import('./fr-FR/robots')).default,
         docs: (await import('./fr-FR/docs')).default,
