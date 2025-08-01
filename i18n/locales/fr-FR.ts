@@ -18,6 +18,7 @@ export default defineI18nLocale(async (locale) => ({
         light: 'Clair',
         dark: 'Sombre'
     },
+    footer: {reserved: 'Tous droits réservés'},
     docs: { name: 'Documentation' },
     index: (await import('./fr-FR/index')).default,
     robots: (await import('./fr-FR/robots')).default,
