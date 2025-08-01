@@ -67,7 +67,7 @@ useSeoMeta({
     ogTitle: t('apps.title'),
     ogDescription: t('apps.description'),
     ogUrl: 'https://tny-robotics.com' + route.path,
-    ogImage: 'https://tny-robotics.com/icon.png',
+    ogImage: 'https://tny-robotics.com/icon-border.png',
     ogType: 'website',
     keywords: 'home, page, website, robot, robotics, furwaz, tny, 360, sensors, actuators, learn, build',
 });
