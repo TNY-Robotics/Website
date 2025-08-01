@@ -1,13 +1,13 @@
 export default {
     name: 'TNY - 360',
-    title: 'A futuristic robot dog, full of sensors!',
-    description: 'A small futuristic robot dog, full of sensors and running with an ESP32!',
+    title: 'A futuristic dog robot packed with sensors!',
+    description: 'A small futuristic dog robot, packed with sensors and powered by an ESP32!',
     integrations: 'Integrations',
     project: {
         title: 'A fully open-source project',
         print: {
             title: 'Easily printable 3D parts',
-            description: 'All TNY-360 parts are designed to be 3D printed with minimal supports, on any type of FDM printer!'
+            description: 'All TNY-360 parts are designed to be 3D printed with minimal supports, on any FDM printer!'
         },
         hardware: {
             title: 'Open-source hardware schematics',
@@ -15,10 +15,10 @@ export default {
         },
         software: {
             title: 'Collaborative open-source software',
-            description: 'All software is open-source and open to contributions, to make TNY-360 even better!'
+            description: 'All software is open-source and open to contributions to make TNY-360 even better!'
         }
     },
-    sensorsAndActuators: 'All the sensors and actuators you will need',
+    sensorsAndActuators: 'All the sensors and actuators you\'ll need',
     sensors: {
         title: 'Sensors',
         camera: {
@@ -27,23 +27,23 @@ export default {
         },
         microphone: {
             title: 'Microphone',
-            description: 'To listen to sounds and respond to voice commands.'
+            description: 'To listen to sounds and react to voice commands.'
         },
         laser: {
-            title: 'Laser distance sensors',
-            description: 'To detect obstacles and measure its environment.'
+            title: 'Laser sensors',
+            description: 'To detect obstacles and measure the environment.'
         },
         potentiometer: {
             title: 'Potentiometer',
-            description: 'To sense every movement of its legs.'
+            description: 'To sense each movement of its legs.'
         },
         mpu: {
             title: 'Inertial measurement unit',
-            description: 'To orient itself in space and detect movements.'
+            description: 'To orient itself in space and detect motion.'
         },
         pressure: {
             title: 'Pressure sensors',
-            description: 'To feel the forces exerted on its legs.'
+            description: 'To feel forces applied to its legs.'
         },
     },
     actuators: {
@@ -58,7 +58,7 @@ export default {
         },
         leds: {
             title: 'LEDs',
-            description: 'To indicate its status and communicate.'
+            description: 'To indicate status and communicate.'
         },
         motors: {
             title: 'Motors',
@@ -69,27 +69,27 @@ export default {
         title: 'Start learning at any level',
         mobile: {
             title: 'Companion mobile app',
-            description: 'Control your TNY-360 with your smartphone, and see sensor feedback in real-time!',
+            description: 'Control your TNY-360 with your smartphone, and see real-time sensor feedback!',
             button: 'Download the app'
         },
         blocks: {
-            title: 'Block programming',
-            description: 'Program your TNY-360 with a block interface, and start robotics in no time!',
+            title: 'Block-based programming',
+            description: 'Program your TNY-360 with a block-based interface, and start with robotics in no time!',
             button: 'Try now'
         },
         python: {
             title: 'Python programming',
-            description: 'Write your own scripts in Python to control your TNY-360, and unleash its full potential!',
+            description: 'Write your own Python scripts to control your TNY-360 and unlock its full potential!',
             button: 'Start coding'
         },
         ros2: {
-            title: 'ROS 2 integration',
-            description: 'Integrate your TNY-360 with the Robot Operating System, and benefit from a powerful robotic middleware!',
+            title: 'ROS 2 Integration',
+            description: 'Integrate your TNY-360 with the Robot Operating System, and benefit from a powerful robotics middleware!',
             button: 'Learn more'
         },
         esp32: {
             title: 'ESP32 development',
-            description: 'Develop your own firmware for the ESP32, and customize your TNY-360 at will!',
+            description: 'Develop your own firmware for the ESP32 and customize your TNY-360 as much as you want!',
             button: 'See more'
         },
     },
@@ -101,26 +101,25 @@ export default {
             button: 'Get started'
         },
         order: {
-            title: 'Want to start right away?',
-            description: 'Order your TNY-360 now and receive it at home, fully assembled or to build yourself!',
+            title: 'Want to start now?',
+            description: 'Order your TNY-360 now and get it delivered fully assembled or as a DIY kit!',
             button: 'Order now'
         }
     },
     order: {
         name: 'Order',
-        description: 'Order your own TNY - 360 robot.',
-        title: 'Order your own TNY - 360 robot',
-        subtitle: 'Order your TNY - 360, and learn to build and program your own robot!',
+        description: 'Order your TNY-360 and learn to build and program your own robot!',
+        title: 'Order your own TNY-360 robot',
         assemble: {
-            title: 'Self-assembly',
-            description1: 'Receive all the necessary components, and build your own TNY - 360 by following our assembly guide!',
-            description2: 'It\'s the best way to understand how the robot works, and learn more about robotics.',
+            title: 'DIY kit',
+            description1: 'Receive all the necessary components and build your own TNY-360 following our assembly guide!',
+            description2: 'It\'s the best way to understand how the robot works and to learn more about robotics.',
             button: 'Order'
         },
         ready: {
             title: 'Ready to use',
-            description1: 'Don\'t have time to assemble your robot? No problem! Receive your TNY - 360 assembled, configured, and ready to use!',
-            description2: 'It\'s a good solution if you want to focus on programming and using the robot.',
+            description1: 'Don\'t have time to build your robot? No problem! Receive your TNY-360 fully assembled, configured, and ready to use!',
+            description2: 'It\'s a good option if you want to focus on programming and using the robot.',
             button: 'Order'
         },
         spare: {

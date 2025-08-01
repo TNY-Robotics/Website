@@ -1,7 +1,7 @@
 export default {
     name: 'TNY - 360',
-    title: 'Un robot chien futuristique, rempli de capteurs !',
-    description: 'Un petit robot chien futuristique, rempli de capteurs et fonctionnant avec un esp32 !',
+    title: 'Un robot chien futuriste, rempli de capteurs !',
+    description: 'Un petit robot chien futuriste, rempli de capteurs et fonctionnant avec un esp32 !',
     integrations: 'Intégrations',
     project: {
         title: 'Un projet entièrement open-source',
@@ -30,7 +30,7 @@ export default {
             description: 'Pour écouter les sons et réagir à des commandes vocales.'
         },
         laser: {
-            title: 'Capteurs de distance laser',
+            title: 'Capteurs lasers',
             description: 'Pour détecter les obstacles et mesurer son environnement.'
         },
         potentiometer: {
@@ -101,7 +101,7 @@ export default {
             button: 'Se lancer'
         },
         order: {
-            title: 'Tu veux commencer tout de suite ?',
+            title: 'Tu veux commencer maintenant ?',
             description: 'Commande ton TNY-360 maintenant et reçois-le chez toi, entièrement assemblé ou à construire toi-même !',
             button: 'Commander maintenant'
         }

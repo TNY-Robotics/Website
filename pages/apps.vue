@@ -1,10 +1,9 @@
 <template>
-    <TNYHeader />
-    <div class="flex flex-col grow justify-center items-center">
-        <NuxtPage />
-    </div>
-    <TNYFooter />
+    <NuxtPage />
 </template>
 
 <script lang="ts" setup>
+
 </script>
+
+<style></style>

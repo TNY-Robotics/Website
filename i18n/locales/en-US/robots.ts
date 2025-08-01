@@ -1,19 +1,15 @@
 export default {
-    name: 'Robots',
-    title: 'Check out our different robots!',
-    description: 'Take a look at our different robots, what they can do, how they work, and how you can get them!',
+    name: 'Our Robots',
+    title: 'Discover our different robots',
+    description: 'Discover our different robots, what they can do, how they work, and how you can get them!',
     intro: {
-        title: 'Our robots',
-        content: 'Are you interested in our robots? Discover them below!'
+        p1: 'Our goal is to make robotics accessible to everyone and help people develop their skills with their own robot.',
+        p2: 'With this in mind, we offer cutting-edge, powerful, and feature-rich robots at an unbeatable price.'
     },
-    tny360: {
-        title: 'Our flagship robot: The ',
-        content: `
-            The TNY360 is our first commercialized robot. This robot-dog has all the sensors and actuators needed to perceive its environment and interact with it.
-            It is designed with one main idea in mind: Making robotics accessible to everyone, and at an affordable price.
-
-            If you are interested in this robot, feel free to check out its dedicated page to learn more!
-        `,
-        button: 'Learn more'
+    tny: {
+        title: 'Our first robot: the TNY - 360!',
+        p1: 'TNY-360 is the most complete and customizable educational robot dog in its category.',
+        p2: 'Designed for makers, students, and enthusiasts, it\'s made for learning, experimenting, and having fun.',
+        more: 'Learn more'
     }
-}
+};

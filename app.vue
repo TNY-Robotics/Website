@@ -1,11 +1,11 @@
 <template>
-    <div>
+    <div class="flex flex-col">
         <NuxtRouteAnnouncer />
-    
+        <NuxtPage />
+        <TNYFooter />
     </div>
-    <NuxtPage />
 </template>
 
 <script lang="ts" setup>
-import '~/assets/style.css';
+
 </script>
