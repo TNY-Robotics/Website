@@ -1,26 +1,28 @@
 {
-  "name": "tny-robotics-website",
-  "private": true,
+  "name": "Website",
   "type": "module",
+  "private": true,
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev --host",
+    "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/fonts": "^0.11.4",
-    "@nuxt/icon": "^1.15.0",
-    "@nuxt/image": "^1.10.0",
-    "@nuxt/ui": "^3.2.0",
-    "nuxt": "^3.17.7",
-    "typescript": "^5.8.3",
-    "vue": "^3.5.17",
-    "vue-router": "^4.5.1",
+    "@nuxt/content": "^3.8.2",
+    "@nuxt/ui": "^4.2.0",
+    "@nuxtjs/i18n": "^10.2.1",
+    "better-sqlite3": "^12.4.1",
+    "nuxt": "^4.2.1",
+    "typescript": "^5.9.3",
+    "vue": "^3.5.24",
+    "vue-router": "^4.6.3",
     "yup": "^1.7.1"
   },
   "devDependencies": {
-    "@nuxtjs/i18n": "^10.0.3"
+    "@iconify-json/heroicons": "^1.2.3",
+    "@iconify-json/lucide": "^1.2.73",
+    "@tailwindcss/typography": "^0.5.19"
   }
 }

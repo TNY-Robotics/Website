@@ -1,10 +1,6 @@
-# TNY - Robotics website
+# Nuxt Minimal Starter
 
-This is the official website for the TNY Robotics team.
-It is built with [Nuxt.js](https://nuxtjs.org) and nuxt modules like:
-- [Tailwind CSS](https://tailwindcss.com)
-- [NuxtUI](https://nuxtui.com)
-- [i18n](https://i18n.nuxtjs.org)
+Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 ## Setup
 

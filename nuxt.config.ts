@@ -2,13 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: [
-    '@nuxt/ui',
-    '@nuxt/image',
-    '@nuxt/icon',
-    '@nuxt/fonts',
-    '@nuxtjs/i18n'
-  ],
+  modules: ['@nuxt/content', '@nuxt/ui', '@nuxtjs/i18n'],
   css: [ '~/assets/main.css' ],
   i18n: {
     baseUrl: 'https://tny-robotics.com/',
@@ -27,5 +21,5 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       ],
     }
-  },
+  }
 })
