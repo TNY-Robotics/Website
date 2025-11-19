@@ -1,44 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('./poppins.css');
 @import 'tailwindcss';
 @import '@nuxt/ui';
 
+#__nuxt {
+    @apply w-full min-h-full;
+}
+
 #__nuxt > div {
-    @apply bg-slate-50 dark:bg-slate-800 text-slate-800 dark:text-slate-50;
+    @apply flex bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-50 w-full min-h-full;
+}
+
+body {
+    @apply flex min-h-screen;
 }
 
 * {
-    font-family: 'Poppins', Helvetica, sans-serif;
+    font-family: 'PoppinsWeb', Helvetica, sans-serif;
 }
 
-h1 {
-    @apply text-6xl lg:text-8xl font-extrabold text-center;
-    /* background: -webkit-linear-gradient(oklch(95% 0 0) 0%, oklch(90% 0 0) 50%, oklch(40% 0 0) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent; */
-    filter: drop-shadow(0px 8px 16px #0004);
+button[disabled] {
+    @apply cursor-not-allowed;
 }
 
-h2, p.subtitle {
-    @apply text-2xl lg:text-3xl font-bold text-center;
-    /* background: -webkit-linear-gradient(oklch(95% 0 0) 0%, oklch(90% 0 0) 60%, oklch(40% 0 0) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent; */
-    filter: drop-shadow(0px 6px 12px #0004);
+button {
+    @apply cursor-pointer;
+}
+
+h2 {
+    @apply text-3xl lg:text-4xl font-bold;
 }
 
 h3 {
-    @apply text-xl lg:text-2xl font-bold text-center;
-}
-
-div#particle-container {
-    background-image: radial-gradient(oklch(66.7% 0.295 322.15) 2px, transparent 0);
-    background-size: 40px 40px;
-    background-position: 0px 0px;
-    mask-image: linear-gradient(90deg, #000A 0%, #0000 40%, #0000 60%, #000A 100%);
-}
-
-p {
-    @apply lg:text-lg;
+    @apply text-xl lg:text-2xl font-semibold;
 }

@@ -22,10 +22,10 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: 'TNY Robotics',
-      titleTemplate: 'TNY Robotics | %s',
+      titleTemplate: '%s | TNY Robotics',
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       ],
     }
-  }
+  },
 })
