@@ -17,7 +17,7 @@
                 </div>
                 <div class="flex w-full items-center justify-end space-x-4 transition-all" :class="floating ? 'pr-2' : 'pr-0'">
                     <LangSwitcher class="hidden xl:flex" />
-                    <UButton label="Se préinscrire" size="lg" class="transition-all" />
+                    <UButton label="Se préinscrire" size="lg" class="transition-all" @click="openModal()" />
                 </div>
             </div>
             <div ref="mobileMenu" class="overflow-hidden w-full transition-all" style="max-height: 0px;">
@@ -34,6 +34,7 @@ const parent = ref<HTMLElement|null>(null);
 const floating = ref(false);
 
 const route = useRoute();
+const { openModal } = useNewsletter();
 
 const buttons = [
     { label: 'Accueil', href: '/' },

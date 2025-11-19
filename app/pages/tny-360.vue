@@ -5,7 +5,7 @@
                 <h1 class="whitespace-nowrap text-5xl lg:text-7xl font-extrabold text-center lg:text-start">TNY - 360</h1>
                 <p class="text-xl lg:text-4xl text-center lg:text-start"> Un condensé de technologie pour <span class="text-primary">comprendre</span>, <span class="text-primary">intéragir</span> et <span class="text-primary">apprendre</span> !</p>
                 <div class="pt-8">
-                    <UButton label="S'inscrire à la liste d'attente" size="xl" @click="emailModal = true" />
+                    <UButton label="S'inscrire à la liste d'attente" size="xl" @click="openModal()" />
                 </div>
             </div>
         </div>
@@ -122,55 +122,12 @@
                 </div>
             </div>
         </div>
-
-        <UModal v-model:open="emailModal" title="Rejoindre la liste d'attente">
-            <template #body>
-                <div class="flex flex-col justify-start items-start space-y-4">
-                    <p> Inscrivez-vous à notre liste d'attente pour être informé de la sortie officielle du <span class="text-primary">TNY - 360</span> ! </p>
-                    <p> En vous inscrivant, vous recevrez des mises à jour exclusives, des offres spéciales et la possibilité de précommander le robot avant son lancement public. </p>
-                    <UForm :schema="emailFormSchema" :state="emailFormState" @submit="onEmailFormSubmit" class="w-fit mx-auto text-center py-8 space-y-4">
-                        <UFormField name="email" label="" class="">
-                            <UInput v-model="emailFormState.email" type="email" placeholder="john.doe@exemple.com" :disabled="emailButtonDisabled" />
-                        </UFormField>
-                        <UAlert v-show="emailSent" variant="subtle" color="success" icon="i-heroicons-check-circle-20-solid" class="flex text-start justify-center items-center"
-                            title="Inscription réussie !"
-                            description="Merci de vous être inscrit à la liste d'attente ! Nous vous enverrons bientôt des nouvelles.">
-                        </UAlert>
-                        <UButton type="submit" label="Rejoindre la liste d'attente" size="lg" class="mt-4" :loading="emailButtonLoading" :disabled="emailButtonDisabled" />
-                    </UForm>
-                </div>
-            </template>
-        </UModal>
     </div>
 </template>
 
 <script lang="ts" setup>
-import type { FormSubmitEvent } from '@nuxt/ui';
-import { object, string, type InferType } from 'yup';
 
-const emailModal = ref(false);
-
-const emailFormSchema = object({
-    email: string().email('Veuillez entrer une adresse e-mail valide').required('L\'adresse e-mail est requise'),
-});
-const emailFormState = reactive({
-    email: '',
-});
-const emailButtonLoading = ref(false);
-const emailSent = ref(false);
-const emailButtonDisabled = computed(() => {
-    return emailButtonLoading.value || emailSent.value;
-});
-
-type EmailFFormSchema = InferType<typeof emailFormSchema>;
-
-function onEmailFormSubmit(event: FormSubmitEvent<EmailFFormSchema>) {
-    emailButtonLoading.value = true;
-    setTimeout(() => { // TODO : send to backend
-        emailSent.value = true;
-        emailButtonLoading.value = false;
-    }, 2000);
-}
+const { openModal } = useNewsletter();
 
 const specs = [
     { component: 'Processeur', detail: 'ESP32-S3 version N16R8' },
@@ -219,7 +176,6 @@ const platforms = [
         button: 'Voir plus'
     },
 ];
-
 </script>
 
 <style></style>
