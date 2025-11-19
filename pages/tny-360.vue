@@ -58,7 +58,7 @@
 
             <div class="flex grow w-full justify-start overflow-auto">
                 <div class="flex w-full justify-evenly">
-                    <div v-for="platform in platforms" :key="platform.type" class="flex flex-col border-2 border-slate-200 dark:border-slate-700 rounded-lg p-4 pt-8 text-center space-y-8 w-1/6 min-w-64 lg:min-w-75 m-4 shadow-lg card">
+                    <div v-for="platform in platforms" :key="platform.type" class="flex flex-col bg-white dark:bg-slate-700 border-2 border-slate-200 dark:border-slate-600 rounded-lg p-4 pt-8 text-center space-y-8 w-1/6 min-w-64 lg:min-w-75 m-4 shadow-lg card">
                         <h3 class="text-primary">
                             {{ platform.title }}
                         </h3>
@@ -66,7 +66,7 @@
                             <p> {{ platform.description }} </p>
                         </div>
                         <div class="flex grow items-end justify-center pb-4">
-                            <UButton :to="platform.link" variant="solid" size="md">
+                            <UButton :to="platform.link" variant="solid" size="lg">
                                 {{ platform.button }}
                             </UButton>
                         </div>
@@ -78,18 +78,18 @@
         <div class="px-4 lg:px-16">
             <div class="space-y-4">
                 <h2 class="text-3xl lg:text-4xl font-bold"> Spécifications techniques </h2>
-                <div class="w-2/5 overflow-hidden rounded-lg border-2 border-slate-200 dark:border-slate-700">
+                <div class="w-2/5">
                     <table class="table-auto w-full">
                         <thead>
                             <tr>
-                                <th class="border-2 border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-900 px-4 py-2 text-left"> Composant </th>
-                                <th class="border-2 border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-900 px-4 py-2 text-left"> Détail </th>
+                                <th class="dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 px-4 py-2 text-left"> Composant </th>
+                                <th class="dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 px-4 py-2 text-left"> Détail </th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr v-for="line in specs" :key="line.component">
-                                <td class="border-2 border-slate-200 dark:border-slate-700 px-4 py-2"> {{ line.component }} </td>
-                                <td class="border-2 border-slate-200 dark:border-slate-700 px-4 py-2"> {{ line.detail }} </td>
+                                <td class="bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 px-4 py-2"> {{ line.component }} </td>
+                                <td class="bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 px-4 py-2"> {{ line.detail }} </td>
                             </tr>
                         </tbody>
                     </table>
@@ -97,11 +97,12 @@
             </div>
         </div>
 
-        <div class="py-16 space-y-12">
-            <h2 class="text-center"> <span class="text-primary">Construis</span> ou <span class="text-primary">commandes</span> ton propre TNY-360 ! </h2>
+        <div class="relative flex flex-col py-16 space-y-12">
+            <div class="absolute top-0 right-0 w-full h-full bg-slate-200 dark:bg-slate-900 translate-y-4 scale-y-120 scale-x-200"></div>
+            <h2 class="text-center z-20 px-4"> <span class="text-primary">Construis</span> ou <span class="text-primary">commandes</span> ton propre TNY-360 ! </h2>
 
-            <div class="flex flex-wrap justify-evenly">
-                <div class="border-2 border-slate-200 dark:border-slate-700 rounded-lg shadow-lg flex flex-col w-full md:w-1/3 m-4 p-8 space-y-4">
+            <div class="flex flex-wrap justify-evenly z-20">
+                <div class="bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-lg shadow-lg flex flex-col w-full md:w-1/3 m-4 p-8 space-y-4">
                     <h3> Tu te sens aventurier ? </h3>
                     <p class="flex grow"> Tu peux construire ton propre TNY-360 en recevant les pièces détachées et le guide d'assemblage ! </p>
                     <div class="flex w-full justify-start pt-4">
@@ -110,9 +111,9 @@
                         </UButton>
                     </div>
                 </div>
-                <div class="border-2 border-slate-200 dark:border-slate-700 rounded-lg shadow-lg flex flex-col w-full md:w-1/3 m-4 p-8 space-y-4">
+                <div class="bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-lg shadow-lg flex flex-col w-full md:w-1/3 m-4 p-8 space-y-4">
                     <h3> Tu veux commencer maintenant ? </h3>
-                    <p class="flex grow"> Commande ton TNY-360 maintenant et reçois-le chez toi, entièrement assemblé ou à construire toi-même ! </p>
+                    <p class="flex grow"> Commandes ton TNY-360 maintenant et reçois-le chez toi, entièrement assemblé ou à construire toi-même ! </p>
                     <div class="flex w-full justify-start pt-4">
                         <UButton class="w-fit" variant="solid" size="md" trailing icon="i-heroicons-chevron-right">
                             Commander maintenant
