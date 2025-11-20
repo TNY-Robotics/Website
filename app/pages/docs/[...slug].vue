@@ -30,7 +30,7 @@
                         <template #trailing>
                             <UKbd value="/" />
                         </template>
-                        <div v-if="searchFocused && searchResults?.length" class="z-20 p-2 show-down absolute w-full h-fit left-0 top-10 bg-slate-200 dark:bg-slate-900 rounded-lg shadow-lg overflow-hidden">
+                        <div v-if="searchFocused && searchResults?.length" class="z-20 p-2 show-down absolute w-full h-fit left-0 top-10 bg-white dark:bg-slate-900 rounded-lg shadow-lg overflow-hidden">
                             <div class="overflow-y-auto h-full max-h-128">
                                 <div class="flex flex-col space-y-2 h-fit min-h-fit">
                                     <div v-for="(item, index) in searchResults" :key="item.id"
