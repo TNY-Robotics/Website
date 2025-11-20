@@ -78,7 +78,7 @@
         <div class="px-4 lg:px-16">
             <div class="space-y-4">
                 <h2 class="subtitle"> Spécifications techniques </h2>
-                <div class="w-2/5">
+                <div class="w-full lg:w-2/5">
                     <table class="table-auto w-full">
                         <thead>
                             <tr>

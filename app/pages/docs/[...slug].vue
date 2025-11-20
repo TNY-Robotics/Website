@@ -1,6 +1,19 @@
 <template>
     <div class="flex grow pt-24 px-2 pb-2 space-x-2">
-        <div class="flex w-1/4 min-w-64">
+        <!-- mobile side bar -->
+        <div class="absolute top-22 w-full h-full bg-slate-700 z-20 transition-all" :style="sideBarOpen? 'left: 0px; opacity: 1;': 'left: -100%; opacity: 0;'">
+            <div class="flex flex-col w-full h-fit p-2 space-y-4">
+                <div>
+                    <h1 class="text-xl font-semibold pt-2 text-center"> Tables des matières </h1>
+                    <UButton icon="i-lucide-x" variant="ghost" color="neutral" class="absolute top-3 right-2" @click="closeSidebar" /> 
+                </div>
+                <div>
+                    <DocTreeView :tree="(tree.children[0] as DocFolder)" :root="true" :current-path="page?.path" />
+                </div>
+            </div>
+        </div>
+
+        <div class="w-1/4 min-w-64 hidden lg:flex">
             <div class="flex flex-col w-full h-fit p-2 space-y-4">
                 <h1 class="text-xl font-semibold pt-2 text-center"> Tables des matières </h1>
                 <div>
@@ -8,10 +21,13 @@
                 </div>
             </div>
         </div>
-        <Divider vertical />
+        <Divider vertical class="hidden lg:flex" />
         <div class="flex flex-col grow w-full space-y-4">
-            <div v-if="page" class="flex w-full h-fit rounded-lg bg-white dark:bg-slate-900 p-4 space-x-4">
-                <div class="flex min-w-fit">
+            <div v-if="page" class="flex w-full h-fit rounded-lg bg-white dark:bg-slate-900 p-4">
+                <div class="flex items-center pr-4">
+                    <UButton icon="i-lucide-list-indent-increase" variant="ghost" color="neutral" class="lg:hidden" @click="openSidebar" />
+                </div>
+                <div class="flex flex-wrap min-w-fit pr-4">
                     <div v-for="(part, index) in filePathArray" class="flex justify-center items-center">
                         <NuxtLink
                             :to="part.path" class="p-0 text-lg font-semibold"
@@ -22,7 +38,7 @@
                         <UIcon v-if="index < filePathArray.length-1" name="i-lucide-chevron-right" class="w-4 h-4 mx-2" />
                     </div>
                 </div>
-                <div class="flex items-center justify-end grow">
+                <div class="items-center justify-end grow hidden xl:flex">
                     <UInput ref="searchInput" type="text" placeholder="Rechercher..." icon="i-lucide-search" :class="searchFocused? 'w-96': 'w-64'"
                         class="transition-all max-w-full" @focus="searchFocused = true" @blur="onSearchBlur"
                         v-model:model-value="searchQuery" :loading="searchLoading"
@@ -283,6 +299,14 @@ function miniPathParts(path: string) {
     const parts = path.split('/').filter(part => part.length > 0).splice(2);
     parts.pop();
     return parts;
+}
+
+const sideBarOpen = ref(false);
+function openSidebar() {
+    sideBarOpen.value = true;
+}
+function closeSidebar() {
+    sideBarOpen.value = false;
 }
 
 </script>
