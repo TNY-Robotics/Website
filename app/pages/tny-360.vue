@@ -159,35 +159,35 @@ const specs = [
 const platforms = [
     {
         type: 'mobile',
-        link: 'https://docs.tny-robotics.com/TNY-360/usage/mobile-app/',
+        link: '/docs/TNY-360/usage/mobile-app/',
         title: 'Application mobile compagnon',
         description: 'Contrôle ton TNY-360 avec ton smartphone, et vois les retours de ses capteurs en temps réel !',
         button: 'Télécharger l\'application'
     },
     {
         type: 'blocks',
-        link: 'https://docs.tny-robotics.com/TNY-360/usage/programming/blocks/',
+        link: '/docs/TNY-360/usage/desktop-app',
         title: 'Programmation par blocs',
         description: 'Programme ton TNY-360 avec une interface par blocs, et commence la robotique en un rien de temps !',
         button: 'Essayer maintenant'
     },
     {
         type: 'python',
-        link: 'https://docs.tny-robotics.com/TNY-360/usage/programming/python/',
+        link: '/docs/TNY-360/usage/programming/python/',
         title: 'Programmation Python',
         description: 'Écris tes propres scripts en Python pour contrôler ton TNY-360, et libère tout son potentiel !',
         button: 'Commencer à coder'
     },
     {
         type: 'ros2',
-        link: 'https://docs.tny-robotics.com/TNY-360/usage/programming/ros2/',
+        link: '/docs/TNY-360/usage/programming/ros2/',
         title: 'Intégration ROS 2',
         description: 'Intègre ton TNY-360 au Robot Operating System, et bénéficie d\'un middleware robotique puissant !',
         button: 'En savoir plus'
     },
     {
         type: 'esp32',
-        link: 'https://docs.tny-robotics.com/TNY-360/operation/software/',
+        link: '/docs/TNY-360/operation/firmware/',
         title: 'Développement ESP32',
         description: 'Développe ton propre firmware pour l\'ESP32, et personnalise ton TNY-360 à volonté !',
         button: 'Voir plus'

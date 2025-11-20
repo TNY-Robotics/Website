@@ -264,7 +264,7 @@ watch(searchQuery, (newVal) => {
 });
 
 onMounted(() => {
-    const inputEl = searchInput.value.inputRef as HTMLInputElement;
+    const inputEl = searchInput.value?.inputRef as HTMLInputElement;
     if (!inputEl) return;
     inputEl.addEventListener('keydown', (ev: KeyboardEvent) => {
         if (ev.key === 'Escape') {
