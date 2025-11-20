@@ -4,7 +4,7 @@
         <div class="absolute top-22 w-full h-full bg-slate-700 z-20 transition-all" :style="sideBarOpen? 'left: 0px; opacity: 1;': 'left: -100%; opacity: 0;'">
             <div class="flex flex-col w-full h-fit p-2 space-y-4">
                 <div>
-                    <h1 class="text-xl font-semibold pt-2 text-center"> Tables des matières </h1>
+                    <h1 class="text-xl font-semibold pt-2 text-center"> Table des matières </h1>
                     <UButton icon="i-lucide-x" variant="ghost" color="neutral" class="absolute top-3 right-2" @click="closeSidebar" /> 
                 </div>
                 <div>
@@ -15,7 +15,7 @@
 
         <div class="w-1/4 min-w-64 hidden lg:flex">
             <div class="flex flex-col w-full h-fit p-2 space-y-4">
-                <h1 class="text-xl font-semibold pt-2 text-center"> Tables des matières </h1>
+                <h1 class="text-xl font-semibold pt-2 text-center"> Table des matières </h1>
                 <div>
                     <DocTreeView :tree="(tree.children[0] as DocFolder)" :root="true" :current-path="page?.path" />
                 </div>
