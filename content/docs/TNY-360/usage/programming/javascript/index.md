@@ -1,6 +1,6 @@
 ---
 title: Programming in JavaScript
-description: Learn how to program your TNY-360 using JavaScript.
+description: Learn how to program your TNY-360 using JavaScript, with examples, libraries, and best practices for effective development.
 ---
 
 # Programming in JavaScript
