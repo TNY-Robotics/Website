@@ -21,4 +21,5 @@ export default defineI18nLocale(async (locale) => ({
     footer: {reserved: 'All rights reserved'},
     docs: { name: 'Documentation' },
     index: (await import('./en-US/index')).default,
+    tny360: (await import('./en-US/tny360')).default,
 }));

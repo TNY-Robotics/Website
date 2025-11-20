@@ -1,10 +1,9 @@
 ---
-title: Python
-description: Learn how to program your TNY-360 using Python.
+title: Programming in Python
+description: Learn how to program your TNY-360 using Python, with examples, libraries, and best practices for effective development.
 ---
 
-# Python
-
+# Programming in Python
 Here is a test of code :
 
 ```py [test.py]

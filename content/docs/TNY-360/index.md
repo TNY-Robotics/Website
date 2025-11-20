@@ -1,6 +1,6 @@
 ---
 title: TNY-360
-description: Documentation for the TNY-360 robot.
+description: Welcome to the TNY-360 documentation! Find guides to get started, program, and operate your TNY-360 robot effectively.
 ---
 
 # TNY-360 Documentation

@@ -1,6 +1,6 @@
 ---
 title: Playing games
-description: Learn how to play games with your TNY-360 robot using the mobile app.
+description: Learn how to play games with your TNY-360 robot using the mobile app, including available games and gameplay instructions.
 ---
 
 # Playing games

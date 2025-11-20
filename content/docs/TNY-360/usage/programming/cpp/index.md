@@ -1,10 +1,9 @@
 ---
-title: C++
-description: Learn how to program your TNY-360 using C++.
+title: Programming in C++
+description: Learn how to program your TNY-360 using C++, with examples, libraries, and best practices for effective development.
 ---
 
-# C++
-
+# Programming in C++
 Here is a test of code :
 
 ```cpp [test.cpp]

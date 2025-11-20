@@ -91,10 +91,9 @@
 </template>
 
 <script lang="ts" setup>
-import DocTreeView from '~/components/DocTreeView.vue';
-
-const route = useRoute()
-const router = useRouter()
+const { t, locale } = useI18n();
+const route = useRoute();
+const router = useRouter();
 
 if (route.path === '/docs') {
     router.replace('/docs/TNY-360');
@@ -107,6 +106,21 @@ const { data: page } = await useAsyncData(route.path, () => {
 const { data: allPages } = await useAsyncData('all-docs', () => {
     return queryCollection('docs').all()
 });
+
+useSeoMeta({
+    title: `${page.value?.title || ''} | Documentation`,
+    description: page.value?.description || 'Get comprehensive guides and resources for TNY-360 robotics projects.',
+    ogTitle: `${page.value?.title || ''} | Documentation`,
+    ogDescription: page.value?.description || 'Get comprehensive guides and resources for TNY-360 robotics projects.',
+    ogUrl: 'https://tny-robotics.com' + route.path,
+    ogImage: 'https://tny-robotics.com/icon-border.png',
+    ogType: 'website',
+    keywords: 'documentation, robot, robotics, furwaz, tny, 360, dog, education, kit, build, learn, coding, programming, arduino, esp32',
+});
+useHead(() => ({
+    link: [ {rel: 'canonical', href: 'https://tny-robotics.com' + route.path}, ],
+    htmlAttrs: { lang: locale.value }
+}));
 
 const tree = buildDocTree(allPages.value || []);
 
