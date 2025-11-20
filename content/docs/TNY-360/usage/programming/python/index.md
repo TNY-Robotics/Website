@@ -1,3 +1,8 @@
+---
+title: Python
+description: Learn how to program your TNY-360 using Python.
+---
+
 # Python
 
 Here is a test of code :

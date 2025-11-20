@@ -1,3 +1,8 @@
+---
+title: TNY-360
+description: Documentation for the TNY-360 robot.
+---
+
 # TNY-360 Documentation
 
 Welcome on the TNY-360 documentation !

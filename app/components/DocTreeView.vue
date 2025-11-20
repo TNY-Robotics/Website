@@ -1,15 +1,20 @@
 <template>
-    <div class="flex flex-col space-y-2">
+    <div ref="rootElement" class="flex flex-col space-y-3 pt-3">
         <template v-for="item in tree.children" :key="item.name">
-            <div v-if="item.isFolder" class="flex flex-col space-y-1">
+            <div v-if="item.isFolder" class="flex flex-col w-full">
                 <NuxtLink
                     :to="item.path"
-                    class="flex space-x-2 items-center justify-start"
+                    class="flex space-x-4 w-full items-center justify-between"
                 >
-                    <UIcon name="i-lucide-folder" class="w-4 h-4" />
                     <h2 class="font-semibold hover:underline" :class="otherStyle(item)">{{ item.name }}</h2>
+                    <UButton v-if="!root && item.children.length" icon="i-lucide-chevron-down" color="neutral"
+                        @click="ev => onItemExpandClicked(ev, item)" size="xl" variant="link"
+                        class="w-6 h-6 p-0 transition-all" :class="item.expanded?.value? '': 'rotate-90'" />
                 </NuxtLink>
-                <DocTreeView :tree="item" :current-path="currentPath" class="border-l border-slate-500 pl-4" />
+                <div v-if="item.children.length" :id="`docChildren-${item.name}`" class="flex h-fit w-full transition-all overflow-hidden" :style="item.expanded?.value? 'max-height: none;' : 'max-height: 0px;'">
+                    <DocTreeView :tree="item" :root="false" :current-path="currentPath" class="h-fit w-full"
+                        :class="root? '': 'border-l-2 border-slate-600 pl-4'" />
+                </div>
             </div>
             <div v-else>
                 <NuxtLink
@@ -27,22 +32,45 @@
 const props = defineProps<{
     tree: DocFolder;
     currentPath?: string;
+    root?: boolean;
 }>();
 
-function otherStyle(item?: DocItem) {
-    if (!item) return '';
-    if (!props.currentPath) return '';
+function isSelected(item?: DocItem) {
+    if (!item) return false;
+    if (!props.currentPath) return false;
 
     const path = item.path?.toLowerCase();
     const curr = props.currentPath.toLowerCase();
-    if (path === '/'+curr ||
+    return path === '/'+curr ||
         path === curr ||
         path+'/index' === '/'+curr ||
-        path+'/index' === curr) {
-        return 'text-primary';
-    }
-    return '';
+        path+'/index' === curr;
 }
+
+function otherStyle(item?: DocItem) {
+    return isSelected(item)? 'text-primary': '';
+}
+
+const rootElement = ref<HTMLElement|null>(null);
+function onItemExpandClicked(ev: Event, item: DocFolder) {
+    ev.preventDefault();
+    item.expanded.value = !item.expanded.value;
+}
+
+if (props.root) {
+    props.tree.children.forEach(child => {
+        if (child.isFolder) {
+            child.expanded.value = true;
+        }
+    });
+}
+
+props.tree.children.forEach(child => {
+    if (isSelected(child) && child.isFolder) {
+        child.expanded.value = true;
+    }
+});
+
 </script>
 
 <style></style>

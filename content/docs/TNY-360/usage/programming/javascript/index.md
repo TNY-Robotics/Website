@@ -1,3 +1,8 @@
+---
+title: JavaScript
+description: Learn how to program your TNY-360 using JavaScript.
+---
+
 # JavaScript
 
 Here is a test of code :
