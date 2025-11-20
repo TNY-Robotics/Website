@@ -135,7 +135,7 @@ useSeoMeta({
     ogTitle: t('tny360.name'),
     ogDescription: t('tny360.description'),
     ogUrl: 'https://tny-robotics.com' + route.path,
-    ogImage: 'https://tny-robotics.com/icon-border.png',
+    ogImage: 'https://tny-robotics.com/tny-360.png',
     ogType: 'website',
     keywords: 'home, page, website, robot, robotics, furwaz, tny, 360, dog, education, kit, build, learn, coding, programming, arduino, esp32',
 });
