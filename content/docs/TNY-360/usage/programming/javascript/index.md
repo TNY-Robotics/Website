@@ -7,11 +7,16 @@ description: Learn how to program your TNY-360 using JavaScript, with examples, 
 Here is a test of code :
 
 ```js [test.js]
-robot = new TNY360('192.168.1.42')
+import { TNY360 } from 'tny-360';
 
-if (robot.connected) {
-    alert("Robot connected");
+const robot = new TNY360('192.168.1.42')
+
+console.log("Connecting to robot...");
+const success = await robot.connect();
+
+if (success) {
+    console.log("Robot connected");
 } else {
-    alert("Robot not connected");
+    console.log("Robot not connected");
 }
 ```

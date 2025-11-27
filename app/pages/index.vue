@@ -3,6 +3,7 @@
 
         <!-- TNY PROMO HEADER -->
         <div class="flex flex-col justify-center items-center space-y-4 pt-32 lg:pt-64 py-16 lg:py-48 px-16 bg-white dark:bg-slate-900 overflow-hidden relative inset-shadow">
+            <div class="absolute top-0 left-0 w-full h-full bg-header-gradient"></div>
             <span class="absolute bg-slate-300 dark:bg-slate-600 shadow-xl w-12 lg:w-16 h-full right-0 bottom-0 translate-y-[30%] -translate-x-[200%] rotate-45"></span>
             <span class="absolute bg-slate-300 dark:bg-slate-600 shadow-xl w-16 lg:w-24 h-full right-0 bottom-0 translate-y-[30%]  translate-x-[50%] rotate-45"></span>
             <span class="absolute bg-primary-600 shadow-2xl w-32 lg:w-96 h-full left-0 bottom-0 scale-y-200 translate-x-[50%] rotate-45"></span>

@@ -1,7 +1,8 @@
 <template>
     <div class="space-y-32 pb-64">
-        <div class="flex w-full h-fit px-4 lg:px-24 pt-8 bg-white dark:bg-slate-900">
-            <div class="flex flex-col w-full lg:w-1/2 space-y-4 justify-center items-center lg:items-start py-32 lg:py-48">
+        <div class="relative flex w-full h-fit px-4 lg:px-24 pt-8 bg-white dark:bg-slate-900">
+            <div class="absolute top-0 left-0 w-full h-full bg-header-gradient"></div>
+            <div class="flex flex-col w-full lg:w-1/2 space-y-4 justify-center items-center lg:items-start py-32 lg:py-48 z-20">
                 <h1 class="whitespace-nowrap text-5xl lg:text-7xl font-extrabold text-center lg:text-start">TNY - 360</h1>
                 <p class="text-xl lg:text-4xl text-center lg:text-start"> Un condensé de technologie pour <span class="text-primary">comprendre</span>, <span class="text-primary">intéragir</span> et <span class="text-primary">apprendre</span> !</p>
                 <div class="pt-8">

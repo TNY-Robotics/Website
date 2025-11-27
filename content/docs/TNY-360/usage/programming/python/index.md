@@ -7,9 +7,14 @@ description: Learn how to program your TNY-360 using Python, with examples, libr
 Here is a test of code :
 
 ```py [test.py]
-robot = new TNY360('192.168.1.42')
+from tny_360 import TNY360
 
-if robot.connected == True:
+robot = TNY360('192.168.1.42')
+
+print("Connecting to robot...")
+success = robot.connect()
+
+if success:
     print("Robot connected")
 else:
     print("Robot not connected")
