@@ -37,3 +37,7 @@ button {
 .bg-header-gradient {
     background: radial-gradient(circle at 0% 100%, rgba(200, 0, 222, 0.3), transparent 80%), radial-gradient(circle at 100% 0%, rgba(200, 0, 222, 0.1), transparent 50%);
 }
+
+.hl {
+    @apply text-primary;
+}
