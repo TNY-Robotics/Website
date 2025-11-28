@@ -41,3 +41,7 @@ button {
 .hl {
     @apply text-primary;
 }
+
+.bd {
+    @apply font-bold;
+}
