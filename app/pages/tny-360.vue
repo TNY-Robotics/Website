@@ -157,9 +157,9 @@ const { t, locale } = useI18n();
 const route = useRoute();
 
 useSeoMeta({
-    title: t('tny360.name'),
+    title: t('tny360.title'),
     description: t('tny360.description'),
-    ogTitle: t('tny360.name'),
+    ogTitle: t('tny360.title'),
     ogDescription: t('tny360.description'),
     ogUrl: 'https://tny-robotics.com' + route.path,
     ogImage: 'https://tny-robotics.com/tny-360.png',

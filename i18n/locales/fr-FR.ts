@@ -19,7 +19,10 @@ export default defineI18nLocale(async (locale) => ({
         dark: 'Sombre'
     },
     footer: {reserved: 'Tous droits réservés'},
-    docs: { name: 'Documentation' },
+    docs: (await import('./fr-FR/docs')).default,
     index: (await import('./fr-FR/index')).default,
     tny360: (await import('./fr-FR/tny360')).default,
+    education: (await import('./fr-FR/education')).default,
+    software: (await import('./fr-FR/software')).default,
+    about: (await import('./fr-FR/about')).default,
 }));

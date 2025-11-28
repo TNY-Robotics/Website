@@ -35,15 +35,16 @@ const floating = ref(false);
 
 const route = useRoute();
 const { openModal } = useNewsletter();
+const { t } = useI18n();
 
-const buttons = [
-    { label: 'Accueil', href: '/' },
-    { label: 'TNY - 360', href: '/tny-360' },
-    { label: 'Éducation', href: '/edu' },
-    { label: 'Logiciels', href: '/soft' },
-    { label: 'Documentation', href: '/docs' },
-    { label: 'À propos', href: '/about' },
-];
+const buttons = computed(() => ([
+    { label: t('index.name'), href: '/' },
+    { label: t('tny360.name'), href: '/tny-360' },
+    { label: t('education.name'), href: '/edu' },
+    { label: t('software.name'), href: '/soft' },
+    { label: t('docs.name'), href: '/docs' },
+    { label: t('about.name'), href: '/about' },
+]));
 
 const mobileMenu = ref<HTMLElement|null>(null);
 function toggleMobileMenu() {
