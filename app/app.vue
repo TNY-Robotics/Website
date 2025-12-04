@@ -20,7 +20,7 @@
             </template>
         </UModal>
 
-        <UModal v-model:open="modalOpenModel" title="Rejoindre la liste d'attente">
+        <UModal v-model:open="modalOpenModel" :title="$t('newsletter.title')">
             <template #body>
                 <div class="flex flex-col justify-start items-start space-y-4">
                     <p> <RichText path="newsletter.content" class="space-y-4" /> </p>

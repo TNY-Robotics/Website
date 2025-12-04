@@ -96,4 +96,8 @@ export default {
             button: 'Order now',
         }
     },
+    info: {
+        title: 'Our TNY-360 is still under development.\nBe among the first to receive it by',
+        button: 'joining our waiting list.'
+    }
 };

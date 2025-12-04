@@ -129,7 +129,7 @@
                         <RichText path="tny360.start.adventure.desc" />
                     </p>
                     <div class="flex w-full justify-start pt-4">
-                        <UButton class="w-fit" variant="solid" size="md" trailing icon="i-heroicons-chevron-right">
+                        <UButton disabled class="w-fit" variant="solid" size="md" trailing icon="i-heroicons-chevron-right">
                             <RichText path="tny360.start.adventure.button" />
                         </UButton>
                     </div>
@@ -142,10 +142,22 @@
                         <RichText path="tny360.start.now.desc" />
                     </p>
                     <div class="flex w-full justify-start pt-4">
-                        <UButton class="w-fit" variant="solid" size="md" trailing icon="i-heroicons-chevron-right">
+                        <UButton disabled class="w-fit" variant="solid" size="md" trailing icon="i-heroicons-chevron-right">
                             <RichText path="tny360.start.now.button" />
                         </UButton>
                     </div>
+                </div>
+            </div>
+            
+            <div class="flex space-x-4 mt-8 mx-auto mb-8 text-slate-500 dark:text-slate-400 justify-center items-center z-20 px-2">
+                <UIcon name="i-lucide-info" size="24" class="min-w-6"/>
+                <div class="flex">
+                    <p class="space-x-1.5">
+                        <RichText path="tny360.info.title" />
+                        <NuxtLink to="?newsletter=true" class="text-primary underline">
+                            <RichText path="tny360.info.button" />
+                        </NuxtLink>
+                    </p>
                 </div>
             </div>
         </div>

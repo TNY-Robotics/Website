@@ -12,8 +12,9 @@
                 <div class="items-center space-x-8 hidden lg:flex">
                     <UButton v-for="btn in buttons" :key="btn.label" :label="btn.label" variant="ghost" color="neutral" class="dark:text-slate-200" size="lg" :href="btn.href" />
                 </div>
-                <div class="flex lg:hidden justify-center items-center" :class="floating ? 'pl-2' : 'pr-0'">
+                <div class="flex lg:hidden justify-center items-center space-x-6" :class="floating ? 'pl-2' : 'pr-0'">
                     <UButton icon="i-lucide-menu" size="xl" class="p-0 text-slate-200" variant="link" @click="toggleMobileMenu" />
+                    <LangSwitcher />
                 </div>
                 <div class="flex w-full items-center justify-end space-x-4 transition-all" :class="floating ? 'pr-2' : 'pr-0'">
                     <LangSwitcher class="hidden xl:flex" />

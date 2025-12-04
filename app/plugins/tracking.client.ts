@@ -14,9 +14,11 @@ export default defineNuxtPlugin((nuxtApp) => {
                 timestamp: new Date().toISOString()
             }
 
+            const API_HOST = import.meta.env.DEV ? 'http://localhost:8000' : 'https://api.tny-robotics.com';
+
             // Envoi de la requête de manière non-bloquante
             // On utilise $fetch qui est natif à Nuxt 3
-            await $fetch('https://api.tny-robotics.com/track', {
+            await $fetch(`${API_HOST}/track`, {
                 method: 'POST',
                 body: payload
             });
