@@ -82,7 +82,7 @@
                         <UIcon name="i-lucide-heart" size="2em" class="text-primary" />
                     </div>
                     <p> <RichText path="index.whoareyou.passionate.desc" /> </p>
-                    <UButton :label="t('index.whoareyou.passionate.button')" size="lg" trailing icon="i-lucide-arrow-right" />
+                    <UButton href="/tny-360" :label="t('index.whoareyou.passionate.button')" size="lg" trailing icon="i-lucide-arrow-right" />
                 </div>
                 <div class="flex flex-col justify-center items-start max-w-128 border-2 border-slate-200 dark:border-slate-700 shadow-lg rounded-lg p-4 pt-8 lg:p-8 space-y-8">
                     <div class="flex justify-center items-center w-full space-x-4">
@@ -90,7 +90,7 @@
                         <UIcon name="i-lucide-microscope" size="2em" class="text-primary" />
                     </div>
                     <p> <RichText path="index.whoareyou.educator.desc" /> </p>
-                    <UButton :label="t('index.whoareyou.educator.button')" size="lg" trailing icon="i-lucide-arrow-right" />
+                    <UButton href="/edu" :label="t('index.whoareyou.educator.button')" size="lg" trailing icon="i-lucide-arrow-right" />
                 </div>
             </div>
         </div>

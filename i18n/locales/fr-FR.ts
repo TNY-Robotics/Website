@@ -23,6 +23,7 @@ export default defineI18nLocale(async (locale) => ({
         content: 'Ce site est actuellement [bd](en cours de développement). Certaines fonctionnalités peuvent ne pas être disponibles ou fonctionner de manière incorrecte.\nN\'hésitez pas à nous faire part de vos commentaires ou à signaler tout problème via notre page GitHub ou notre email de contact.\nMerci de votre compréhension et de votre patience pendant que nous travaillons à l\'amélioration du site !',
     },
     newsletter: {
+        name: 'Se préinscrire',
         title: 'Rejoindre la liste d\'attente',
         content: 'Inscrivez-vous à notre liste d\'attente pour être informé de la sortie officielle du [hl](TNY - 360) !\nEn vous inscrivant, vous recevrez des mises à jour exclusives, des offres spéciales et la possibilité de précommander le robot avant son lancement public.',
         emailPlaceholder: 'Votre adresse e-mail',

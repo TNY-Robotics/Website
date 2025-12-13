@@ -16,7 +16,7 @@
                 <RichText path="education.levels.title" />
             </h1>
             <div class="flex flex-col lg:flex-row w-full justify-evenly space-y-16 lg:space-y-0 p-2">
-                <div class="border-2 border-slate-200 dark:border-slate-700 rounded-lg shadow-lg p-8 space-y-4 max-w-xl">
+                <div class="border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 rounded-lg shadow-lg p-8 space-y-4 max-w-xl">
                     <div class="flex flex-col pb-3">
                         <h1 class="w-full text-2xl font-semibold text-center">
                             <RichText path="education.levels.starter.title" />
@@ -44,7 +44,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="border-2 border-slate-200 dark:border-slate-700 rounded-lg shadow-lg p-8 space-y-4 max-w-xl">
+                <div class="border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 rounded-lg shadow-lg p-8 space-y-4 max-w-xl">
                     <div class="flex flex-col pb-3">
                         <h1 class="w-full text-2xl font-semibold text-center">
                             <RichText path="education.levels.advanced.title" />
@@ -85,7 +85,7 @@
             </div>
             <div class="flex flex-col justify-center items-center">
                 <div class="flex flex-col space-y-8 w-fit max-w-sm">
-                    <div class="flex flex-col justify-center items-center border-1 border-slate-300 dark:border-slate-700 rounded-lg shadow-lg p-6 space-y-4">
+                    <div class="flex flex-col justify-center items-center border-1 border-slate-300 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800 shadow-lg p-6 space-y-4">
                         <div class="flex space-x-2 text-primary">
                             <UIcon name="i-lucide-book-open" size="32" class="min-w-8" />
                             <h2 class="text-2xl font-semibold">
@@ -96,7 +96,7 @@
                             <p> <RichText path="education.courses.theory.description" /> </p>
                         </div>
                     </div>
-                    <div class="flex flex-col justify-center items-center border-1 border-slate-300 dark:border-slate-700 rounded-lg shadow-lg p-6 space-y-4">
+                    <div class="flex flex-col justify-center items-center border-1 border-slate-300 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800 shadow-lg p-6 space-y-4">
                         <div class="flex space-x-2 text-primary">
                             <UIcon name="i-lucide-pencil" size="32" class="min-w-8" />
                             <h2 class="text-2xl font-semibold">
@@ -107,7 +107,7 @@
                             <p> <RichText path="education.courses.exercises.description" /> </p>
                         </div>
                     </div>
-                    <div class="flex flex-col justify-center items-center border-1 border-slate-300 dark:border-slate-700 rounded-lg shadow-lg p-6 space-y-4">
+                    <div class="flex flex-col justify-center items-center border-1 border-slate-300 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800 shadow-lg p-6 space-y-4">
                         <div class="flex space-x-2 text-primary">
                             <UIcon name="i-lucide-graduation-cap" size="32" class="min-w-8" />
                             <h2 class="text-2xl font-semibold">
@@ -126,18 +126,18 @@
                 <RichText path="education.hardware.title" />
             </h1>
             <div class="flex w-fit mx-auto border-3 border-white dark:border-slate-900 rounded-lg shadow-lg overflow-hidden">
-                <div class="flex flex-col space-y-1 bg-slate-700">
-                    <button class="space-y-4 px-8 py-12 bg-slate-800 hover:bg-primary-600/10 transition-all border-primary-500"
+                <div class="flex flex-col space-y-1 bg-white bg-slate-700">
+                    <button class="space-y-4 px-8 py-12 bg-slate-100 dark:bg-slate-800 hover:bg-primary-600/10 dark:hover:bg-primary-600/10 transition-all border-primary-400 dark:border-primary-500"
                         @click="hardwareSelect = 1" :class="hardwareSelect === 1 ? 'lg:border-r-4' : 'border-r-0'">
                         <h1 class="text-2xl font-semibold"> <RichText path="education.hardware.manip.title" /> </h1>
                         <p class="text-lg"> <RichText path="education.hardware.manip.description" /> </p>
                     </button>
-                    <button class="space-y-4 px-8 py-12 bg-slate-800 hover:bg-primary-600/10 transition-all border-primary-500"
+                    <button class="space-y-4 px-8 py-12 bg-slate-100 dark:bg-slate-800 hover:bg-primary-600/10 dark:hover:bg-primary-600/10 transition-all border-primary-400 dark:border-primary-500"
                         @click="hardwareSelect = 2" :class="hardwareSelect === 2 ? 'lg:border-r-4' : 'border-r-0'">
                         <h1 class="text-2xl font-semibold"> <RichText path="education.hardware.fixable.title" /> </h1>
                         <p class="text-lg"> <RichText path="education.hardware.fixable.description" /> </p>
                     </button>
-                    <button class="space-y-4 px-8 py-12 bg-slate-800 hover:bg-primary-600/10 transition-all border-primary-500"
+                    <button class="space-y-4 px-8 py-12 bg-slate-100 dark:bg-slate-800 hover:bg-primary-600/10 dark:hover:bg-primary-600/10 transition-all border-primary-400 dark:border-primary-500"
                         @click="hardwareSelect = 3" :class="hardwareSelect === 3 ? 'lg:border-r-4' : 'border-r-0'">
                         <h1 class="text-2xl font-semibold"> <RichText path="education.hardware.mobile.title" /> </h1>
                         <p class="text-lg"> <RichText path="education.hardware.mobile.description" /> </p>
