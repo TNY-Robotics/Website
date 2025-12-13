@@ -6,6 +6,13 @@ export default {
         title: 'TNY-Coder',
         subtitle: 'Programming has never been so [hl](fun) and [hl](accessible)!',
         description: 'TNY-Coder is a visual programming platform designed for young curious minds.\nWith its intuitive [hl](block-based interface), users can easily assemble commands to bring their robots to life.',
-        button: 'Download TNY-Coder'
+        download: 'Download TNY-Coder',
+        lastVersion: 'Latest version: {version}',
+        platforms: {
+            windows: 'Download for Windows',
+            macos: 'Download for macOS',
+            linux: 'Download for Linux'
+        },
+        downloadForOthers: 'Download for other platforms'
     }
 };

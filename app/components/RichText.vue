@@ -18,7 +18,8 @@
 
 <script setup lang="ts">
 const props = defineProps<{
-    path: string
+    path: string,
+    args?: Record<string, any>
 }>()
 
 const { t } = useI18n()
@@ -26,11 +27,10 @@ const { t } = useI18n()
 const stylePattern = /\[([a-zA-Z0-9_-]+)\]\(([^)]+)\)/g
 
 const parsedContent = computed(() => {
-    const rawText = t(props.path)
+    const rawText = t(props.path, props.args || {})
     const lines = rawText.split('\n')
 
     const finalSegments: any[] = []
-
     lines.forEach((line, lineIndex) => {
         let lastIndex = 0
         let match
