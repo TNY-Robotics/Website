@@ -8,6 +8,8 @@ export default {
         description: 'TNY-Coder est une [hl](plateforme de programmation visuelle) conçue pour les jeunes esprits curieux.\nAvec son interface intuitive [hl](basée sur des blocs), les utilisateurs peuvent facilement [hl](assembler des commandes) pour donner vie à leurs robots.',
         download: 'Télécharger TNY-Coder',
         lastVersion: 'Dernière version : {version}',
+        downloadError: 'Impossible de récupérer la dernière version. Veuillez réessayer plus tard.',
+        githubReleaseLink: 'Aller sur la page des releases GitHub',
         platforms: {
             windows: 'Télécharger pour Windows',
             macos: 'Télécharger pour macOS',

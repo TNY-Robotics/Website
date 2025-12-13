@@ -5,9 +5,11 @@ export default {
     coder: {
         title: 'TNY-Coder',
         subtitle: 'Programming has never been so [hl](fun) and [hl](accessible)!',
-        description: 'TNY-Coder is a [hl](visual programming platform) designed for young curious minds.\nWith its intuitive [hl](block-based interface), users can easily assemble commands to bring their robots to life.',
+        description: 'TNY-Coder is a [hl](visual programming platform) designed for young curious minds.\nWith its intuitive [hl](block-based interface), users can easily [hl](assemble commands) to bring their robots to life.',
         download: 'Download TNY-Coder',
         lastVersion: 'Latest version: {version}',
+        downloadError: 'Unable to fetch the latest version. Please try again later.',
+        githubReleaseLink: 'Go to the GitHub releases page',
         platforms: {
             windows: 'Download for Windows',
             macos: 'Download for macOS',
