@@ -40,6 +40,21 @@ export default defineI18nLocale(async (locale) => ({
             content: 'Il semble que cette adresse e-mail soit déjà inscrite à la liste d\'attente. Pas besoin de s\'inscrire à nouveau !',
         },
     },
+    qr: {
+        invalid: {
+            title: 'QR Code invalide',
+            content: 'Désolé, il semble que le QR code que vous avez scanné soit invalide ou expiré.\nMais vous pouvez toujours visiter notre documentation pour plus d\'informations !',
+        },
+        redirect: {
+            title: 'Redirection...',
+            content: 'Vous allez être redirigé vers la documentation correspondante.',
+        },
+        msg: {
+            title: 'Attendez un peu, ce n\'est pas encore là !',
+            content: 'Notre TNY-360 est [hl](encore en développement), donc ce QR Code n\'est pas encore actif.\nMais vous pouvez toujours [hl](rejoindre la liste d\'attente) pour être informé lorsqu\'il sera prêt !',
+            learnMore: 'En savoir plus sur le TNY-360'
+        }
+    },
     footer: {reserved: 'Tous droits réservés'},
     docs: (await import('./fr-FR/docs')).default,
     index: (await import('./fr-FR/index')).default,

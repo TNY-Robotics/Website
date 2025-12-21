@@ -40,6 +40,21 @@ export default defineI18nLocale(async (locale) => ({
             content: 'It seems this email address is already on the waitlist. No need to sign up again!',
         },
     },
+    qr: {
+        invalid: {
+            title: 'Invalid QR Code',
+            content: 'Sorry, it seems the QR code you scanned is invalid or expired.\nBut you can still visit our documentation for more information!',
+        },
+        redirect: {
+            title: 'Redirecting...',
+            content: 'You will be redirected to the corresponding documentation.',
+        },
+        msg: {
+            title: 'Chill out, it\'s not done yet !',
+            content: 'Our TNY-360 is [hl](still in development), so this QR Code is not active yet.\nBut you can still [hl](join the waitlist) to be notified when it\'s ready!',
+            learnMore: 'Learn more about TNY-360'
+        }
+    },
     footer: {reserved: 'All rights reserved'},
     docs: (await import('./en-US/docs')).default,
     index: (await import('./en-US/index')).default,
