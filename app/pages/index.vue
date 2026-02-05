@@ -17,7 +17,7 @@
         <!-- CONTENT -->
         <div class="flex flex-col lg:flex-row w-full h-fit pb-32">
             <div class="flex lg:w-1/2 justify-center items-center p-4 lg:p-8 max-w-128 lg:max-w-full">
-                <img src="/tny-360.png" alt="TNY - 360 Picture" class="lg:w-2/3 drop-shadow-2xl drop-shadow-fuchsia-500/10 max-w-full">
+                <img src="/tny-360.png" alt="TNY - 360 Picture" class="lg:w-2/3 drop-shadow-2xl drop-shadow-fuchsia-500/5 max-w-full">
             </div>
             <div class="flex lg:w-1/2 justify-center items-center p-4 lg:p-8">
                 <div class="flex flex-col space-y-6 max-w-196 lg:max-w-2/3">
