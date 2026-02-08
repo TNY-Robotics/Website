@@ -138,8 +138,14 @@
                     <p class="flex text-center">
                         <RichText path="tny360.start.tinkerer.desc" />
                     </p>
-                    <div class="flex grow w-full justify-center py-4">
+                    <div class="flex flex-col grow w-full items-center py-4 space-y-8">
                         <p class="text-4xl font-extrabold"> <span class="text-primary">{{ prices['tinkerer'] }}</span> € </p>
+                        <div class="flex flex-col space-y-2">
+                            <div v-for="feature in features['tinkerer']" class="flex items-center space-x-2">
+                                <UIcon name="i-lucide-check" size="1em" class="text-primary" />
+                                <span> {{ feature }} </span>
+                            </div>
+                        </div>
                     </div>
                     <div class="flex w-full justify-center pt-4">
                         <UButton disabled class="w-fit" variant="subtle" size="xl">
@@ -160,8 +166,14 @@
                         <p class="flex text-center">
                             <RichText path="tny360.start.adventure.desc" />
                         </p>
-                        <div class="flex grow w-full justify-center py-4">
+                        <div class="flex flex-col grow w-full items-center py-4 space-y-8">
                             <p class="text-4xl font-extrabold"> <span class="text-primary">{{ prices['adventure'] }}</span> € </p>
+                            <div class="flex flex-col space-y-2">
+                                <div v-for="feature in features['adventure']" class="flex items-center w-full justify-start space-x-2">
+                                    <UIcon name="i-lucide-check" size="1em" class="text-primary" />
+                                    <span> {{ feature }} </span>
+                                </div>
+                            </div>
                         </div>
                         <div class="flex w-full justify-center pt-4">
                             <UButton disabled class="w-fit" variant="subtle" size="xl">
@@ -178,8 +190,14 @@
                     <p class="flex text-center">
                         <RichText path="tny360.start.ready.desc" />
                     </p>
-                    <div class="flex grow w-full justify-center py-4">
+                    <div class="flex flex-col grow w-full items-center py-4 space-y-8">
                         <p class="text-4xl font-extrabold"> <span class="text-primary">{{ prices['ready'] }}</span> € </p>
+                        <div class="flex flex-col space-y-2">
+                            <div v-for="feature in features['ready']" class="flex items-center space-x-2">
+                                <UIcon name="i-lucide-check" size="1em" class="text-primary" />
+                                <span> {{ feature }} </span>
+                            </div>
+                        </div>
                     </div>
                     <div class="flex w-full justify-center pt-4">
                         <UButton disabled class="w-fit" variant="subtle" size="xl">
@@ -278,6 +296,25 @@ const prices = computed(() => ({
     tinkerer: 179,
     adventure: 249,
     ready: 349,
+}));
+
+const features = computed(() => ({
+    tinkerer: [
+        t('tny360.start.tinkerer.features.1'),
+        t('tny360.start.tinkerer.features.2'),
+        t('tny360.start.tinkerer.features.3'),
+    ],
+    adventure: [
+        t('tny360.start.adventure.features.1'),
+        t('tny360.start.adventure.features.2'),
+        t('tny360.start.adventure.features.3'),
+        t('tny360.start.adventure.features.4'),
+    ],
+    ready: [
+        t('tny360.start.ready.features.1'),
+        t('tny360.start.ready.features.2'),
+        t('tny360.start.ready.features.3'),
+    ],
 }));
 
 </script>

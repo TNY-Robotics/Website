@@ -95,16 +95,32 @@ export default {
             title: '[hl](Bidouilleur) dans l\'âme ?',
             desc: 'Imprime tes propres pièces à la maison et commande seulement ce dont tu as besoin !',
             button: 'Obtenir les composants',
+            features: {
+                1: 'Circuits imprimés assemblés',
+                2: 'Moteurs et composants détachés',
+                3: 'Visserie et guide d\'assemblage',
+            }
         },
         adventure: {
             title: 'Tu te sens [hl](aventurier) ?',
             desc: 'Tu peux construire ton propre TNY-360 en recevant les pièces détachées et le guide d\'assemblage !',
             button: 'Se lancer dans l\'aventure',
+            features: {
+                1: 'Circuits imprimés assemblés',
+                2: 'Moteurs et composants détachés',
+                3: 'Pièces 3D imprimées et préparées',
+                4: 'Visserie et guide d\'assemblage',
+            }
         },
         ready: {
             title: 'Tu veux commencer [hl](direct) ?',
             desc: 'Commandes ton TNY-360 maintenant et reçois-le chez toi, entièrement assemblé et calibré !',
             button: 'Commander maintenant',
+            features: {
+                1: 'Robot assemblé et calibré',
+                2: 'Guide de démarrage rapide',
+                3: 'Guide d\'assemblage / réparation',
+            }
         },
         notYetAvailable: 'Pas encore disponible',
     },

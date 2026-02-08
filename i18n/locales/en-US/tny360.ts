@@ -95,16 +95,32 @@ export default {
             title: 'Tinkerer at [hl](heart)?',
             desc: 'Print your own parts at home and only order what you need!',
             button: 'Get the components',
+            features: {
+                1: 'Custom PCBs assembled',
+                2: 'Motors and detached components',
+                3: 'Screws and assembly guide',
+            }
         },
         adventure: {
             title: 'Feeling [hl](adventurous)?',
             desc: 'You can build your own TNY-360 by receiving the spare parts and the assembly guide!',
             button: 'Start the adventure',
+            features: {
+                1: 'Custom PCBs assembled',
+                2: 'Motors and detached components',
+                3: '3D printed and prepared parts',
+                4: 'Screws and assembly guide',
+            }
         },
         ready: {
             title: 'Wanna start [hl](now)?',
             desc: 'Order your TNY-360 now and receive it at home, fully assembled and calibrated!',
             button: 'Order now',
+            features: {
+                1: 'Robot assembled and calibrated',
+                2: 'Quick start guide',
+                3: 'Assembly / repair guide',
+            }
         },
         notYetAvailable: 'Not yet available',
     },
