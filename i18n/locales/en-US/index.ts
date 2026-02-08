@@ -39,5 +39,20 @@ export default {
             desc: 'You want to integrate an advanced and affordable robot into your classes or research projects.',
             button: 'View education offer',
         }
+    },
+    follow: {
+        title: 'Join the adventure\non [hl](our social medias)!',
+        instagram: {
+            title: 'Instagram',
+        },
+        tiktok: {
+            title: 'TikTok',
+        },
+        discord: {
+            title: 'Discord',
+        },
+        youtube: {
+            title: 'YouTube',
+        }
     }
 };

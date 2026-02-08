@@ -39,5 +39,20 @@ export default {
             desc: 'Vous souhaitez intégrer un robot avancé et abordable dans vos cours ou vos projets de recherche.',
             button: 'Voir l\'offre éducation',
         }
+    },
+    follow: {
+        title: 'Rejoignez l\'aventure\nsur [hl](nos réseaux sociaux) !',
+        instagram: {
+            title: 'Instagram',
+        },
+        tiktok: {
+            title: 'TikTok',
+        },
+        discord: {
+            title: 'Discord',
+        },
+        youtube: {
+            title: 'YouTube',
+        }
     }
 };

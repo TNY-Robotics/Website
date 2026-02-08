@@ -94,6 +94,35 @@
                 </div>
             </div>
         </div>
+        <div class="flex flex-col justify-center space-y-16 w-full h-fit p-4">
+            <div class="relative flex w-full h-128">
+                <NuxtLink to="https://www.instagram.com/furwaz_" target="_blank">
+                    <div class="absolute flex flex-col items-center top-[60%] md:left-[24%] -rotate-15 drop-shadow-2xl drop-shadow-primary scale-100 hover:scale-110 transition-transform">
+                        <UIcon name="mdi:instagram" size="7em" class="text-primary" />
+                        <RichText path="index.follow.instagram.title" class="text-primary font-bold" />
+                    </div>
+                </NuxtLink>
+                <NuxtLink to="https://www.tiktok.com/@furwaz_" target="_blank">
+                    <div class="absolute flex flex-col items-center top-[20%] md:left-[37%] -rotate-6 drop-shadow-2xl drop-shadow-primary scale-100 hover:scale-110 transition-transform">
+                        <UIcon name="ic:baseline-tiktok" size="7em" class="text-primary" />
+                        <RichText path="index.follow.tiktok.title" class="text-primary font-bold" />
+                    </div>
+                </NuxtLink>
+                <NuxtLink to="https://discord.gg/XGABkx5A4y" target="_blank">
+                    <div class="absolute flex flex-col items-center top-[16%] left-[55%] rotate-8 drop-shadow-2xl drop-shadow-primary scale-100 hover:scale-110 transition-transform">
+                        <UIcon name="ic:baseline-discord" size="7em" class="text-primary" />
+                        <RichText path="index.follow.discord.title" class="text-primary font-bold" />
+                    </div>
+                </NuxtLink>
+                <NuxtLink to="https://www.youtube.com/@furwaz" target="_blank">
+                    <div class="absolute flex flex-col items-center top-[70%] left-[69%] rotate-27 drop-shadow-2xl drop-shadow-primary scale-100 hover:scale-110 transition-transform">
+                        <UIcon name="mdi:youtube" size="7em" class="text-primary" />
+                        <RichText path="index.follow.youtube.title" class="text-primary font-bold" />
+                    </div>
+                </NuxtLink>
+            </div>
+            <h2 class="subtitle text-center xl:-translate-y-50 pointer-events-none"><RichText path="index.follow.title" /></h2>
+        </div>
     </div>
 </template>
 
@@ -129,5 +158,9 @@ useHead(() => ({
 
 .bg-gradient {
     background: radial-gradient(circle at 100% 100%, rgba(255, 0, 221, 0.02), transparent 60%), radial-gradient(circle at 50% 0%, rgba(255, 0, 221, 0.01), transparent 50%);
+}
+
+.drop-shadow-primary {
+    filter: drop-shadow(0 4px 20px rgba(249, 76, 255, 0.418));
 }
 </style>
