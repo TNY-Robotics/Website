@@ -20,7 +20,12 @@ export default {
         soft: {
             title: 'Logiciel collaboratif ouvert',
             desc: 'Tout le logiciel est open-source et ouvert aux contributions, pour rendre le TNY-360 encore meilleur !',
-        }
+        },
+        takeALook: {
+            title: 'Tu veux y jeter un œil ?',
+            desc: 'Tu peux trouver toutes les ressources, le code et les modèles sur le',
+            link: 'dépôt GitHub',
+        },
     },
     learn: {
         title: 'Commences à apprendre [hl](à n\'importe quel niveau) !',
@@ -85,16 +90,23 @@ export default {
     },
     start: {
         title: '[hl](Construis) ou [hl](commandes) ton propre TNY-360 !',
+        best: 'Le plus populaire',
+        tinkerer: {
+            title: '[hl](Bidouilleur) dans l\'âme ?',
+            desc: 'Imprime tes propres pièces à la maison et commande seulement ce dont tu as besoin !',
+            button: 'Obtenir les composants',
+        },
         adventure: {
             title: 'Tu te sens [hl](aventurier) ?',
             desc: 'Tu peux construire ton propre TNY-360 en recevant les pièces détachées et le guide d\'assemblage !',
-            button: 'Se lancer dans l\'aventsure',
+            button: 'Se lancer dans l\'aventure',
         },
-        now: {
-            title: 'Tu veux commencer [hl](maintenant) ?',
-            desc: 'Commandes ton TNY-360 maintenant et reçois-le chez toi, entièrement assemblé ou à construire toi-même !',
+        ready: {
+            title: 'Tu veux commencer [hl](direct) ?',
+            desc: 'Commandes ton TNY-360 maintenant et reçois-le chez toi, entièrement assemblé et calibré !',
             button: 'Commander maintenant',
-        }
+        },
+        notYetAvailable: 'Pas encore disponible',
     },
     info: {
         title: 'Notre TNY-360 est encore en cours de développement.\nSoyez parmi les premiers à le recevoir en',

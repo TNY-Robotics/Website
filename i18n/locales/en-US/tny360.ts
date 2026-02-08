@@ -20,7 +20,12 @@ export default {
         soft: {
             title: 'Open Collaborative Software',
             desc: 'All software is open-source and open to contributions, to make the TNY-360 even better!',
-        }
+        },
+        takeALook: {
+            title: 'Wanna take a look at it?',
+            desc: 'You can find all the resources, code and models on the',
+            link: 'GitHub repository',
+        },
     },
     learn: {
         title: 'Start learning [hl](at any level)!',
@@ -85,16 +90,23 @@ export default {
     },
     start: {
         title: '[hl](Build) or [hl](order) your own TNY-360!',
+        best: 'Most popular',
+        tinkerer: {
+            title: 'Tinkerer at [hl](heart)?',
+            desc: 'Print your own parts at home and only order what you need!',
+            button: 'Get the components',
+        },
         adventure: {
             title: 'Feeling [hl](adventurous)?',
             desc: 'You can build your own TNY-360 by receiving the spare parts and the assembly guide!',
             button: 'Start the adventure',
         },
-        now: {
-            title: 'Want to start [hl](now)?',
-            desc: 'Order your TNY-360 now and receive it at home, fully assembled or for self-assembly!',
+        ready: {
+            title: 'Wanna start [hl](now)?',
+            desc: 'Order your TNY-360 now and receive it at home, fully assembled and calibrated!',
             button: 'Order now',
-        }
+        },
+        notYetAvailable: 'Not yet available',
     },
     info: {
         title: 'Our TNY-360 is still under development.\nBe among the first to receive it by',

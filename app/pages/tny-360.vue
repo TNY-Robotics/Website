@@ -64,6 +64,16 @@
                     </div>
                 </div>
             </div>
+
+            <div class="w-full text-center pl-1 py-8 space-y-4">
+                <h2 class="subtitle"> <RichText path="tny360.features.takeALook.title" /></h2>
+                <p class="text-lg">
+                    <RichText path="tny360.features.takeALook.desc" />
+                    <NuxtLink target="_blank" to="https://github.com/tny-robotics/tny-360" class="text-primary underline px-1">
+                        <RichText path="tny360.features.takeALook.link" />
+                    </NuxtLink>.
+                </p>
+            </div>
         </div>
 
         <div class="flex flex-col py-16 min-h-[75vh] space-y-12">
@@ -114,36 +124,67 @@
             </div>
         </div>
 
-        <div class="relative flex flex-col py-16 space-y-12">
-            <div class="absolute top-0 right-0 w-full h-full bg-slate-200 dark:bg-slate-900 translate-y-4 scale-y-120 scale-x-200"></div>
+        <div class="relative flex flex-col py-16 space-y-24 px-4 xl:px-0 pt-24">
+            <div class="absolute top-0 right-0 w-full h-full bg-slate-200 dark:bg-slate-900"></div>
             <h2 class="subtitle text-center z-20 px-4">
                 <RichText path="tny360.start.title" />
             </h2>
 
-            <div class="flex flex-wrap justify-evenly z-20">
-                <div class="bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-lg shadow-lg flex flex-col w-full md:w-1/3 m-4 p-8 space-y-4">
-                    <h3 class="subsubtitle">
-                        <RichText path="tny360.start.adventure.title" />
+            <div class="flex flex-col xl:flex-row xl:flex-wrap justify-center items-center z-20 space-y-16 xl:space-y-0 xl:space-x-4 pt-8">
+                <div class="bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-xl xl:rounded-r-none xl:rounded-l-4xl shadow-lg flex flex-col w-full max-w-80 xl:max-w-full xl:w-96 p-4 py-12 space-y-8">
+                    <h3 class="subsubtitle text-center">
+                        <RichText path="tny360.start.tinkerer.title" />
                     </h3>
-                    <p class="flex grow">
-                        <RichText path="tny360.start.adventure.desc" />
+                    <p class="flex text-center">
+                        <RichText path="tny360.start.tinkerer.desc" />
                     </p>
-                    <div class="flex w-full justify-start pt-4">
-                        <UButton disabled class="w-fit" variant="solid" size="md" trailing icon="i-heroicons-chevron-right">
-                            <RichText path="tny360.start.adventure.button" />
+                    <div class="flex grow w-full justify-center py-4">
+                        <p class="text-4xl font-extrabold"> <span class="text-primary">{{ prices['tinkerer'] }}</span> € </p>
+                    </div>
+                    <div class="flex w-full justify-center pt-4">
+                        <UButton disabled class="w-fit" variant="subtle" size="xl">
+                            <!-- <RichText path="tny360.start.tinkerer.button" /> -->
+                            <RichText path="tny360.start.notYetAvailable" />
                         </UButton>
                     </div>
                 </div>
-                <div class="bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-lg shadow-lg flex flex-col w-full md:w-1/3 m-4 p-8 space-y-4">
-                    <h3 class="subsubtitle">
-                        <RichText path="tny360.start.now.title" />
+                <div class="relative shine xl:scale-110 bg-white dark:bg-slate-800 border-2 border-primary-500 dark:border-primary-500 rounded-lg shadow-lg flex flex-col w-full max-w-80 xl:max-w-full xl:w-100 p-4 py-12">
+                    <div class="absolute flex justify-center w-full top-0 left-0">
+                        <p class="-translate-y-full bg-primary-500 bright px-4 py-1 rounded-t-lg w-fit font-extrabold text-lg text-center"> <RichText path="tny360.start.best" /> </p>
+                    </div>
+                    <div class="shine-background" />
+                    <div class="space-y-8 z-20">
+                        <h3 class="subsubtitle text-center">
+                            <RichText path="tny360.start.adventure.title" />
+                        </h3>
+                        <p class="flex text-center">
+                            <RichText path="tny360.start.adventure.desc" />
+                        </p>
+                        <div class="flex grow w-full justify-center py-4">
+                            <p class="text-4xl font-extrabold"> <span class="text-primary">{{ prices['adventure'] }}</span> € </p>
+                        </div>
+                        <div class="flex w-full justify-center pt-4">
+                            <UButton disabled class="w-fit" variant="subtle" size="xl">
+                                <!-- <RichText path="tny360.start.adventure.button" /> -->
+                                <RichText path="tny360.start.notYetAvailable" />
+                            </UButton>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-xl xl:rounded-l-none xl:rounded-r-4xl shadow-lg flex flex-col w-full max-w-80 xl:max-w-full xl:w-96 p-4 py-12 space-y-8">
+                    <h3 class="subsubtitle text-center">
+                        <RichText path="tny360.start.ready.title" />
                     </h3>
-                    <p class="flex grow">
-                        <RichText path="tny360.start.now.desc" />
+                    <p class="flex text-center">
+                        <RichText path="tny360.start.ready.desc" />
                     </p>
-                    <div class="flex w-full justify-start pt-4">
-                        <UButton disabled class="w-fit" variant="solid" size="md" trailing icon="i-heroicons-chevron-right">
-                            <RichText path="tny360.start.now.button" />
+                    <div class="flex grow w-full justify-center py-4">
+                        <p class="text-4xl font-extrabold"> <span class="text-primary">{{ prices['ready'] }}</span> € </p>
+                    </div>
+                    <div class="flex w-full justify-center pt-4">
+                        <UButton disabled class="w-fit" variant="subtle" size="xl">
+                            <!-- <RichText path="tny360.start.ready.button" /> -->
+                            <RichText path="tny360.start.notYetAvailable" />
                         </UButton>
                     </div>
                 </div>
@@ -232,6 +273,40 @@ const platforms = computed(() => ([
         button: t('tny360.learn.esp32.button'),
     },
 ]));
+
+const prices = computed(() => ({
+    tinkerer: 179,
+    adventure: 249,
+    ready: 349,
+}));
+
 </script>
 
-<style></style>
+<style>
+@import 'tailwindcss';
+
+.shine {
+    @apply shadow-xl shadow-fuchsia-500/20;
+}
+
+.shine-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(192, 0, 255, 0.03) 50%, rgba(192, 0, 255, 0.2) 50%, rgba(192, 0, 255, 0.2) 55%, rgba(192, 0, 255, 0.03) 55%, rgba(192, 0, 255, 0.03) 56%, rgba(192, 0, 255, 0.2) 56%, rgba(192, 0, 255, 0.2) 58%, rgba(192, 0, 255, 0.03) 58%);
+    background-size: 400% 400%;
+    animation: shine 4s cubic-bezier(.75,0,.25,1) infinite;
+    pointer-events: none;
+}
+
+@keyframes shine {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 130% 50%;
+    }
+}
+</style>

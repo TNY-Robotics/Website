@@ -4,8 +4,11 @@ description: Learn how to program your TNY-360 using Python, with examples, libr
 ---
 
 # Programming in Python
-Here is a test of code :
 
+::in-progress
+::
+
+It should look something like this, though :
 ```py [test.py]
 from tny_360 import TNY360
 

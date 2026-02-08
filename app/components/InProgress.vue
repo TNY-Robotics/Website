@@ -16,7 +16,7 @@
 
 </script>
 
-<style>
+<style scoped>
 @import 'tailwindcss';
 code {
     @apply bg-slate-200 dark:bg-slate-900 px-2 py-1 rounded mx-1 font-mono;
