@@ -4,7 +4,7 @@
         <div class="absolute top-22 w-full h-full bg-slate-700 z-20 transition-all" :style="sideBarOpen? 'left: 0px; opacity: 1;': 'left: -100%; opacity: 0;'">
             <div class="flex flex-col w-full h-fit p-2 space-y-4">
                 <div>
-                    <h1 class="text-xl font-semibold pt-2 text-center"> Table des matières </h1>
+                    <h1 class="text-xl font-semibold pt-2 text-center"> {{ $t('docs.table') }} </h1>
                     <UButton icon="i-lucide-x" variant="ghost" color="neutral" class="absolute top-3 right-2" @click="closeSidebar" /> 
                 </div>
                 <div>
@@ -15,7 +15,7 @@
 
         <div class="w-1/4 min-w-64 hidden lg:flex">
             <div class="flex flex-col w-full h-fit p-2 space-y-4">
-                <h1 class="text-xl font-semibold pt-2 text-center"> Table des matières </h1>
+                <h1 class="text-xl font-semibold pt-2 text-center"> {{ $t('docs.table') }} </h1>
                 <div>
                     <DocTreeView :tree="(tree.children[0] as DocFolder)" :root="true" :current-path="page?.path" />
                 </div>
@@ -39,16 +39,16 @@
                     </div>
                 </div>
                 <div class="items-center justify-end grow hidden xl:flex">
-                    <UInput ref="searchInput" type="text" placeholder="Rechercher..." icon="i-lucide-search" :class="searchFocused? 'w-96': 'w-64'"
+                    <UInput ref="searchInput" type="text" :placeholder="$t('docs.search')" icon="i-lucide-search" :class="searchFocused? 'w-96': 'w-64'"
                         class="transition-all max-w-full" @focus="searchFocused = true" @blur="onSearchBlur"
                         v-model:model-value="searchQuery" :loading="searchLoading"
                     >
                         <template #trailing>
                             <UKbd value="/" />
                         </template>
-                        <div v-if="searchFocused && searchResults?.length" class="z-20 p-2 show-down absolute w-full h-fit left-0 top-10 bg-white dark:bg-slate-900 rounded-lg shadow-lg overflow-hidden">
+                        <div v-if="searchFocused" class="z-20 show-down absolute w-full h-fit left-0 top-10 bg-white dark:bg-slate-900 rounded-lg shadow-lg overflow-hidden">
                             <div class="overflow-y-auto h-full max-h-128">
-                                <div class="flex flex-col space-y-2 h-fit min-h-fit">
+                                <div v-if="(searchResults !== undefined && searchResults !== null) && searchResults?.length" class="flex flex-col space-y-2 h-fit min-h-fit p-2">
                                     <div v-for="(item, index) in searchResults" :key="item.id"
                                         class="py-1 px-2 hover:bg-primary-500/[0.1] rounded-md border-2"
                                         :class="index === searchCursor ? 'border-primary-400/[0.75] bg-primary-500/[0.05]' : 'border-transparent'">
@@ -73,6 +73,13 @@
                                         </NuxtLink>
                                     </div>
                                 </div>
+                                <div v-else-if="searchResults === null">
+                                    <div class="flex flex-col items-center justify-center h-full p-4 text-slate-500 space-y-2">
+                                        <UIcon name="i-lucide-frown" size="3em" />
+                                        <p class="text-center font-bold"> {{ $t('docs.notFound.title') }} </p>
+                                        <p class="text-center"> {{ $t('docs.notFound.description') }} </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </UInput>
@@ -81,9 +88,9 @@
             <div class="flex w-full max-w-[64em] mx-auto">
                 <ContentRenderer v-if="page" :value="page" :prose="true" class="w-full" />
                 <div v-else class="w-full p-4 text-center">
-                    <h1 class="text-2xl font-semibold"> Document non trouvé </h1>
-                    <p class="mt-2 text-lg"> Désolé, le document que vous recherchez n'existe pas. </p>
-                    <UButton @click="router.back()" label="Retour" class="mt-8" icon="i-lucide-chevron-left" />
+                    <h1 class="text-2xl font-semibold"> {{ $t('docs.docNotFound.title') }} </h1>
+                    <p class="mt-2 text-lg"> {{ $t('docs.docNotFound.description') }} </p>
+                    <UButton @click="router.back()" :label="$t('docs.back')" class="mt-8" icon="i-lucide-chevron-left" />
                 </div>
             </div>
         </div>
@@ -95,12 +102,14 @@ const { t, locale } = useI18n();
 const route = useRoute();
 const router = useRouter();
 
-if (route.path === '/docs') {
+let path = route.path.toLowerCase();
+if (route.path === '/docs' || route.path === '/docs/') {
     router.replace('/docs/TNY-360');
+    path = '/docs/tny-360';
 }
 
-const { data: page } = await useAsyncData(route.path, () => {
-    return queryCollection('docs').path(route.path.toLowerCase()).first()
+const { data: page } = await useAsyncData(path, () => {
+    return queryCollection('docs').path(path).first()
 });
 
 const { data: allPages } = await useAsyncData('all-docs', () => {
@@ -112,13 +121,13 @@ useSeoMeta({
     description: page.value?.description || 'Get comprehensive guides and resources for TNY-360 robotics projects.',
     ogTitle: `${page.value?.title || ''} | Documentation`,
     ogDescription: page.value?.description || 'Get comprehensive guides and resources for TNY-360 robotics projects.',
-    ogUrl: 'https://tny-robotics.com' + route.path,
+    ogUrl: 'https://tny-robotics.com' + path,
     ogImage: 'https://tny-robotics.com/icon-border.png',
     ogType: 'website',
     keywords: 'documentation, robot, robotics, furwaz, tny, 360, dog, education, kit, build, learn, coding, programming, arduino, esp32',
 });
 useHead(() => ({
-    link: [ {rel: 'canonical', href: 'https://tny-robotics.com' + route.path}, ],
+    link: [ {rel: 'canonical', href: 'https://tny-robotics.com' + path}, ],
     htmlAttrs: { lang: locale.value }
 }));
 
@@ -233,10 +242,18 @@ function onSearchBlur() { // set timeout to allow click event to register
     setTimeout(() => { searchFocused.value = false }, 50);
 }
 
+watch (searchFocused, (newVal) => {
+    if (!newVal) {
+        searchQuery.value = '';
+        searchResults.value = undefined;
+        searchCursor.value = -1;
+    }
+});
+
 watch(searchQuery, (newVal) => {
     if (searchTimeout.value) clearTimeout(searchTimeout.value);
     if (newVal.length < 1) {
-        searchResults.value = null;
+        searchResults.value = undefined;
         return;
     }
     searchTimeout.value = setTimeout(async () => {
@@ -259,6 +276,12 @@ watch(searchQuery, (newVal) => {
         } catch (err) {            
             searchResults.value = null;
         }
+
+        // display message if no results
+        if (searchResults.value && searchResults.value.length === 0) {
+            searchResults.value = null;
+        }
+
         searchLoading.value = false;
     }, 300);
 });

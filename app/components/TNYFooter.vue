@@ -13,12 +13,12 @@
         </div> -->
         <div class="flex w-full h-fit justify-center items-center p-2">
             <p class="text-center">
-                &copy; 2025 TNY Robotics. {{ $t('footer.reserved') }}.
+                &copy; {{ year }} TNY Robotics. {{ $t('footer.reserved') }}.
             </p>
         </div>
     </footer>
 </template>
 
 <script lang="ts" setup>
-
+const year = new Date().getFullYear();
 </script>
