@@ -13,9 +13,9 @@ export default {
             title: 'Pièces 3D imprimables facilement',
             desc: 'Toutes les pièces du TNY-360 sont conçues pour être imprimées en 3D avec un minimum de supports, sur n\'importe quel type d\'imprimante FDM !'
         },
-        schema: {
-            title: 'Schémas matériels accessibles',
-            desc: 'Tous les schémas matériels et plans sont disponibles gratuitement pour construire son propre TNY-360 !',
+        maker: {
+            title: 'Plateforme orientée maker',
+            desc: 'Une conception pensée pour être modifée, étendue, améliorée, et réparée le plus facilement possible !'
         },
         soft: {
             title: 'Logiciel collaboratif ouvert',
@@ -56,36 +56,74 @@ export default {
         },
     },
     specs: {
-        title: 'Spécifications techniques',
-        component: 'Composant',
-        detail: 'Détail',
-        processor: {
-            component: 'Processeur',
-            detail: 'ESP32-S3 version N16R8',
+        title: 'Petit par la taille, mais [hl](grand par la technique).',
+        cpu: {
+            title: '[hl](2x 240) MHz',
+            desc: 'Une puce [hl](ESP32-S3 N16R8) puissante pour la cinématique inverse, la fusion de capteurs, la vision par ordinateur, et l\'inférence d\'IA !',
+            wifi: {
+                title: '[hl](Wi-Fi)',
+                desc: '802.11 b/g/n',
+            },
+            bluetooth: {
+                title: '[hl](Bluetooth)',
+                desc: 'v5.0 avec BLE',
+            },
         },
         motors: {
-            component: 'Moteurs',
-            detail: '12x Servomoteurs MG996R 180° 14kg.cm, avec retour de position',
-        },
-        camera: {
-            component: 'Caméra',
-            detail: 'Caméra HD OV2640, FOV 120°',
+            title: '[hl](12x) Moteurs [hl](MG996R)',
+            desc: '12 servos [hl](métal à couple élevé) avec [hl](retour de position) pour des mouvements précis et puissants !',
         },
         screen: {
-            component: 'Écran',
-            detail: 'Écran OLED 1.3" 128x64 avec controlleur SH1106',
+            title: 'Écran [hl](128x64)',
+            desc: 'Pour les expressions faciales & infos',
+        },
+        battery: {
+            title: '[hl](45+) min',
+            desc: 'Autonomie avec une batterie [hl](LiPo 31.5Wh)',
+        },
+        payload: {
+            title: '[hl](1) Kg',
+            desc: 'Charge utile maximale',
+        },
+        weight: {
+            title: '[hl](1.5) Kg',
+            desc: 'Poids total du robot',
+        },
+        speed: {
+            title: '[hl](0.8) m/s',
+            desc: 'Vitesse de marche maximale',
         },
         imu: {
-            component: 'IMU',
-            detail: 'MPU6050 6-axes (Accéléromètre + Gyroscope)',
+            title: '[hl](6 Axis) IMU',
+            desc: '[hl](Accéléromètre) et [hl](Gyroscope) intégrés pour l\'équilibre et la détection de mouvement',
         },
-        communication: {
-            component: 'Communication',
-            detail: 'Wi-Fi 2.4GHz 802.11 b/g/n, Bluetooth 4.0',
+        camera: {
+            title: 'Caméra [hl](HD)',
+            desc: 'Une caméra [hl](grand angle 2MP) pour :',
+            bullet1: 'Vision par ordi.',
+            bullet2: 'Streaming vidéo',
+            bullet3: 'Suivi d\'objets',
         },
-        power: {
-            component: 'Alimentation',
-            detail: 'Batterie Li-Po 3S 12.6V 5000mAh',
+    },
+    roadmap: {
+        title: 'On [hl](travaille dessus) ! Voici ce qui [hl](arrive bientôt) :',
+        firmware: {
+            title: 'Firmware',
+            step1: 'Drivers bas niveau',
+            step2: 'Interface Web & IK',
+            step3: 'Déplacements & IA',
+        },
+        hardware: {
+            title: 'Hardware',
+            step1: 'Châssis V2 Core',
+            step2: 'Conception tête et style',
+            step3: 'V3 pour la production',
+        },
+        doc: {
+            title: 'Documentation',
+            step1: 'Structure & Stack technique',
+            step2: 'Manuels et guides d\'assembl.',
+            step3: 'Wiki complet',
         },
     },
     start: {

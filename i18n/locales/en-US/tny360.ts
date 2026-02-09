@@ -13,9 +13,9 @@ export default {
             title: 'Easily Printable 3D Parts',
             desc: 'All TNY-360 parts are designed to be 3D printed with minimal supports, on any type of FDM printer!',
         },
-        schema: {
-            title: 'Accessible Hardware Schematics',
-            desc: 'All hardware schematics and plans are available for free to build your own TNY-360!',
+        maker: {
+            title: 'Maker-Friendly Platform',
+            desc: 'A design meant to be easily modified, extended, improved, and repaired as easily as possible!',
         },
         soft: {
             title: 'Open Collaborative Software',
@@ -56,36 +56,74 @@ export default {
         },
     },
     specs: {
-        title: 'Technical Specifications',
-        component: 'Component',
-        detail: 'Detail',
-        processor: {
-            component: 'Processor',
-            detail: 'ESP32-S3 version N16R8',
+        title: 'Small by design, but [hl](big on tech).',
+        cpu: {
+            title: '[hl](2x 240) MHz',
+            desc: 'A powerful [hl](ESP32-S3 N16R8) chip for Inverse Kimematics, Sensor Fusion, Computer Vision, and Embeded AI Inference!',
+            wifi: {
+                title: '[hl](Wi-Fi)',
+                desc: '802.11 b/g/n',
+            },
+            bluetooth: {
+                title: '[hl](Bluetooth)',
+                desc: 'v5.0 with BLE',
+            },
         },
         motors: {
-            component: 'Motors',
-            detail: '12x MG996R 180° 14kg.cm Servomotors, with position feedback',
-        },
-        camera: {
-            component: 'Camera',
-            detail: 'OV2640 HD Camera, 120° FOV',
+            title: '[hl](12x MG996R) Motors',
+            desc: '12 [hl](high-torque all-metal) servos with [hl](position feedback) for precise and powerful movements!',
         },
         screen: {
-            component: 'Screen',
-            detail: '1.3" 128x64 OLED Screen with SH1106 controller',
+            title: '[hl](128x64) Screen',
+            desc: 'For facial expressions & system info',
+        },
+        battery: {
+            title: '[hl](45+) min',
+            desc: 'Autonomy with a [hl](31.5Wh LiPo) battery',
+        },
+        payload: {
+            title: '[hl](1) Kg',
+            desc: 'Maximum payload for carrying objects',
+        },
+        weight: {
+            title: '[hl](1.5) Kg',
+            desc: 'Total weight of the robot',
+        },
+        speed: {
+            title: '[hl](0.8) m/s',
+            desc: 'Maximum walking speed',
         },
         imu: {
-            component: 'IMU',
-            detail: 'MPU6050 6-axis (Accelerometer + Gyroscope)',
+            title: '[hl](6 Axis) IMU',
+            desc: 'Integrated [hl](Accelerometer) and [hl](Gyroscope) for balance and motion sensing',
         },
-        communication: {
-            component: 'Communication',
-            detail: 'Wi-Fi 2.4GHz 802.11 b/g/n, Bluetooth 4.0',
+        camera: {
+            title: '[hl](HD) Camera',
+            desc: 'A [hl](wide-angle 2MP) camera for :',
+            bullet1: 'Computer Vision',
+            bullet2: 'Video Streaming',
+            bullet3: 'Object Tracking',
         },
-        power: {
-            component: 'Power',
-            detail: 'Li-Po 3S 12.6V 5000mAh Battery',
+    },
+    roadmap: {
+        title: 'We\'re [hl](working on it)! Here\'s what\'s [hl](coming next):',
+        firmware: {
+            title: 'Firmware',
+            step1: 'Low-Level Drivers',
+            step2: 'Web Interface & IK',
+            step3: 'Walking Gaits & AI',
+        },
+        hardware: {
+            title: 'Hardware',
+            step1: 'V2 Core Chassis',
+            step2: 'Head Design & Style',
+            step3: 'Production-Ready V3',
+        },
+        doc: {
+            title: 'Documentation',
+            step1: 'Structure & Tech stack',
+            step2: 'Assembly manuals & guides',
+            step3: 'Complete Wiki',
         },
     },
     start: {
