@@ -6,20 +6,20 @@
                     :to="item.path"
                     class="flex space-x-4 w-full items-center justify-between"
                 >
-                    <h2 class="font-semibold hover:underline" :class="otherStyle(item)">{{ item.name }}</h2>
-                    <UButton v-if="!root && item.children.length" icon="i-lucide-chevron-down" color="neutral"
+                    <h2 class="hover:underline" :class="otherStyle(item) + ' ' + (root? 'font-extrabold text-xl' : 'font-medium')">{{ item.name }}</h2>
+                    <UButton v-if="item.children.length" icon="i-lucide-chevron-down" color="neutral"
                         @click="ev => onItemExpandClicked(ev, item)" size="xl" variant="link"
                         class="w-6 h-6 p-0 transition-all" :class="item.expanded?.value? '': 'rotate-90'" />
                 </NuxtLink>
                 <div v-if="item.children.length" :id="`docChildren-${item.name}`" class="flex h-fit w-full transition-all overflow-hidden" :style="item.expanded?.value? 'max-height: none;' : 'max-height: 0px;'">
-                    <DocTreeView :tree="item" :root="false" :current-path="currentPath" class="h-fit w-full"
-                        :class="root? '': 'border-l-2 border-slate-600 pl-4'" />
+                    <DocTreeView :tree="item" :root="false" :current-path="currentPath" class="h-fit w-full pl-4"
+                        :class="root? '': 'border-l-2 border-slate-600'" />
                 </div>
             </div>
             <div v-else>
                 <NuxtLink
                     :to="item.path"
-                    class="font-semibold hover:underline" :class="otherStyle(item)"
+                    class="font-medium hover:underline" :class="otherStyle(item)"
                 >
                     {{ item.name }}
                 </NuxtLink>
@@ -57,7 +57,7 @@ function onItemExpandClicked(ev: Event, item: DocFolder) {
     item.expanded.value = !item.expanded.value;
 }
 
-if (props.root) {
+if (props.root && (props.currentPath === '/docs' || props.currentPath === '/docs/')) {
     props.tree.children.forEach(child => {
         if (child.isFolder) {
             child.expanded.value = true;

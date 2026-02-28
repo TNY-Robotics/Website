@@ -103,10 +103,6 @@ const route = useRoute();
 const router = useRouter();
 
 let path = route.path.toLowerCase();
-if (route.path === '/docs' || route.path === '/docs/') {
-    router.replace('/docs/TNY-360');
-    path = '/docs/tny-360';
-}
 
 const { data: page } = await useAsyncData(path, () => {
     return queryCollection('docs').path(path).first()

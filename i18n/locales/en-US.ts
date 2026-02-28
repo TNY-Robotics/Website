@@ -55,7 +55,7 @@ export default defineI18nLocale(async (locale) => ({
             learnMore: 'Learn more about TNY-360'
         }
     },
-    footer: {reserved: 'All rights reserved'},
+    footer: (await import('./en-US/footer')).default,
     docs: (await import('./en-US/docs')).default,
     index: (await import('./en-US/index')).default,
     tny360: (await import('./en-US/tny360')).default,
