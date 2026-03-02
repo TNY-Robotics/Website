@@ -8,7 +8,7 @@
             <li> - The <a class="hover:underline text-primary" target="_blank" href="https://discord.gg/XGABkx5A4y">Discord Server</a> for live help. </li>
             <li> - The <a class="hover:underline text-primary" target="_blank" href="https://www.youtube.com/@furwaz">YouTube Channel</a> for video demos. </li>
         </ul>
-        <p>Estimated full release: <code>End of February</code>.</p>
+        <p>Estimated full release: <code>End of March</code>.</p>
     </div>
 </template>
 

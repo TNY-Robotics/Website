@@ -360,36 +360,29 @@ const { openModal } = useNewsletter();
 
 const platforms = computed(() => ([
     {
-        type: 'mobile',
-        link: '/docs/TNY-360/usage/mobile-app/',
-        title: t('tny360.learn.mobile.title'),
-        description: t('tny360.learn.mobile.desc'),
-        button: t('tny360.learn.mobile.button'),
-    },
-    {
         type: 'blocks',
-        link: '/docs/TNY-360/usage/desktop-app',
+        link: '/soft',
         title: t('tny360.learn.desktop.title'),
         description: t('tny360.learn.desktop.desc'),
         button: t('tny360.learn.desktop.button'),
     },
     {
         type: 'python',
-        link: '/docs/TNY-360/usage/programming/python/',
+        link: '/docs/tny-360/development-modding/software-development/python',
         title: t('tny360.learn.python.title'),
         description: t('tny360.learn.python.desc'),
         button: t('tny360.learn.python.button'),
     },
     {
         type: 'ros2',
-        link: '/docs/TNY-360/usage/programming/ros2/',
+        link: '/docs/tny-360/development-modding/software-development/ros2',
         title: t('tny360.learn.ros2.title'),
         description: t('tny360.learn.ros2.desc'),
         button: t('tny360.learn.ros2.button'),
     },
     {
         type: 'esp32',
-        link: '/docs/TNY-360/operation/firmware/',
+        link: '/docs/tny-360/anatomy/firmware/',
         title: t('tny360.learn.esp32.title'),
         description: t('tny360.learn.esp32.desc'),
         button: t('tny360.learn.esp32.button'),

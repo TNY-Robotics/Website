@@ -2,6 +2,7 @@ export type DocItem = DocFolder | DocFile;
 
 export interface DocFolder {
   isFolder: true;
+  id: string;
   name: string;
   path?: string;
   expanded: Ref<boolean, boolean>;
@@ -10,6 +11,7 @@ export interface DocFolder {
 
 export interface DocFile {
   isFolder: false;
+  id: string;
   name: string;
   path: string;
 }

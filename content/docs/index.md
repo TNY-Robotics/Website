@@ -1,6 +1,6 @@
 ---
 title: Documentation
-description: Find all the documentation for TNY Robotics products, including user guides, programming references, and tips.
+description: TNY Robotics documentation hub — user guides, programming references, and troubleshooting for all products.
 ---
 
 # Documentation

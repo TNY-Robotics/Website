@@ -33,7 +33,7 @@
                             :to="part.path" class="p-0 text-lg font-semibold"
                             :class="part.path? 'hover:text-primary': ''"
                         >
-                            {{ part.name }}
+                            {{ findDocDisplayName(part.path) }}
                         </NuxtLink>
                         <UIcon v-if="index < filePathArray.length-1" name="i-lucide-chevron-right" class="w-4 h-4 mx-2" />
                     </div>
@@ -85,7 +85,7 @@
                     </UInput>
                 </div>
             </div>
-            <div class="flex w-full max-w-[64em] mx-auto">
+            <div class="flex w-full max-w-[64em] mx-auto pb-8">
                 <ContentRenderer v-if="page" :value="page" :prose="true" class="w-full" />
                 <div v-else class="w-full p-4 text-center">
                     <h1 class="text-2xl font-semibold"> {{ $t('docs.docNotFound.title') }} </h1>
@@ -112,11 +112,21 @@ const { data: allPages } = await useAsyncData('all-docs', () => {
     return queryCollection('docs').all()
 });
 
+// Little fix to avoid weird inconsistencies with links : ensure end slash for folders and no end slash for files
+if (page.value) {
+    const isFolder = page.value.id.endsWith('index.md'); // we always read index.md when reading a folder root
+    if (isFolder && !route.path.endsWith('/')) {
+        router.replace(route.path + '/');
+    } else if (!isFolder && route.path.endsWith('/')) {
+        router.replace(route.path.slice(0, -1));
+    }
+}
+
 useSeoMeta({
-    title: `${page.value?.title || ''} | Documentation`,
-    description: page.value?.description || 'Get comprehensive guides and resources for TNY-360 robotics projects.',
-    ogTitle: `${page.value?.title || ''} | Documentation`,
-    ogDescription: page.value?.description || 'Get comprehensive guides and resources for TNY-360 robotics projects.',
+    title: `${page.value?.seo.title || ''} - Documentation`,
+    description: page.value?.seo.description || 'Get comprehensive guides and resources for TNY-360 robotics projects.',
+    ogTitle: `${page.value?.seo.title || ''} - Documentation`,
+    ogDescription: page.value?.seo.description || 'Get comprehensive guides and resources for TNY-360 robotics projects.',
     ogUrl: 'https://tny-robotics.com' + path,
     ogImage: 'https://tny-robotics.com/icon-border.png',
     ogType: 'website',
@@ -131,18 +141,11 @@ const tree = buildDocTree(allPages.value || []);
 
 const filePathArray = computed(() => {
     if (!page.value) return [];
-    const stem = page.value.stem;
-    const stemParts = stem.split('/').filter((part: string) => part.length > 0);
-    if (stem.endsWith('/index')) {
-        stemParts.pop();
-    }
-    const formattedParts = stemParts.map((part: any, index) => ({
-        name: index < stemParts.length - 1
-            ? part[0].toUpperCase() + part.slice(1)
-            : page.value?.title || '',
-        path: index < stemParts.length - 1
-            ? '/' + stemParts.slice(0, stemParts.indexOf(part) + 1).join('/')
-            : undefined
+    const path = page.value.path;
+    const pathParts = path.split('/').filter((part: string) => part.length > 0);
+    const formattedParts = pathParts.map((part: any, index) => ({
+        name: findDocDisplayName(pathParts.slice(0, index + 1).join('/')),
+        path: '/' + pathParts.slice(0, index + 1).join('/')
     }));
     return formattedParts.splice(1);
 });
@@ -151,56 +154,63 @@ function buildDocTree(pages: Array<any>) : DocFolder {
     const root: DocFolder = {
         isFolder: true,
         name: 'root',
+        id: '',
         children: [],
         expanded: ref(false),
     };
 
-    // create all folders and files from pages
+    // create all files from allPages variable, and build the tree from there
     pages.forEach(page => {
-        const stem = page.stem;
-        const folder = stem.endsWith('/')
-            ? stem.substring(0, stem.slice(0, -1).lastIndexOf('/') + 1)
-            : stem.substring(0, stem.lastIndexOf('/') + 1);
-        const folderParts = folder.split('/').filter((part: string) => part.length > 0);
+        const isIndexFile = page.stem.endsWith('index');
+        const folderPath = isIndexFile? page.path : page.path.substring(0, page.path.lastIndexOf('/'));
+        const folderPathParts = folderPath.split('/').filter((part: string) => part.length > 0);
+        const folderId = page.id.substring(0, page.id.lastIndexOf('/'));
+        const folderIdParts = folderId.split('/').filter((part: string) => part.length > 0);
 
+        // navigate to the file location in our tree
         let currentFolder = root;
-        folderParts.forEach((part: any) => {
+        folderPathParts.forEach((part: any, index: number) => {
             let nextFolder = currentFolder.children.find(
                 (child) => child.isFolder && child.name.toLowerCase() === part.toLowerCase()
             ) as DocFolder;
 
+            // if folder isn't found, create it
             if (!nextFolder) {
                 nextFolder = {
                     isFolder: true,
-                    name: part[0].toUpperCase() + part.slice(1),
-                    path: '/' + folderParts.slice(0, folderParts.indexOf(part) + 1).join('/'),
+                    name: part,
+                    path: '/' + folderPathParts.slice(0, index+1).join('/'),
+                    id: '/' + folderIdParts.slice(0, index+2).join('/'),
                     children: [],
                     expanded: ref(false),
                 };
                 currentFolder.children.push(nextFolder);
             }
+            // continue to navigate down the tree
             currentFolder = nextFolder;
         });
-        const fileName = page.title
-            ? page.title.toString()
-            : stem.substring(folder.length);
-        if (stem && stem.split('/').pop() !== 'index') {
+
+        // now that we have the folder in currentFolder, create the file in it (if it's not the folder's index file)
+        if (!page.id.endsWith('index.md')) {
             currentFolder.children.push({
                 isFolder: false,
-                name: fileName[0].toUpperCase() + fileName.slice(1),
-                path: page.path
+                name: page.title,
+                path: page.path,
+                id: page.id,
             });
         }
     });
 
-    // Change folder names if they contain index.md files
+    // Now that all the files have been gathered in the three,
+    // do a second pass on the tree to update all folder names with the title of their index.md files
+
     function updateFolderNames(folder: DocFolder) {
         folder.children.forEach(child => {
             if (child.isFolder) {
                 const indexFile = pages.find(page => {
-                    const stem = page.stem;
-                    const folderStem = child.path?.substring(1)+'/index';
-                    return stem === folderStem;
+                    const id = page.id;
+                    const folderId = child.id.substring(1)+'/index.md';
+                    return id === folderId;
                 });
                 if (indexFile) {
                     child.name = indexFile.title;
@@ -212,6 +222,29 @@ function buildDocTree(pages: Array<any>) : DocFolder {
     updateFolderNames(root);
 
     return root;
+}
+
+function findDocDisplayName(path: string) {
+    const node = findNodeByPath(tree, path.toLowerCase());
+    return node ? node.name : path;
+}
+
+function findNodeByPath(node: DocFolder, path: string): DocFolder | DocFile | null {
+    if (node.path?.toLowerCase() === path.toLowerCase()) {
+        return node;
+    }
+    for (const child of node.children) {
+        if (child.isFolder) {
+            const found = findNodeByPath(child, path);
+            if (found) {
+                return found;
+            }
+        } else if (child.path?.toLowerCase() === path.toLowerCase()) {
+            return child;
+        }
+    }
+    // console.groupEnd();
+    return null;
 }
 
 // expand the tree to the current page

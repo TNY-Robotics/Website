@@ -127,8 +127,6 @@
 </template>
 
 <script lang="ts" setup>
-import RichText from '~/components/RichText.vue';
-
 const { t, locale } = useI18n();
 const route = useRoute();
 

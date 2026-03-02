@@ -1,22 +1,34 @@
 ---
-title: TNY-360
-description: Welcome to the TNY-360 documentation! Find guides to get started, program, and operate your TNY-360 robot effectively.
+title: TNY-360 Documentation
+description: Explore TNY-360 docs — guides for assembly, programming, setup, maintenance & troubleshooting.
 ---
 
 # TNY-360 Documentation
 
 Welcome on the TNY-360 documentation !
 
-Here are some sections you might want to read :
+This documentation is organized into several main sections to help you understand and work with your TNY-360:
 
 ::chevron
-Get started with your TNY-360 using our [Quick start](/docs/TNY-360/usage/quick-start/) guide.
+[Practical Guide](./practical-guide/index.md) - Get started with your TNY-360, from fabrication and assembly to first power up and daily operations.
 ::
 
 ::chevron
-Learn how to program your TNY-360 in [Python](/docs/TNY-360/usage/programming/python/), [JavaScript](/docs/TNY-360/usage/programming/javascript/) or [C++](/docs/TNY-360/usage/programming/cpp/).
+[Development & Modding](./development-modding/index.md) - Learn how to control your TNY-360 through code, and how to create extensions to customize it.
 ::
 
 ::chevron
-Discover the mechanical aspects of the TNY-360 in the [Mechanical operation](/docs/TNY-360/operation/mechanical/) section.
+[Anatomy](./anatomy/index.md) - Deep dive into the hardware, electronics, and firmware that make up your TNY-360.
 ::
+
+::chevron
+[Dashboard & Control](./dashboard-control/index.md) - Learn how to use the built-in web dashboard to control your robot.
+::
+
+::chevron
+[Maintenance & Troubleshooting](./maintenance-troubleshooting/index.md) - Keep your TNY-360 in top shape with routine maintenance and troubleshooting guides.
+::
+
+Have fun exploring !
+
+If you have any questions, feedback, or want to share your TNY-360 projects, feel free to join our community on [Discord](https://discord.gg/tny-360)!

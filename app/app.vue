@@ -24,6 +24,12 @@
             <template #body>
                 <div class="flex flex-col justify-start items-start space-y-4">
                     <p> <RichText path="newsletter.content" class="space-y-4" /> </p>
+                    <div class="flex flex-col justify-center items-center w-full space-y-1">
+                        <p class="font-semibold"> {{ $t('newsletter.release.title') }} </p>
+                        <div class="bg-slate-200 dark:bg-slate-800 rounded py-2 px-4">
+                            <p class="text-lg" style="font-family: monospace;"> {{ $t('newsletter.release.date') }} </p>
+                        </div>
+                    </div>
                     <UForm :schema="emailFormSchema" :state="emailFormState" @submit="onEmailFormSubmit" class="w-fit mx-auto text-center py-8 space-y-4">
                         <UFormField name="email" label="" class="">
                             <UInput v-model="emailFormState.email" type="email" :placeholder="$t('newsletter.emailPlaceholder')" :disabled="emailButtonDisabled" />
@@ -52,7 +58,8 @@
 import type { FormSubmitEvent } from '@nuxt/ui';
 import { object, string, type InferType } from 'yup';
 
-const WIPModal = ref(true);
+// const WIPModal = ref(true);
+const WIPModal = ref(false); // Disabling the WIP modal by default, this thing annoys the sh*t out of me
 
 const { modalOpenModel } = useNewsletter();
 

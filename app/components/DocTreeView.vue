@@ -13,7 +13,7 @@
                 </NuxtLink>
                 <div v-if="item.children.length" :id="`docChildren-${item.name}`" class="flex h-fit w-full transition-all overflow-hidden" :style="item.expanded?.value? 'max-height: none;' : 'max-height: 0px;'">
                     <DocTreeView :tree="item" :root="false" :current-path="currentPath" class="h-fit w-full pl-4"
-                        :class="root? '': 'border-l-2 border-slate-600'" />
+                        :class="root? '': 'border-l-2 border-slate-300 dark:border-slate-600'" />
                 </div>
             </div>
             <div v-else>

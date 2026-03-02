@@ -39,6 +39,10 @@ export default defineI18nLocale(async (locale) => ({
             title: 'You are already registered!',
             content: 'It seems this email address is already on the waitlist. No need to sign up again!',
         },
+        release: {
+            title: 'Estimated Release Date',
+            date: 'End of March 2026',
+        },
     },
     qr: {
         invalid: {

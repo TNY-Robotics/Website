@@ -128,7 +128,7 @@ export default {
     },
     start: {
         title: '[hl](Build) or [hl](order) your own TNY-360!',
-        best: 'Most popular',
+        best: 'Best value',
         tinkerer: {
             title: 'Tinkerer at [hl](heart)?',
             desc: 'Print your own parts at home and only order what you need!',

@@ -25,9 +25,11 @@ export default defineNuxtConfig({
   // Configuration du parser Markdown (MDC) utilisé par Content v3
   mdc: {
     highlight: {
-      theme: 'one-dark-pro',
-      
-      // Attention : Dans MDC/v3, la clé s'appelle souvent 'langs', pas 'preload'
+      theme: {
+        default: 'one-light',
+        dark: 'one-dark-pro',
+      },
+
       langs: [
         'js',
         'ts',

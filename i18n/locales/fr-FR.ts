@@ -39,6 +39,10 @@ export default defineI18nLocale(async (locale) => ({
             title: 'Vous êtes déjà inscrit !',
             content: 'Il semble que cette adresse e-mail soit déjà inscrite à la liste d\'attente. Pas besoin de s\'inscrire à nouveau !',
         },
+        release: {
+            title: 'Date de sortie estimée',
+            date: 'Fin Mars 2026',
+        },
     },
     qr: {
         invalid: {

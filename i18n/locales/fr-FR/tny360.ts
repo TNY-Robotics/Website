@@ -128,7 +128,7 @@ export default {
     },
     start: {
         title: '[hl](Construis) ou [hl](commandes) ton propre TNY-360 !',
-        best: 'Le plus populaire',
+        best: 'Meilleure valeur',
         tinkerer: {
             title: '[hl](Bidouilleur) dans l\'âme ?',
             desc: 'Imprime tes propres pièces à la maison et commande seulement ce dont tu as besoin !',
