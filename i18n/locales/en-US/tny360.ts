@@ -78,7 +78,7 @@ export default {
             desc: 'For facial expressions & system info',
         },
         battery: {
-            title: '[hl](45+) min',
+            title: '[hl](60+) minutes',
             desc: 'Autonomy with a [hl](31.5Wh LiPo) battery',
         },
         payload: {
@@ -86,7 +86,7 @@ export default {
             desc: 'Maximum payload for carrying objects',
         },
         weight: {
-            title: '[hl](1.5) Kg',
+            title: '[hl](1.8) Kg',
             desc: 'Total weight of the robot',
         },
         speed: {
