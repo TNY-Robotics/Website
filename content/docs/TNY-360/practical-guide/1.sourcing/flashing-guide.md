@@ -5,7 +5,7 @@ description: Learn how to flash firmware onto the TNY-360 microcontroller using 
 
 # Flashing Guide
 
-When building your TNY-360 from the Maker Kit, you will need to flash the firmware onto the microcontroller before you can start assembling the physical robot.
+When building your TNY-360 from scratch, you will need to flash the firmware onto the microcontroller before you can start assembling the physical robot.
 
 This guide will walk you through the process of flashing the precompiled firmware onto the TNY-360 main board using our web-based flashing tool.
 
