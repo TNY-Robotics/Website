@@ -196,8 +196,8 @@
                     <div class="roadmap-block roadmap-done"> <RichText path="tny360.roadmap.firmware.step1" /> </div>
                     <span class="roadmap-line roadmap-line-done" />
                     <div class="roadmap-block roadmap-done"> <RichText path="tny360.roadmap.firmware.step2" /> </div>
-                    <span class="roadmap-line roadmap-line-inprogress" />
-                    <div class="roadmap-block roadmap-inprogress"> <RichText path="tny360.roadmap.firmware.step3" /> </div>
+                    <span class="roadmap-line roadmap-line-done" />
+                    <div class="roadmap-block roadmap-done"> <RichText path="tny360.roadmap.firmware.step3" /> </div>
                 </div>
                 <div class="roadmap-container">
                     <div class="roadmap-header">
@@ -206,20 +206,20 @@
                     </div>
                     <span class="roadmap-line roadmap-line-done" />
                     <div class="roadmap-block roadmap-done"> <RichText path="tny360.roadmap.hardware.step1" /> </div>
+                    <span class="roadmap-line roadmap-line-done" />
+                    <div class="roadmap-block roadmap-done"> <RichText path="tny360.roadmap.hardware.step2" /> </div>
                     <span class="roadmap-line roadmap-line-inprogress" />
-                    <div class="roadmap-block roadmap-inprogress"> <RichText path="tny360.roadmap.hardware.step2" /> </div>
-                    <span class="roadmap-line roadmap-line-todo" />
-                    <div class="roadmap-block roadmap-todo"> <RichText path="tny360.roadmap.hardware.step3" /> </div>
+                    <div class="roadmap-block roadmap-inprogress"> <RichText path="tny360.roadmap.hardware.step3" /> </div>
                 </div>
                 <div class="roadmap-container">
                     <div class="roadmap-header">
                         <UIcon name="i-lucide-book-open-text" size="2em" />
                         <h3 class="subsubtitle"> <RichText path="tny360.roadmap.doc.title" /> </h3>
                     </div>
+                    <span class="roadmap-line roadmap-line-done" />
+                    <div class="roadmap-block roadmap-done"> <RichText path="tny360.roadmap.doc.step1" /> </div>
                     <span class="roadmap-line roadmap-line-inprogress" />
-                    <div class="roadmap-block roadmap-inprogress"> <RichText path="tny360.roadmap.doc.step1" /> </div>
-                    <span class="roadmap-line roadmap-line-todo" />
-                    <div class="roadmap-block roadmap-todo"> <RichText path="tny360.roadmap.doc.step2" /> </div>
+                    <div class="roadmap-block roadmap-inprogress"> <RichText path="tny360.roadmap.doc.step2" /> </div>
                     <span class="roadmap-line roadmap-line-todo" />
                     <div class="roadmap-block roadmap-todo"> <RichText path="tny360.roadmap.doc.step3" /> </div>
                 </div>
