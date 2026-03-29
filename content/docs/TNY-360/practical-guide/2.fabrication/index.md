@@ -12,9 +12,6 @@ Our goal here is to help you correctly source your materials, print your structu
 
 ---
 
-::in-progress
-::
-
 ## 3D Printing Guide
 
 ### Material Selection
