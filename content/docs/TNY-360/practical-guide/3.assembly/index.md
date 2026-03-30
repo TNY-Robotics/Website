@@ -32,5 +32,9 @@ If you have any questions or need help during the assembly, don't hesitate to re
 
 All clear ? Let's get started with the assembly process!
 
-::nav-buttons{right="Main Assembly" right-link="./main-assembly" right-icon="i-lucide-chevron-right"}
+---
+
+::center
+::big-button{href="./main-assembly" label="Start Assembly" icon="i-lucide-chevron-right" inline=true}
+::
 ::

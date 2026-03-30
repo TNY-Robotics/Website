@@ -9,6 +9,14 @@ This section details the internal electrical design of the TNY-360. It is primar
 
 ---
 
+## Printed Circuit Boards (PCBs)
+
+The TNY-360 uses a total of 6 custom-designed PCBs to manage its various electronic components and connections.
+These PCBs are designed to optimize space, reduce wiring complexity, and improve reliability.
+
+If you want to learn more about the robot's PCBs, check out the [PCBs section](./pcbs) for detailed explanations of each board's function and design.
+
+
 ## Power Architecture
 
 Learn how the TNY-360 manages power distribution to its components while balancing performance and reliability.

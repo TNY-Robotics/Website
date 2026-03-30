@@ -20,17 +20,17 @@ The TNY-360 is designed to be compact and lightweight, making it ideal for indoo
 
 This robot may be small, but its size does matter. So here are the dimensions of the key parts of the TNY-360:
 
-### Main body block
+### Global robot dimensions
 
-The core of the robot is a rectangular block that houses the hip roll motors, power distribution boards and other central components.
-Knowing the dimensions of this block is crucial for any modifications or extensions you might want to add.
+here are the overall dimensions of the TNY-360, to give you an idea of the size and scale of the robot:
 
 | **Dimension** | **Measurement** |
 | ------------- | --------------- |
-| Length        | 220mm           |
-| Width         | 130mm           |
-| Height        | 30mm            |
+| Length        | 350mm           |
+| Width         | 300mm           |
+| Height        | 150mm           |
 
+These dimensions are measured from the outermost points of the robot in *resting position* (on the ground, legs on the sides).
 
 ## Kinematics and Degrees of Freedom (DOF)
 
