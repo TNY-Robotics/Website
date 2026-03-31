@@ -58,4 +58,4 @@ If you're here for guides on how to print, assemble, and set up your TNY-360, he
 
 Have fun exploring !
 
-If you have any questions, feedback, or want to share your TNY-360 projects, feel free to join our community on [Discord](https://discord.gg/tny-360)!
+If you have any questions, feedback, or want to share your TNY-360 projects, feel free to join our community on [Discord](https://discord.gg/XGABkx5A4y)!

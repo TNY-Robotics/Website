@@ -13,7 +13,7 @@ Take your time, follow the steps carefully, and let's put your quadruped togethe
 
 ---
 
-This guide is structured in 4 main steps :
+This guide is structured in 5 main steps :
 
 - [**Torso assembly**](./torso-assembly)<br>
     You will assemble the core of the robot, mount the PCBs and wire up all the motors and power components.
@@ -30,8 +30,7 @@ This guide is structured in 4 main steps :
 - [**Cables & aesthetic**](./cables-aesthetic)<br>
     You will route and secure all the cables inside the chassis, and install the aesthetic covers to give your TNY-360 its final look.
 
-If you have any questions or need help during the assembly, don't hesitate to reach out to the community on our [Discord server](https://discord.com/invite/tny360)!
-<!-- or check out the [Troubleshooting section](../troubleshooting/index.md) for common issues and solutions. -->
+If you have any questions or need help during the assembly, don't hesitate to reach out to the community on our [Discord server](https://discord.gg/XGABkx5A4y)!
 
 All clear ? Let's get started with the assembly process!
 
