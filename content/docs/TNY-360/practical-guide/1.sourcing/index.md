@@ -18,15 +18,17 @@ Before starting, ensure you have gathered all the necessary hardware and tools f
 
 ### Required Tools
 
-| Tool                      | Recommendation | Link                                                               |
-| ------------------------- | -------------- | ------------------------------------------------------------------ |
-| Soldering Iron            | TS101          | [AliExpress](https://s.click.aliexpress.com/e/_c3MnB3SB)           |
-| Lead-Free Solder Wire     | -              | [AliExpress](https://s.click.aliexpress.com/e/_c3S6N3lN)           |
-| Tweezers Kit              | -              | [AliExpress](https://s.click.aliexpress.com/e/_c4rHYTvz)           |
-| Solder Flux               | -              | [AliExpress](https://aliexpress.com)                               |
-|                           |                |                                                                    |
-| Solder Paste*             | -              | [AliExpress](https://fr.aliexpress.com/item/1005009851071408.html) |
-| Hot Plate Solder Station* | -              | [AliExpress](https://s.click.aliexpress.com/e/_c4eMdVRt)           |
+| Tool                      | Recommendation             | Link                                                               |
+| ------------------------- | -------------------------- | ------------------------------------------------------------------ |
+| Soldering Iron            | TS101                      | [AliExpress](https://s.click.aliexpress.com/e/_c3MnB3SB)           |
+| Heat insert tool          | -                          | [AliExpress](https://s.click.aliexpress.com/e/_c3obf7E9)           |
+| Lead-Free Solder Wire     | -                          | [AliExpress](https://s.click.aliexpress.com/e/_c3S6N3lN)           |
+| Tweezers Kit              | -                          | [AliExpress](https://s.click.aliexpress.com/e/_c4rHYTvz)           |
+| Solder Flux               | -                          | [AliExpress](https://aliexpress.com)                               |
+| Screwdriver Set           | MIJIA Electric Screwdriver | [AliExpress](https://s.click.aliexpress.com/e/_c3MzhpXR)           |
+|                           |                            |                                                                    |
+| Solder Paste*             | -                          | [AliExpress](https://fr.aliexpress.com/item/1005009851071408.html) |
+| Hot Plate Solder Station* | -                          | [AliExpress](https://s.click.aliexpress.com/e/_c4eMdVRt)           |
 
 **Only needed if you plan to manufacture PCBs yourself.*
 
@@ -34,15 +36,15 @@ Before starting, ensure you have gathered all the necessary hardware and tools f
 
 The TNY-360 requires 7 different PCBs. You can find all design files in the [GitHub repository](https://github.com/TNY-Robotics/TNY-360/tree/main/Electronics/PCBs).
 
-| PCB           | Purpose                                                                             | Files                                                                                                    |
-| ------------- | ----------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| Main Board    | Robot brain and main controller                                                     | [GitHub PCB Files](https://github.com/TNY-Robotics/TNY-360/tree/main/Electronics/PCBs/Main)              |
-| Analog Reader | Sensor interface board                                                              | [GitHub PCB Files](https://github.com/TNY-Robotics/TNY-360/tree/main/Electronics/PCBs/Analog%20Reader)   |
-| Motor Driver  | Motor control board                                                                 | [GitHub PCB Files](https://github.com/TNY-Robotics/TNY-360/tree/main/Electronics/PCBs/Motor%20Driver)    |
-| Power Board   | Power distribution                                                                  | [GitHub PCB Files](https://github.com/TNY-Robotics/TNY-360/tree/main/Electronics/PCBs/Power)             |
-| Paw Board     | Legs multiplexing and power management                                              | [GitHub PCB Files](https://github.com/TNY-Robotics/TNY-360/tree/main/Electronics/PCBs/Paw)               |
-| Mount Board   | [Universal Mount](../../development-modding/physical-extensions/index.md) interface | [GitHub PCB Files](https://github.com/TNY-Robotics/TNY-360/tree/main/Electronics/PCBs/Universal%20Mount) |
-| Servo Board   | Custom MG996R servo modification board                                              | [GitHub PCB Files](https://github.com/TNY-Robotics/TNY-360/tree/main/Electronics/PCBs/Servomotor)        |
+| PCB                                                    | Purpose                                                                             | Quantity | Files                                                                                                    |
+| ------------------------------------------------------ | ----------------------------------------------------------------------------------- | :------: | -------------------------------------------------------------------------------------------------------- |
+| [Main Board](../../anatomy/electronics/pcbs/main)      | Robot brain and main controller                                                     |    1     | [GitHub PCB Files](https://github.com/TNY-Robotics/TNY-360/tree/main/Electronics/PCBs/Main)              |
+| [Analog Reader](../../anatomy/electronics/pcbs/reader) | Sensor interface board                                                              |    1     | [GitHub PCB Files](https://github.com/TNY-Robotics/TNY-360/tree/main/Electronics/PCBs/Analog%20Reader)   |
+| [Motor Driver](../../anatomy/electronics/pcbs/driver)  | Motor control board                                                                 |    1     | [GitHub PCB Files](https://github.com/TNY-Robotics/TNY-360/tree/main/Electronics/PCBs/Motor%20Driver)    |
+| [Power Board](../../anatomy/electronics/pcbs/power)    | Power distribution                                                                  |    1     | [GitHub PCB Files](https://github.com/TNY-Robotics/TNY-360/tree/main/Electronics/PCBs/Power)             |
+| [Paw Board](../../anatomy/electronics/pcbs/paw)        | Legs multiplexing and power management                                              |    2     | [GitHub PCB Files](https://github.com/TNY-Robotics/TNY-360/tree/main/Electronics/PCBs/Paw)               |
+| [Plug Board](../../anatomy/electronics/pcbs/plug)      | [Universal Mount](../../development-modding/physical-extensions/index.md) interface |    1     | [GitHub PCB Files](https://github.com/TNY-Robotics/TNY-360/tree/main/Electronics/PCBs/Universal%20Mount) |
+| [Servo Board](../../anatomy/electronics/pcbs/servo)    | Custom MG996R servo modification board                                              |    12    | [GitHub PCB Files](https://github.com/TNY-Robotics/TNY-360/tree/main/Electronics/PCBs/Servomotor)        |
 
 To order the PCBs, please follow the [PCB Ordering Guide](./pcb-ordering.md) for detailed instructions on how to prepare the files and place your order with a PCB manufacturer.
 
@@ -52,23 +54,23 @@ A complete Bill of Materials (BOM) for all the components needed in the TNY-360 
 
 For your convenience, we have also compiled a list of the most critical and hard-to-find components with direct links to suppliers:
 
-| Component         | Description                                              | Quantity | Link                                                               |
-| ----------------- | -------------------------------------------------------- | :------: | ------------------------------------------------------------------ |
-| Step down 7V      | DC-DC 300W 20A Buck Converter                            |    1     | [Aliexpress](https://s.click.aliexpress.com/e/_c3CWv1Vp)           |
-| Step down 5V      | DC-DC 5V 3A Converter                                    |    1     | [Aliexpress](https://fr.aliexpress.com/item/1005008678729834.html) |
-|                   |                                                          |          |                                                                    |
-| VL53L0X           | Laser depth sensor                                       |    1     | [Aliexpress](https://s.click.aliexpress.com/e/_c4LPbeMT)           |
-| SH1106            | OLED Screen 64x128                                       |    1     | [Aliexpress](https://s.click.aliexpress.com/e/_c4POAdYX)           |
-| TTP223            | Touch sensor for menu navigation                         |    2     | [Aliexpress](https://fr.aliexpress.com/item/1005006087171183.html) |
-| OV2640            | HD Camera  120° 75mm                                     |    1     | [Aliexpress](https://s.click.aliexpress.com/e/_c3eXa4EP)           |
-| I2S Mic.          | I2S Microphone                                           |    1     | [Aliexpress](https://s.click.aliexpress.com/e/_c3CFAo5V)           |
-|                   |                                                          |          |                                                                    |
-| MG996R Servomotor | High-torque servo motor, compatible with the custom PCB. |    1     | [Aliexpress](https://s.click.aliexpress.com/e/_c37d8WVN)           |
-| SG90              | Small servo motors, used for the ears                    |    2     | [Aliexpress](https://s.click.aliexpress.com/e/_c4PiVQKP)           |
-|                   |                                                          |          |                                                                    |
-| MPU6050           | 6-axis motion tracking sensor                            |    1     | [Aliexpress](https://s.click.aliexpress.com/e/_c4LXGDrH)           |
-| Switches          | Tactile switches 6x6x5 mm to detect foot contact         |    4     | [Aliexpress](https://s.click.aliexpress.com/e/_c4koO1EL)           |
-| Antenna           | Wi-Fi/Bluetooth 2.4Ghz antenna                           |    1     | [Aliexpress](https://s.click.aliexpress.com/e/_c3wCvBLz)           |
+| Component         | Description                                              | Quantity | Link \[Option\]                                                                    |
+| ----------------- | -------------------------------------------------------- | :------: | ---------------------------------------------------------------------------------- |
+| Step down 7V      | DC-DC 300W 20A Buck Converter                            |    1     | [Aliexpress](https://s.click.aliexpress.com/e/_c3CWv1Vp)                           |
+| Step down 5V      | DC-DC 5V 3A Converter                                    |    1     | [Aliexpress](https://fr.aliexpress.com/item/1005008678729834.html) \[5V\]          |
+|                   |                                                          |          |                                                                                    |
+| VL53L0X           | Laser depth sensor                                       |    1     | [Aliexpress](https://s.click.aliexpress.com/e/_c4LPbeMT)           \[0-200CM\]     |
+| SH1106            | OLED Screen 64x128                                       |    1     | [Aliexpress](https://s.click.aliexpress.com/e/_c4POAdYX)           \[WHITE\]       |
+| TTP223            | Touch sensor for menu navigation                         |    2     | [Aliexpress](https://fr.aliexpress.com/item/1005006087171183.html)                 |
+| OV2640            | HD Camera  120° 75mm                                     |    1     | [Aliexpress](https://s.click.aliexpress.com/e/_c3eXa4EP)           \[120°/75mm\]   |
+| I2S Mic.          | I2S Microphone                                           |    1     | [Aliexpress](https://s.click.aliexpress.com/e/_c3CFAo5V)                           |
+|                   |                                                          |          |                                                                                    |
+| MG996R Servomotor | High-torque servo motor, compatible with the custom PCB. |    1     | [Aliexpress](https://s.click.aliexpress.com/e/_c37d8WVN)           \[180°\]        |
+| SG90              | Small servo motors, used for the ears                    |    2     | [Aliexpress](https://s.click.aliexpress.com/e/_c4PiVQKP)           \[MG996R/180°\] |
+|                   |                                                          |          |                                                                                    |
+| MPU6050           | 6-axis motion tracking sensor                            |    1     | [Aliexpress](https://s.click.aliexpress.com/e/_c4LXGDrH)                           |
+| Switches          | Tactile switches 6x6x5 mm to detect foot contact         |    4     | [Aliexpress](https://s.click.aliexpress.com/e/_c4koO1EL)           \[6x6x5mm\]     |
+| Antenna           | Wi-Fi/Bluetooth 2.4Ghz antenna                           |    1     | [Aliexpress](https://s.click.aliexpress.com/e/_c3wCvBLz)           \[FPC-IPX1/5cm] |
 
 ### Screws and Cables
 

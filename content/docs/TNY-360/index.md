@@ -50,6 +50,10 @@ If you're here for guides on how to print, assemble, and set up your TNY-360, he
 
 ::
 
+::center
+[I am building it from scratch (no kit)](./practical-guide/sourcing)
+::
+
 ---
 
 Have fun exploring !

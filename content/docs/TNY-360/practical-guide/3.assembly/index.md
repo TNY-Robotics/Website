@@ -15,16 +15,19 @@ Take your time, follow the steps carefully, and let's put your quadruped togethe
 
 This guide is structured in 4 main steps :
 
-- [**Main assembly**](./1.main-assembly.md)<br>
+- [**Torso assembly**](./torso-assembly)<br>
     You will assemble the core of the robot, mount the PCBs and wire up all the motors and power components.
 
-- [**First power up**](./2.first-power-up.md)<br>
+- [**Head assembly**](./head-assembly)<br>
+    You will assemble the head of the robot, mount the Main PCB and wire up all the visor components.
+
+- [**First power up**](./first-power-up)<br>
     You will power up the robot for the first time and perform the *zero motor* calibration, to ensure all the motors are centered before mounting the legs and ears.
 
-- [**Legs & ears assembly**](./3.legs-ears-assembly.md)<br>
+- [**Legs & ears assembly**](./legs-ears-assembly)<br>
     You will assemble and mount the legs and ears to the body to complete the robot's physical structure.
 
-- [**Cables & aesthetic**](./4.cables-aesthetic.md)<br>
+- [**Cables & aesthetic**](./cables-aesthetic)<br>
     You will route and secure all the cables inside the chassis, and install the aesthetic covers to give your TNY-360 its final look.
 
 If you have any questions or need help during the assembly, don't hesitate to reach out to the community on our [Discord server](https://discord.com/invite/tny360)!
@@ -35,6 +38,6 @@ All clear ? Let's get started with the assembly process!
 ---
 
 ::center
-::big-button{href="./main-assembly" label="Start Assembly" icon="i-lucide-chevron-right" inline=true}
+::big-button{href="./torso-assembly" label="Start Assembly" icon="i-lucide-chevron-right" inline=true}
 ::
 ::
