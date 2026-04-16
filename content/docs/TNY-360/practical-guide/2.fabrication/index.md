@@ -49,13 +49,13 @@ The optimal printing temperature and speed can vary based on the specific filame
 
 ---
 
-## 3- Pre-made .3MF file
+## 3 - Pre-made .3MF file
 
 For easier printing, a complete .3MF file with all the parts already oriented and configured with the recommended slicing settings is available in the [GitHub repository](https://github.com/TNY-Robotics/TNY-360/tree/main/CAD/Exported).
 
 This file can be directly imported into your slicer software (like [OrcaSlicer](https://github.com/OrcaSlicer/OrcaSlicer)), and it will automatically apply the correct settings and orientations for each part, ensuring optimal print quality and performance.
 
-Keep in mind that even if the .3MF file provides a good starting point, you may need to adjust the settings based on your specific printer and filament to achieve the best results, for example :
+Keep in mind that even though the .3MF file provides a good starting point, **you may need to adjust the settings** based on your specific printer and filament to achieve the best results, for example :
 
 * Calibrating the printing temperature and speed for your specific filament brand.
 * Calibrating the hole-compensation settings to ensure the holes are the correct size.
@@ -63,7 +63,7 @@ Keep in mind that even if the .3MF file provides a good starting point, you may 
 * Adjusting the bed adhesion settings or adding a raft if you encounter warping issues.
 * Tweaking the ironing settings to achieve a smoother finish on the leg joints.
 
-A great guide for printer / filament calibration can be found in the [OrcaSlicer documentation](https://www.orcaslicer.com/wiki/#calibrations).
+A great guide for printer & filament calibration can be found in the [OrcaSlicer documentation](https://www.orcaslicer.com/wiki/#calibrations).
 
 ::info-box{title="Filament Color" type="info"}
 The color of the filament you choose for printing is entirely up to you and will not affect the robot's performance. But for a more authentic look, you may want to use the color indications on the .3mf file **build plates names**.
@@ -71,14 +71,25 @@ The color of the filament you choose for printing is entirely up to you and will
 
 ---
 
-## 4 - Printing the parts
+## 4 - Calibration parts
+
+**Even if your 3D printer is well calibrated**, we still recommend **printing the calibration parts** included in the .3MF file before starting the full print of the robot.
+
+This is because depending on the manufacturer of your motors, screen, or other components, **the provided screws and holes may differ slightly in size**.<br>
+By printing the calibration parts first, you can test the fit of the screws and components, and make any necessary adjustments to the hole sizes in the FreeCAD files before printing the entire robot, ensuring a better fit and **avoiding potential issues** during assembly.
+
+
+
+---
+
+## 5 - Printing the parts
 
 Once you have selected the materials, configured the slicing settings, and prepared the .3MF file, you can start printing the parts of your TNY-360 robot.
 
-Make sure to monitor the printing process, especially for the first few layers, to ensure proper adhesion and to catch any issues early on.
-After printing, allow the parts to cool down completely before removing them from the print bed to prevent warping or damage.
+Make sure to monitor the printing process, **especially for the first few layers**, to ensure proper adhesion and to catch any issues early on.
+After printing, **allow the parts to cool down completely** before removing them from the print bed to prevent warping or damage.
 
-be aware that the entire robot can take a significant amount of time to print, especially if you are using slower speeds for better quality, so be patient and plan accordingly.
+be aware that the entire robot can take a significant amount of time to print, especially if you are using slower speeds for better quality, so **be patient and plan accordingly**.
 
 *Good luck to you (and your printer) !*
 
