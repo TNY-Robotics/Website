@@ -31,6 +31,5 @@ Once you have completed these steps, you will be ready to explore the world of y
 ---
 
 ::center
-::big-button{href="./power-up" label="Start Setup" icon="i-lucide-chevron-right" inline=true}
-::
+:big-button{href="./power-up" label="Start Setup" icon="i-lucide-chevron-right" inline=true}
 ::

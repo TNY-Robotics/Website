@@ -30,6 +30,8 @@ This guide is structured in 5 main steps :
 - [**Cables & aesthetic**](./cables-aesthetic)<br>
     You will route and secure all the cables inside the chassis, and install the aesthetic covers to give your TNY-360 its final look.
 
+---
+
 If you have any questions or need help during the assembly, don't hesitate to reach out to the community on our [Discord server](https://discord.gg/XGABkx5A4y)!
 
 All clear ? Let's get started with the assembly process!
@@ -37,6 +39,5 @@ All clear ? Let's get started with the assembly process!
 ---
 
 ::center
-::big-button{href="./torso-assembly" label="Start Assembly" icon="i-lucide-chevron-right" inline=true}
-::
+:big-button{href="./torso-assembly" label="Start Assembly" icon="i-lucide-chevron-right" inline=true}
 ::
