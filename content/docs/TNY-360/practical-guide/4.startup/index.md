@@ -26,9 +26,11 @@ There are three main steps in this section:
 [Configuration](./3.configuration.md) - Configure your TNY-360 settings and connect it to your network.
 ::
 
+---
+
 Once you have completed these steps, you will be ready to explore the world of your TNY-360!
 
----
+<br>
 
 ::center
 :big-button{href="./power-up" label="Start Setup" icon="i-lucide-chevron-right" inline=true}

@@ -126,7 +126,7 @@
                 <RichText path="education.hardware.title" />
             </h1>
             <div class="flex w-fit mx-auto border-3 border-white dark:border-slate-900 rounded-lg shadow-lg overflow-hidden">
-                <div class="flex flex-col space-y-1 bg-white bg-slate-700">
+                <div class="flex flex-col space-y-1 bg-white dark:bg-slate-700">
                     <button class="space-y-4 px-8 py-12 bg-slate-100 dark:bg-slate-800 hover:bg-primary-600/10 dark:hover:bg-primary-600/10 transition-all border-primary-400 dark:border-primary-500"
                         @click="hardwareSelect = 1" :class="hardwareSelect === 1 ? 'lg:border-r-4' : 'border-r-0'">
                         <h1 class="text-2xl font-semibold"> <RichText path="education.hardware.manip.title" /> </h1>
@@ -144,11 +144,11 @@
                     </button>
                 </div>
                 <div class="hidden lg:flex relative w-4xl bg-white dark:bg-slate-900">
-                    <img src="" alt="Robust piece image" class="absolute top-0 left-0 w-full h-full transition-all flex justify-center items-center"
+                    <img src="/edu/robust-parts.png" alt="Robust piece image" class="absolute top-0 left-0 w-full h-full transition-all flex justify-center items-center rounded ml-1"
                         :class="hardwareSelect === 1? 'opacity-100' : 'opacity-0'">
-                    <img src="" alt="Printable piece image" class="absolute top-0 left-0 w-full h-full transition-all flex justify-center items-center"
+                    <img src="/edu/printable.png" alt="Printable piece image" class="absolute top-0 left-0 w-full h-full transition-all flex justify-center items-center rounded ml-1"
                         :class="hardwareSelect === 2? 'opacity-100' : 'opacity-0'">
-                    <img src="" alt="Movable robot image" class="absolute top-0 left-0 w-full h-full transition-all flex justify-center items-center"
+                    <img src="" alt="Movable robot image" class="absolute top-0 left-0 w-full h-full transition-all flex justify-center items-center rounded ml-1"
                         :class="hardwareSelect === 3? 'opacity-100' : 'opacity-0'">
                 </div>
             </div>

@@ -36,7 +36,7 @@ If you have any questions or need help during the assembly, don't hesitate to re
 
 All clear ? Let's get started with the assembly process!
 
----
+<br>
 
 ::center
 :big-button{href="./torso-assembly" label="Start Assembly" icon="i-lucide-chevron-right" inline=true}

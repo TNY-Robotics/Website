@@ -4,8 +4,6 @@ In this section, we will cover the process of placing the heat inserts into the 
 
 ---
 
-:in-progress
-
 ## Why heat inserts
 
 There's a couple of ways to assemble 3D printed parts and components together (clips, screws directly into plastic, nuts & bolts, etc.).
@@ -17,6 +15,8 @@ but the plastic threads tend to wear out and become loose if you disassemble and
 We want the TNY-360 to be easily maintainable and upgradable, so we opted for heat inserts on the parts that are likely to be disassembled multiple times during the robot's life (like the torso, legs, and head).
 
 This method also has the advantage of working regardless of the printer's precision and the quality of the print, while still providing a strong and durable assembly, making assembly easier for everyone.
+
+---
 
 ## Heat Inserts Guide
 

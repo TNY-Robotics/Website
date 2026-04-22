@@ -41,7 +41,7 @@ export default defineI18nLocale(async (locale) => ({
         },
         release: {
             title: 'Date de sortie estimée',
-            date: 'Fin Mars 2026',
+            date: 'Fin Mai 2026',
         },
     },
     qr: {

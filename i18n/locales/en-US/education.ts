@@ -56,7 +56,7 @@ export default {
             description: 'Robust structure and low-cost sacrificial parts.',
         },
         fixable: {
-            title: '[hl](Infinitely repairable)',
+            title: 'Infinitely [hl](repairable)',
             description: 'STL files provided. Printable parts in the classroom.',
         },
         mobile: {

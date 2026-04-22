@@ -32,7 +32,7 @@ Here's a quick breakdown of what you'll find in this section:
 
 Ready to start ? Let's dive into the sourcing and preparation process !
 
----
+<br>
 
 ::center
 :big-button{href="./components" label="Start Sourcing" icon="i-lucide-chevron-right" inline=true}
