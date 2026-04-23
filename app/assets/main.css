@@ -45,3 +45,7 @@ button {
 .bd {
     @apply font-bold;
 }
+
+.link {
+    @apply text-primary underline;
+}

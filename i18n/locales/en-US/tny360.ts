@@ -1,3 +1,5 @@
+import { en } from "@nuxt/ui/runtime/locale/index.js";
+
 export default {
     name: 'TNY - 360',
     title: 'Discover our TNY-360 Robot Dog',
@@ -26,6 +28,24 @@ export default {
             desc: 'You can find all the resources, code and models on the',
             link: 'GitHub repository',
         },
+    },
+    engineering:  {
+        title: 'Small form factor, [hl](Monster Engineering).',
+        closedLoop: {
+            title: 'No more blind servos',
+            desc: 'We hacked MG996R servos with a custom PCB. The result? Perfect and noise-free position feedback for 200Hz control.',
+            cta: 'See the tutorial',
+        },
+        wiring: {
+            title: 'A modular architecture',
+            desc: 'No more Dupont cables ripping off. The TNY-360 relies on an ecosystem of 6 interconnected PCBs with secure JST-PH connectors',
+            cta: 'Discover the electronics',
+        },
+        extension: {
+            title: 'Extend its capabilities',
+            desc: 'Plug your own physical modules (robotic arms, sensors) directly into the dorsal port exposing power and the I2C bus.',
+            cta: 'Create an extension',
+        }
     },
     learn: {
         title: 'Start learning [hl](at any level)!',

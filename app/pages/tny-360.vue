@@ -1,7 +1,8 @@
 <template>
     <div class="space-y-48 pb-64">
-        <section class="relative flex w-full h-fit px-4 lg:px-24 pt-8 bg-white dark:bg-slate-900">
+        <section class="relative flex w-full h-fit px-4 lg:px-24 pt-8 bg-white dark:bg-slate-900 overflow-hidden">
             <div class="absolute top-0 left-0 w-full h-full bg-header-gradient"></div>
+            <img src="/tny-360-wireframe.svg" class="absolute -bottom-[10%] -right-[50%] xl:-bottom-[20%] xl:-right-[25%]" />
             <div
                 class="flex flex-col w-full lg:w-1/2 space-y-4 justify-center items-center lg:items-start py-32 lg:py-48 z-20">
                 <h1 class="whitespace-nowrap text-5xl lg:text-7xl font-extrabold text-center lg:text-start">
@@ -16,9 +17,8 @@
             </div>
         </section>
 
-        <section class="px-4 lg:px-8">
-            <div
-                class="flex items-center w-full min-h-[75vh] h-fit md:h-[75vh] bg-white border-2 border-slate-200 dark:border-slate-700 dark:bg-slate-900 overflow-hidden rounded-lg">
+        <section class="px-4 lg:px-8 space-y-8">
+            <div class="flex items-center w-full min-h-[75vh] h-fit md:h-[75vh] bg-white border-2 border-slate-200 dark:border-slate-700 dark:bg-slate-900 overflow-hidden rounded-lg">
                 <div class="flex flex-col items-center w-full space-y-12 py-16">
                     <h2 class="subtitle text-center px-4">
                         <RichText path="tny360.features.title" />
@@ -66,25 +66,75 @@
                         </div>
                     </div>
                 </div>
-                <div
-                    class="hidden xl:flex flex-col w-full h-full -skew-x-12 bg-primary-400 translate-x-20 shadow-2xl border-l-4 border-primary-500 dark:border-primary-400">
+                <div class="hidden xl:flex flex-col w-full h-full -skew-x-12 bg-primary-300 translate-x-20 shadow-2xl border-l-4 border-primary-500 dark:border-primary-400">
                     <div class="flex justify-center items-center skew-x-12 grow">
                         <img src="/tny-360.png" alt="" class="translate-y-4 drop-shadow-lg w-[80%]">
                     </div>
                 </div>
             </div>
 
-            <div class="w-full text-center pl-1 py-8 space-y-4">
-                <h2 class="subtitle">
-                    <RichText path="tny360.features.takeALook.title" />
-                </h2>
-                <p class="text-lg">
-                    <RichText path="tny360.features.takeALook.desc" />
-                    <NuxtLink target="_blank" to="https://github.com/tny-robotics/tny-360"
-                        class="text-primary underline px-1">
-                        <RichText path="tny360.features.takeALook.link" />
-                    </NuxtLink>.
-                </p>
+            <div class="flex flex-col md:flex-row w-fit mx-auto space-x-4">
+                <div class="w-fit mx-auto">
+                    <UIcon size="6em" name="uil:github" />
+                </div>
+                <div class="w-min space-y-2 text-left">
+                    <h2 class="subtitle whitespace-nowrap">
+                        <RichText path="tny360.features.takeALook.title" />
+                    </h2>
+                    <p class="text-lg">
+                        <RichText path="tny360.features.takeALook.desc" />
+                        <NuxtLink target="_blank" to="https://github.com/tny-robotics/tny-360"
+                            class="text-primary underline px-1">
+                            <RichText path="tny360.features.takeALook.link" />
+                        </NuxtLink>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="flex flex-col py-16 min-h-[75vh] space-y-12">
+            <h2 class="subtitle text-center px-4">
+                <RichText path="tny360.engineering.title" />
+            </h2>
+            <div class="flex flex-col lg:flex-row justify-evenly items-center gap-4 px-4">
+                <div class="lg:w-1/4 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-xl p-6 shadow-lg flex flex-col space-y-4">
+                    <UIcon name="i-lucide-gauge" size="2.2em" class="text-primary" />
+                    <h3 class="subsubtitle">
+                        <RichText path="tny360.engineering.closedLoop.title" />
+                    </h3>
+                    <p class="text-slate-700 dark:text-slate-200 grow">
+                        <RichText path="tny360.engineering.closedLoop.desc" />
+                    </p>
+                    <UButton to="/docs/tny-360/anatomy/electronics/mg996r-mod" variant="soft" size="lg" class="w-fit">
+                        <RichText path="tny360.engineering.closedLoop.cta" />
+                    </UButton>
+                </div>
+
+                <div class="lg:w-1/4 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-xl p-6 shadow-lg flex flex-col space-y-4">
+                    <UIcon name="i-lucide-cable" size="2.2em" class="text-primary" />
+                    <h3 class="subsubtitle">
+                        <RichText path="tny360.engineering.wiring.title" />
+                    </h3>
+                    <p class="text-slate-700 dark:text-slate-200 grow">
+                        <RichText path="tny360.engineering.wiring.desc" />
+                    </p>
+                    <UButton to="/docs/tny-360/anatomy/electronics" variant="soft" size="lg" class="w-fit">
+                        <RichText path="tny360.engineering.wiring.cta" />
+                    </UButton>
+                </div>
+
+                <div class="lg:w-1/4 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-xl p-6 shadow-lg flex flex-col space-y-4">
+                    <UIcon name="i-lucide-puzzle" size="2.2em" class="text-primary" />
+                    <h3 class="subsubtitle">
+                        <RichText path="tny360.engineering.extension.title" />
+                    </h3>
+                    <p class="text-slate-700 dark:text-slate-200 grow">
+                        <RichText path="tny360.engineering.extension.desc" />
+                    </p>
+                    <UButton to="/docs/tny-360/development-modding/physical-extensions" variant="soft" size="lg" class="w-fit">
+                        <RichText path="tny360.engineering.extension.cta" />
+                    </UButton>
+                </div>
             </div>
         </section>
 
@@ -97,9 +147,12 @@
                 <div class="flex w-full justify-evenly">
                     <div v-for="platform in platforms" :key="platform.type"
                         class="flex flex-col bg-white dark:bg-slate-700 border-2 border-slate-200 dark:border-slate-600 rounded-lg p-4 pt-8 text-center space-y-8 w-1/6 min-w-64 lg:min-w-75 m-4 shadow-lg card">
-                        <h3 class="subsubtitle text-primary">
-                            {{ platform.title }}
-                        </h3>
+                        <div class="text-center space-y-4">
+                            <UIcon :name="'i-lucide-' + platform.icon" size="3em" class="text-primary" />
+                            <h3 class="subsubtitle text-primary">
+                                {{ platform.title }}
+                            </h3>
+                        </div>
                         <div>
                             <p> {{ platform.description }} </p>
                         </div>
@@ -361,6 +414,7 @@ const { openModal } = useNewsletter();
 const platforms = computed(() => ([
     {
         type: 'blocks',
+        icon: 'layout-template',
         link: '/soft',
         title: t('tny360.learn.desktop.title'),
         description: t('tny360.learn.desktop.desc'),
@@ -368,6 +422,7 @@ const platforms = computed(() => ([
     },
     {
         type: 'python',
+        icon: 'chart-no-axes-gantt',
         link: '/docs/tny-360/development-modding/software-development/python',
         title: t('tny360.learn.python.title'),
         description: t('tny360.learn.python.desc'),
@@ -375,6 +430,7 @@ const platforms = computed(() => ([
     },
     {
         type: 'ros2',
+        icon: 'bot',
         link: '/docs/tny-360/development-modding/software-development/ros2',
         title: t('tny360.learn.ros2.title'),
         description: t('tny360.learn.ros2.desc'),
@@ -382,6 +438,7 @@ const platforms = computed(() => ([
     },
     {
         type: 'esp32',
+        icon: 'microchip',
         link: '/docs/tny-360/anatomy/firmware/',
         title: t('tny360.learn.esp32.title'),
         description: t('tny360.learn.esp32.desc'),

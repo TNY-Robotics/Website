@@ -27,6 +27,24 @@ export default {
             link: 'dépôt GitHub',
         },
     },
+    engineering:  {
+        title: 'Petit format, [hl](Ingénierie monstre).',
+        closedLoop: {
+            title: 'Fini les servos aveugles',
+            desc: 'Nous avons hacké des servos MG996R avec un PCB maison. Le résultat ? un retour de position parfait et sans parasite pour un contrôle à 200Hz.',
+            cta: 'Voir le tutoriel',
+        },
+        wiring: {
+            title: 'Une architecture modulaire',
+            desc: 'Plus de câbles Dupont qui s\'arrachent. Le TNY-360 repose sur un écosystème de 6 PCBs interconnectés par des prises JST-PH sécurisées',
+            cta: 'Découvrir l\'électronique',
+        },
+        extension: {
+            title: 'Étendez ses capacités',
+            desc: 'Branchez vos propres modules physiques (bras robotique, capteurs) directement sur le port dorsal exposant l\'alimentation et le bus I2C.',
+            cta: 'Créer une extension',
+        }
+    },
     learn: {
         title: 'Commences à apprendre [hl](à n\'importe quel niveau) !',
         mobile: {
