@@ -66,7 +66,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="hidden xl:flex flex-col w-full h-full -skew-x-12 bg-primary-300 translate-x-20 shadow-2xl border-l-4 border-primary-500 dark:border-primary-400">
+                <div class="hidden xl:flex flex-col w-full h-full -skew-x-12 bg-primary-300 dark:bg-primary-400 translate-x-20 shadow-2xl border-l-4 border-primary-500 dark:border-primary-400">
                     <div class="flex justify-center items-center skew-x-12 grow">
                         <img src="/tny-360.png" alt="" class="translate-y-4 drop-shadow-lg w-[80%]">
                     </div>
