@@ -35,12 +35,17 @@ const props = defineProps<{
     root?: boolean;
 }>();
 
+const VERSION_REGEX = /v(\d+\.)+\d+$/;
+function fileNameWithoutVersion(path: string) {
+    return path.replace(VERSION_REGEX, '');
+}
+
 function isSelected(item?: DocItem) {
     if (!item) return false;
     if (!props.currentPath) return false;
 
-    const path = item.path?.toLowerCase();
-    const curr = props.currentPath.toLowerCase();
+    const path = fileNameWithoutVersion(item.path?.toLowerCase() || '');
+    const curr = fileNameWithoutVersion(props.currentPath.toLowerCase());
     return path === '/'+curr ||
         path === curr ||
         path+'/index' === '/'+curr ||

@@ -85,12 +85,15 @@
                     </UInput>
                 </div>
             </div>
-            <div class="flex w-full max-w-[64em] mx-auto pb-8">
+            <div class="relative flex w-full max-w-[64em] mx-auto pb-8">
                 <ContentRenderer v-if="page" :value="page" :prose="true" class="w-full" />
                 <div v-else class="w-full p-4 text-center">
                     <h1 class="text-2xl font-semibold"> {{ $t('docs.docNotFound.title') }} </h1>
                     <p class="mt-2 text-lg"> {{ $t('docs.docNotFound.description') }} </p>
                     <UButton @click="router.back()" :label="$t('docs.back')" class="mt-8" icon="i-lucide-chevron-left" />
+                </div>
+                <div v-if="fileVersions.length > 0" class="absolute top-0 right-0">
+                    <USelect :items="fileVersions.map(v => ({label: v.version, value: v.path}))" class="w-48" @update:model-value="(val) => router.push(val)" :model-value="page?.path" />
                 </div>
             </div>
         </div>
@@ -101,6 +104,13 @@
 const { t, locale } = useI18n();
 const route = useRoute();
 const router = useRouter();
+
+const VERSION_REGEX = /v(\d+\.)+\d+$/;
+
+interface FileVersionResult {
+    path: string;
+    version: string;
+}
 
 let path = route.path.toLowerCase();
 
@@ -150,6 +160,28 @@ const filePathArray = computed(() => {
     return formattedParts.splice(1);
 });
 
+// Get file infos and find if there's different versions
+const fileVersions = ref<Array<FileVersionResult>>([]);
+if (isVersionedFile(path)) {
+    fileVersions.value = findVersionedFiles(path);
+}
+
+/// FUNCTIONS AND METHODS
+
+function isVersionedFile(path: string) {
+    return VERSION_REGEX.test(path);
+}
+
+function fileNameWithoutVersion(path: string) {
+    return path.replace(VERSION_REGEX, '');
+}
+
+function findVersionedFiles(path: string) {
+    const filepath = isVersionedFile(path) ? fileNameWithoutVersion(path) : path;
+    const results = allPages.value?.filter(p => p.path.startsWith(filepath) && isVersionedFile(p.path));
+    return results ? results.map(p => ({path: p.path, version: p.path.match(VERSION_REGEX) ? p.path.match(VERSION_REGEX)![0] : 'No version'} as FileVersionResult)) : [];
+}
+
 function buildDocTree(pages: Array<any>) : DocFolder {
     const root: DocFolder = {
         isFolder: true,
@@ -192,6 +224,13 @@ function buildDocTree(pages: Array<any>) : DocFolder {
 
         // now that we have the folder in currentFolder, create the file in it (if it's not the folder's index file)
         if (!page.id.endsWith('index.md')) {
+            // little check for versioning : if versions exists, only add the last version in the tree
+            if (isVersionedFile(page.path)) {
+                const allVersions = findVersionedFiles(page.path);
+                const lastVersion = allVersions.length > 0 ? allVersions[allVersions.length - 1]?.path : page.path;
+                if (lastVersion !== page.path) return; // not the last version. skip
+            }
+
             currentFolder.children.push({
                 isFolder: false,
                 name: page.title,
@@ -240,6 +279,8 @@ function findNodeByPath(node: DocFolder, path: string): DocFolder | DocFile | nu
                 return found;
             }
         } else if (child.path?.toLowerCase() === path.toLowerCase()) {
+            return child;
+        } else if (fileNameWithoutVersion(child.path?.toLowerCase() || '') === fileNameWithoutVersion(path.toLowerCase())) {
             return child;
         }
     }
