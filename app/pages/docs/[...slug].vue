@@ -334,7 +334,14 @@ watch(searchQuery, (newVal) => {
             const results = allPages.value?.filter(page => {
                 const title = page.title?.toString().toLowerCase() || '';
                 const description = page.description?.toString().toLowerCase() || '';
-                return title.includes(query) || description.includes(query);
+                if (!title.includes(query) && !description.includes(query)) return false;
+                // keep last version only
+                if (isVersionedFile(page.path)) {
+                    const allVersions = findVersionedFiles(page.path);
+                    const lastVersion = allVersions.length > 0 ? allVersions[allVersions.length - 1]?.path : page.path;
+                    return lastVersion === page.path;
+                }
+                return true;
             });
             searchResults.value = results?.map(page => ({
                 id: page.id,
