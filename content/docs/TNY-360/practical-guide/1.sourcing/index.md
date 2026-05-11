@@ -25,6 +25,9 @@ Here's a quick breakdown of what you'll find in this section:
 - [**PCB Soldering**](./pcb-soldering)<br>
     You'll see what components need to be soldered on each PCB, where to solder them, and how to do it.
 
+- [**Component Preparation**](./preparing)<br>
+    You'll solder the connectors to the components, make custom cables, and prepare everything for the assembly phase.
+
 - [**Firmware Flashing**](./flashing)<br>
     You'll learn how to flash the firmware onto the microcontroller using the recommended tools and settings.
 
