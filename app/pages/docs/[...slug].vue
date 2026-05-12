@@ -1,13 +1,13 @@
 <template>
     <div class="flex grow pt-24 px-2 pb-2 space-x-2">
         <!-- mobile side bar -->
-        <div class="absolute top-22 w-full h-full bg-slate-700 z-20 transition-all" :style="sideBarOpen? 'left: 0px; opacity: 1;': 'left: -100%; opacity: 0;'">
-            <div class="flex flex-col w-full h-fit p-2 space-y-4">
+        <div class="absolute top-22 w-full h-full-22 bg-slate-700 z-20 transition-all" :style="sideBarOpen? 'left: 0px; opacity: 1;': 'left: -100%; opacity: 0;'">
+            <div class="flex flex-col w-full h-full max-h-full min-h-0 p-2 space-y-4">
                 <div>
                     <h1 class="text-xl font-semibold pt-2 text-center"> {{ $t('docs.table') }} </h1>
                     <UButton icon="i-lucide-x" variant="ghost" color="neutral" class="absolute top-3 right-2" @click="closeSidebar" /> 
                 </div>
-                <div>
+                <div class="h-full max-h-full overflow-y-auto">
                     <DocTreeView :tree="(tree.children[0] as DocFolder)" :root="true" :current-path="page?.path" />
                 </div>
             </div>
@@ -424,3 +424,9 @@ function closeSidebar() {
 }
 
 </script>
+
+<style scoped>
+.h-full-22 {
+    height: calc(100vh - 5.5rem);
+}
+</style>
