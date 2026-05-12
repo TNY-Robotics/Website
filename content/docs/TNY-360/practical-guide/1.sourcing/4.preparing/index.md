@@ -56,8 +56,8 @@ Devices with a **L/R** (Left-Right) pin will have this pin connected to the **GN
 
 Here's the components and boards you'll solder in this section :
 
-- [**The Buttons**](./buttons)<br>
-    You'll solder a JST-PH 3-pin connector to the pins of the two buttons.
+- [**The Touch Sensors**](./buttons)<br>
+    You'll solder a JST-PH 3-pin connector to the pins of the two touch sensors.
 
 - [**The Screen**](./screen)<br>
     You'll solder a JST-PH 4-pin connector to the pins of the screen.
