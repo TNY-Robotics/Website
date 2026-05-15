@@ -84,4 +84,4 @@ Here's the components and boards you'll solder in this section :
 
 Ready to solder? Let's start with the buttons, then!
 
-:nav-buttons{right="The Buttons" right-link="./buttons" right-icon="i-lucide-chevron-right"}
+:nav-buttons{left="The Main PCB" left-link="../pcb-soldering/main.v1.1" left-icon="i-lucide-chevron-left" right="The Buttons" right-link="./buttons" right-icon="i-lucide-chevron-right"}
