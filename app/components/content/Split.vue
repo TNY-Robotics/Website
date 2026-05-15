@@ -1,9 +1,9 @@
 <template>
 <div class="flex flex-col md:flex-row md:space-x-4 items-center">
-    <div :class="side==='right'? 'w-full' : 'w-full md:w-1/2 justify-center items-center text-center flex'">
+    <div :class="side==='right'? 'w-full' : 'w-full md:w-1/2 justify-center items-center text-center flex flex-col'">
         <slot name="left" />
     </div>
-    <div :class="side==='left'? 'w-full' : 'w-full md:w-1/2 justify-center items-center text-center flex'">
+    <div :class="side==='left'? 'w-full' : 'w-full md:w-1/2 justify-center items-center text-center flex flex-col'">
         <slot name="right" />
     </div>
 </div>
