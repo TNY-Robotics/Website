@@ -48,6 +48,35 @@ This will help you get a feel for the process and avoid any potential mistakes o
 
 ---
 
+## Section overview
+
+There's multiple parts of the robot that require heat inserts. We will go through each of them one by one, starting with the simplest one and ending with the most complex one.
+
+Here's a list of the parts you'll be working on in this section:
+
+- [**The Back**](./back)<br>
+    You'll add 3 small heat inserts at the back of the robot to hold the Power Board in place.
+
+- [**The Universal Mount**](./mount)<br>
+    The universal mount has 2 heat inserts for its PCB, as well as 4 bigger heat inserts for the mounting holes.
+
+- [**The Torso - Top**](./torso-top)<br>
+    You'll place the 4 heat inserts required for the universal mount to screw in place.
+
+- [**The Torso - Bottom**](./torso-bottom)<br>
+    This part is the the one with the most heat inserts and different sizes (2mm, 4mm, 6mm).
+
+- [**The Shoulders**](./shoulders)<br>
+    The shoulders have only 2 small heat inserts to place, but their placement has to be precise.
+
+- [**The Head**](./head)<br>
+    You'll place the 4 heat inserts on the back and the 10 heat inserts on the visor.
+
+- [**The Ears**](./ears)<br>
+    The ears are the simplest parts to work on, just to finish on a very easy note.
+
+---
+
 Feeling ready ? Let's start putting some heat inserts in the robot !
 
 :nav-buttons{right="The Back" right-link="./back" right-icon="i-lucide-chevron-right"}
