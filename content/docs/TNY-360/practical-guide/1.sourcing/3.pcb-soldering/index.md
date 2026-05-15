@@ -54,6 +54,32 @@ Use a **soldering iron with a fine tip**, and some **solder flux**. Place the so
 
 ---
 
+## Section overview
+
+In this section, we'll go through 6 different PCBs. Starting from the simplest one, and ending with the most complex one.
+
+Here's all the PCBs you'll be working on in this section:
+
+- [**The Plug PCB**](./plug)<br>
+    We'll start with this simple PCB that uses only through-hole components.
+
+- [**The Paw PCBs**](./paw)<br>
+    These PCBs are a bit more complex, as they use both through-hole and SMD components.
+
+- [**The Power PCB**](./power)<br>
+    For this PCB, you'll be soldering SMD components, but also some big through-hole components.
+
+- [**The Analog Reader**](./reader.v1.1)<br>
+    This PCB uses a lot of SMD components, which will get you used to soldering them.
+
+- [**The Motor Driver**](./driver)<br>
+    The Motor Driver PCB uses a couple of fine-pitch SMD components, which are a bit more challenging to solder.
+
+- [**The Main PCB**](./main.v1.1)<br>
+    This Board is the most complex one, with fine-pitch connectors, lots of components and connectors.
+
+---
+
 Now that you know how to solder the PCBs, let's solder the boards!
 
 ::nav-buttons{right="The Plug PCB" right-link="./plug" right-icon="i-lucide-chevron-right"}
