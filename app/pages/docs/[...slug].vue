@@ -23,7 +23,7 @@
         </div>
         <Divider vertical class="hidden lg:flex" />
         <div class="flex flex-col grow w-full space-y-4">
-            <div v-if="page" class="flex w-full h-fit rounded-lg bg-white dark:bg-slate-900 p-4">
+            <div v-if="page" class="flex flex-wrap w-full h-fit rounded-lg bg-white dark:bg-slate-900 p-4">
                 <div class="flex items-center pr-4">
                     <UButton icon="i-lucide-list-indent-increase" variant="ghost" color="neutral" class="lg:hidden" @click="openSidebar" />
                 </div>
@@ -38,7 +38,7 @@
                         <UIcon v-if="index < filePathArray.length-1" name="i-lucide-chevron-right" class="w-4 h-4 mx-2" />
                     </div>
                 </div>
-                <div class="items-center justify-end grow hidden xl:flex">
+                <div class="items-center justify-end grow hidden lg:flex">
                     <UInput ref="searchInput" type="text" :placeholder="$t('docs.search')" icon="i-lucide-search" :class="searchFocused? 'w-96': 'w-64'"
                         class="transition-all max-w-full" @focus="searchFocused = true" @blur="onSearchBlur"
                         v-model:model-value="searchQuery" :loading="searchLoading"
@@ -46,7 +46,7 @@
                         <template #trailing>
                             <UKbd value="/" />
                         </template>
-                        <div v-if="searchFocused" class="z-20 show-down absolute w-full h-fit left-0 top-10 bg-white dark:bg-slate-900 rounded-lg shadow-lg overflow-hidden">
+                        <div v-if="searchMenuOpen" class="z-20 show-down absolute w-full h-fit left-0 top-10 bg-white dark:bg-slate-900 rounded-lg shadow-lg overflow-hidden">
                             <div class="overflow-y-auto h-full max-h-128">
                                 <div v-if="(searchResults !== undefined && searchResults !== null) && searchResults?.length" class="flex flex-col space-y-2 h-fit min-h-fit p-2">
                                     <div v-for="(item, index) in searchResults" :key="item.id"
@@ -312,12 +312,19 @@ function onSearchBlur() { // set timeout to allow click event to register
     setTimeout(() => { searchFocused.value = false }, 50);
 }
 
+const searchMenuOpen = ref(false);
 watch (searchFocused, (newVal) => {
     if (!newVal) {
-        searchQuery.value = '';
-        searchResults.value = undefined;
-        searchCursor.value = -1;
+        setTimeout(() => { // delay to allow click event to register
+            searchMenuOpen.value = false;
+        }, 20);
+        setTimeout(() => {
+            searchQuery.value = '';
+            searchResults.value = undefined;
+            searchCursor.value = -1;
+        }, 200);
     }
+    else searchMenuOpen.value = true;
 });
 
 watch(searchQuery, (newVal) => {

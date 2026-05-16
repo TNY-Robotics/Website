@@ -28,6 +28,9 @@ Here's a quick breakdown of what you'll find in this section:
 - [**Component Preparation**](./preparing)<br>
     You'll solder the connectors to the components, make custom cables, and prepare everything for the assembly phase.
 
+- [**Motor Modification**](./motors)<br>
+    You'll modify all the motors to add position feedback capabilities to them. 
+
 - [**Firmware Flashing**](./flashing)<br>
     You'll learn how to flash the firmware onto the microcontroller using the recommended tools and settings.
 
