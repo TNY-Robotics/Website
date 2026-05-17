@@ -13,21 +13,36 @@ Take your time, follow the steps carefully, and let's put your quadruped togethe
 
 ---
 
+## Tools and materials needed
+
+Before we dive into the assembly, make sure you have the following tools and materials ready:
+
+- A Phillips screwdriver (size `PH1` and `PH000` or `PH00`)
+
+
+## Section overview
+
 This guide is structured in 5 main steps :
 
-- [**Torso assembly**](./torso-assembly)<br>
+- [**Torso Assembly**](./torso)<br>
     You will assemble the core of the robot, mount the PCBs and wire up all the motors and power components.
 
-- [**Head assembly**](./head-assembly)<br>
+- [**Head Assembly**](./head)<br>
     You will assemble the head of the robot, mount the Main PCB and wire up all the visor components.
 
-- [**First power up**](./first-power-up)<br>
-    You will power up the robot for the first time and perform the *zero motor* calibration, to ensure all the motors are centered before mounting the legs and ears.
+- [**Front-Left Leg Assembly**](./leg-fl)<br>
+    You will assemble and mount the front-left leg, including the shoulder, and add the aesthetic covers.
 
-- [**Legs & ears assembly**](./legs-ears-assembly)<br>
-    You will assemble and mount the legs and ears to the body to complete the robot's physical structure.
+- [**Back-Left Leg Assembly**](./leg-bl)<br>
+    You will assemble and mount the back-left leg, the same way as the front-left leg.
 
-- [**Cables & aesthetic**](./cables-aesthetic)<br>
+- [**Back-Right Leg Assembly**](./leg-br)<br>
+    You will assemble and mount the back-right leg, the same way as the front-left leg.
+
+- [**Front-Right Leg Assembly**](./leg-fr)<br>
+    You will assemble and mount the front-right leg, the same way as the front-left leg.
+
+- [**Final Assembly**](./final)<br>
     You will route and secure all the cables inside the chassis, and install the aesthetic covers to give your TNY-360 its final look.
 
 ---
@@ -39,5 +54,5 @@ All clear ? Let's get started with the assembly process!
 <br>
 
 ::center
-:big-button{href="./torso-assembly" label="Start Assembly" icon="i-lucide-chevron-right" inline=true}
+:big-button{href="./torso" label="Start Assembly" icon="i-lucide-chevron-right" inline=true}
 ::
