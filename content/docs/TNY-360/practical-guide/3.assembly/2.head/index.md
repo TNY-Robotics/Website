@@ -10,11 +10,19 @@ So take your time to follow the instructions carefully and make sure everything 
 
 ## Section overview
 
+Here's a quick overview of the sections in this chapter:
+
 - [**Assembling the Visor**](./visor)<br>
-    Description text
+    We'll first assemble the visor, which is the part that holds most of the sensors, the screen, and the main board.
 
 - [**Attaching to the Torso**](./torso)<br>
-    Description text
+    We'll then attach the head to the torso, adding the speaker and ear motors in the process.
 
 - [**Finishing the Head**](./final)<br>
-    Description text
+    Finally, we'll add the plastic covers and make sure everything is properly assembled and looking good.
+
+---
+
+Ready to give your robot a head ? Let's get started !
+
+:nav-buttons{left="Wiring Everything" left-link="../torso/wiring" left-icon="i-lucide-chevron-left" right="Assembling the Visor" right-link="./visor" right-icon="i-lucide-chevron-right"}
