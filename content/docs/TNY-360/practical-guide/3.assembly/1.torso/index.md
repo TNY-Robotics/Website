@@ -6,6 +6,10 @@ It will hold all the main PCBs, motors, and other power components (and a lot of
 
 ---
 
+## Preparation
+
+This whole section is about the torso, so make sure you have the `Torso-Bottom` part ready to go before starting !
+
 ## Section overview
 
 Here's a quick overview of the sections in this chapter:
