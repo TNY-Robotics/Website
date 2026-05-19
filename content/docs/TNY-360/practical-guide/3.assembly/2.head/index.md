@@ -21,6 +21,9 @@ Here's a quick overview of the sections in this chapter:
 - [**Finishing the Head**](./final)<br>
     Finally, we'll add the plastic covers and make sure everything is properly assembled and looking good.
 
+- [**Assembling the Ears**](./ears)<br>
+    In the last section, we'll assemble the ears and attach them to the head.
+
 ---
 
 Ready to give your robot a head ? Let's get started !
