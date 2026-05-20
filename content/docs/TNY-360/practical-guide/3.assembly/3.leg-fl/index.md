@@ -25,6 +25,9 @@ Here's a quick overview of the sections in this chapter:
 - [**Adding the Plastic Covers**](./covers)<br>
     Finally, we'll add a couple of plastic covers to make the leg look nice and hide the wires and other components.
 
+- [**Wiring the Leg**](./wiring)<br>
+    Finally, we'll connect the leg to the rest of the robot and ensure everything is properly wired.
+
 ---
 
 Ready to make your first leg ? Let's get started !
