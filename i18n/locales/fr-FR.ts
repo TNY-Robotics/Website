@@ -52,11 +52,6 @@ export default defineI18nLocale(async (locale) => ({
         redirect: {
             title: 'Redirection...',
             content: 'Vous allez être redirigé vers la documentation correspondante.',
-        },
-        msg: {
-            title: 'Attendez un peu, ce n\'est pas encore là !',
-            content: 'Notre TNY-360 est [hl](encore en développement), donc ce QR Code n\'est pas encore actif.\nMais vous pouvez toujours [hl](rejoindre la liste d\'attente) pour être informé lorsqu\'il sera prêt !',
-            learnMore: 'En savoir plus sur le TNY-360'
         }
     },
     footer: (await import('./fr-FR/footer')).default,

@@ -52,11 +52,6 @@ export default defineI18nLocale(async (locale) => ({
         redirect: {
             title: 'Redirecting...',
             content: 'You will be redirected to the corresponding documentation.',
-        },
-        msg: {
-            title: 'Chill out, it\'s not done yet !',
-            content: 'Our TNY-360 is [hl](still in development), so this QR Code is not active yet.\nBut you can still [hl](join the waitlist) to be notified when it\'s ready!',
-            learnMore: 'Learn more about TNY-360'
         }
     },
     footer: (await import('./en-US/footer')).default,

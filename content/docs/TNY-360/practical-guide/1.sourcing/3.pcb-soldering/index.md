@@ -69,13 +69,13 @@ Here's all the PCBs you'll be working on in this section:
 - [**The Power PCB**](./power)<br>
     For this PCB, you'll be soldering SMD components, but also some big through-hole components.
 
-- [**The Analog Reader**](./reader.v1.1)<br>
+- [**The Analog Reader**](./reader)<br>
     This PCB uses a lot of SMD components, which will get you used to soldering them.
 
 - [**The Motor Driver**](./driver)<br>
     The Motor Driver PCB uses a couple of fine-pitch SMD components, which are a bit more challenging to solder.
 
-- [**The Main PCB**](./main.v1.1)<br>
+- [**The Main PCB**](./main)<br>
     This Board is the most complex one, with fine-pitch connectors, lots of components and connectors.
 
 ---
