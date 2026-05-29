@@ -153,8 +153,8 @@ export default {
             button: 'Obtenir les composants',
             features: {
                 1: 'Circuits imprimés assemblés',
-                2: 'Moteurs et composants détachés',
-                3: 'Visserie et guide d\'assemblage',
+                2: 'Composants & Moteurs sur-mesure',
+                3: 'Visserie et câbles',
             }
         },
         adventure: {
@@ -163,9 +163,9 @@ export default {
             button: 'Se lancer dans l\'aventure',
             features: {
                 1: 'Circuits imprimés assemblés',
-                2: 'Moteurs et composants détachés',
+                2: 'Composants & Moteurs sur-mesure',
                 3: 'Pièces 3D imprimées et préparées',
-                4: 'Visserie et guide d\'assemblage',
+                4: 'Visserie et câbles',
             }
         },
         ready: {
@@ -175,7 +175,7 @@ export default {
             features: {
                 1: 'Robot assemblé et calibré',
                 2: 'Guide de démarrage rapide',
-                3: 'Guide d\'assemblage / réparation',
+                3: 'Guide d\'assemblage & de réparation',
             }
         },
         notYetAvailable: 'Pas encore disponible',

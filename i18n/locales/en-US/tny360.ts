@@ -155,8 +155,8 @@ export default {
             button: 'Get the components',
             features: {
                 1: 'Custom PCBs assembled',
-                2: 'Motors and detached components',
-                3: 'Screws and assembly guide',
+                2: 'Components & Custom Motors',
+                3: 'Screws & Cables',
             }
         },
         adventure: {
@@ -165,9 +165,9 @@ export default {
             button: 'Start the adventure',
             features: {
                 1: 'Custom PCBs assembled',
-                2: 'Motors and detached components',
+                2: 'Components & Custom Motors',
                 3: '3D printed and prepared parts',
-                4: 'Screws and assembly guide',
+                4: 'Screws & Cables',
             }
         },
         ready: {
@@ -175,9 +175,9 @@ export default {
             desc: 'Order your TNY-360 now and receive it at home, fully assembled and calibrated!',
             button: 'Order now',
             features: {
-                1: 'Robot assembled and calibrated',
+                1: 'Robot assembled & calibrated',
                 2: 'Quick start guide',
-                3: 'Assembly / repair guide',
+                3: 'Assembly & Repair guide',
             }
         },
         notYetAvailable: 'Not yet available',

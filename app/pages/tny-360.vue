@@ -138,6 +138,11 @@
             </div>
         </section>
 
+        <!-- <video autoplay loop muted playsinline class="w-128">
+            <source src="/tny-360/screen.mp4" type="video/mp4; codecs=hevc">
+            <source src="/tny-360/screen.webm" type="video/webm">
+        </video> -->
+
         <section class="flex flex-col py-16 min-h-[75vh] space-y-12">
             <h2 class="subtitle text-center px-4">
                 <RichText path="tny360.learn.title" />
@@ -261,8 +266,8 @@
                     <div class="roadmap-block roadmap-done"> <RichText path="tny360.roadmap.hardware.step1" /> </div>
                     <span class="roadmap-line roadmap-line-done" />
                     <div class="roadmap-block roadmap-done"> <RichText path="tny360.roadmap.hardware.step2" /> </div>
-                    <span class="roadmap-line roadmap-line-inprogress" />
-                    <div class="roadmap-block roadmap-inprogress"> <RichText path="tny360.roadmap.hardware.step3" /> </div>
+                    <span class="roadmap-line roadmap-line-done" />
+                    <div class="roadmap-block roadmap-done"> <RichText path="tny360.roadmap.hardware.step3" /> </div>
                 </div>
                 <div class="roadmap-container">
                     <div class="roadmap-header">
@@ -271,10 +276,10 @@
                     </div>
                     <span class="roadmap-line roadmap-line-done" />
                     <div class="roadmap-block roadmap-done"> <RichText path="tny360.roadmap.doc.step1" /> </div>
+                    <span class="roadmap-line roadmap-line-done" />
+                    <div class="roadmap-block roadmap-done"> <RichText path="tny360.roadmap.doc.step2" /> </div>
                     <span class="roadmap-line roadmap-line-inprogress" />
-                    <div class="roadmap-block roadmap-inprogress"> <RichText path="tny360.roadmap.doc.step2" /> </div>
-                    <span class="roadmap-line roadmap-line-todo" />
-                    <div class="roadmap-block roadmap-todo"> <RichText path="tny360.roadmap.doc.step3" /> </div>
+                    <div class="roadmap-block roadmap-inprogress"> <RichText path="tny360.roadmap.doc.step3" /> </div>
                 </div>
             </div>
         </section>
@@ -287,8 +292,10 @@
 
             <div
                 class="flex flex-col xl:flex-row xl:flex-wrap justify-center items-center z-20 space-y-16 xl:space-y-0 xl:space-x-4 pt-8">
-                <div
-                    class="bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-xl xl:rounded-r-none xl:rounded-l-4xl shadow-lg flex flex-col w-full max-w-88 xl:max-w-full xl:w-96 p-4 py-12 space-y-8">
+                <div class="relative bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-xl xl:rounded-r-none xl:rounded-l-4xl shadow-lg flex flex-col w-full max-w-88 xl:max-w-full xl:w-96 p-4 py-12 space-y-8 overflow-hidden">
+                    <div class="absolute top-0 left-0 py-1 px-4 bg-slate-700 rounded-br-xl text-slate-300">
+                        BareBones
+                    </div>
                     <h3 class="subsubtitle text-center">
                         <RichText path="tny360.start.tinkerer.title" />
                     </h3>
@@ -312,8 +319,12 @@
                         </UButton>
                     </div>
                 </div>
-                <div
-                    class="relative shine xl:scale-110 bg-white dark:bg-slate-800 border-2 border-primary-500 dark:border-primary-500 rounded-lg shadow-lg flex flex-col w-full max-w-88 xl:max-w-full xl:w-100 p-4 py-12">
+                <div class="z-10 relative shine xl:scale-110 bg-white dark:bg-slate-800 border-2 border-primary-500 dark:border-primary-500 rounded-lg shadow-lg flex flex-col w-full max-w-88 xl:max-w-full xl:w-100 p-4 py-12">
+                    <div class="absolute top-0 left-0 right-0 flex justify-center">
+                        <div class="py-1 px-4 bg-slate-700 rounded-b-xl text-slate-300">
+                            Maker
+                        </div>
+                    </div>
                     <div class="absolute flex justify-center w-full top-0 left-0">
                         <p
                             class="-translate-y-full text-white bg-primary-500 bright px-4 py-1 rounded-t-lg w-fit font-extrabold text-lg text-center">
@@ -347,8 +358,10 @@
                         </div>
                     </div>
                 </div>
-                <div
-                    class="bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-xl xl:rounded-l-none xl:rounded-r-4xl shadow-lg flex flex-col w-full max-w-88 xl:max-w-full xl:w-96 p-4 py-12 space-y-8">
+                <div class="relative bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-xl xl:rounded-l-none xl:rounded-r-4xl shadow-lg flex flex-col w-full max-w-88 xl:max-w-full xl:w-96 p-4 py-12 space-y-8 overflow-hidden">
+                    <div class="absolute top-0 right-0 py-1 px-4 bg-slate-700 rounded-bl-xl text-slate-300">
+                        Ready2Run
+                    </div>
                     <h3 class="subsubtitle text-center">
                         <RichText path="tny360.start.ready.title" />
                     </h3>
@@ -447,9 +460,9 @@ const platforms = computed(() => ([
 ]));
 
 const prices = computed(() => ({
-    tinkerer: 179,
-    adventure: 249,
-    ready: 349,
+    tinkerer: 219,
+    adventure: 349,
+    ready: 499,
 }));
 
 const features = computed(() => ({
