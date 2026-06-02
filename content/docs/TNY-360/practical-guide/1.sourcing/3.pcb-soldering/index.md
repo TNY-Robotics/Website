@@ -8,7 +8,7 @@ In this guide, we will cover the basics of soldering the PCBs for the TNY-360, a
 
 Soldering Surface Mount Devices (SMD) is a bit more challenging than soldering through-hole components, but with the right tools and techniques, everyone can do it!
 
-First of all, make sure you have a good quality tools to tackle the job, such as the ones listed in the [Component Sourcing section](./components#_1-get-the-necessary-tools).
+First of all, make sure you have a good quality tools to tackle the job, such as the ones listed in the [Component Sourcing section](../components#_1-get-the-necessary-tools).
 
 ### SMD components packaging
 
