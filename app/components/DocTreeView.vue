@@ -1,12 +1,12 @@
 <template>
-    <div ref="rootElement" class="flex flex-col space-y-3 pt-3">
+    <div ref="rootElement" class="flex flex-col space-y-3 pt-3 min-w-0 max-w-full w-full">
         <template v-for="item in tree.children" :key="item.name">
-            <div v-if="item.isFolder" class="flex flex-col w-full">
+            <div v-if="item.isFolder" class="flex flex-col min-w-0 max-w-full w-full">
                 <NuxtLink
                     :to="item.path"
-                    class="flex space-x-4 w-full items-center justify-between"
+                    class="flex space-x-4 w-full items-center justify-between min-w-0 max-w-full w-full"
                 >
-                    <h2 class="hover:underline" :class="otherStyle(item) + ' ' + (root? 'font-extrabold text-xl' : 'font-medium')">{{ item.name }}</h2>
+                    <h2 class="whitespace-nowrap text-ellipsis min-w-0 max-w-full w-full overflow-hidden hover:underline" :class="otherStyle(item) + ' ' + (root? 'font-extrabold text-xl' : 'font-medium')">{{ item.name }}</h2>
                     <UButton v-if="item.children.length" icon="i-lucide-chevron-down" color="neutral"
                         @click="ev => onItemExpandClicked(ev, item)" size="xl" variant="link"
                         class="w-6 h-6 p-0 transition-all" :class="item.expanded?.value? '': 'rotate-90'" />
@@ -16,12 +16,12 @@
                         :class="root? '': 'border-l-2 border-slate-300 dark:border-slate-600'" />
                 </div>
             </div>
-            <div v-else>
+            <div v-else class="min-w-0 max-w-full w-full">
                 <NuxtLink
                     :to="item.path"
-                    class="font-medium hover:underline" :class="otherStyle(item)"
+                    class="" :class="otherStyle(item)"
                 >
-                    {{ item.name }}
+                    <p class="whitespace-nowrap text-ellipsis min-w-0 max-w-full w-full overflow-hidden font-medium hover:underline"> {{ item.name }} </p>
                 </NuxtLink>
             </div>
         </template>

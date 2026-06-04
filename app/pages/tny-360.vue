@@ -297,26 +297,29 @@
                         BareBones
                     </div>
                     <h3 class="subsubtitle text-center">
-                        <RichText path="tny360.start.tinkerer.title" />
+                        <RichText path="tny360.start.barebones.title" />
                     </h3>
                     <p class="flex text-center">
-                        <RichText path="tny360.start.tinkerer.desc" />
+                        <RichText path="tny360.start.barebones.desc" />
                     </p>
                     <div class="flex flex-col grow w-full items-center py-4 space-y-8">
-                        <p class="text-4xl font-extrabold"> <span class="text-primary">{{ prices['tinkerer'] }}</span> €
+                        <p class="text-4xl font-extrabold"> <span class="text-primary">{{ prices['barebones'] }}</span> €
                         </p>
                         <div class="flex flex-col space-y-2">
-                            <div v-for="feature in features['tinkerer']" class="flex items-center space-x-2">
+                            <div v-for="feature in features['barebones']" class="flex items-center space-x-2">
                                 <UIcon name="i-lucide-check" size="1em" class="text-primary" />
                                 <span> {{ feature }} </span>
                             </div>
+                            <UButton variant="link" class="w-fit p-0" to="/docs/tny-robotics/products/tny-360-barebones-kit-founders-edition" trailing icon="lucide:arrow-right"> {{ $t('tny360.start.completeList') }} </UButton>
                         </div>
                     </div>
                     <div class="flex w-full justify-center pt-4">
-                        <UButton disabled class="w-fit" variant="subtle" size="xl">
-                            <!-- <RichText path="tny360.start.tinkerer.button" /> -->
-                            <RichText path="tny360.start.notYetAvailable" />
-                        </UButton>
+                        <UTooltip :text="$t('tny360.start.restock')">
+                            <UButton disabled class="w-fit" variant="subtle" size="xl">
+                                <!-- <RichText path="tny360.start.barebones.button" /> -->
+                                <RichText path="tny360.start.outOfStock" />
+                            </UButton>
+                        </UTooltip>
                     </div>
                 </div>
                 <div class="z-10 relative shine xl:scale-110 bg-white dark:bg-slate-800 border-2 border-primary-500 dark:border-primary-500 rounded-lg shadow-lg flex flex-col w-full max-w-88 xl:max-w-full xl:w-100 p-4 py-12">
@@ -334,27 +337,29 @@
                     <div class="shine-background" />
                     <div class="space-y-8 z-20">
                         <h3 class="subsubtitle text-center">
-                            <RichText path="tny360.start.adventure.title" />
+                            <RichText path="tny360.start.maker.title" />
                         </h3>
                         <p class="flex text-center">
-                            <RichText path="tny360.start.adventure.desc" />
+                            <RichText path="tny360.start.maker.desc" />
                         </p>
                         <div class="flex flex-col grow w-full items-center py-4 space-y-8">
-                            <p class="text-4xl font-extrabold"> <span class="text-primary">{{ prices['adventure']
-                                    }}</span> € </p>
+                            <p class="text-4xl font-extrabold"> <span class="text-primary">{{ prices['maker'] }}</span> € </p>
                             <div class="flex flex-col space-y-2">
-                                <div v-for="feature in features['adventure']"
+                                <div v-for="feature in features['maker']"
                                     class="flex items-center w-full justify-start space-x-2">
                                     <UIcon name="i-lucide-check" size="1em" class="text-primary" />
                                     <span> {{ feature }} </span>
                                 </div>
+                                <UButton variant="link" class="w-fit p-0" to="/docs/tny-robotics/products/tny-360-maker-kit-founders-edition" trailing icon="lucide:arrow-right"> {{ $t('tny360.start.completeList') }} </UButton>
                             </div>
                         </div>
                         <div class="flex w-full justify-center pt-4">
-                            <UButton disabled class="w-fit" variant="subtle" size="xl">
-                                <!-- <RichText path="tny360.start.adventure.button" /> -->
-                                <RichText path="tny360.start.notYetAvailable" />
-                            </UButton>
+                            <UTooltip :text="$t('tny360.start.restock')">
+                                <UButton disabled class="w-fit" variant="subtle" size="xl">
+                                    <!-- <RichText path="tny360.start.maker.button" /> -->
+                                    <RichText path="tny360.start.outOfStock" />
+                                </UButton>
+                            </UTooltip>
                         </div>
                     </div>
                 </div>
@@ -363,16 +368,16 @@
                         Ready2Run
                     </div>
                     <h3 class="subsubtitle text-center">
-                        <RichText path="tny360.start.ready.title" />
+                        <RichText path="tny360.start.r2r.title" />
                     </h3>
                     <p class="flex text-center">
-                        <RichText path="tny360.start.ready.desc" />
+                        <RichText path="tny360.start.r2r.desc" />
                     </p>
                     <div class="flex flex-col grow w-full items-center py-4 space-y-8">
-                        <p class="text-4xl font-extrabold"> <span class="text-primary">{{ prices['ready'] }}</span> €
+                        <p class="text-4xl font-extrabold"> <span class="text-primary">{{ prices['r2r'] }}</span> €
                         </p>
                         <div class="flex flex-col space-y-2">
-                            <div v-for="feature in features['ready']" class="flex items-center space-x-2">
+                            <div v-for="feature in features['r2r']" class="flex items-center space-x-2">
                                 <UIcon name="i-lucide-check" size="1em" class="text-primary" />
                                 <span> {{ feature }} </span>
                             </div>
@@ -380,7 +385,7 @@
                     </div>
                     <div class="flex w-full justify-center pt-4">
                         <UButton disabled class="w-fit" variant="subtle" size="xl">
-                            <!-- <RichText path="tny360.start.ready.button" /> -->
+                            <!-- <RichText path="tny360.start.r2r.button" /> -->
                             <RichText path="tny360.start.notYetAvailable" />
                         </UButton>
                     </div>
@@ -460,27 +465,27 @@ const platforms = computed(() => ([
 ]));
 
 const prices = computed(() => ({
-    tinkerer: 219,
-    adventure: 349,
-    ready: 499,
+    barebones: 219,
+    maker: 349,
+    r2r: 499,
 }));
 
 const features = computed(() => ({
-    tinkerer: [
-        t('tny360.start.tinkerer.features.1'),
-        t('tny360.start.tinkerer.features.2'),
-        t('tny360.start.tinkerer.features.3'),
+    barebones: [
+        t('tny360.start.barebones.features.1'),
+        t('tny360.start.barebones.features.2'),
+        t('tny360.start.barebones.features.3'),
     ],
-    adventure: [
-        t('tny360.start.adventure.features.1'),
-        t('tny360.start.adventure.features.2'),
-        t('tny360.start.adventure.features.3'),
-        t('tny360.start.adventure.features.4'),
+    maker: [
+        t('tny360.start.maker.features.1'),
+        t('tny360.start.maker.features.2'),
+        t('tny360.start.maker.features.3'),
+        t('tny360.start.maker.features.4'),
     ],
-    ready: [
-        t('tny360.start.ready.features.1'),
-        t('tny360.start.ready.features.2'),
-        t('tny360.start.ready.features.3'),
+    r2r: [
+        t('tny360.start.r2r.features.1'),
+        t('tny360.start.r2r.features.2'),
+        t('tny360.start.r2r.features.3'),
     ],
 }));
 

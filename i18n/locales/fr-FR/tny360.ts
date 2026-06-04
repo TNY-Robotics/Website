@@ -147,7 +147,7 @@ export default {
     start: {
         title: '[hl](Construis) ou [hl](commandes) ton propre TNY-360 !',
         best: 'Meilleure valeur',
-        tinkerer: {
+        barebones: {
             title: '[hl](Bidouilleur) dans l\'âme ?',
             desc: 'Imprime tes propres pièces à la maison et commande seulement ce dont tu as besoin !',
             button: 'Obtenir les composants',
@@ -157,7 +157,7 @@ export default {
                 3: 'Visserie et câbles',
             }
         },
-        adventure: {
+        maker: {
             title: 'Tu te sens [hl](aventurier) ?',
             desc: 'Tu peux construire ton propre TNY-360 en recevant les pièces détachées et le guide d\'assemblage !',
             button: 'Se lancer dans l\'aventure',
@@ -168,7 +168,7 @@ export default {
                 4: 'Visserie et câbles',
             }
         },
-        ready: {
+        r2r: {
             title: 'Tu veux commencer [hl](direct) ?',
             desc: 'Commandes ton TNY-360 maintenant et reçois-le chez toi, entièrement assemblé et calibré !',
             button: 'Commander maintenant',
@@ -178,7 +178,10 @@ export default {
                 3: 'Guide d\'assemblage & de réparation',
             }
         },
+        completeList: 'Liste complète',
         notYetAvailable: 'Pas encore disponible',
+        outOfStock: 'Rupture de stock',
+        restock: 'Rejoingnez la liste d\'attente pour être informé du retour en stock !',
     },
     info: {
         title: 'Notre TNY-360 est encore en cours de développement.\nSoyez parmi les premiers à le recevoir en',

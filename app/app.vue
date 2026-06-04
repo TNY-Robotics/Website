@@ -1,10 +1,12 @@
 <template>
     <div class="flex flex-col">
         <NuxtRouteAnnouncer />
-        <div class="flex flex-col grow">
-            <HeaderBar />
-            <NuxtPage class="overflow-x-hidden" />
-        </div>
+        <UApp>
+            <NuxtLayout>
+                <HeaderBar />
+                <NuxtPage class="overflow-x-hidden" />
+            </NuxtLayout>
+        </UApp>
         <TNYFooter />
 
         <UModal :title="$t('disclaimer.title')" v-model:open="WIPModal">

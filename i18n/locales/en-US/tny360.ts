@@ -149,7 +149,7 @@ export default {
     start: {
         title: '[hl](Build) or [hl](order) your own TNY-360!',
         best: 'Best value',
-        tinkerer: {
+        barebones: {
             title: 'Tinkerer at [hl](heart)?',
             desc: 'Print your own parts at home and only order what you need!',
             button: 'Get the components',
@@ -159,7 +159,7 @@ export default {
                 3: 'Screws & Cables',
             }
         },
-        adventure: {
+        maker: {
             title: 'Feeling [hl](adventurous)?',
             desc: 'You can build your own TNY-360 by receiving the spare parts and the assembly guide!',
             button: 'Start the adventure',
@@ -170,7 +170,7 @@ export default {
                 4: 'Screws & Cables',
             }
         },
-        ready: {
+        r2r: {
             title: 'Wanna start [hl](now)?',
             desc: 'Order your TNY-360 now and receive it at home, fully assembled and calibrated!',
             button: 'Order now',
@@ -180,7 +180,10 @@ export default {
                 3: 'Assembly & Repair guide',
             }
         },
+        completeList: 'Complete list',
         notYetAvailable: 'Not yet available',
+        outOfStock: 'Out of stock',
+        restock: 'Join the waitlist to be informed of restocks!',
     },
     info: {
         title: 'Our TNY-360 is still under development.\nBe among the first to receive it by',
