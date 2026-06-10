@@ -24,7 +24,7 @@ Before attempting to send direct commands, ensure your TNY-360 is powered on, co
 
 Software Development Kits (SDKs) for popular programming languages are in active development and will provide a high-level interface for interacting with the TNY-360.
 
-As of today, only the [Javascript/TypeScript SDK](./javascript) is available, but the Python and C/C++ SDKs are coming soon!
+As of today, only the [Javascript/TypeScript SDK](./javascript) and the [Python SDK](./python) are available, but the others are coming soon!
 
 ---
 
@@ -34,7 +34,7 @@ Here are the links to the API references for the different SDKs :
 
 ::chevron
 [Python SDK](./python)<br>
-The Python SDK is currently in development, but will provide a high-level interface to control your TNY-360 from Python scripts and applications.
+The Python SDK is available now and provides a high-level interface to control your TNY-360 from Python scripts and applications.
 ::
 
 ::chevron
