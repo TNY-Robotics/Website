@@ -114,11 +114,11 @@ You may find more screws in the kits (to ensure that you have enough), but the q
 
 | Wire                                  | Description                                    | Quantity |
 | ------------------------------------- | ---------------------------------------------- | -------- |
-| JST-PH 2-Pins - 20cm                  | 4-Wire cable with JST-PH with a 20cm length    | 1        |
-| JST-PH 3-Pins - 20cm                  | 4-Wire cable with JST-PH with a 20cm length    | 4        |
-| JST-PH 4-Pins - 20cm                  | 4-Wire cable with JST-PH with a 20cm length    | 4        |
-| JST-PH 5-Pins - 20cm                  | 4-Wire cable with JST-PH with a 20cm length    | 1        |
-| JST-PH 7-Pins - 20cm                  | 4-Wire cable with JST-PH with a 20cm length    | 1        |
+| JST-PH 2-Pins - 10cm                  | 4-Wire cable with JST-PH with a 10cm length    | 1        |
+| JST-PH 3-Pins - 10cm                  | 4-Wire cable with JST-PH with a 10cm length    | 4        |
+| JST-PH 4-Pins - 10cm                  | 4-Wire cable with JST-PH with a 10cm length    | 4        |
+| JST-PH 5-Pins - 10cm                  | 4-Wire cable with JST-PH with a 10cm length    | 1        |
+| JST-PH 7-Pins - 10cm                  | 4-Wire cable with JST-PH with a 10cm length    | 1        |
 | JST-PH 2-Pins - 20cm                  | 4-Wire cable with JST-PH with a 20cm length    | 2        |
 | JST-PH 4-Pins - 20cm                  | 4-Wire cable with JST-PH with a 20cm length    | 2        |
 | JST-PH 2-Pins to Dupont 3-pins - 40cm | Custom cable with JST-PH and Dupont connectors | 4        |
