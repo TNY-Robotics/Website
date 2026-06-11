@@ -4,12 +4,12 @@
 
 Le site `tny-robotics.com` est édité par :
 
-- **Paul LOISIL** *(agissant sous le nom commercial TNY Robotics)*
+- **Nom :** Paul LOISIL *(agissant sous le nom commercial TNY Robotics)*
 - **Statut :** Micro-entreprise
-<!-- - **Adresse :** ... -->
-- **SIRET :** 92052782700017
+- **Adresse :** 173 Rue de Courcelle, 75017, Paris, France
+- **SIREN :** 920527827
 - **Email :** contact@tny-robotics.com
-<!-- - **Téléphone :** ... -->
+- **Téléphone :** [+33 9 72 15 08 37](tel:+33972150837)
 - **TVA Intracommunautaire :** Non applicable, art. 293 B du CGI.
 
 ## Directeur de la publication
