@@ -25,7 +25,7 @@ export default defineI18nLocale(async (locale) => ({
     newsletter: {
         name: 'Join Waitlist',
         title: 'Join the waitlist',
-        content: 'Sign up for our waitlist to be notified of the official release of the [hl](TNY - 360)!\nBy signing up, you will receive exclusive updates, special offers, and the opportunity to pre-order the robot before its public launch.',
+        content: 'A second drop of our [hl](TNY-360) is coming soon!\nBe among the first to receive it by signing up for our waitlist.',
         emailPlaceholder: 'Your email address',
         success: {
             title: 'Registration successful!',
@@ -41,7 +41,7 @@ export default defineI18nLocale(async (locale) => ({
         },
         release: {
             title: 'Estimated Release Date',
-            date: 'End of May 2026',
+            date: 'End of July 2026',
         },
     },
     qr: {

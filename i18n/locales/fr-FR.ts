@@ -25,7 +25,7 @@ export default defineI18nLocale(async (locale) => ({
     newsletter: {
         name: 'Se préinscrire',
         title: 'Rejoindre la liste d\'attente',
-        content: 'Inscrivez-vous à notre liste d\'attente pour être informé de la sortie officielle du [hl](TNY - 360) !\nEn vous inscrivant, vous recevrez des mises à jour exclusives, des offres spéciales et la possibilité de précommander le robot avant son lancement public.',
+        content: 'Un second drop de notre [hl](TNY-360) arrive bientôt !\nSoyez parmi les premiers à le recevoir en vous inscrivant à notre liste d\'attente.',
         emailPlaceholder: 'Votre adresse e-mail',
         success: {
             title: 'Inscription réussie !',
@@ -41,7 +41,7 @@ export default defineI18nLocale(async (locale) => ({
         },
         release: {
             title: 'Date de sortie estimée',
-            date: 'Fin Mai 2026',
+            date: 'Fin Juillet 2026',
         },
     },
     qr: {

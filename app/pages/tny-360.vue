@@ -1,285 +1,232 @@
 <template>
-    <div class="space-y-48 pb-64">
-        <section class="relative flex w-full h-fit px-4 lg:px-24 pt-8 bg-white dark:bg-slate-900 overflow-hidden">
-            <div class="absolute top-0 left-0 w-full h-full bg-header-gradient"></div>
-            <img src="/tny-360-wireframe.svg" class="absolute -bottom-[10%] -right-[50%] xl:-bottom-[20%] xl:-right-[25%] dark:invert" />
-            <div
-                class="flex flex-col w-full lg:w-1/2 space-y-4 justify-center items-center lg:items-start py-32 lg:py-48 z-20">
-                <h1 class="whitespace-nowrap text-5xl lg:text-7xl font-extrabold text-center lg:text-start">
+    <div class="space-y-32 pb-32">
+        <header class="relative flex w-full h-fit pt-8 bg-white dark:bg-slate-900 overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full bg-header-gradient">
+                <img src="/tny-360/header.webp" alt="TNY-360" class="object-cover w-full h-full" />
+            </div>
+            <div class="flex flex-col w-full space-y-4 justify-center items-center lg:items-start py-32 lg:py-48 z-20 px-4 lg:px-24">
+                <h1 class="show-up whitespace-nowrap text-5xl lg:text-7xl font-extrabold text-center lg:text-start text-white">
                     <RichText path="tny360.header.title" />
                 </h1>
-                <p class="text-xl lg:text-4xl text-center lg:text-start">
+                <p class="show-up delay-200 text-xl lg:text-4xl text-center lg:text-start text-white max-w-192">
                     <RichText path="tny360.header.desc" />
                 </p>
-                <div class="pt-8">
+                <div class="show-up delay-400 pt-8">
                     <UButton :label="$t('tny360.header.button')" size="xl" @click="openModal()" />
                 </div>
             </div>
-        </section>
+        </header>
 
-        <section class="px-4 lg:px-8 space-y-8">
-            <div class="flex items-center w-full min-h-[75vh] h-fit md:h-[75vh] bg-white border-2 border-slate-200 dark:border-slate-700 dark:bg-slate-900 overflow-hidden rounded-lg">
-                <div class="flex flex-col items-center w-full space-y-12 py-16">
-                    <h2 class="subtitle text-center px-4">
-                        <RichText path="tny360.features.title" />
-                    </h2>
-
-                    <div class="flex flex-col space-y-8 px-4 lg:px-8 md:max-w-[40em]">
-                        <div class="space-y-2 lg:min-w-140">
-                            <div class="flex space-x-4 w-full justify-center lg:justify-start">
-                                <div class="hidden lg:flex w-fit items-center">
-                                    <UIcon name="i-heroicons-cube" class="w-8 h-8" />
-                                </div>
-                                <h3 class="subsubtitle text-center lg:text-left">
-                                    <RichText path="tny360.features.print.title" />
-                                </h3>
-                            </div>
-                            <p class="text-center lg:text-left lg:pl-12">
-                                <RichText path="tny360.features.print.desc" />
-                            </p>
-                        </div>
-                        <div class="space-y-2 lg:min-w-140">
-                            <div class="flex space-x-4 w-full justify-center lg:justify-start">
-                                <div class="hidden lg:flex w-fit items-center">
-                                    <UIcon name="i-heroicons-wrench-screwdriver" class="w-8 h-8" />
-                                </div>
-                                <h3 class="subsubtitle text-center lg:text-left">
-                                    <RichText path="tny360.features.maker.title" />
-                                </h3>
-                            </div>
-                            <p class="text-center lg:text-left lg:pl-12">
-                                <RichText path="tny360.features.maker.desc" />
-                            </p>
-                        </div>
-                        <div class="space-y-2 lg:min-w-140">
-                            <div class="flex space-x-4 w-full justify-center lg:justify-start">
-                                <div class="hidden lg:flex w-fit items-center">
-                                    <UIcon name="i-heroicons-code-bracket" class="w-8 h-8" />
-                                </div>
-                                <h3 class="subsubtitle text-center lg:text-left">
-                                    <RichText path="tny360.features.soft.title" />
-                                </h3>
-                            </div>
-                            <p class="text-center lg:text-left lg:pl-12">
-                                <RichText path="tny360.features.soft.desc" />
-                            </p>
-                        </div>
+        <section class="show-up w-full px-2 lg:px-8 m-auto pt-32 space-y-16" v-show-on-display>
+            <h2 class="subtitle"> <RichText path="tny360.readable.title" /> </h2>
+            <div class="flex flex-col lg:flex-row justify-center items-center lg:space-x-8">
+                <div class="relative flex flex-col w-full lg:w-1/2 justify-start items-center p-4 lg:p-16 h-fit mb-auto">
+                    <div class="flex flex-col z-20 justify-center items-center space-y-4">
+                        <h3 class="subsubtitle"> <RichText path="tny360.readable.ing.title" /> </h3>
+                        <p class="lg:text-lg"> <RichText path="tny360.readable.ing.p1" /> </p>
+                        <p class="lg:text-lg"> <RichText path="tny360.readable.ing.p2" /> </p>
+                    </div>
+                    <div class="w-full lg:w-2/3 h-fit z-10 bottom-0 left-0 flex justify-center">
+                        <video v-if="darkMode" autoplay muted loop playsinline loading="lazy" class="show-up h-full object-cover">
+                            <source src="/tny-360/pcbs-dark.mp4" type="video/mp4" />
+                        </video>
+                        <video v-else autoplay muted loop playsinline loading="lazy" class="show-up h-full object-cover">
+                            <source src="/tny-360/pcbs-light.mp4" type="video/mp4" />
+                        </video>
                     </div>
                 </div>
-                <div class="hidden xl:flex flex-col w-full h-full -skew-x-12 bg-primary-300 dark:bg-primary-400 translate-x-20 shadow-2xl border-l-4 border-primary-500 dark:border-primary-400">
-                    <div class="flex justify-center items-center skew-x-12 grow">
-                        <img src="/tny-360.png" alt="" class="translate-y-4 drop-shadow-lg w-[80%]">
+                <div class="relative flex flex-col w-full lg:w-1/2 justify-start items-center p-4 lg:p-16 h-fit mb-auto">
+                    <div class="flex flex-col z-20 justify-center items-center space-y-4">
+                        <h3 class="subsubtitle"> <RichText path="tny360.readable.doc.title" /> </h3>
+                        <p class="lg:text-lg"> <RichText path="tny360.readable.doc.p1" /> </p>
+                        <p class="lg:text-lg"> <RichText path="tny360.readable.doc.p2" /> </p>
+                    </div>
+                    <div class="w-full h-fit z-10 bottom-0 left-0 flex justify-center">
+                        <video v-if="darkMode" autoplay muted loop playsinline loading="lazy" class="show-up h-full object-cover">
+                            <source src="/tny-360/doc-dark.mp4" type="video/mp4" />
+                        </video>
+                        <video v-else autoplay muted loop playsinline loading="lazy" class="show-up h-full object-cover">
+                            <source src="/tny-360/doc-light.mp4" type="video/mp4" />
+                        </video>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="flex flex-col md:flex-row w-fit mx-auto space-x-4">
-                <div class="w-fit mx-auto">
-                    <UIcon size="6em" name="uil:github" />
+        <section class="show-up w-full m-auto pt-64" v-show-on-display>
+            <h2 class="subtitle text-center py-16 px-2"> <RichText path="tny360.dev.title" /> </h2>
+            <div class="relative w-full flex h-128">
+                <div class="absolute top-0 right-0 w-full h-full z-10">
+                    <video v-if="darkMode" autoplay muted loop playsinline loading="lazy" class="show-left w-full h-full object-cover">
+                        <source src="/tny-360/open-dark.mp4" type="video/mp4" />
+                    </video>
+                    <video v-else autoplay muted loop playsinline loading="lazy" class="show-left w-full h-full object-cover">
+                        <source src="/tny-360/open-light.mp4" type="video/mp4" />
+                    </video>
                 </div>
-                <div class="w-min space-y-2 text-left">
-                    <h2 class="subtitle whitespace-nowrap">
-                        <RichText path="tny360.features.takeALook.title" />
-                    </h2>
-                    <p class="text-lg">
-                        <RichText path="tny360.features.takeALook.desc" />
-                        <NuxtLink target="_blank" to="https://github.com/tny-robotics/tny-360"
-                            class="text-primary underline px-1">
-                            <RichText path="tny360.features.takeALook.link" />
-                        </NuxtLink>.
+                <div class="show-right flex w-full flex-col justify-center gradient-dark-left z-20" v-show-on-display>
+                    <div class="w-full lg:w-1/2 space-y-4 px-4 lg:px-16">
+                    <h3 class="subsubtitle"> <RichText path="tny360.dev.open.title" /> </h3>
+                    <p class="lg:text-lg"> <RichText path="tny360.dev.open.p1" />
+                        <a href="https://github.com/tny-robotics" target="_blank" class="text-primary-400 hover:underline pl-1"> <RichText path="tny360.dev.open.link" /> </a>.
                     </p>
+                    <p class="lg:text-lg"> <RichText path="tny360.dev.open.p2" /> </p>
+                    </div>
                 </div>
             </div>
-        </section>
-
-        <section class="flex flex-col py-16 min-h-[75vh] space-y-12">
-            <h2 class="subtitle text-center px-4">
-                <RichText path="tny360.engineering.title" />
-            </h2>
-            <div class="flex flex-col lg:flex-row justify-evenly items-center gap-4 px-4">
-                <div class="lg:w-1/4 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-xl p-6 shadow-lg flex flex-col space-y-4">
-                    <UIcon name="i-lucide-gauge" size="2.2em" class="text-primary" />
-                    <h3 class="subsubtitle">
-                        <RichText path="tny360.engineering.closedLoop.title" />
-                    </h3>
-                    <p class="text-slate-700 dark:text-slate-200 grow">
-                        <RichText path="tny360.engineering.closedLoop.desc" />
-                    </p>
-                    <UButton to="/docs/tny-360/anatomy/electronics/mg996r-mod" variant="soft" size="lg" class="w-fit">
-                        <RichText path="tny360.engineering.closedLoop.cta" />
-                    </UButton>
+            <div class="relative w-full flex h-128">
+                <div class="absolute top-0 left-0 w-full h-full z-10">
+                    <video v-if="darkMode" autoplay muted loop playsinline loading="lazy" class="show-right w-full h-full object-cover">
+                        <source src="/tny-360/clips-dark.mp4" type="video/mp4" />
+                    </video>
+                    <video v-else autoplay muted loop playsinline loading="lazy" class="show-right w-full h-full object-cover">
+                        <source src="/tny-360/clips-light.mp4" type="video/mp4" />
+                    </video>
                 </div>
-
-                <div class="lg:w-1/4 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-xl p-6 shadow-lg flex flex-col space-y-4">
-                    <UIcon name="i-lucide-cable" size="2.2em" class="text-primary" />
-                    <h3 class="subsubtitle">
-                        <RichText path="tny360.engineering.wiring.title" />
-                    </h3>
-                    <p class="text-slate-700 dark:text-slate-200 grow">
-                        <RichText path="tny360.engineering.wiring.desc" />
-                    </p>
-                    <UButton to="/docs/tny-360/anatomy/electronics" variant="soft" size="lg" class="w-fit">
-                        <RichText path="tny360.engineering.wiring.cta" />
-                    </UButton>
-                </div>
-
-                <div class="lg:w-1/4 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-xl p-6 shadow-lg flex flex-col space-y-4">
-                    <UIcon name="i-lucide-puzzle" size="2.2em" class="text-primary" />
-                    <h3 class="subsubtitle">
-                        <RichText path="tny360.engineering.extension.title" />
-                    </h3>
-                    <p class="text-slate-700 dark:text-slate-200 grow">
-                        <RichText path="tny360.engineering.extension.desc" />
-                    </p>
-                    <UButton to="/docs/tny-360/development-modding/physical-extensions" variant="soft" size="lg" class="w-fit">
-                        <RichText path="tny360.engineering.extension.cta" />
-                    </UButton>
+                <div class="show-left flex w-full flex-col justify-center items-end gradient-dark-right z-20" v-show-on-display>
+                    <div class="w-full lg:w-1/2 space-y-4 px-4 lg:px-16">
+                        <h3 class="subsubtitle"> <RichText path="tny360.dev.mod.title" /> </h3>
+                        <p class="lg:text-lg"> <RichText path="tny360.dev.mod.p1" /> </p>
+                        <p class="lg:text-lg"> <RichText path="tny360.dev.mod.p2" /> </p>
+                    </div>
                 </div>
             </div>
-        </section>
-
-        <!-- <video autoplay loop muted playsinline class="w-128">
-            <source src="/tny-360/screen.mp4" type="video/mp4; codecs=hevc">
-            <source src="/tny-360/screen.webm" type="video/webm">
-        </video> -->
-
-        <section class="flex flex-col py-16 min-h-[75vh] space-y-12">
-            <h2 class="subtitle text-center px-4">
-                <RichText path="tny360.learn.title" />
-            </h2>
-
-            <div class="flex grow w-full justify-start overflow-auto">
-                <div class="flex w-full justify-evenly">
-                    <div v-for="platform in platforms" :key="platform.type"
-                        class="flex flex-col bg-white dark:bg-slate-700 border-2 border-slate-200 dark:border-slate-600 rounded-lg p-4 pt-8 text-center space-y-8 w-1/6 min-w-64 lg:min-w-75 m-4 shadow-lg card">
-                        <div class="text-center space-y-4">
-                            <UIcon :name="'i-lucide-' + platform.icon" size="3em" class="text-primary" />
-                            <h3 class="subsubtitle text-primary">
-                                {{ platform.title }}
-                            </h3>
-                        </div>
-                        <div>
-                            <p> {{ platform.description }} </p>
-                        </div>
-                        <div class="flex grow items-end justify-center pb-4">
-                            <UButton :to="platform.link" variant="solid" size="lg">
-                                {{ platform.button }}
-                            </UButton>
-                        </div>
+            <div class="relative w-full flex h-128">
+                <div class="absolute top-0 left-0 w-full h-full z-10">
+                    <video v-if="darkMode" autoplay muted loop playsinline loading="lazy" class="show-left w-full h-full object-cover">
+                        <source src="/tny-360/ext-dark.mp4" type="video/mp4" />
+                    </video>
+                    <video v-else autoplay muted loop playsinline loading="lazy" class="show-left w-full h-full object-cover">
+                        <source src="/tny-360/ext-light.mp4" type="video/mp4" />
+                    </video>
+                </div>
+                <div class="show-right flex w-full flex-col justify-center gradient-dark-left z-20" v-show-on-display>
+                    <div class="w-full lg:w-1/2 space-y-4 px-4 lg:px-16">
+                        <h3 class="subsubtitle"> <RichText path="tny360.dev.ext.title" /> </h3>
+                        <p class="lg:text-lg"> <RichText path="tny360.dev.ext.p1" /> </p>
+                        <p class="lg:text-lg"> <RichText path="tny360.dev.ext.p2" /> </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="flex flex-col py-16 space-y-16 px-2 xl:px-8">
-            <h2 class="subtitle text-center">
-                <RichText path="tny360.specs.title" />
-            </h2>
-            <div class="bento-grid">
-                <div class="bento-card bento-card-large">
-                    <UIcon name="i-lucide-cpu" size="5em" />
-                    <h3 class="text-3xl font-extrabold text-center"> <RichText path="tny360.specs.cpu.title" /> </h3>
-                    <p class="text-lg text-center"> <RichText path="tny360.specs.cpu.desc" /> </p>
-
-                    <div class="flex w-full bento-small-hidden py-8">
-                        <div class="w-1/2 text-center">
-                            <h3 class="text-3xl font-extrabold text-primary"> <RichText path="tny360.specs.cpu.wifi.title" /> </h3>
-                            <p> <RichText path="tny360.specs.cpu.wifi.desc" /> </p>
+        <section class="show-up w-full px-2 lg:px-8 m-auto pt-64 space-y-16" v-show-on-display>
+            <h2 class="subtitle"> <RichText path="tny360.evolve.title" /> </h2>
+            <div class="flex flex-col lg:flex-row w-full space-y-8 lg:space-y-0">
+                <div class="flex flex-col space-y-8 w-full lg:w-1/2 justify-start items-center p-4">
+                    <div class="flex flex-col space-y-2 justify-center items-center">
+                        <h3 class="subsubtitle"> <RichText path="tny360.evolve.poss.title" /> </h3>
+                        <p class="lg:text-lg"> <RichText path="tny360.evolve.poss.p1" /> </p>
+                    </div>
+                    <div class="flex flex-col space-y-4 justify-center items-center">
+                        <div class="flex justify-center items-center space-x-4 border-2 border-primary-500 rounded-lg p-4 lg:max-w-2/3">
+                            <UIcon name="lucide:gamepad-2" class="w-16 h-12 p-4" />
+                            <p class="lg:text-lg text-left"> <RichText path="tny360.evolve.poss.tel" /> </p>
                         </div>
-                        <div class="w-1/2 text-center">
-                            <h3 class="text-3xl font-extrabold text-primary"> <RichText path="tny360.specs.cpu.bluetooth.title" /> </h3>
-                            <p> <RichText path="tny360.specs.cpu.bluetooth.desc" /> </p>
+                        <span class="h-8 w-1 border-l-4 border-dashed border-primary-500" />
+                        <div class="flex justify-center items-center space-x-4 border-2 border-primary-500 rounded-lg p-4 lg:max-w-2/3">
+                            <UIcon name="lucide:text-quote" class="w-16 h-12 p-4" />
+                            <p class="lg:text-lg text-left"> <RichText path="tny360.evolve.poss.blocks" /> </p>
+                        </div>
+                        <span class="h-8 w-1 border-l-4 border-dashed border-primary-500" />
+                        <div class="flex justify-center items-center space-x-4 border-2 border-primary-500 rounded-lg p-4 lg:max-w-2/3">
+                            <UIcon name="lucide:terminal" class="w-16 h-12 p-4" />
+                            <p class="lg:text-lg text-left"> <RichText path="tny360.evolve.poss.sdk" /> </p>
+                        </div>
+                        <span class="h-8 w-1 border-l-4 border-dashed border-primary-500" />
+                        <div class="flex justify-center items-center space-x-4 border-2 border-primary-500 rounded-lg p-4 lg:max-w-2/3">
+                            <UIcon name="lucide:bot" class="w-16 h-12 p-4" />
+                            <p class="lg:text-lg text-left"> <RichText path="tny360.evolve.poss.ros" /> </p>
                         </div>
                     </div>
                 </div>
-                <div class="bento-card bento-card-wide">
-                    <UIcon name="i-lucide-biceps-flexed" size="4em" />
-                    <h3 class="text-2xl font-extrabold text-center"> <RichText path="tny360.specs.motors.title" /> </h3>
-                    <p class="text-lg text-center"> <RichText path="tny360.specs.motors.desc" /> </p>
-                </div>
-                <div class="bento-card bento-card-tall">
-                    <UIcon name="i-lucide-aperture" size="4em" />
-                    <h3 class="text-2xl font-extrabold text-center"> <RichText path="tny360.specs.camera.title" /> </h3>
-                    <p class="text-lg text-center"> <RichText path="tny360.specs.camera.desc" /> </p>
-                    <ul class="list-disc list-inside text-lg text-left space-y-1">
-                        <li><RichText path="tny360.specs.camera.bullet1" /></li>
-                        <li><RichText path="tny360.specs.camera.bullet2" /></li>
-                        <li><RichText path="tny360.specs.camera.bullet3" /></li>
-                    </ul>
-                </div>
-                <div class="bento-card">
-                    <UIcon name="i-lucide-tv-minimal" size="3em" />
-                    <h3 class="text-2xl font-extrabold text-center"> <RichText path="tny360.specs.screen.title" /> </h3>
-                    <p class="text-lg text-center"> <RichText path="tny360.specs.screen.desc" /> </p>
-                </div>
-                <div class="bento-card">
-                    <UIcon name="i-lucide-battery-full" size="3em" />
-                    <h3 class="text-2xl font-extrabold text-center"> <RichText path="tny360.specs.battery.title" /> </h3>
-                    <p class="text-lg text-center"> <RichText path="tny360.specs.battery.desc" /> </p>
-                </div>
-                <div class="bento-card bento-small-hidden">
-                    <UIcon name="i-lucide-dumbbell" size="3em" />
-                    <h3 class="text-2xl font-extrabold text-center"> <RichText path="tny360.specs.payload.title" /> </h3>
-                    <p class="text-lg text-center"> <RichText path="tny360.specs.payload.desc" /> </p>
-                </div>
-                <div class="bento-card bento-card-wide">
-                    <UIcon name="i-lucide-rotate-3d" size="3em" />
-                    <h3 class="text-2xl font-extrabold text-center"> <RichText path="tny360.specs.imu.title" /> </h3>
-                    <p class="text-lg text-center"> <RichText path="tny360.specs.imu.desc" /> </p>
-                </div>
-                <div class="bento-card">
-                    <UIcon name="i-lucide-weight" size="3em" />
-                    <h3 class="text-2xl font-extrabold text-center"> <RichText path="tny360.specs.weight.title" /> </h3>
-                    <p class="text-lg text-center"> <RichText path="tny360.specs.weight.desc" /> </p>
-                </div>
-                <div class="bento-card">
-                    <UIcon name="i-lucide-gauge" size="3em" />
-                    <h3 class="text-2xl font-extrabold text-center"> <RichText path="tny360.specs.speed.title" /> </h3>
-                    <p class="text-lg text-center"> <RichText path="tny360.specs.speed.desc" /> </p>
+                <div class="flex flex-col space-y-4 w-full lg:w-1/2 justify-start items-center p-4">
+                    <h3 class="subsubtitle"> <RichText path="tny360.evolve.learn.title" /> </h3>
+                    <p class="lg:text-lg"> <RichText path="tny360.evolve.learn.p1" /> </p>
+                    <!-- <p class="lg:text-lg"> Au-delà de l'assemblage, notre écosystème propose des jeux éducatifs et des défis interactifs pour assimiler la logique de la programmation en s'amusant. </p> -->
+                    <p class="lg:text-lg"> <b> <RichText path="tny360.evolve.learn.p2" /> </b> </p>
+                    <video v-if="darkMode" autoplay muted loop playsinline loading="lazy" class="show-up w-fit h-full max-h-128 object-fit bg-gradient-highlight">
+                        <source src="/tny-360/learn-dark.mp4" type="video/mp4" />
+                    </video>
+                    <video v-else autoplay muted loop playsinline loading="lazy" class="show-up w-fit h-full max-h-128 object-fit bg-gradient-highlight">
+                        <source src="/tny-360/learn-light.mp4" type="video/mp4" />
+                    </video>
                 </div>
             </div>
         </section>
 
-        <section class="space-y-24">
-            <h2 class="subtitle text-center z-20 px-4">
-                <RichText path="tny360.roadmap.title" />
-            </h2>
-            <div class="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-24 w-min m-auto">
-                <div class="roadmap-container">
-                    <div class="roadmap-header">
-                        <UIcon name="i-lucide-code" size="2em" />
-                        <h3 class="subsubtitle"> <RichText path="tny360.roadmap.firmware.title" /> </h3>
+        <section class="show-up w-full px-2 lg:px-8 m-auto pt-64 pb-64 space-y-8" v-show-on-display>
+            <h2 class="subtitle text-center"> <RichText path="tny360.perfs.title" /> </h2>
+            <div class="relative flex w-full min-h-128 lg:min-h-192 overflow-hidden bg-slate-100 dark:bg-slate-900">
+                <div class="absolute top-0 left-0 w-full h-full flex justify-center items-end">
+                    <div class="flex w-fit space-x-4 z-50 pb-4">
+                        <button class="w-4 h-4 rounded-full border-2" :class="carouselIndex === 0 ? 'bg-primary-500 border-transparent' : 'bg-transparent border-primary-500'" @click="setCarouselIndex(0)"></button>
+                        <button class="w-4 h-4 rounded-full border-2" :class="carouselIndex === 1 ? 'bg-primary-500 border-transparent' : 'bg-transparent border-primary-500'" @click="setCarouselIndex(1)"></button>
+                        <button class="w-4 h-4 rounded-full border-2" :class="carouselIndex === 2 ? 'bg-primary-500 border-transparent' : 'bg-transparent border-primary-500'" @click="setCarouselIndex(2)"></button>
+                        <button class="w-4 h-4 rounded-full border-2" :class="carouselIndex === 3 ? 'bg-primary-500 border-transparent' : 'bg-transparent border-primary-500'" @click="setCarouselIndex(3)"></button>
                     </div>
-                    <span class="roadmap-line roadmap-line-done" />
-                    <div class="roadmap-block roadmap-done"> <RichText path="tny360.roadmap.firmware.step1" /> </div>
-                    <span class="roadmap-line roadmap-line-done" />
-                    <div class="roadmap-block roadmap-done"> <RichText path="tny360.roadmap.firmware.step2" /> </div>
-                    <span class="roadmap-line roadmap-line-done" />
-                    <div class="roadmap-block roadmap-done"> <RichText path="tny360.roadmap.firmware.step3" /> </div>
                 </div>
-                <div class="roadmap-container">
-                    <div class="roadmap-header">
-                        <UIcon name="i-lucide-wrench" size="2em" />
-                        <h3 class="subsubtitle"> <RichText path="tny360.roadmap.hardware.title" /> </h3>
+                <div class="flex w-full transition-all duration-500" :style="{ transform: `translateX(-${carouselIndex * 100}%)` }">
+                    <div class="relative flex flex-col w-full flex-shrink-0 justify-end items-center pb-12">
+                        <div class="lg:absolute top-0 left-0 w-full h-1/2 lg:h-full">
+                            <video v-if="darkMode" autoplay muted loop playsinline loading="lazy" class="w-full h-full object-fit">
+                                <source src="/tny-360/power-dark.mp4" type="video/mp4" />
+                            </video>
+                            <video v-else autoplay muted loop playsinline loading="lazy" class="w-full h-full object-fit">
+                                <source src="/tny-360/power-light.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+                        <div class="flex flex-col max-w-256 space-y-2 justify-center items-center z-20 bg-white/85 dark:bg-slate-800/60 rounded-xl p-3 bg-blur-xl shadow-xl shadow-slate-900/10 mx-2">
+                            <h3 class="subsubtitle text-center"> <RichText path="tny360.perfs.power.title" /> </h3>
+                            <p class="text-sm lg:text-lg text-center"> <RichText path="tny360.perfs.power.p1" /> </p>
+                            <p class="text-sm lg:text-lg text-center"> <RichText path="tny360.perfs.power.p2" /> </p>
+                        </div>
                     </div>
-                    <span class="roadmap-line roadmap-line-done" />
-                    <div class="roadmap-block roadmap-done"> <RichText path="tny360.roadmap.hardware.step1" /> </div>
-                    <span class="roadmap-line roadmap-line-done" />
-                    <div class="roadmap-block roadmap-done"> <RichText path="tny360.roadmap.hardware.step2" /> </div>
-                    <span class="roadmap-line roadmap-line-done" />
-                    <div class="roadmap-block roadmap-done"> <RichText path="tny360.roadmap.hardware.step3" /> </div>
-                </div>
-                <div class="roadmap-container">
-                    <div class="roadmap-header">
-                        <UIcon name="i-lucide-book-open-text" size="2em" />
-                        <h3 class="subsubtitle"> <RichText path="tny360.roadmap.doc.title" /> </h3>
+                    <div class="relative flex flex-col w-full flex-shrink-0 justify-end items-center pb-12">
+                        <div class="lg:absolute top-0 left-0 w-full h-1/2 lg:h-full">
+                            <video v-if="darkMode" autoplay muted loop playsinline loading="lazy" class="w-full h-full object-fit">
+                                <source src="/tny-360/move-dark.mp4" type="video/mp4" />
+                            </video>
+                            <video v-else autoplay muted loop playsinline loading="lazy" class="w-full h-full object-fit">
+                                <source src="/tny-360/move-light.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+                        <div class="flex flex-col max-w-256 space-y-2 justify-center items-center z-20 bg-white/85 dark:bg-slate-800/60 rounded-xl p-3 bg-blur-xl shadow-xl shadow-slate-900/10 mx-2">
+                            <h3 class="subsubtitle text-center"> <RichText path="tny360.perfs.moves.title" /> </h3>
+                            <p class="text-sm lg:text-lg text-center"> <RichText path="tny360.perfs.moves.p1" /> </p>
+                            <p class="text-sm lg:text-lg text-center"> <RichText path="tny360.perfs.moves.p2" /> </p>
+                        </div>
                     </div>
-                    <span class="roadmap-line roadmap-line-done" />
-                    <div class="roadmap-block roadmap-done"> <RichText path="tny360.roadmap.doc.step1" /> </div>
-                    <span class="roadmap-line roadmap-line-done" />
-                    <div class="roadmap-block roadmap-done"> <RichText path="tny360.roadmap.doc.step2" /> </div>
-                    <span class="roadmap-line roadmap-line-inprogress" />
-                    <div class="roadmap-block roadmap-inprogress"> <RichText path="tny360.roadmap.doc.step3" /> </div>
+                    <div class="relative flex flex-col w-full flex-shrink-0 justify-end items-center pb-12">
+                        <div class="lg:absolute top-0 left-0 w-full h-1/2 lg:h-full">
+                            <video v-if="darkMode" autoplay muted loop playsinline loading="lazy" class="w-full h-full object-cover">
+                                <source src="/tny-360/alive-dark.mp4" type="video/mp4" />
+                            </video>
+                            <video v-else autoplay muted loop playsinline loading="lazy" class="w-full h-full object-cover">
+                                <source src="/tny-360/alive-light.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+                        <div class="flex flex-col max-w-256 space-y-2 justify-center items-center z-20 bg-white/85 dark:bg-slate-800/60 rounded-xl p-3 bg-blur-xl shadow-xl shadow-slate-900/10 mx-2">
+                            <h3 class="subsubtitle text-center">  <RichText path="tny360.perfs.alive.title" /></h3>
+                            <p class="text-sm lg:text-lg text-center"> <RichText path="tny360.perfs.alive.p1" /> </p>
+                            <p class="text-sm lg:text-lg text-center"> <RichText path="tny360.perfs.alive.p2" /> </p>
+                        </div>
+                    </div>
+                    <div class="relative flex flex-col w-full flex-shrink-0 justify-end items-center pb-12">
+                        <div class="lg:absolute top-0 left-0 w-full h-1/2 lg:h-full">
+                            <video v-if="darkMode" autoplay muted loop playsinline loading="lazy" class="w-full h-full object-fit">
+                                <source src="/tny-360/hri-dark.mp4" type="video/mp4" />
+                            </video>
+                            <video v-else autoplay muted loop playsinline loading="lazy" class="w-full h-full object-fit">
+                                <source src="/tny-360/hri-light.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+                        <div class="flex flex-col max-w-256 space-y-2 justify-center items-center z-20 bg-white/85 dark:bg-slate-800/60 rounded-xl p-3 bg-blur-xl shadow-xl shadow-slate-900/10 mx-2">
+                            <h3 class="subsubtitle text-center">  <RichText path="tny360.perfs.hri.title" /></h3>
+                            <p class="text-sm lg:text-lg text-center"> <RichText path="tny360.perfs.hri.p1" /> </p>
+                            <p class="text-sm lg:text-lg text-center"> <RichText path="tny360.perfs.hri.p2" /> </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -290,10 +237,9 @@
                 <RichText path="tny360.start.title" />
             </h2>
 
-            <div
-                class="flex flex-col xl:flex-row xl:flex-wrap justify-center items-center z-20 space-y-16 xl:space-y-0 xl:space-x-4 pt-8">
-                <div class="relative bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-xl xl:rounded-r-none xl:rounded-l-4xl shadow-lg flex flex-col w-full max-w-88 xl:max-w-full xl:w-96 p-4 py-12 space-y-8 overflow-hidden">
-                    <div class="absolute top-0 left-0 py-1 px-4 bg-slate-700 rounded-br-xl text-slate-300">
+            <div class="show-up flex flex-col xl:flex-row xl:flex-wrap justify-center items-center z-20 space-y-16 xl:space-y-0 xl:space-x-4 pt-8" v-show-on-display>
+                <div class="show-left delay-200 relative bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-xl xl:rounded-r-none xl:rounded-l-4xl shadow-lg flex flex-col w-full max-w-88 xl:max-w-full xl:w-96 p-4 py-12 space-y-8 overflow-hidden" v-show-on-display>
+                    <div class="absolute top-0 left-0 py-1 px-4 bg-slate-100 dark:bg-slate-700 rounded-br-xl text-slate-600 dark:text-slate-300">
                         BareBones
                     </div>
                     <h3 class="subsubtitle text-center">
@@ -322,15 +268,15 @@
                         </UTooltip>
                     </div>
                 </div>
-                <div class="z-10 relative shine xl:scale-110 bg-white dark:bg-slate-800 border-2 border-primary-500 dark:border-primary-500 rounded-lg shadow-lg flex flex-col w-full max-w-88 xl:max-w-full xl:w-100 p-4 py-12">
+                <div class="show-up z-10 relative shine xl:scale-110 bg-white dark:bg-slate-800 border-2 border-primary-500 dark:border-primary-500 rounded-lg shadow-lg flex flex-col w-full max-w-88 xl:max-w-full xl:w-100 p-4 py-12" v-show-on-display>
                     <div class="absolute top-0 left-0 right-0 flex justify-center">
-                        <div class="py-1 px-4 bg-slate-700 rounded-b-xl text-slate-300">
+                        <div class="py-1 px-4 bg-slate-100 dark:bg-slate-700 rounded-b-xl text-slate-600 dark:text-slate-300">
                             Maker
                         </div>
                     </div>
                     <div class="absolute flex justify-center w-full top-0 left-0">
                         <p
-                            class="-translate-y-full text-white bg-primary-500 bright px-4 py-1 rounded-t-lg w-fit font-extrabold text-lg text-center">
+                            class="-translate-y-full text-white bg-primary-500 bright px-4 py-1 rounded-t-lg w-fit font-extrabold lg:text-lg text-center">
                             <RichText path="tny360.start.best" />
                         </p>
                     </div>
@@ -363,8 +309,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="relative bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-xl xl:rounded-l-none xl:rounded-r-4xl shadow-lg flex flex-col w-full max-w-88 xl:max-w-full xl:w-96 p-4 py-12 space-y-8 overflow-hidden">
-                    <div class="absolute top-0 right-0 py-1 px-4 bg-slate-700 rounded-bl-xl text-slate-300">
+                <div class="show-right delay-200 relative bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-xl xl:rounded-l-none xl:rounded-r-4xl shadow-lg flex flex-col w-full max-w-88 xl:max-w-full xl:w-96 p-4 py-12 space-y-8 overflow-hidden" v-show-on-display>
+                    <div class="absolute top-0 right-0 py-1 px-4 bg-slate-100 dark:bg-slate-700 rounded-bl-xl text-slate-600 dark:text-slate-300">
                         Ready2Run
                     </div>
                     <h3 class="subsubtitle text-center">
@@ -429,40 +375,25 @@ useHead(() => ({
 
 const { openModal } = useNewsletter();
 
-const platforms = computed(() => ([
-    {
-        type: 'blocks',
-        icon: 'layout-template',
-        link: '/soft',
-        title: t('tny360.learn.desktop.title'),
-        description: t('tny360.learn.desktop.desc'),
-        button: t('tny360.learn.desktop.button'),
-    },
-    {
-        type: 'python',
-        icon: 'chart-no-axes-gantt',
-        link: '/docs/tny-360/development-modding/software-development/python',
-        title: t('tny360.learn.python.title'),
-        description: t('tny360.learn.python.desc'),
-        button: t('tny360.learn.python.button'),
-    },
-    {
-        type: 'ros2',
-        icon: 'bot',
-        link: '/docs/tny-360/development-modding/software-development/ros2',
-        title: t('tny360.learn.ros2.title'),
-        description: t('tny360.learn.ros2.desc'),
-        button: t('tny360.learn.ros2.button'),
-    },
-    {
-        type: 'esp32',
-        icon: 'microchip',
-        link: '/docs/tny-360/anatomy/firmware/',
-        title: t('tny360.learn.esp32.title'),
-        description: t('tny360.learn.esp32.desc'),
-        button: t('tny360.learn.esp32.button'),
-    },
-]));
+const darkMode = ref(false);
+onMounted(() => {
+    darkMode.value = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        darkMode.value = e.matches;
+    });
+});
+
+const carouselIndex = ref(0);
+let carouselInterval: number | null = null;
+async function setCarouselIndex(index: number) {
+    carouselIndex.value = index;
+    if (carouselInterval) {
+        clearInterval(carouselInterval);
+    }
+    carouselInterval = setInterval(() => {
+        carouselIndex.value = (carouselIndex.value + 1) % 4;
+    }, 8000);
+}
 
 const prices = computed(() => ({
     barebones: 219,
@@ -489,10 +420,56 @@ const features = computed(() => ({
     ],
 }));
 
+onMounted(() => {
+    setCarouselIndex(0);
+});
+
+onUnmounted(() => {
+    if (carouselInterval) {
+        clearInterval(carouselInterval);
+    }
+});
+
 </script>
 
 <style scoped>
 @import 'tailwindcss';
+
+.gradient-dark-left {
+    background: linear-gradient(to right, rgba(248, 250, 252, 1.0) 0%, rgba(0, 0, 0, 0.0) 80%);
+}
+
+@media (prefers-color-scheme: dark) {
+    .gradient-dark-left {
+        background: linear-gradient(to right, rgba(29, 41, 61, 1.0) 0%, rgba(0, 0, 0, 0.0) 80%);
+    }
+}
+
+.gradient-dark-right {
+    background: linear-gradient(to left, rgba(248, 250, 252, 1.0) 0%, rgba(0, 0, 0, 0.0) 80%);
+}
+
+@media (prefers-color-scheme: dark) {
+    .gradient-dark-right {
+        background: linear-gradient(to left, rgba(29, 41, 61, 1.0) 0%, rgba(0, 0, 0, 0.0) 80%);
+    }
+}
+
+.bg-gradient-highlight {
+    background: radial-gradient(circle at 50% 50%, rgba(255, 0, 255, 0.1) 0%, rgba(255, 0, 255, 0.0) 70%);
+}
+
+.bg-gradient-centerfuschia {
+    background: radial-gradient(circle at 50% 100%, rgba(255, 0, 255, 0.1) 0%, rgba(255, 0, 255, 0) 80%);
+}
+
+.drop-shadow-slate-900 {
+    filter: drop-shadow(0 0 4px rgba(15, 23, 42, 0.8));
+}
+
+.bg-blur-xl {
+    backdrop-filter: blur(20px);
+}
 
 .shine {
     @apply shadow-xl shadow-fuchsia-500/20;
@@ -566,36 +543,4 @@ const features = computed(() => ({
     }
 }
 
-.roadmap-container {
-    @apply flex flex-col space-y-4 w-full justify-center items-center bg-white dark:bg-slate-900/50 p-6 rounded-xl shadow-xl;
-}
-.roadmap-header {
-    @apply flex items-center space-x-2 text-slate-800 dark:text-white py-4;
-}
-
-.roadmap-block {
-    @apply rounded-lg border-2 py-4 px-6 text-center w-80 max-w-full whitespace-nowrap md:text-lg;
-}
-.roadmap-done {
-    @apply border-fuchsia-500 bg-fuchsia-500/10 text-slate-800 dark:text-white;
-}
-.roadmap-inprogress {
-    @apply border-yellow-500 bg-yellow-500/10 text-slate-800 dark:text-white border-dashed;
-}
-.roadmap-todo {
-    @apply border-slate-300 dark:border-slate-700 bg-slate-300/10 dark:bg-slate-700/10 text-slate-500 dark:text-slate-300 border-dashed;
-}
-
-.roadmap-line {
-    @apply flex w-1 h-12 rounded-lg;
-}
-.roadmap-line-done {
-    @apply bg-fuchsia-500;
-}
-.roadmap-line-inprogress {
-    @apply bg-yellow-500;
-}
-.roadmap-line-todo {
-    @apply bg-slate-300 dark:bg-slate-700;
-}
 </style>

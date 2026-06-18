@@ -7,70 +7,75 @@ export default {
         desc: 'Un condensé de technologie pour [hl](comprendre), [hl](interagir) et [hl](apprendre) !',
         button: 'S\'inscrire à la liste d\'attente',
     },
-    features: {
-        title: 'Un projet [hl](100% Open-Source) !',
-        print: {
-            title: 'Pièces 3D imprimables facilement',
-            desc: 'Toutes les pièces du TNY-360 sont conçues pour être imprimées en 3D avec un minimum de supports, sur n\'importe quel type d\'imprimante FDM !'
+    readable: {
+        title: 'La [hl](robotique avancée), enfin lisible',
+        ing: {
+            title: 'L\'ingénieurie complexe [hl](devient une évidence).',
+            p1: 'Fini les nids de câbles impossibles à déboguer. Le TNY-360 introduit un design électronique sémantique et "idiot-proof".',
+            p2: 'Chaque PCB a un rôle précis, des icônes claires pour le câblage, et des QR codes qui vous lient directement à une documentation pas-à-pas.',
         },
-        maker: {
-            title: 'Plateforme orientée maker',
-            desc: 'Une conception pensée pour être modifée, étendue, améliorée, et réparée le plus facilement possible !'
-        },
-        soft: {
-            title: 'Logiciel collaboratif ouvert',
-            desc: 'Tout le logiciel est open-source et ouvert aux contributions, pour rendre le TNY-360 encore meilleur !',
-        },
-        takeALook: {
-            title: 'Tu veux y jeter un œil ?',
-            desc: 'Tu peux trouver toutes les ressources, le code et les modèles sur le',
-            link: 'dépôt GitHub',
+        doc: {
+            title: 'Une documentation [hl](pensée pour l\'humain).',
+            p1: 'L\'apprentissage ne doit pas être une corvée. Nous avons banni le jargon académique pour créer une documentation ultra-visuelle, pensée comme un jeu de construction.',
+            p2: 'Chaque étape est illustrée, chaque concept est schématisé. Que vous soyez un ingénieur chevronné ou un débutant passionné, vous visualisez l\'assemblage et la logique logicielle sans le moindre effort.',
         },
     },
-    engineering:  {
-        title: 'Petit format, [hl](Ingénierie monstre).',
-        closedLoop: {
-            title: 'Fini les servos aveugles',
-            desc: 'Nous avons hacké des servos MG996R avec un PCB maison. Le résultat ? un retour de position parfait et sans parasite pour un contrôle à 200Hz.',
-            cta: 'Voir le tutoriel',
+    dev: {
+        title: 'La [hl](plateforme de développement) par excellence',
+        open: {
+            title: 'Un projet [hl](100% Open-Source). Vraiment.',
+            p1: 'Nous ne cachons rien. La mécanique (fichiers 3D - STL/FreeCAD), l\'électronique (schémas et routages), le firmware et toute notre suite de logiciels compagnons sont en libre accès sur',
+            link: 'nos repositories GitHub',
+            p2: 'Étudiez-les, modifiez-les, améliorez-les : [bd](Le TNY-360 est un bac à sable absolu.)',
         },
-        wiring: {
-            title: 'Une architecture modulaire',
-            desc: 'Plus de câbles Dupont qui s\'arrachent. Le TNY-360 repose sur un écosystème de 6 PCBs interconnectés par des prises JST-PH sécurisées',
-            cta: 'Découvrir l\'électronique',
+        mod: {
+            title: 'Une architecture [hl](modulaire) et hautement [hl](modifiable).',
+            p1: 'Oubliez les soudures hasardeuses. Toute notre électronique repose sur des connecteurs standards JST-PH : c\'est propre, solide et modifiable à l\'infini.',
+            p2: 'Côté mécanique, notre système de clips permet de remplacer les pièces d\'armure en un claquement de doigts. Imprimez vos propres pièces 3D, changez les couleurs, ajoutez votre logo : [bd](Ce robot devient votre robot.)',
         },
-        extension: {
-            title: 'Étendez ses capacités',
-            desc: 'Branchez vos propres modules physiques (bras robotique, capteurs) directement sur le port dorsal exposant l\'alimentation et le bus I2C.',
-            cta: 'Créer une extension',
-        }
+        ext: {
+            title: 'Vous avez une idée ? [hl](Branchez-la) !',
+            p1: 'Avec son architecture entièrement modulaire et son port d\'extension dorsal, ajouter un capteur LiDAR ou un bras robotique prend quelques secondes.',
+            p2: 'Nous avons même imprimé les dimensions mécaniques directement sur le port ! [bd](Même plus besoin d\'ouvrir la documentation pour prototyper.)',
+        },
     },
-    learn: {
-        title: 'Commences à apprendre [hl](à n\'importe quel niveau) !',
-        mobile: {
-            title: 'Application mobile',
-            desc: 'Contrôle ton TNY-360 avec ton smartphone, et vois les retours de ses capteurs en temps réel !',
-            button: 'Télécharger l\'application',
+    evolve: {
+        title: 'Un robot qui [hl](évolue à votre rythme)',
+        poss: {
+            title: 'Un seul matériel, des possibilités [hl](infinies).',
+            p1: 'Que vous ayez 12 ou 45 ans, le TNY-360 s\'adapte à votre expertise.',
+            tel: 'Commencez par le piloter via une manette ou votre téléphone',
+            blocks: 'Programmez-le en blocs graphiques avec nos applications',
+            sdk: 'Montez en puissance avec nos SDK natifs en Python ou JS/TS',
+            ros: 'Allez jusqu\'à la recherche avancée en l\'intégrant sous ROS2'
         },
-        desktop: {
-            title: 'Programmation par blocs',
-            desc: 'Programme ton TNY-360 avec une interface par blocs, et commence la robotique en un rien de temps !',
-            button: 'Essayer maintenant',
+        learn: {
+            title: 'Le vecteur [hl](idéal) d\'apprentissage.',
+            p1: 'La théorie s\'oublie, la pratique reste. Le TNY-360 transforme les concepts abstraits (cinématique, algorithmes, IA) en un projet tangible et gratifiant.',
+            p2: 'C\'est [hl](l\'outil STEM ultime) pour les écoles, les universités et les makers.',
         },
-        python: {
-            title: 'Programmation Python',
-            desc: 'Écris tes propres scripts en Python pour contrôler ton TNY-360, et libère tout son potentiel !',
-            button: 'Commencer à coder',
+    },
+    perfs: {
+        title: 'Des [hl](performances de pros), au juste prix',
+        power: {
+            title: 'Un [hl](monstre de puissance) sous le capot.',
+            p1: 'Nous avons repoussé les limites du matériel embarqué. Propulsé par une architecture Dual-Core, le TNY-360 calcule sa cinématique inverse avec une boucle de contrôle à [bd](200 Hz).',
+            p2: 'Blindé de capteurs environnementaux et proprioceptifs, la seule limite à ses capacités d\'analyse, c\'est votre imagination.',
         },
-        ros2: {
-            title: 'Intégration ROS 2',
-            desc: 'Intègre ton TNY-360 au Robot Operating System, et bénéficie d\'un middleware robotique puissant !',
-            button: 'En savoir plus',
+        moves: {
+            title: 'Une [hl](fluidité de mouvement) exceptionnelle.',
+            p1: 'La majorité des robots amateurs se contentent d\'un rafraîchissement à 50 Hz. Nous tournons 4 fois plus vite.',
+            p2: 'Cette réactivité hors norme, couplée au contrôle fin de nos moteurs et à l\'IMU, permet au robot de générer une démarche adaptative, intelligente et d\'une stabilité bluffante, même sur terrain accidenté.',
         },
-        esp32: {
-            title: 'Développement ESP32',
-            desc: 'Développe ton propre firmware pour l\'ESP32, et personnalise ton TNY-360 à volonté !',
-            button: 'Voir plus',
+        alive: {
+            title: 'Plus [hl](vivant) que jamais.',
+            p1: 'Le TNY-360 ne fait pas qu\'exécuter des lignes de code, il vit. Grâce à son arbre de comportements autonome, vous décidez de son niveau d\'indépendance :',
+            p2: 'Laissez-le explorer son environnement librement, limitez-le à des animations réactives, ou reprenez le contrôle total. Ses sécurités actives (safeguards) veillent en permanence pour éviter les chutes.',
+        },
+        hri: {
+            title: 'L\'outil ultime pour la [hl](recherche HRI).',
+            p1: 'Un robot ne doit pas être froid. Avec son écran facial haute résolution, ses oreilles motorisées, son haut-parleur, son micro et sa caméra intégrée, le TNY-360 a tout pour communiquer.',
+            p2: 'Générez des expressions complexes, créez des interactions anthropomorphiques et explorez le potentiel infini de l\'[bd](Interaction Humain-Robot (HRI) ). C\'est plus qu\'une machine, c\'est un compagnon de développement.',
         },
     },
     specs: {
@@ -123,30 +128,9 @@ export default {
             bullet3: 'Suivi d\'objets',
         },
     },
-    roadmap: {
-        title: 'On [hl](travaille dessus) ! Voici ce qui [hl](arrive bientôt) :',
-        firmware: {
-            title: 'Firmware',
-            step1: 'Drivers bas niveau',
-            step2: 'Interface Web & IK',
-            step3: 'Déplacements & IA',
-        },
-        hardware: {
-            title: 'Hardware',
-            step1: 'Châssis V2 Core',
-            step2: 'Conception tête et style',
-            step3: 'V3 pour la production',
-        },
-        doc: {
-            title: 'Documentation',
-            step1: 'Structure & Stack technique',
-            step2: 'Manuels et guides d\'assembl.',
-            step3: 'Wiki complet',
-        },
-    },
     start: {
         title: '[hl](Construis) ou [hl](commandes) ton propre TNY-360 !',
-        best: 'Meilleure valeur',
+        best: 'Meilleure offre',
         barebones: {
             title: '[hl](Bidouilleur) dans l\'âme ?',
             desc: 'Imprime tes propres pièces à la maison et commande seulement ce dont tu as besoin !',
