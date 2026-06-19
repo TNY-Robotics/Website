@@ -28,12 +28,14 @@
                     </div>
                     <div class="flex lg:flex-row flex-col space-x-8">
                         <div class="flex w-full lg:w-1/2 justify-center items-center">
-                            <video v-if="darkMode" autoplay muted loop playsinline loading="lazy" class="w-full">
+                            <!-- <video v-if="darkMode" autoplay muted loop playsinline loading="lazy" class="w-full">
                                 <source src="/tny-360/happy-dark.mp4" type="video/mp4" />
                             </video>
                             <video v-else autoplay muted loop playsinline loading="lazy" class="w-full">
                                 <source src="/tny-360/happy-light.mp4" type="video/mp4" />
-                            </video>
+                            </video> -->
+                            <SmartVideo src="/tny-360/happy-dark.mp4" poster="/tny-360/happy-dark.webp" v-if="darkMode" />
+                            <SmartVideo src="/tny-360/happy-light.mp4" poster="/tny-360/happy-light.webp" v-else />
                         </div>
                         <div class="flex flex-col w-full lg:w-1/2 justify-center items-start space-y-8">
                             <p class="text-lg"> <RichText path="index.tny360.desc" class="space-y-4" /> </p>
