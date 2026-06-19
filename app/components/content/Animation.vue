@@ -1,5 +1,5 @@
 <template>
-    <video v-if="!error" ref="video" :src="props.src" autoplay loop muted playsinline alt="Animation" class="rounded-lg bg-white dark:bg-slate-900" />
+    <video v-if="!error" ref="video" :src="props.src" autoplay loop muted playsinline alt="Animation" class="rounded-lg bg-white dark:bg-slate-900" :style="{ transform: props.flip ? 'scaleX(-1)' : 'none' }" />
     <div v-if="error" class="text-red-500">
         Video not available (yet)
         <br>
@@ -10,6 +10,7 @@
 <script lang="ts" setup>
 const props = defineProps<{
     src: string;
+    flip?: boolean;
 }>();
 
 const error = ref(false);
