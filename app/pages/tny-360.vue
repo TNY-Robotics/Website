@@ -27,12 +27,6 @@
                         <p class="lg:text-lg"> <RichText path="tny360.readable.ing.p2" /> </p>
                     </div>
                     <div class="w-full lg:w-2/3 h-fit z-10 bottom-0 left-0 flex justify-center">
-                        <!-- <video v-if="darkMode" autoplay muted loop playsinline loading="lazy" class="show-up h-full object-cover">
-                            <source src="/tny-360/pcbs-dark.mp4" type="video/mp4" />
-                        </video>
-                        <video v-else autoplay muted loop playsinline loading="lazy" class="show-up h-full object-cover">
-                            <source src="/tny-360/pcbs-light.mp4" type="video/mp4" />
-                        </video> -->
                         <SmartVideo src="/tny-360/pcbs-dark.mp4" poster="/tny-360/pcbs-dark.webp" v-if="darkMode" />
                         <SmartVideo src="/tny-360/pcbs-light.mp4" poster="/tny-360/pcbs-light.webp" v-else />
                     </div>
@@ -44,12 +38,6 @@
                         <p class="lg:text-lg"> <RichText path="tny360.readable.doc.p2" /> </p>
                     </div>
                     <div class="w-full h-fit z-10 bottom-0 left-0 flex justify-center">
-                        <!-- <video v-if="darkMode" autoplay muted loop playsinline loading="lazy" class="show-up h-full object-cover">
-                            <source src="/tny-360/doc-dark.mp4" type="video/mp4" />
-                        </video>
-                        <video v-else autoplay muted loop playsinline loading="lazy" class="show-up h-full object-cover">
-                            <source src="/tny-360/doc-light.mp4" type="video/mp4" />
-                        </video> -->
                         <SmartVideo src="/tny-360/doc-dark.mp4" poster="/tny-360/doc-dark.webp" v-if="darkMode" />
                         <SmartVideo src="/tny-360/doc-light.mp4" poster="/tny-360/doc-light.webp" v-else />
                     </div>
@@ -61,12 +49,6 @@
             <h2 class="subtitle text-center py-16 px-2"> <RichText path="tny360.dev.title" /> </h2>
             <div class="relative w-full flex h-128">
                 <div class="absolute top-0 right-0 w-full h-full z-10">
-                    <!-- <video v-if="darkMode" autoplay muted loop playsinline loading="lazy" class="show-left w-full h-full object-cover">
-                        <source src="/tny-360/open-dark.mp4" type="video/mp4" />
-                    </video>
-                    <video v-else autoplay muted loop playsinline loading="lazy" class="show-left w-full h-full object-cover">
-                        <source src="/tny-360/open-light.mp4" type="video/mp4" />
-                    </video> -->
                     <SmartVideo src="/tny-360/open-dark.mp4" poster="/tny-360/open-dark.webp" v-if="darkMode" />
                     <SmartVideo src="/tny-360/open-light.mp4" poster="/tny-360/open-light.webp" v-else />
                 </div>
@@ -82,12 +64,6 @@
             </div>
             <div class="relative w-full flex h-128">
                 <div class="absolute top-0 left-0 w-full h-full z-10">
-                    <!-- <video v-if="darkMode" autoplay muted loop playsinline loading="lazy" class="show-right w-full h-full object-cover">
-                        <source src="/tny-360/clips-dark.mp4" type="video/mp4" />
-                    </video>
-                    <video v-else autoplay muted loop playsinline loading="lazy" class="show-right w-full h-full object-cover">
-                        <source src="/tny-360/clips-light.mp4" type="video/mp4" />
-                    </video> -->
                     <SmartVideo src="/tny-360/clips-dark.mp4" poster="/tny-360/clips-dark.webp" v-if="darkMode" />
                     <SmartVideo src="/tny-360/clips-light.mp4" poster="/tny-360/clips-light.webp" v-else />
                 </div>
@@ -101,12 +77,6 @@
             </div>
             <div class="relative w-full flex h-128">
                 <div class="absolute top-0 left-0 w-full h-full z-10">
-                    <!-- <video v-if="darkMode" autoplay muted loop playsinline loading="lazy" class="show-left w-full h-full object-cover">
-                        <source src="/tny-360/ext-dark.mp4" type="video/mp4" />
-                    </video>
-                    <video v-else autoplay muted loop playsinline loading="lazy" class="show-left w-full h-full object-cover">
-                        <source src="/tny-360/ext-light.mp4" type="video/mp4" />
-                    </video> -->
                     <SmartVideo src="/tny-360/ext-dark.mp4" poster="/tny-360/ext-dark.webp" v-if="darkMode" />
                     <SmartVideo src="/tny-360/ext-light.mp4" poster="/tny-360/ext-light.webp" v-else />
                 </div>
@@ -155,12 +125,6 @@
                     <p class="lg:text-lg"> <RichText path="tny360.evolve.learn.p1" /> </p>
                     <!-- <p class="lg:text-lg"> Au-delà de l'assemblage, notre écosystème propose des jeux éducatifs et des défis interactifs pour assimiler la logique de la programmation en s'amusant. </p> -->
                     <p class="lg:text-lg"> <b> <RichText path="tny360.evolve.learn.p2" /> </b> </p>
-                    <!-- <video v-if="darkMode" autoplay muted loop playsinline loading="lazy" class="show-up w-fit h-full max-h-128 object-fit bg-gradient-highlight">
-                        <source src="/tny-360/learn-dark.mp4" type="video/mp4" />
-                    </video>
-                    <video v-else autoplay muted loop playsinline loading="lazy" class="show-up w-fit h-full max-h-128 object-fit bg-gradient-highlight">
-                        <source src="/tny-360/learn-light.mp4" type="video/mp4" />
-                    </video> -->
                     <SmartVideo src="/tny-360/learn-dark.mp4" poster="/tny-360/learn-dark.webp" v-if="darkMode" />
                     <SmartVideo src="/tny-360/learn-light.mp4" poster="/tny-360/learn-light.webp" v-else />
                 </div>
@@ -181,12 +145,6 @@
                 <div class="flex w-full transition-all duration-500" :style="{ transform: `translateX(-${carouselIndex * 100}%)` }">
                     <div class="relative flex flex-col w-full flex-shrink-0 justify-end items-center pb-12">
                         <div class="lg:absolute top-0 left-0 w-full h-1/2 lg:h-full">
-                            <!-- <video v-if="darkMode" autoplay muted loop playsinline loading="lazy" class="w-full h-full object-fit">
-                                <source src="/tny-360/power-dark.mp4" type="video/mp4" />
-                            </video>
-                            <video v-else autoplay muted loop playsinline loading="lazy" class="w-full h-full object-fit">
-                                <source src="/tny-360/power-light.mp4" type="video/mp4" />
-                            </video> -->
                             <SmartVideo src="/tny-360/power-dark.mp4" poster="/tny-360/power-dark.webp" v-if="darkMode" />
                             <SmartVideo src="/tny-360/power-light.mp4" poster="/tny-360/power-light.webp" v-else />
                         </div>
@@ -198,12 +156,6 @@
                     </div>
                     <div class="relative flex flex-col w-full flex-shrink-0 justify-end items-center pb-12">
                         <div class="lg:absolute top-0 left-0 w-full h-1/2 lg:h-full">
-                            <!-- <video v-if="darkMode" autoplay muted loop playsinline loading="lazy" class="w-full h-full object-fit">
-                                <source src="/tny-360/move-dark.mp4" type="video/mp4" />
-                            </video>
-                            <video v-else autoplay muted loop playsinline loading="lazy" class="w-full h-full object-fit">
-                                <source src="/tny-360/move-light.mp4" type="video/mp4" />
-                            </video> -->
                             <SmartVideo src="/tny-360/move-dark.mp4" poster="/tny-360/move-dark.webp" v-if="darkMode" />
                             <SmartVideo src="/tny-360/move-light.mp4" poster="/tny-360/move-light.webp" v-else />
                         </div>
@@ -215,12 +167,6 @@
                     </div>
                     <div class="relative flex flex-col w-full flex-shrink-0 justify-end items-center pb-12">
                         <div class="lg:absolute top-0 left-0 w-full h-1/2 lg:h-full">
-                            <!-- <video v-if="darkMode" autoplay muted loop playsinline loading="lazy" class="w-full h-full object-cover">
-                                <source src="/tny-360/alive-dark.mp4" type="video/mp4" />
-                            </video>
-                            <video v-else autoplay muted loop playsinline loading="lazy" class="w-full h-full object-cover">
-                                <source src="/tny-360/alive-light.mp4" type="video/mp4" />
-                            </video> -->
                             <SmartVideo src="/tny-360/alive-dark.mp4" poster="/tny-360/alive-dark.webp" v-if="darkMode" />
                             <SmartVideo src="/tny-360/alive-light.mp4" poster="/tny-360/alive-light.webp" v-else />
                         </div>
@@ -232,12 +178,6 @@
                     </div>
                     <div class="relative flex flex-col w-full flex-shrink-0 justify-end items-center pb-12">
                         <div class="lg:absolute top-0 left-0 w-full h-1/2 lg:h-full">
-                            <!-- <video v-if="darkMode" autoplay muted loop playsinline loading="lazy" class="w-full h-full object-fit">
-                                <source src="/tny-360/hri-dark.mp4" type="video/mp4" />
-                            </video>
-                            <video v-else autoplay muted loop playsinline loading="lazy" class="w-full h-full object-fit">
-                                <source src="/tny-360/hri-light.mp4" type="video/mp4" />
-                            </video> -->
                             <SmartVideo src="/tny-360/hri-dark.mp4" poster="/tny-360/hri-dark.webp" v-if="darkMode" />
                             <SmartVideo src="/tny-360/hri-light.mp4" poster="/tny-360/hri-light.webp" v-else />
                         </div>
