@@ -221,9 +221,9 @@
                     </div>
                     <div class="flex w-full justify-center pt-4">
                         <UTooltip :text="$t('tny360.start.restock')">
-                            <UButton disabled class="w-fit" variant="subtle" size="xl">
-                                <!-- <RichText path="tny360.start.barebones.button" /> -->
-                                <RichText path="tny360.start.outOfStock" />
+                            <UButton class="w-fit" variant="subtle" size="xl" href="https://store.tny-robotics.com/products/tny-360-barebones-kit">
+                                <RichText path="tny360.start.barebones.button" />
+                                <!-- <RichText path="tny360.start.outOfStock" /> -->
                             </UButton>
                         </UTooltip>
                     </div>
@@ -261,9 +261,9 @@
                         </div>
                         <div class="flex w-full justify-center pt-4">
                             <UTooltip :text="$t('tny360.start.restock')">
-                                <UButton disabled class="w-fit" variant="subtle" size="xl">
-                                    <!-- <RichText path="tny360.start.maker.button" /> -->
-                                    <RichText path="tny360.start.outOfStock" />
+                                <UButton class="w-fit" variant="subtle" size="xl" href="https://store.tny-robotics.com/products/tny-360-maker-kit">
+                                    <RichText path="tny360.start.maker.button" />
+                                    <!-- <RichText path="tny360.start.outOfStock" /> -->
                                 </UButton>
                             </UTooltip>
                         </div>
