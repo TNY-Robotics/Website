@@ -28,9 +28,9 @@ As of today, only the [Javascript/TypeScript SDK](./javascript) and the [Python 
 
 ---
 
-## API References
+## SDK Documentation
 
-Here are the links to the API references for the different SDKs :
+Here are the links to the SDK documentation for each programming language:
 
 ::chevron
 [Python SDK](./python)<br>
@@ -54,14 +54,14 @@ The ROS2 Integration is under active development. It will allow you to talk to y
 
 ---
 
-## SDK Documentation
+## API Reference
 
 All the SDKs (Python, Javascript/TypeScript, C/C++, ...) are built on top of the same underlying API that uses Websockets to communicate with the robot.
 
-This makes all SDKs structured in a similar way. So we built a dedicated [SDK Documentation](./sdk-doc) section where you can find all the details about the available methods, classes, you can use in every SDK.
+This makes all SDKs structured in a similar way. So we built a dedicated [API Reference](./api-ref) section where you can find all the details about the available methods and types, you can use in every SDK.
 
 <br>
 
 ::center
-:big-button{label="SDK Documentation" href="./sdk-doc" icon="i-lucide-chevron-right" inline}
+:big-button{label="API Reference" href="./api-ref" icon="i-lucide-chevron-right" inline}
 ::

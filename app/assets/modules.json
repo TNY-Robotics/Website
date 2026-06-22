@@ -1,0 +1,1599 @@
+{
+  "adc": [
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "voltages",
+          "type": "float32[16]",
+          "desc": "Array of voltage readings for all ADC channels in volts."
+        }
+      ],
+      "desc": "Gets the current voltage readings of all ADC channels.",
+      "impl": "done",
+      "module": {
+        "name": "adc",
+        "id": 15
+      },
+      "action": {
+        "name": "getAllChannels",
+        "id": 0
+      }
+    }
+  ],
+  "body": [
+    {
+      "args": [
+        {
+          "name": "enabled_flag",
+          "type": "uint16",
+          "desc": "Bitfield representing the enabled state of each joint (see JointId).",
+          "required": true
+        }
+      ],
+      "result": null,
+      "desc": "Sets the enabled state of the body joints.",
+      "impl": "done",
+      "module": {
+        "name": "body",
+        "id": 3
+      },
+      "action": {
+        "name": "setEnabled",
+        "id": 0
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "enabled_flag",
+          "type": "uint16",
+          "desc": "Bitfield representing the enabled state of each joint (see JointId)."
+        }
+      ],
+      "desc": "Gets the enabled state of the body joints.",
+      "impl": "done",
+      "module": {
+        "name": "body",
+        "id": 3
+      },
+      "action": {
+        "name": "getEnabled",
+        "id": 1
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "x_ms",
+          "type": "float32",
+          "desc": "X velocity in meters per second.",
+          "required": true
+        },
+        {
+          "name": "y_ms",
+          "type": "float32",
+          "desc": "Y velocity in meters per second.",
+          "required": true
+        },
+        {
+          "name": "z_rads",
+          "type": "float32",
+          "desc": "Rotational velocity around Z axis in radians per second.",
+          "required": true
+        },
+        {
+          "name": "clear_overrides",
+          "type": "bool",
+          "desc": "Whether to clear joint overrides when setting the velocity (default: true).",
+          "required": true
+        }
+      ],
+      "result": null,
+      "desc": "Sets the target velocity of the robot's body.",
+      "impl": "done",
+      "module": {
+        "name": "body",
+        "id": 3
+      },
+      "action": {
+        "name": "setVelocity",
+        "id": 2
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "x_ms",
+          "type": "float32",
+          "desc": "X velocity in meters per second."
+        },
+        {
+          "name": "y_ms",
+          "type": "float32",
+          "desc": "Y velocity in meters per second."
+        },
+        {
+          "name": "z_rads",
+          "type": "float32",
+          "desc": "Rotational velocity around Z axis in radians per second."
+        }
+      ],
+      "desc": "Gets the target velocity of the robot's body.",
+      "impl": "done",
+      "module": {
+        "name": "body",
+        "id": 3
+      },
+      "action": {
+        "name": "getTargetVelocity",
+        "id": 3
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "x_pos",
+          "type": "float32",
+          "desc": "X position in meters.",
+          "required": true
+        },
+        {
+          "name": "y_pos",
+          "type": "float32",
+          "desc": "Y position in meters.",
+          "required": true
+        },
+        {
+          "name": "z_pos",
+          "type": "float32",
+          "desc": "Z position in meters.",
+          "required": true
+        },
+        {
+          "name": "x_rot",
+          "type": "float32",
+          "desc": "X rotation in radians (Euler XYZ).",
+          "required": true
+        },
+        {
+          "name": "y_rot",
+          "type": "float32",
+          "desc": "Y rotation in radians (Euler XYZ).",
+          "required": true
+        },
+        {
+          "name": "z_rot",
+          "type": "float32",
+          "desc": "Z rotation in radians (Euler XYZ).",
+          "required": true
+        },
+        {
+          "name": "clear_overrides",
+          "type": "bool",
+          "desc": "Whether to clear joint overrides when setting the posture (default: true).",
+          "required": true
+        }
+      ],
+      "result": null,
+      "desc": "Sets the target posture of the robot's body.",
+      "impl": "done",
+      "module": {
+        "name": "body",
+        "id": 3
+      },
+      "action": {
+        "name": "setPosture",
+        "id": 4
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "pos",
+          "type": "Vec3f",
+          "desc": "Target position of the body in meters."
+        },
+        {
+          "name": "rot",
+          "type": "Vec3f",
+          "desc": "Target rotation of the body in radians (Euler XYZ)."
+        }
+      ],
+      "desc": "Gets the target posture of the robot's body.",
+      "impl": "done",
+      "module": {
+        "name": "body",
+        "id": 3
+      },
+      "action": {
+        "name": "getPosture",
+        "id": 5
+      }
+    }
+  ],
+  "gait": [
+    {
+      "args": [
+        {
+          "name": "gait_type",
+          "type": "uint8",
+          "desc": "Gait type (0 = Stand, 1 = Walk, 2 = Trot, 3 = Gallop).",
+          "required": true
+        }
+      ],
+      "result": null,
+      "desc": "Sets the gait type for the robot.",
+      "impl": "done",
+      "module": {
+        "name": "gait",
+        "id": 2
+      },
+      "action": {
+        "name": "setType",
+        "id": 0
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "gait_type",
+          "type": "uint8",
+          "desc": "Gait type (0 = Stand, 1 = Walk, 2 = Trot, 3 = Gallop)."
+        }
+      ],
+      "desc": "Gets the current gait type for the robot.",
+      "impl": "done",
+      "module": {
+        "name": "gait",
+        "id": 2
+      },
+      "action": {
+        "name": "getType",
+        "id": 1
+      }
+    }
+  ],
+  "i2c": [
+    {
+      "args": [
+        {
+          "name": "address",
+          "type": "uint8",
+          "desc": "I2C address of the device to ping.",
+          "required": true
+        }
+      ],
+      "result": [
+        {
+          "name": "found",
+          "type": "bool",
+          "desc": "Whether a device responded at the specified address."
+        }
+      ],
+      "desc": "Pings an I2C device at the specified address to check if it is present on the bus.",
+      "impl": "done",
+      "module": {
+        "name": "i2c",
+        "id": 14
+      },
+      "action": {
+        "name": "pingDevice",
+        "id": 0
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "address",
+          "type": "uint8",
+          "desc": "I2C address of the device to write to.",
+          "required": true
+        },
+        {
+          "name": "reg_address",
+          "type": "uint8",
+          "desc": "Register address to write to.",
+          "required": true
+        },
+        {
+          "name": "length",
+          "type": "uint8",
+          "desc": "Number of bytes to write.",
+          "required": true
+        },
+        {
+          "name": "data",
+          "type": "byte[]",
+          "desc": "Data bytes to write to the register.",
+          "required": true
+        }
+      ],
+      "result": null,
+      "desc": "Writes a sequence of bytes to a register of an I2C device.",
+      "impl": "done",
+      "module": {
+        "name": "i2c",
+        "id": 14
+      },
+      "action": {
+        "name": "writeRegisters",
+        "id": 1
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "address",
+          "type": "uint8",
+          "desc": "I2C address of the device to read from.",
+          "required": true
+        },
+        {
+          "name": "reg_address",
+          "type": "uint8",
+          "desc": "Register address to read from.",
+          "required": true
+        },
+        {
+          "name": "length",
+          "type": "uint8",
+          "desc": "Number of bytes to read.",
+          "required": true
+        }
+      ],
+      "result": [
+        {
+          "name": "data",
+          "type": "byte[]",
+          "desc": "Read data bytes (of specified length)."
+        }
+      ],
+      "desc": "Reads a sequence of bytes from a register of an I2C device.",
+      "impl": "done",
+      "module": {
+        "name": "i2c",
+        "id": 14
+      },
+      "action": {
+        "name": "readRegisters",
+        "id": 2
+      }
+    }
+  ],
+  "imu": [
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "acceleration",
+          "type": "Vec3f",
+          "desc": "Acceleration vector in m/s^2 (x, y, z)."
+        }
+      ],
+      "desc": "Gets the current acceleration vector from the IMU.",
+      "impl": "partial",
+      "module": {
+        "name": "imu",
+        "id": 7
+      },
+      "action": {
+        "name": "getAcceleration",
+        "id": 0
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "angular_velocity",
+          "type": "Vec3f",
+          "desc": "Angular velocity vector in rad/s (x, y, z)."
+        }
+      ],
+      "desc": "Gets the current angular velocity vector from the IMU.",
+      "impl": "partial",
+      "module": {
+        "name": "imu",
+        "id": 7
+      },
+      "action": {
+        "name": "getAngularVelocity",
+        "id": 1
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "down_vector",
+          "type": "Vec3f",
+          "desc": "Down vector (unit vector pointing in the direction of gravity)."
+        }
+      ],
+      "desc": "Gets the current down vector from the IMU (i.e. the direction of gravity).",
+      "impl": "done",
+      "module": {
+        "name": "imu",
+        "id": 7
+      },
+      "action": {
+        "name": "getDownVector",
+        "id": 2
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "orientation",
+          "type": "Vec3f",
+          "desc": "Rotation vector representing the robot's orientation (Euler rotation in radians, XYZ order)"
+        }
+      ],
+      "desc": "Gets the current orientation of the robot as a rotation vector (axis-angle representation).",
+      "impl": "done",
+      "module": {
+        "name": "imu",
+        "id": 7
+      },
+      "action": {
+        "name": "getOrientation",
+        "id": 3
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "state",
+          "type": "uint8",
+          "desc": "Calibration state (0 = not calibrated, 1 = calibrating, 2 = calibrated)."
+        }
+      ],
+      "desc": "Gets the current calibration state of the IMU.",
+      "impl": "nope",
+      "module": {
+        "name": "imu",
+        "id": 7
+      },
+      "action": {
+        "name": "getCalibrationState",
+        "id": 4
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "data",
+          "type": "byte[]",
+          "desc": "Calibration data blob (format TBD)."
+        }
+      ],
+      "desc": "Gets the current calibration data of the IMU.",
+      "impl": "nope",
+      "module": {
+        "name": "imu",
+        "id": 7
+      },
+      "action": {
+        "name": "getCalibrationData",
+        "id": 5
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "data",
+          "type": "byte[]",
+          "desc": "Calibration data blob (format TBD).",
+          "required": true
+        }
+      ],
+      "result": null,
+      "desc": "Sets the calibration data of the IMU.",
+      "impl": "nope",
+      "module": {
+        "name": "imu",
+        "id": 7
+      },
+      "action": {
+        "name": "setCalibrationData",
+        "id": 6
+      }
+    },
+    {
+      "args": [],
+      "result": null,
+      "desc": "Starts the calibration process for the IMU.",
+      "impl": "nope",
+      "module": {
+        "name": "imu",
+        "id": 7
+      },
+      "action": {
+        "name": "startCalibration",
+        "id": 7
+      }
+    },
+    {
+      "args": [],
+      "result": null,
+      "desc": "Stops the calibration process for the IMU.",
+      "impl": "nope",
+      "module": {
+        "name": "imu",
+        "id": 7
+      },
+      "action": {
+        "name": "stopCalibration",
+        "id": 8
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "progress",
+          "type": "uint8",
+          "desc": "Calibration progress percentage (0-100)."
+        }
+      ],
+      "desc": "Gets the current progress of the IMU calibration process.",
+      "impl": "nope",
+      "module": {
+        "name": "imu",
+        "id": 7
+      },
+      "action": {
+        "name": "getCalibrationProgress",
+        "id": 9
+      }
+    }
+  ],
+  "joint": [
+    {
+      "args": [
+        {
+          "name": "joint_id",
+          "type": "uint8",
+          "desc": "ID of the joint to set the enabled state for.",
+          "required": true
+        },
+        {
+          "name": "enabled",
+          "type": "bool",
+          "desc": "Whether to enable (true) or disable (false) the joint.",
+          "required": true
+        }
+      ],
+      "result": null,
+      "desc": "Sets the enabled state of a joint.",
+      "impl": "done",
+      "module": {
+        "name": "joint",
+        "id": 5
+      },
+      "action": {
+        "name": "setEnabled",
+        "id": 0
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "joint_id",
+          "type": "uint8",
+          "desc": "ID of the joint to get the enabled state for.",
+          "required": true
+        }
+      ],
+      "result": [
+        {
+          "name": "enabled",
+          "type": "bool",
+          "desc": "Whether the joint is currently enabled."
+        }
+      ],
+      "desc": "Gets the enabled state of a joint.",
+      "impl": "done",
+      "module": {
+        "name": "joint",
+        "id": 5
+      },
+      "action": {
+        "name": "getEnabled",
+        "id": 1
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "joint_id",
+          "type": "uint8",
+          "desc": "ID of the joint to set the target angle for.",
+          "required": true
+        },
+        {
+          "name": "angle",
+          "type": "float32",
+          "desc": "Target angle in radians.",
+          "required": true
+        }
+      ],
+      "result": null,
+      "desc": "Sets the target angle of a joint.",
+      "impl": "done",
+      "module": {
+        "name": "joint",
+        "id": 5
+      },
+      "action": {
+        "name": "setAngle",
+        "id": 2
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "joint_id",
+          "type": "uint8",
+          "desc": "ID of the joint to get the target angle for.",
+          "required": true
+        }
+      ],
+      "result": [
+        {
+          "name": "angle",
+          "type": "float32",
+          "desc": "Target angle in radians."
+        }
+      ],
+      "desc": "Gets the target angle of a joint.",
+      "impl": "done",
+      "module": {
+        "name": "joint",
+        "id": 5
+      },
+      "action": {
+        "name": "getTargetAngle",
+        "id": 3
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "joint_id",
+          "type": "uint8",
+          "desc": "ID of the joint to get the feedback angle for.",
+          "required": true
+        }
+      ],
+      "result": [
+        {
+          "name": "angle",
+          "type": "float32",
+          "desc": "Feedback angle in radians."
+        }
+      ],
+      "desc": "Gets the feedback angle of a joint.",
+      "impl": "done",
+      "module": {
+        "name": "joint",
+        "id": 5
+      },
+      "action": {
+        "name": "getFeedbackAngle",
+        "id": 4
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "joint_id",
+          "type": "uint8",
+          "desc": "ID of the joint to get the model angle for.",
+          "required": true
+        }
+      ],
+      "result": [
+        {
+          "name": "angle",
+          "type": "float32",
+          "desc": "Model angle in radians."
+        }
+      ],
+      "desc": "Gets the model angle of a joint.",
+      "impl": "done",
+      "module": {
+        "name": "joint",
+        "id": 5
+      },
+      "action": {
+        "name": "getModelAngle",
+        "id": 5
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "joint_id",
+          "type": "uint8",
+          "desc": "ID of the joint to get the estimated angle for.",
+          "required": true
+        }
+      ],
+      "result": [
+        {
+          "name": "angle",
+          "type": "float32",
+          "desc": "Estimated angle in radians."
+        }
+      ],
+      "desc": "Gets the estimated angle of a joint.",
+      "impl": "done",
+      "module": {
+        "name": "joint",
+        "id": 5
+      },
+      "action": {
+        "name": "getEstimatedAngle",
+        "id": 6
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "angles",
+          "type": "float32[14]",
+          "desc": "Target angles for all joints in radians (order: LF hip, LF knee, LF ankle, RF hip, RF knee, RF ankle, LH hip, LH knee, LH ankle, RH hip, RH knee, RH ankle).",
+          "required": true
+        }
+      ],
+      "result": null,
+      "desc": "Sets the target angles of all joints at once.",
+      "impl": "done",
+      "module": {
+        "name": "joint",
+        "id": 5
+      },
+      "action": {
+        "name": "setJointAngles",
+        "id": 7
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "angles",
+          "type": "float32[14]",
+          "desc": "Feedback angles for all joints in radians (order: LF hip, LF knee, LF ankle, RF hip, RF knee, RF ankle, LH hip, LH knee, LH ankle, RH hip, RH knee, RH ankle)."
+        }
+      ],
+      "desc": "Gets the feedback angles of all joints at once.",
+      "impl": "done",
+      "module": {
+        "name": "joint",
+        "id": 5
+      },
+      "action": {
+        "name": "getJointAngles",
+        "id": 8
+      }
+    }
+  ],
+  "leg": [
+    {
+      "args": [
+        {
+          "name": "leg_id",
+          "type": "uint8",
+          "desc": "ID of the leg to set the enabled state for.",
+          "required": true
+        },
+        {
+          "name": "enabled_flag",
+          "type": "uint8",
+          "desc": "Bitfield representing the enabled state of each joint (bit 0 = hip, bit 1 = knee, bit 2 = ankle).",
+          "required": true
+        }
+      ],
+      "result": null,
+      "desc": "Sets the enabled state of the joints in a leg.",
+      "impl": "done",
+      "module": {
+        "name": "leg",
+        "id": 4
+      },
+      "action": {
+        "name": "setEnabled",
+        "id": 0
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "leg_id",
+          "type": "uint8",
+          "desc": "ID of the leg to get the enabled state for.",
+          "required": true
+        }
+      ],
+      "result": [
+        {
+          "name": "enabled_flag",
+          "type": "uint8",
+          "desc": "Bitfield representing the enabled state of each joint (bit 0 = hip, bit 1 = knee, bit 2 = ankle)."
+        }
+      ],
+      "desc": "Gets the enabled state of the joints in a leg.",
+      "impl": "done",
+      "module": {
+        "name": "leg",
+        "id": 4
+      },
+      "action": {
+        "name": "getEnabled",
+        "id": 1
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "leg_id",
+          "type": "uint8",
+          "desc": "ID of the leg to set the position for.",
+          "required": true
+        },
+        {
+          "name": "x_m",
+          "type": "float32",
+          "desc": "X coordinate of the target position in meters.",
+          "required": true
+        },
+        {
+          "name": "y_m",
+          "type": "float32",
+          "desc": "Y coordinate of the target position in meters.",
+          "required": true
+        },
+        {
+          "name": "z_m",
+          "type": "float32",
+          "desc": "Z coordinate of the target position in meters.",
+          "required": true
+        },
+        {
+          "name": "clear_overrides",
+          "type": "bool",
+          "desc": "Whether to clear joint overrides when setting the position (default: true).",
+          "required": true
+        }
+      ],
+      "result": null,
+      "desc": "Sets the target position of a leg.",
+      "impl": "done",
+      "module": {
+        "name": "leg",
+        "id": 4
+      },
+      "action": {
+        "name": "setPosition",
+        "id": 2
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "leg_id",
+          "type": "uint8",
+          "desc": "ID of the leg to get the target position for.",
+          "required": true
+        }
+      ],
+      "result": [
+        {
+          "name": "pos",
+          "type": "Vec3f",
+          "desc": "Target position of the leg in meters."
+        }
+      ],
+      "desc": "Gets the target position of a leg.",
+      "impl": "done",
+      "module": {
+        "name": "leg",
+        "id": 4
+      },
+      "action": {
+        "name": "getTargetPosition",
+        "id": 3
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "leg_id",
+          "type": "uint8",
+          "desc": "ID of the leg to get the grounded state for.",
+          "required": true
+        }
+      ],
+      "result": [
+        {
+          "name": "grounded",
+          "type": "bool",
+          "desc": "Whether the leg is currently grounded."
+        }
+      ],
+      "desc": "Gets whether a leg is currently grounded.",
+      "impl": "done",
+      "module": {
+        "name": "leg",
+        "id": 4
+      },
+      "action": {
+        "name": "getGrounded",
+        "id": 4
+      }
+    }
+  ],
+  "motor": [
+    {
+      "args": [
+        {
+          "name": "joint_id",
+          "type": "uint8",
+          "desc": "ID of the joint to set the duty cycle for.",
+          "required": true
+        },
+        {
+          "name": "duty_cycle",
+          "type": "float32",
+          "desc": "Duty cycle to set in ms (between 0.0 and 5.0).",
+          "required": true
+        }
+      ],
+      "result": null,
+      "desc": "Sets the duty cycle of a motor.",
+      "impl": "done",
+      "module": {
+        "name": "motor",
+        "id": 6
+      },
+      "action": {
+        "name": "setDutyCycle",
+        "id": 0
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "joint_id",
+          "type": "uint8",
+          "desc": "ID of the joint to get the duty cycle for.",
+          "required": true
+        }
+      ],
+      "result": [
+        {
+          "name": "duty_cycle",
+          "type": "float32",
+          "desc": "Current duty cycle in ms (between 0.0 and 5.0)."
+        }
+      ],
+      "desc": "Gets the current duty cycle of a motor.",
+      "impl": "done",
+      "module": {
+        "name": "motor",
+        "id": 6
+      },
+      "action": {
+        "name": "getDutyCycle",
+        "id": 1
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "joint_id",
+          "type": "uint8",
+          "desc": "ID of the joint to get the calibration state for.",
+          "required": true
+        }
+      ],
+      "result": [
+        {
+          "name": "calib_state",
+          "type": "uint8",
+          "desc": "Current calibration state (0 = Not Calibrated, 1 = Calibrating, 2 = Calibrated)."
+        }
+      ],
+      "desc": "Gets the current calibration state of a motor.",
+      "impl": "done",
+      "module": {
+        "name": "motor",
+        "id": 6
+      },
+      "action": {
+        "name": "getCalibrationState",
+        "id": 2
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "joint_id",
+          "type": "uint8",
+          "desc": "ID of the joint to get the calibration data for.",
+          "required": true
+        }
+      ],
+      "result": [
+        {
+          "name": "calib_data",
+          "type": "CalibrationData",
+          "desc": "Current calibration data."
+        }
+      ],
+      "desc": "Gets the calibration data of a motor.",
+      "impl": "done",
+      "module": {
+        "name": "motor",
+        "id": 6
+      },
+      "action": {
+        "name": "getCalibrationData",
+        "id": 3
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "joint_id",
+          "type": "uint8",
+          "desc": "ID of the joint to set the calibration data for.",
+          "required": true
+        },
+        {
+          "name": "calib_data",
+          "type": "CalibrationData",
+          "desc": "New calibration data.",
+          "required": true
+        }
+      ],
+      "result": null,
+      "desc": "Sets the calibration data of a motor.",
+      "impl": "done",
+      "module": {
+        "name": "motor",
+        "id": 6
+      },
+      "action": {
+        "name": "setCalibrationData",
+        "id": 4
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "joint_id",
+          "type": "uint8",
+          "desc": "ID of the joint to delete the calibration data for.",
+          "required": true
+        }
+      ],
+      "result": null,
+      "desc": "Deletes the calibration data of a motor.",
+      "impl": "done",
+      "module": {
+        "name": "motor",
+        "id": 6
+      },
+      "action": {
+        "name": "deleteCalibrationData",
+        "id": 5
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "joint_id",
+          "type": "uint8",
+          "desc": "ID of the joint to start the calibration for.",
+          "required": true
+        }
+      ],
+      "result": null,
+      "desc": "Starts the calibration process for a motor.",
+      "impl": "done",
+      "module": {
+        "name": "motor",
+        "id": 6
+      },
+      "action": {
+        "name": "startCalibration",
+        "id": 6
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "joint_id",
+          "type": "uint8",
+          "desc": "ID of the joint to stop the calibration for.",
+          "required": true
+        }
+      ],
+      "result": null,
+      "desc": "Stops the calibration process for a motor.",
+      "impl": "done",
+      "module": {
+        "name": "motor",
+        "id": 6
+      },
+      "action": {
+        "name": "stopCalibration",
+        "id": 7
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "joint_id",
+          "type": "uint8",
+          "desc": "ID of the joint to get the calibration progress for.",
+          "required": true
+        }
+      ],
+      "result": [
+        {
+          "name": "progress",
+          "type": "float32",
+          "desc": "Current calibration progress (0.0 to 1.0)."
+        }
+      ],
+      "desc": "Gets the progress of the calibration process for a motor.",
+      "impl": "done",
+      "module": {
+        "name": "motor",
+        "id": 6
+      },
+      "action": {
+        "name": "getCalibrationProgress",
+        "id": 8
+      }
+    }
+  ],
+  "power": [
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "voltage_v",
+          "type": "float32",
+          "desc": "Current voltage in volts."
+        }
+      ],
+      "desc": "Gets the current voltage of the robot.",
+      "impl": "done",
+      "module": {
+        "name": "power",
+        "id": 9
+      },
+      "action": {
+        "name": "getVoltage",
+        "id": 0
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "current_a",
+          "type": "float32",
+          "desc": "Current current in amps."
+        }
+      ],
+      "desc": "Gets the current current of the robot.",
+      "impl": "done",
+      "module": {
+        "name": "power",
+        "id": 9
+      },
+      "action": {
+        "name": "getCurrent",
+        "id": 1
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "power_w",
+          "type": "float32",
+          "desc": "Current power consumption in watts."
+        }
+      ],
+      "desc": "Gets the current power consumption of the robot.",
+      "impl": "done",
+      "module": {
+        "name": "power",
+        "id": 9
+      },
+      "action": {
+        "name": "getPower",
+        "id": 2
+      }
+    }
+  ],
+  "protocol": [
+    {
+      "args": [
+        {
+          "name": "frequency_hz",
+          "type": "uint16",
+          "desc": "Desired frequency of the data stream in Hz.",
+          "required": true
+        }
+      ],
+      "result": null,
+      "desc": "Sets the frequency of the robot's data stream.",
+      "impl": "done",
+      "module": {
+        "name": "protocol",
+        "id": 1
+      },
+      "action": {
+        "name": "setStreamFrequency",
+        "id": 0
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "flags",
+          "type": "uint8",
+          "desc": "Flags for the data stream.",
+          "required": true
+        }
+      ],
+      "result": null,
+      "desc": "Sets the flags for the robot's data stream.",
+      "impl": "done",
+      "module": {
+        "name": "protocol",
+        "id": 1
+      },
+      "action": {
+        "name": "setStreamFlags",
+        "id": 1
+      }
+    }
+  ],
+  "system": [
+    {
+      "args": [],
+      "result": null,
+      "desc": "Pings the robot to check connection status.",
+      "impl": "done",
+      "module": {
+        "name": "system",
+        "id": 0
+      },
+      "action": {
+        "name": "ping",
+        "id": 0
+      }
+    },
+    {
+      "args": [],
+      "result": null,
+      "desc": "Reboots the robot.",
+      "impl": "done",
+      "module": {
+        "name": "system",
+        "id": 0
+      },
+      "action": {
+        "name": "reboot",
+        "id": 1
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "settings",
+          "type": "string",
+          "desc": "New settings to apply.",
+          "required": true
+        }
+      ],
+      "result": null,
+      "desc": "Sets the robot's configuration.",
+      "impl": "nope",
+      "module": {
+        "name": "system",
+        "id": 0
+      },
+      "action": {
+        "name": "setSettings",
+        "id": 2
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "settings",
+          "type": "string",
+          "desc": "Current settings."
+        }
+      ],
+      "desc": "Gets the robot's configuration.",
+      "impl": "nope",
+      "module": {
+        "name": "system",
+        "id": 0
+      },
+      "action": {
+        "name": "getSettings",
+        "id": 1
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "level",
+          "type": "uint8",
+          "desc": "New autolife level (0-100).",
+          "required": true
+        }
+      ],
+      "result": null,
+      "desc": "Sets the autolife level.",
+      "impl": "done",
+      "module": {
+        "name": "system",
+        "id": 0
+      },
+      "action": {
+        "name": "setAutolifeLevel",
+        "id": 4
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "level",
+          "type": "uint8",
+          "desc": "Current autolife level (0-100)."
+        }
+      ],
+      "desc": "Gets the current autolife level.",
+      "impl": "done",
+      "module": {
+        "name": "system",
+        "id": 0
+      },
+      "action": {
+        "name": "getAutolifeLevel",
+        "id": 5
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "temp_c",
+          "type": "float32",
+          "desc": "Current temperature in Celsius."
+        },
+        {
+          "name": "cpu_usage",
+          "type": "CPUUsage",
+          "desc": "Current CPU usage statistics."
+        },
+        {
+          "name": "ram_usage",
+          "type": "RAMUsage",
+          "desc": "Current RAM usage statistics."
+        }
+      ],
+      "desc": "Gets system statistics including temperature, CPU usage, and RAM usage.",
+      "impl": "done",
+      "module": {
+        "name": "system",
+        "id": 0
+      },
+      "action": {
+        "name": "getStatistics",
+        "id": 6
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "count",
+          "type": "uint8",
+          "desc": "Number of log lines."
+        }
+      ],
+      "desc": "Gets the number of log lines.",
+      "impl": "done",
+      "module": {
+        "name": "system",
+        "id": 0
+      },
+      "action": {
+        "name": "getNbLogLines",
+        "id": 7
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "index",
+          "type": "uint8",
+          "desc": "Index of the log line to retrieve (0-based).",
+          "required": true
+        }
+      ],
+      "result": [
+        {
+          "name": "timestampMs",
+          "type": "uint32",
+          "desc": "Timestamp of the log line in milliseconds since boot."
+        },
+        {
+          "name": "level",
+          "type": "uint8",
+          "desc": "Log level (0=Debug, 1=Info, 2=Warning, 3=Error)."
+        },
+        {
+          "name": "indent",
+          "type": "uint8",
+          "desc": "Indentation level of the log line."
+        },
+        {
+          "name": "tag",
+          "type": "string",
+          "desc": "Tag associated with the log line."
+        },
+        {
+          "name": "message",
+          "type": "string",
+          "desc": "Log message."
+        }
+      ],
+      "desc": "Gets a specific log line by index.",
+      "impl": "done",
+      "module": {
+        "name": "system",
+        "id": 0
+      },
+      "action": {
+        "name": "getLogLine",
+        "id": 8
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "enabled",
+          "type": "bool",
+          "desc": "Whether the control loop should be enabled.",
+          "required": true
+        }
+      ],
+      "result": null,
+      "desc": "Sets the enabled status of the control loop.",
+      "impl": "done",
+      "module": {
+        "name": "system",
+        "id": 0
+      },
+      "action": {
+        "name": "setControlLoopEnabled",
+        "id": 9
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "enabled",
+          "type": "bool",
+          "desc": "Whether the control loop is currently enabled."
+        }
+      ],
+      "desc": "Gets whether the control loop is currently enabled.",
+      "impl": "done",
+      "module": {
+        "name": "system",
+        "id": 0
+      },
+      "action": {
+        "name": "getControlLoopEnabled",
+        "id": 10
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "enabled",
+          "type": "bool",
+          "desc": "Whether the decision loop should be enabled.",
+          "required": true
+        }
+      ],
+      "result": null,
+      "desc": "Sets the enabled status of the decision loop.",
+      "impl": "done",
+      "module": {
+        "name": "system",
+        "id": 0
+      },
+      "action": {
+        "name": "setDecisionLoopEnabled",
+        "id": 11
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "enabled",
+          "type": "bool",
+          "desc": "Whether the decision loop is currently enabled."
+        }
+      ],
+      "desc": "Gets whether the decision loop is currently enabled.",
+      "impl": "done",
+      "module": {
+        "name": "system",
+        "id": 0
+      },
+      "action": {
+        "name": "getDecisionLoopEnabled",
+        "id": 12
+      }
+    }
+  ],
+  "wifi": [
+    {
+      "args": [
+        {
+          "name": "ssid",
+          "type": "string",
+          "desc": "SSID of the Wi-Fi network.",
+          "required": true
+        },
+        {
+          "name": "password",
+          "type": "string",
+          "desc": "Password of the Wi-Fi network.",
+          "required": true
+        }
+      ],
+      "result": null,
+      "desc": "Connects the robot to a Wi-Fi access point.",
+      "impl": "done",
+      "module": {
+        "name": "wifi",
+        "id": 16
+      },
+      "action": {
+        "name": "connectToAP",
+        "id": 0
+      }
+    }
+  ]
+}

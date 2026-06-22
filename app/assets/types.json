@@ -1,0 +1,211 @@
+{
+  "CalibrationData": {
+    "desc": "Calibration data for the motor controller.",
+    "fields": [
+      {
+        "name": "dc_min",
+        "type": "float32",
+        "desc": "Minimum Duty Cycle value corresponding to the minimum physical position of the motor."
+      },
+      {
+        "name": "dc_max",
+        "type": "float32",
+        "desc": "Maximum Duty Cycle value corresponding to the maximum physical position of the motor."
+      },
+      {
+        "name": "dc_deadband",
+        "type": "float32",
+        "desc": "Deadband width in Duty Cycle unit."
+      },
+      {
+        "name": "feedback_min",
+        "type": "float32",
+        "desc": "Feedback value corresponding to the minimum physical position of the motor."
+      },
+      {
+        "name": "feedback_max",
+        "type": "float32",
+        "desc": "Feedback value corresponding to the maximum physical position of the motor."
+      },
+      {
+        "name": "feedback_noise",
+        "type": "float32",
+        "desc": "Feedback noise level in Volt (standard deviation)."
+      },
+      {
+        "name": "feedback_latency_ms",
+        "type": "float32",
+        "desc": "Latency between command and movement in ms."
+      },
+      {
+        "name": "feedback_inverted",
+        "type": "bool",
+        "desc": "Flag indicating whether the feedback is inverted or not."
+      },
+      {
+        "name": "max_speed",
+        "type": "float32",
+        "desc": "Maximum speed of the motor in range/s (range = [max bound - min bound])."
+      }
+    ],
+    "name": "CalibrationData"
+  },
+  "Vec3f": {
+    "desc": "A 3D vector with x, y, z components represented as floats.",
+    "fields": [
+      {
+        "name": "x",
+        "type": "float",
+        "desc": "The x component of the vector."
+      },
+      {
+        "name": "y",
+        "type": "float",
+        "desc": "The y component of the vector."
+      },
+      {
+        "name": "z",
+        "type": "float",
+        "desc": "The z component of the vector."
+      }
+    ],
+    "name": "Vec3f"
+  },
+  "Vec3i": {
+    "desc": "A 3D vector with x, y, z components represented as integers.",
+    "fields": [
+      {
+        "name": "x",
+        "type": "int",
+        "desc": "The x component of the vector."
+      },
+      {
+        "name": "y",
+        "type": "int",
+        "desc": "The y component of the vector."
+      },
+      {
+        "name": "z",
+        "type": "int",
+        "desc": "The z component of the vector."
+      }
+    ],
+    "name": "Vec3i"
+  },
+  "Vec2f": {
+    "desc": "A 2D vector with x, y components represented as floats.",
+    "fields": [
+      {
+        "name": "x",
+        "type": "float",
+        "desc": "The x component of the vector."
+      },
+      {
+        "name": "y",
+        "type": "float",
+        "desc": "The y component of the vector."
+      }
+    ],
+    "name": "Vec2f"
+  },
+  "Vec2i": {
+    "desc": "A 2D vector with x, y components represented as integers.",
+    "fields": [
+      {
+        "name": "x",
+        "type": "int",
+        "desc": "The x component of the vector."
+      },
+      {
+        "name": "y",
+        "type": "int",
+        "desc": "The y component of the vector."
+      }
+    ],
+    "name": "Vec2i"
+  },
+  "Quatf": {
+    "desc": "A quaternion with x, y, z, w components represented as floats.",
+    "fields": [
+      {
+        "name": "x",
+        "type": "float",
+        "desc": "The x component of the quaternion."
+      },
+      {
+        "name": "y",
+        "type": "float",
+        "desc": "The y component of the quaternion."
+      },
+      {
+        "name": "z",
+        "type": "float",
+        "desc": "The z component of the quaternion."
+      },
+      {
+        "name": "w",
+        "type": "float",
+        "desc": "The w component of the quaternion."
+      }
+    ],
+    "name": "Quatf"
+  },
+  "Transformf": {
+    "desc": "A transformation consisting of a position and rotation, represented with float components.",
+    "fields": [
+      {
+        "name": "position",
+        "type": "Vec3f",
+        "desc": "The position component of the transformation."
+      },
+      {
+        "name": "rotation",
+        "type": "Quatf",
+        "desc": "The rotation component of the transformation."
+      }
+    ],
+    "name": "Transformf"
+  },
+  "CPUUsage": {
+    "desc": "Statistics about the CPU usage of the robot.",
+    "fields": [
+      {
+        "name": "core0",
+        "type": "float32",
+        "desc": "CPU usage percentage of core 0 (0-100)."
+      },
+      {
+        "name": "core1",
+        "type": "float32",
+        "desc": "CPU usage percentage of core 1 (0-100)."
+      }
+    ],
+    "name": "CPUUsage"
+  },
+  "RAMUsage": {
+    "desc": "Statistics about the robot's memory usage.",
+    "fields": [
+      {
+        "name": "internal_total",
+        "type": "uint32",
+        "desc": "Total number of bytes in internal RAM."
+      },
+      {
+        "name": "internal_used",
+        "type": "uint32",
+        "desc": "Number of bytes used in internal RAM."
+      },
+      {
+        "name": "psram_total",
+        "type": "uint32",
+        "desc": "Total number of bytes in PSRAM."
+      },
+      {
+        "name": "psram_used",
+        "type": "uint32",
+        "desc": "Number of bytes used in PSRAM."
+      }
+    ],
+    "name": "RAMUsage"
+  }
+}
