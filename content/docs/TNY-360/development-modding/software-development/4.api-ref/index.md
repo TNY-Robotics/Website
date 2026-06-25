@@ -62,3 +62,7 @@ The TNY-360 API has quite a few modules. Here's a complete list of the modules :
 | [**I2C**](./i2c)                   | I2C communication actions, such as reading from or writing to I2C devices.                 |
 | [**ADC**](./adc)                   | ADC (Analog-to-Digital Conversion) actions, such as reading analog sensor values.          |
 | [**Wi-Fi**](./wifi)                | Wi-Fi network actions, such as connecting to a network or retrieving network information.  |
+| [**Bluetooth**](./bluetooth)       | Bluetooth communication actions, such as pairing with devices or transferring data.        |
+| [**LED**](./led)                   | LED control actions, such as setting LED colors or brightness.                             |
+| [**Error**](./error)               | Error handling actions, such as retrieving error codes or clearing errors.                 |
+

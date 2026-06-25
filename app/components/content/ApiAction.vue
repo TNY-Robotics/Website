@@ -83,19 +83,18 @@
 </template>
 
 <script setup lang="ts">
-type ArgType = 'uint32' | 'uint8' | 'int32' | 'int8' | 'float32' | 'bool' | 'string';
-type Arg = { name: string; type: ArgType; desc: string; required: boolean };
-type Res = { name: string; type: ArgType; desc: string };
+type Arg = { name: string; type: string; desc: string; required: boolean };
+type Res = { name: string; type: string; desc: string };
 type ImplState = 'done' | 'partial' | 'nope';
 
-const nativeTypes: ArgType[] = ['uint32', 'uint8', 'int32', 'int8', 'float32', 'bool', 'string'];
+const nativeTypes: string[] = ['uint32', 'uint16', 'uint8', 'int32', 'int16', 'int8', 'float32', 'bool', 'string'];
 
 function getBaseType(typeStr: string) {
     return typeStr.replace(/\[.*?\]/g, '');
 }
 
 function isTypeNative(type: string): boolean {
-    return nativeTypes.includes(getBaseType(type) as ArgType);
+    return nativeTypes.includes(getBaseType(type));
 }
 
 function formatHex(num: number | string): string {

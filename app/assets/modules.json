@@ -11,6 +11,8 @@
       ],
       "desc": "Gets the current voltage readings of all ADC channels.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "adc",
         "id": 15
@@ -34,6 +36,8 @@
       "result": null,
       "desc": "Sets the enabled state of the body joints.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "body",
         "id": 3
@@ -54,6 +58,8 @@
       ],
       "desc": "Gets the enabled state of the body joints.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "body",
         "id": 3
@@ -93,6 +99,8 @@
       "result": null,
       "desc": "Sets the target velocity of the robot's body.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "body",
         "id": 3
@@ -123,6 +131,8 @@
       ],
       "desc": "Gets the target velocity of the robot's body.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "body",
         "id": 3
@@ -180,6 +190,8 @@
       "result": null,
       "desc": "Sets the target posture of the robot's body.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "body",
         "id": 3
@@ -205,6 +217,8 @@
       ],
       "desc": "Gets the target posture of the robot's body.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "body",
         "id": 3
@@ -212,6 +226,88 @@
       "action": {
         "name": "getPosture",
         "id": 5
+      }
+    }
+  ],
+  "error": [
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "count",
+          "type": "uint16",
+          "desc": "The number of errors."
+        }
+      ],
+      "desc": "Gets the number of errors.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "error",
+        "id": 19
+      },
+      "action": {
+        "name": "getErrorCount",
+        "id": 0
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "index",
+          "type": "uint16",
+          "desc": "The index of the error event to retrieve (0 is the most recent event).",
+          "required": true
+        }
+      ],
+      "result": [
+        {
+          "name": "event",
+          "type": "ErrorEvent",
+          "desc": "The error event at the specified index."
+        }
+      ],
+      "desc": "Gets the error event at the specified index.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "error",
+        "id": 19
+      },
+      "action": {
+        "name": "getErrorEventByIndex",
+        "id": 1
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "event_id",
+          "type": "uint16",
+          "desc": "The event ID of the error event to retrieve.",
+          "required": true
+        }
+      ],
+      "result": [
+        {
+          "name": "event",
+          "type": "ErrorEvent",
+          "desc": "The error event with the specified event ID."
+        }
+      ],
+      "desc": "Gets the error event with the specified event ID.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "error",
+        "id": 19
+      },
+      "action": {
+        "name": "getErrorEventById",
+        "id": 2
       }
     }
   ],
@@ -228,6 +324,8 @@
       "result": null,
       "desc": "Sets the gait type for the robot.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "gait",
         "id": 2
@@ -248,6 +346,8 @@
       ],
       "desc": "Gets the current gait type for the robot.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "gait",
         "id": 2
@@ -277,6 +377,8 @@
       ],
       "desc": "Pings an I2C device at the specified address to check if it is present on the bus.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "i2c",
         "id": 14
@@ -316,6 +418,8 @@
       "result": null,
       "desc": "Writes a sequence of bytes to a register of an I2C device.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "i2c",
         "id": 14
@@ -355,6 +459,8 @@
       ],
       "desc": "Reads a sequence of bytes from a register of an I2C device.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "i2c",
         "id": 14
@@ -377,6 +483,8 @@
       ],
       "desc": "Gets the current acceleration vector from the IMU.",
       "impl": "partial",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "imu",
         "id": 7
@@ -397,6 +505,8 @@
       ],
       "desc": "Gets the current angular velocity vector from the IMU.",
       "impl": "partial",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "imu",
         "id": 7
@@ -417,6 +527,8 @@
       ],
       "desc": "Gets the current down vector from the IMU (i.e. the direction of gravity).",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "imu",
         "id": 7
@@ -437,6 +549,8 @@
       ],
       "desc": "Gets the current orientation of the robot as a rotation vector (axis-angle representation).",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "imu",
         "id": 7
@@ -457,6 +571,8 @@
       ],
       "desc": "Gets the current calibration state of the IMU.",
       "impl": "nope",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "imu",
         "id": 7
@@ -477,6 +593,8 @@
       ],
       "desc": "Gets the current calibration data of the IMU.",
       "impl": "nope",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "imu",
         "id": 7
@@ -498,6 +616,8 @@
       "result": null,
       "desc": "Sets the calibration data of the IMU.",
       "impl": "nope",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "imu",
         "id": 7
@@ -512,6 +632,8 @@
       "result": null,
       "desc": "Starts the calibration process for the IMU.",
       "impl": "nope",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "imu",
         "id": 7
@@ -526,6 +648,8 @@
       "result": null,
       "desc": "Stops the calibration process for the IMU.",
       "impl": "nope",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "imu",
         "id": 7
@@ -546,6 +670,8 @@
       ],
       "desc": "Gets the current progress of the IMU calibration process.",
       "impl": "nope",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "imu",
         "id": 7
@@ -575,6 +701,8 @@
       "result": null,
       "desc": "Sets the enabled state of a joint.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "joint",
         "id": 5
@@ -602,6 +730,8 @@
       ],
       "desc": "Gets the enabled state of a joint.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "joint",
         "id": 5
@@ -629,6 +759,8 @@
       "result": null,
       "desc": "Sets the target angle of a joint.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "joint",
         "id": 5
@@ -656,6 +788,8 @@
       ],
       "desc": "Gets the target angle of a joint.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "joint",
         "id": 5
@@ -683,6 +817,8 @@
       ],
       "desc": "Gets the feedback angle of a joint.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "joint",
         "id": 5
@@ -710,6 +846,8 @@
       ],
       "desc": "Gets the model angle of a joint.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "joint",
         "id": 5
@@ -737,6 +875,8 @@
       ],
       "desc": "Gets the estimated angle of a joint.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "joint",
         "id": 5
@@ -758,6 +898,8 @@
       "result": null,
       "desc": "Sets the target angles of all joints at once.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "joint",
         "id": 5
@@ -778,6 +920,8 @@
       ],
       "desc": "Gets the feedback angles of all joints at once.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "joint",
         "id": 5
@@ -807,6 +951,8 @@
       "result": null,
       "desc": "Sets the enabled state of the joints in a leg.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "leg",
         "id": 4
@@ -834,6 +980,8 @@
       ],
       "desc": "Gets the enabled state of the joints in a leg.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "leg",
         "id": 4
@@ -879,6 +1027,8 @@
       "result": null,
       "desc": "Sets the target position of a leg.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "leg",
         "id": 4
@@ -906,6 +1056,8 @@
       ],
       "desc": "Gets the target position of a leg.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "leg",
         "id": 4
@@ -933,6 +1085,8 @@
       ],
       "desc": "Gets whether a leg is currently grounded.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "leg",
         "id": 4
@@ -962,6 +1116,8 @@
       "result": null,
       "desc": "Sets the duty cycle of a motor.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "motor",
         "id": 6
@@ -989,6 +1145,8 @@
       ],
       "desc": "Gets the current duty cycle of a motor.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "motor",
         "id": 6
@@ -1016,6 +1174,8 @@
       ],
       "desc": "Gets the current calibration state of a motor.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "motor",
         "id": 6
@@ -1043,6 +1203,8 @@
       ],
       "desc": "Gets the calibration data of a motor.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "motor",
         "id": 6
@@ -1070,6 +1232,8 @@
       "result": null,
       "desc": "Sets the calibration data of a motor.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "motor",
         "id": 6
@@ -1091,6 +1255,8 @@
       "result": null,
       "desc": "Deletes the calibration data of a motor.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "motor",
         "id": 6
@@ -1112,6 +1278,8 @@
       "result": null,
       "desc": "Starts the calibration process for a motor.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "motor",
         "id": 6
@@ -1133,6 +1301,8 @@
       "result": null,
       "desc": "Stops the calibration process for a motor.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "motor",
         "id": 6
@@ -1160,6 +1330,8 @@
       ],
       "desc": "Gets the progress of the calibration process for a motor.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "motor",
         "id": 6
@@ -1182,6 +1354,8 @@
       ],
       "desc": "Gets the current voltage of the robot.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "power",
         "id": 9
@@ -1202,6 +1376,8 @@
       ],
       "desc": "Gets the current current of the robot.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "power",
         "id": 9
@@ -1222,6 +1398,8 @@
       ],
       "desc": "Gets the current power consumption of the robot.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "power",
         "id": 9
@@ -1245,6 +1423,8 @@
       "result": null,
       "desc": "Sets the frequency of the robot's data stream.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "protocol",
         "id": 1
@@ -1266,6 +1446,8 @@
       "result": null,
       "desc": "Sets the flags for the robot's data stream.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "protocol",
         "id": 1
@@ -1282,6 +1464,8 @@
       "result": null,
       "desc": "Pings the robot to check connection status.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "system",
         "id": 0
@@ -1296,6 +1480,8 @@
       "result": null,
       "desc": "Reboots the robot.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "system",
         "id": 0
@@ -1317,6 +1503,8 @@
       "result": null,
       "desc": "Sets the robot's configuration.",
       "impl": "nope",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "system",
         "id": 0
@@ -1337,6 +1525,8 @@
       ],
       "desc": "Gets the robot's configuration.",
       "impl": "nope",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "system",
         "id": 0
@@ -1358,6 +1548,8 @@
       "result": null,
       "desc": "Sets the autolife level.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "system",
         "id": 0
@@ -1378,6 +1570,8 @@
       ],
       "desc": "Gets the current autolife level.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "system",
         "id": 0
@@ -1408,6 +1602,8 @@
       ],
       "desc": "Gets system statistics including temperature, CPU usage, and RAM usage.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "system",
         "id": 0
@@ -1428,6 +1624,8 @@
       ],
       "desc": "Gets the number of log lines.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "system",
         "id": 0
@@ -1475,6 +1673,8 @@
       ],
       "desc": "Gets a specific log line by index.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "system",
         "id": 0
@@ -1496,6 +1696,8 @@
       "result": null,
       "desc": "Sets the enabled status of the control loop.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "system",
         "id": 0
@@ -1516,6 +1718,8 @@
       ],
       "desc": "Gets whether the control loop is currently enabled.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "system",
         "id": 0
@@ -1537,6 +1741,8 @@
       "result": null,
       "desc": "Sets the enabled status of the decision loop.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "system",
         "id": 0
@@ -1557,6 +1763,8 @@
       ],
       "desc": "Gets whether the decision loop is currently enabled.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "system",
         "id": 0
@@ -1586,6 +1794,8 @@
       "result": null,
       "desc": "Connects the robot to a Wi-Fi access point.",
       "impl": "done",
+      "payload": [],
+      "values": [],
       "module": {
         "name": "wifi",
         "id": 16
