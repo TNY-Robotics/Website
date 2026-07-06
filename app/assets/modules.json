@@ -229,6 +229,74 @@
       }
     }
   ],
+  "diagnostic": [
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "enabled",
+          "type": "bool",
+          "desc": "Whether diagnostic mode is enabled."
+        }
+      ],
+      "desc": "Returns if the robot is currently in diagnostic mode.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "diagnostic",
+        "id": 20
+      },
+      "action": {
+        "name": "isEnabled",
+        "id": 0
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "result",
+          "type": "uint8_t",
+          "desc": "0 in case of success, error id otherwise."
+        }
+      ],
+      "desc": "Checks the status of the LED module.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "diagnostic",
+        "id": 20
+      },
+      "action": {
+        "name": "checkLED",
+        "id": 1
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "result",
+          "type": "uint8_t",
+          "desc": "0 in case of success, error id otherwise."
+        }
+      ],
+      "desc": "Checks the status of the I2C module.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "diagnostic",
+        "id": 20
+      },
+      "action": {
+        "name": "checkI2C",
+        "id": 2
+      }
+    }
+  ],
   "error": [
     {
       "args": [],
@@ -308,6 +376,22 @@
       "action": {
         "name": "getErrorEventById",
         "id": 2
+      }
+    },
+    {
+      "args": [],
+      "result": null,
+      "desc": "Clears all error events.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "error",
+        "id": 19
+      },
+      "action": {
+        "name": "clearErrorEvents",
+        "id": 3
       }
     }
   ],

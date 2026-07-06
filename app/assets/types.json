@@ -70,7 +70,7 @@
     "values": [],
     "name": "CalibrationData"
   },
-  "ErrorLevel": {
+  "ErrorSeverity": {
     "desc": "Represents the severity level of an error event.",
     "fields": [],
     "payload": [],
@@ -92,7 +92,7 @@
         "desc": "When critical issues occur, and the system should stop to prevent further damage"
       }
     ],
-    "name": "ErrorLevel"
+    "name": "ErrorSeverity"
   },
   "ErrorEvent": {
     "desc": "Represents an error event that occurred in the system.",
@@ -105,59 +105,38 @@
         "indent": 0
       },
       {
-        "name": "error",
-        "fullName": "error",
-        "type": "struct",
-        "desc": "The error code information",
-        "indent": 0
-      },
-      {
-        "name": "fullCode",
-        "fullName": "error.fullCode",
-        "type": "uint32",
-        "desc": "The full error code, which can be used to uniquely identify the error.",
-        "indent": 1
-      },
-      {
-        "name": "parts",
-        "fullName": "error.parts",
-        "type": "struct",
-        "desc": "The individual parts of the error code.",
-        "indent": 1
-      },
-      {
-        "name": "module",
-        "fullName": "error.parts.module",
-        "type": "uint8",
-        "desc": "The module ID where the error occurred (see ModuleID).",
-        "indent": 2
-      },
-      {
-        "name": "subsystem",
-        "fullName": "error.parts.subsystem",
-        "type": "uint8",
-        "desc": "The subsystem ID within the module where the error occurred.",
-        "indent": 2
-      },
-      {
-        "name": "code",
-        "fullName": "error.parts.code",
-        "type": "uint8",
-        "desc": "The specific error code within the subsystem.",
-        "indent": 2
-      },
-      {
-        "name": "category",
-        "fullName": "error.parts.category",
-        "type": "ErrorLevel",
-        "desc": "The severity level of the error (see ErrorLevel).",
-        "indent": 2
-      },
-      {
         "name": "eventId",
         "fullName": "eventId",
         "type": "uint16",
         "desc": "The unique event ID assigned to this error event.",
+        "indent": 0
+      },
+      {
+        "name": "module",
+        "fullName": "module",
+        "type": "uint8",
+        "desc": "The module ID where the error occurred (see ModuleID).",
+        "indent": 0
+      },
+      {
+        "name": "subsystem",
+        "fullName": "subsystem",
+        "type": "uint8",
+        "desc": "The subsystem ID within the module where the error occurred.",
+        "indent": 0
+      },
+      {
+        "name": "code",
+        "fullName": "code",
+        "type": "uint8",
+        "desc": "The specific error code within the subsystem.",
+        "indent": 0
+      },
+      {
+        "name": "severity",
+        "fullName": "severity",
+        "type": "ErrorSeverity",
+        "desc": "The severity level of the error (see ErrorSeverity).",
         "indent": 0
       },
       {

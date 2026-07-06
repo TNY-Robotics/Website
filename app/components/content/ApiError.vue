@@ -42,7 +42,7 @@
 </template>
 
 <script setup lang="ts">
-import errorsData from '~/assets/types.json';
+import typesData from '~/assets/types.json';
 
 const props = defineProps({
     errorData: {
@@ -90,7 +90,7 @@ const errorTypeTextColor = computed(() => {
     }
 });
 
-const errorLevelType = errorsData['ErrorLevel'] ?? null;
+const errorLevelType = typesData['ErrorSeverity'] ?? null;
 const errorTypeTooltip = computed(() => {
     if (!errorLevelType || !errorType.value) return '';
     return errorLevelType.values.find((item: { name: string }) => item.name.toLowerCase().trim() === errorTypeText.value.toLowerCase().trim())?.desc ?? 'No description available';

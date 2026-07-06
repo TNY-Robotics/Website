@@ -54,7 +54,7 @@ function parseBlock(blockContent) {
     let kind = null; // Permet de savoir si on lit une 'action' ou un 'type'
     
     // On prépare un objet "fourre-tout"
-    const data = { args: [], result: null, desc: "", impl: "done", fields: [], payload: [], values: [] };
+    const data = { args: [], result: null, desc: "", impl: "done", fields: [], payload: [], values: [], module: null, submodule: null, severity: null };
     let currentTag = null;
 
     for (const line of lines) {
@@ -68,9 +68,12 @@ function parseBlock(blockContent) {
             switch (currentTag) {
                 // --- Tags spécifiques aux Actions ---
                 case 'module': {
-                    kind = 'action';
-                    const parsedId = Number(parts[1]);
-                    data.module = { name: parts[0], id: isNaN(parsedId) ? 0 : parsedId };
+                    if (kind === 'error') {
+                        data.module = tagValue;
+                    } else {
+                        const parsedId = Number(parts[1]);
+                        data.module = { name: parts[0], id: isNaN(parsedId) ? 0 : parsedId };
+                    }
                     break;
                 }
                 case 'action': {
@@ -111,6 +114,12 @@ function parseBlock(blockContent) {
                 case 'fix':
                     data.fix = tagValue;
                     break;
+                case 'submodule':
+                    data.submodule = tagValue;
+                    break;
+                case 'severity':
+                    data.severity = tagValue;
+                    break;
                 case 'payload':
                     data.payload.push({ name: parts[0], type: parts[1], desc: parts.slice(2).join(' ') });
                     break;
@@ -132,6 +141,8 @@ function parseBlock(blockContent) {
     if (kind === 'action' && data.module && data.action) {
         delete data.name;
         delete data.fields;
+        delete data.submodule;
+        delete data.severity;
         return { kind: 'action', data: data };
     } else if (kind === 'type' && data.name) {
         delete data.module;
@@ -139,6 +150,8 @@ function parseBlock(blockContent) {
         delete data.args;
         delete data.result;
         delete data.impl;
+        delete data.submodule;
+        delete data.severity;
         data.fields = processNestedFields(data.fields);
         return { kind: 'type', data: data };
     } else if (kind === 'error' && data.id) {
