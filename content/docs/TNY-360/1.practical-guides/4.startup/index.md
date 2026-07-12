@@ -15,15 +15,15 @@ Our objective here is to guide you through safely powering up your TNY-360, sett
 There are three main steps in this section:
 
 ::chevron
-[Powering up](./1.power-up.md) - Learn how to safely power up your TNY-360.
+[Power Up](./power-up) - Learn how to safely power up your TNY-360.
 ::
 
 ::chevron
-[Calibration & Validation](./2.calibration-validation.md) - Go through the final calibration and validation steps to ensure everything is working correctly.
+[Diagnostic](./diagnostic) - Go through the diagnostic process to ensure that your TNY-360 is correctly wired.
 ::
 
 ::chevron
-[Configuration](./3.configuration.md) - Configure your TNY-360 settings and connect it to your network.
+[Calibration](./calibration) - Calibrate your TNY-360 actuators and sensors to ensure that it moves and perceives its environment the way it should.
 ::
 
 ---

@@ -1,23 +1,4 @@
 {
-  "0x08020101": {
-    "desc": "Failed to detect if a motor feedback is inverted or not.",
-    "payload": [
-      {
-        "name": "diff",
-        "type": "float",
-        "desc": "The difference between expected and actual feedback values."
-      },
-      {
-        "name": "noise",
-        "type": "float",
-        "desc": "The noise level in the feedback signal."
-      }
-    ],
-    "values": [],
-    "id": "0x08020101",
-    "name": "FeedbackInversion",
-    "fix": "Check motor and analog reader wiring and ensure that everything is properly connected."
-  },
   "0x08020201": {
     "desc": "Failed to estimate the deadband size of a motor.",
     "payload": [
@@ -33,6 +14,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x08020201",
     "name": "DeadbandSizeEstimation",
     "fix": "Check motor, analog reader, and motor driver wiring and ensure that everything is properly connected."
@@ -47,6 +30,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x08020301",
     "name": "LatencyTimeout",
     "fix": "Check motor, analog reader, and motor driver wiring and ensure that everything is properly connected."
@@ -66,6 +51,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x08020401",
     "name": "PhysicalBoundNotFound",
     "fix": "Check motor assembly and ensure that the motor is centered, and check power board wiring."
@@ -74,6 +61,8 @@
     "desc": "Motor calibration sequence failed. See above errors for more details.",
     "payload": [],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x08020503",
     "name": "CalibrationFailed",
     "fix": "Check motor assembly, wiring, and ensure that the motor is centered and properly connected."
@@ -88,6 +77,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x11010101",
     "name": "GPIOConfigFailed",
     "fix": "Check for any GPIO configuration issues and ensure the GPIO pins are properly initialized."
@@ -102,6 +93,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x11010201",
     "name": "OneshotInitFailed",
     "fix": "Check for any ADC configuration issues and ensure the ADC is properly initialized."
@@ -116,6 +109,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x11010301",
     "name": "OneshotConfigFailed",
     "fix": "Check for any ADC configuration issues and ensure the ADC channel is properly initialized."
@@ -130,6 +125,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x11010401",
     "name": "CalibrationInitFailed",
     "fix": "Check for any ADC calibration issues and ensure the calibration handle is properly initialized."
@@ -144,6 +141,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x11020101",
     "name": "ADCReadFailed",
     "fix": "Check for any ADC configuration issues and ensure the ADC is properly initialized."
@@ -158,6 +157,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x11020201",
     "name": "ConversionFailed",
     "fix": "Check for any calibration issues and ensure the ADC calibration is properly initialized."
@@ -172,6 +173,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x11020301",
     "name": "GPIOSelectFailed",
     "fix": "Check for any GPIO configuration issues and ensure the GPIO pins are properly initialized."
@@ -186,6 +189,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x11030101",
     "name": "OneshotDeleteFailed",
     "fix": "Check for any ADC configuration issues and ensure the ADC is properly deinitialized."
@@ -200,6 +205,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x11030201",
     "name": "CalibrationDeleteFailed",
     "fix": "Check for any ADC calibration issues and ensure the calibration handle is properly deinitialized."
@@ -208,6 +215,8 @@
     "desc": "The I2C initialization for the camera driver failed.",
     "payload": [],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x0D010101",
     "name": "I2CInitFailed",
     "fix": "Ensure that the I2C bus is properly configured and available for use by the camera driver."
@@ -217,11 +226,13 @@
     "payload": [
       {
         "name": "err",
-        "type": "esp_err_t",
+        "type": "uint32",
         "desc": "The error code returned by the camera initialization function."
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x0D010201",
     "name": "CameraInitFailed",
     "fix": "Ensure that the camera is properly connected, and that the I2C bus is functioning correctly."
@@ -230,6 +241,8 @@
     "desc": "The camera sensor could not be retrieved after initialization.",
     "payload": [],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x0D010301",
     "name": "GetSensorFailed",
     "fix": "Ensure that the camera is properly connected, isn't damaged, and that the I2C bus is functioning correctly."
@@ -244,6 +257,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x0D020101",
     "name": "ServerStartFailed",
     "fix": "Ensure that the server is properly configured and that there are no port conflicts or other issues preventing it from starting."
@@ -258,6 +273,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x0D020201",
     "name": "ServerRegisterFailed",
     "fix": "Ensure that the server is properly configured and that there are no memory or resource issues / limits."
@@ -272,6 +289,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x0D030101",
     "name": "ServerStopFailed",
     "fix": "Ensure that the server is properly configured and that there are no resource issues preventing it from stopping."
@@ -280,6 +299,8 @@
     "desc": "The camera capture failed.",
     "payload": [],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x0D040101",
     "name": "CameraCaptureFailed",
     "fix": "Ensure that the camera is properly connected, isn't damaged, and that the connector and traces on the pcb are clear."
@@ -294,6 +315,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x0D050101",
     "name": "CameraDeinitFailed",
     "fix": "Ensure that the camera is properly connected, and that the I2C bus is functioning correctly."
@@ -302,6 +325,8 @@
     "desc": "Indicates that the I2C initialization failed during initialization.",
     "payload": [],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x09010101",
     "name": "I2CInitFailed",
     "fix": "Check that the I2C bus is properly configured and available for use by the IMU driver."
@@ -316,6 +341,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x09010201",
     "name": "CreateFailed",
     "fix": "Check the I2C connection and ensure that the MPU6050 is properly connected and powered."
@@ -330,6 +357,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x09010301",
     "name": "ResetFailed",
     "fix": "Check the I2C connection and ensure that the MPU6050 is properly connected and powered."
@@ -344,6 +373,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x09010401",
     "name": "ConfigFailed",
     "fix": "Check the I2C connection and ensure that the MPU6050 is properly connected and powered."
@@ -358,6 +389,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x09010501",
     "name": "WakeUpFailed",
     "fix": "Check the I2C connection and ensure that the MPU6050 is properly connected and powered."
@@ -372,6 +405,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x09020101",
     "name": "ReadDataFailed",
     "fix": "Check the I2C connection and ensure that the MPU6050 is properly connected and powered."
@@ -386,6 +421,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x09030101",
     "name": "DeleteFailed",
     "fix": "Check the I2C connection and ensure that the MPU6050 is properly connected and powered."
@@ -394,6 +431,8 @@
     "desc": "Indicates that the I2C initialization failed during initialization.",
     "payload": [],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x07010101",
     "name": "I2CInitFailed",
     "fix": "Check that the I2C bus is properly configured and available for use by the Motor driver."
@@ -408,6 +447,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x07010201",
     "name": "CreateFailed",
     "fix": "Check the I2C connection and ensure that the PCA9685 is properly connected and powered."
@@ -422,6 +463,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x07010301",
     "name": "ResetFailed",
     "fix": "Check the I2C connection and ensure that the PCA9685 is properly connected and powered."
@@ -436,6 +479,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x07010401",
     "name": "ConfigFailed",
     "fix": "Check the I2C connection and ensure that the PCA9685 is properly connected and powered."
@@ -450,6 +495,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x07010501",
     "name": "WakeUpFailed",
     "fix": "Check the I2C connection and ensure that the PCA9685 is properly connected and powered."
@@ -464,6 +511,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x07020101",
     "name": "SendDataFailed",
     "fix": "Check the I2C connection and ensure that the PCA9685 is properly connected and powered."
@@ -478,6 +527,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x07030101",
     "name": "DeleteFailed",
     "fix": "Check the I2C connection and ensure that the PCA9685 is properly connected and powered."
@@ -486,6 +537,8 @@
     "desc": "Indicates that the I2C initialization failed during initialization.",
     "payload": [],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x0B010101",
     "name": "I2CInitFailed",
     "fix": "Check that the I2C bus is properly configured and available for use by the Power driver."
@@ -500,6 +553,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x0B010201",
     "name": "CreateFailed",
     "fix": "Check that the INA219 device is properly connected and available on the I2C bus."
@@ -514,6 +569,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x0B010301",
     "name": "ConfigFailed",
     "fix": "Check that the INA219 device is properly connected and available on the I2C bus."
@@ -528,6 +585,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x0B010401",
     "name": "WakeUpFailed",
     "fix": "Check that the INA219 device is properly connected and available on the I2C bus."
@@ -542,6 +601,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x0B020101",
     "name": "ReadVoltageFailed",
     "fix": "Check that the INA219 device is properly connected and available on the I2C bus."
@@ -556,6 +617,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x0B020201",
     "name": "ReadCurrentFailed",
     "fix": "Check that the INA219 device is properly connected and available on the I2C bus."
@@ -570,6 +633,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x0B020301",
     "name": "ReadPowerFailed",
     "fix": "Check that the INA219 device is properly connected and available on the I2C bus."
@@ -584,6 +649,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x0B030101",
     "name": "DeleteFailed",
     "fix": "Check that the INA219 device is properly connected and available on the I2C bus."
@@ -592,6 +659,8 @@
     "desc": "Indicates that the I2C initialization failed during initialization.",
     "payload": [],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x15010101",
     "name": "I2CInitFailed",
     "fix": "Check that the I2C bus is properly configured and available for use by the Screen driver."
@@ -606,6 +675,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x15010201",
     "name": "PanelCreateFailed",
     "fix": "Check the I2C connection and ensure that the screen is properly connected and powered."
@@ -620,6 +691,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x15010301",
     "name": "PanelResetFailed",
     "fix": "Check the I2C connection and ensure that the screen is properly connected and powered."
@@ -634,6 +707,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x15010401",
     "name": "PanelInitFailed",
     "fix": "Check the I2C connection and ensure that the screen is properly connected and powered."
@@ -648,6 +723,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x15010501",
     "name": "PanelDisplayOnFailed",
     "fix": "Check the I2C connection and ensure that the screen is properly connected and powered."
@@ -662,6 +739,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x15020101",
     "name": "UploadFailed",
     "fix": "Check the I2C connection and ensure that the screen is properly connected and powered."
@@ -676,6 +755,8 @@
       }
     ],
     "values": [],
+    "submodule": null,
+    "severity": null,
     "id": "0x15030101",
     "name": "PanelDeleteFailed",
     "fix": "Check the I2C connection and ensure that the screen is properly connected and powered."

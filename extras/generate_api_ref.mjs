@@ -70,9 +70,11 @@ function parseBlock(blockContent) {
                 case 'module': {
                     if (kind === 'error') {
                         data.module = tagValue;
+                        kind = null;
                     } else {
                         const parsedId = Number(parts[1]);
                         data.module = { name: parts[0], id: isNaN(parsedId) ? 0 : parsedId };
+                        kind = 'action';
                     }
                     break;
                 }

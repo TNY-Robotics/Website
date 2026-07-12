@@ -227,6 +227,50 @@
         "name": "getPosture",
         "id": 5
       }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "time",
+          "type": "float32",
+          "desc": "Estimated time in seconds for the smooth enable to complete."
+        }
+      ],
+      "desc": "Enables the whole body smoothly, going slowly into stand position.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "body",
+        "id": 3
+      },
+      "action": {
+        "name": "enableSmooth",
+        "id": 6
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "time",
+          "type": "float32",
+          "desc": "Estimated time in seconds for the smooth disable to complete."
+        }
+      ],
+      "desc": "Disables the whole body smoothly, going slowly to a rest position before disabling all joints.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "body",
+        "id": 3
+      },
+      "action": {
+        "name": "disableSmooth",
+        "id": 7
+      }
     }
   ],
   "diagnostic": [
@@ -254,6 +298,22 @@
     },
     {
       "args": [],
+      "result": null,
+      "desc": "Reboots the robot in diagnostic mode.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "diagnostic",
+        "id": 20
+      },
+      "action": {
+        "name": "RebootInDiagnosticMode",
+        "id": 1
+      }
+    },
+    {
+      "args": [],
       "result": [
         {
           "name": "result",
@@ -271,7 +331,7 @@
       },
       "action": {
         "name": "checkLED",
-        "id": 1
+        "id": 2
       }
     },
     {
@@ -293,7 +353,227 @@
       },
       "action": {
         "name": "checkI2C",
-        "id": 2
+        "id": 3
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "result",
+          "type": "uint8_t",
+          "desc": "0 in case of success, error id otherwise."
+        }
+      ],
+      "desc": "Checks the status of the Speaker module.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "diagnostic",
+        "id": 20
+      },
+      "action": {
+        "name": "checkSpeaker",
+        "id": 4
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "result",
+          "type": "uint8_t",
+          "desc": "0 in case of success, error id otherwise."
+        }
+      ],
+      "desc": "Checks the status of the Microphone module.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "diagnostic",
+        "id": 20
+      },
+      "action": {
+        "name": "checkMicrophone",
+        "id": 5
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "result",
+          "type": "uint8_t",
+          "desc": "0 in case of success, error id otherwise."
+        }
+      ],
+      "desc": "Checks the status of the Camera module.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "diagnostic",
+        "id": 20
+      },
+      "action": {
+        "name": "checkCamera",
+        "id": 6
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "result",
+          "type": "uint8_t",
+          "desc": "0 in case of success, error id otherwise."
+        }
+      ],
+      "desc": "Checks the status of the Laser module.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "diagnostic",
+        "id": 20
+      },
+      "action": {
+        "name": "checkLaser",
+        "id": 7
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "result",
+          "type": "uint8_t",
+          "desc": "0 in case of success, error id otherwise."
+        }
+      ],
+      "desc": "Checks the status of the IMU module.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "diagnostic",
+        "id": 20
+      },
+      "action": {
+        "name": "checkIMU",
+        "id": 8
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "result",
+          "type": "uint8_t",
+          "desc": "0 in case of success, error id otherwise."
+        }
+      ],
+      "desc": "Checks the status of the Power module.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "diagnostic",
+        "id": 20
+      },
+      "action": {
+        "name": "checkPower",
+        "id": 9
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "result",
+          "type": "uint8_t",
+          "desc": "0 in case of success, error id otherwise."
+        }
+      ],
+      "desc": "Checks the status of the Motor Driver module.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "diagnostic",
+        "id": 20
+      },
+      "action": {
+        "name": "checkMotorDriver",
+        "id": 10
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "result",
+          "type": "uint8_t",
+          "desc": "0 in case of success, error id otherwise."
+        }
+      ],
+      "desc": "Checks the status of the Analog Reader module.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "diagnostic",
+        "id": 20
+      },
+      "action": {
+        "name": "checkAnalogReader",
+        "id": 11
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "result",
+          "type": "uint8_t",
+          "desc": "0 in case of success, error id otherwise."
+        }
+      ],
+      "desc": "Checks the status of the Control Loop module.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "diagnostic",
+        "id": 20
+      },
+      "action": {
+        "name": "checkControlLoop",
+        "id": 12
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "result",
+          "type": "uint8_t",
+          "desc": "0 in case of success, error id otherwise."
+        }
+      ],
+      "desc": "Checks the status of the Decision Loop module.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "diagnostic",
+        "id": 20
+      },
+      "action": {
+        "name": "checkDecisionLoop",
+        "id": 13
       }
     }
   ],
@@ -566,7 +846,7 @@
         }
       ],
       "desc": "Gets the current acceleration vector from the IMU.",
-      "impl": "partial",
+      "impl": "done",
       "payload": [],
       "values": [],
       "module": {
@@ -588,7 +868,7 @@
         }
       ],
       "desc": "Gets the current angular velocity vector from the IMU.",
-      "impl": "partial",
+      "impl": "done",
       "payload": [],
       "values": [],
       "module": {
@@ -1281,7 +1561,7 @@
       "result": [
         {
           "name": "calib_data",
-          "type": "CalibrationData",
+          "type": "MotorController::CalibrationData",
           "desc": "Current calibration data."
         }
       ],
@@ -1308,7 +1588,7 @@
         },
         {
           "name": "calib_data",
-          "type": "CalibrationData",
+          "type": "MotorController::CalibrationData",
           "desc": "New calibration data.",
           "required": true
         }

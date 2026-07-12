@@ -53,16 +53,16 @@ The TNY-360 API has quite a few modules. Here's a complete list of the modules :
 | [**Joint**](./joint)               | Joint control actions, such as setting joint angles, getting joint states, etc.            |
 | [**Motor**](./motor)               | Motor control actions, such as triggering motor calibration, sending raw duty cycles, etc. |
 | [**Imu**](./imu)                   | IMU related actions, such as getting the current orientation or acceleration of the robot. |
-| Laser *(not yet implemented)*      | Laser related actions, such as getting the distance to a front object.                     |
+| [**Laser**](./laser)               | Laser related actions, such as getting the distance to a front object.                     |
 | [**Power**](./power)               | Power management actions, such as getting battery status or controlling power consumption. |
-| Face *(not yet implemented)*       | Face recognition and display actions.                                                      |
-| Camera *(not yet implemented)*     | Camera control actions, such as capturing images or recording video.                       |
-| Speaker *(not yet implemented)*    | Audio playback actions, such as playing sounds or music.                                   |
-| Microphone *(not yet implemented)* | Audio recording actions, such as capturing voice input.                                    |
+| [**Face**](./face)                 | Facial expression actions, such as displaying emotions or animations on the robot's face.  |
+| [**Camera**](./camera)             | Camera control actions, such as capturing images, settings resolution and frame rate.      |
+| [**Speaker**](./speaker)           | Audio playback actions, such as playing sounds or music.                                   |
+| [**Microphone**](./microphone)     | Audio recording actions, such as capturing audio or adjusting recording settings.          |
 | [**I2C**](./i2c)                   | I2C communication actions, such as reading from or writing to I2C devices.                 |
 | [**ADC**](./adc)                   | ADC (Analog-to-Digital Conversion) actions, such as reading analog sensor values.          |
 | [**Wi-Fi**](./wifi)                | Wi-Fi network actions, such as connecting to a network or retrieving network information.  |
 | [**Bluetooth**](./bluetooth)       | Bluetooth communication actions, such as pairing with devices or transferring data.        |
 | [**LED**](./led)                   | LED control actions, such as setting LED colors or brightness.                             |
 | [**Error**](./error)               | Error handling actions, such as retrieving error codes or clearing errors.                 |
-
+| [**Diagnostic**](./diagnostic)     | Diagnostic actions, such as running system checks                                          |
