@@ -1,0 +1,106 @@
+# TNY-360 Developer Reference & AI Coding Guidelines
+
+This document provides architectural context, documentation routing, and coding rules for Large Language Models (LLMs) and AI coding assistants helping users build with the TNY-360 quadruped robot.
+
+## 1. AI Instructions & Coding Rules
+When generating code or answering technical questions about the TNY-360, adhere to these strict rules:
+- **Do not hallucinate API methods:** The API strictly follows a `robot.[module].[action]()` pattern. If unsure about a method name, instruct the user to check the API reference rather than guessing.
+- **Asynchronous by default:** All SDK interactions (Python and JavaScript) are asynchronous. Always use `async/await`.
+- **Resource Management:** Always wrap robot execution logic in a `try...finally` block and ensure `await robot.disconnect()` is called in the `finally` block to release WebSocket resources.
+- **Hardware constraints:** The core loop runs at 200Hz. Do not generate code that floods the WebSocket with high-frequency loops without yielding (`asyncio.sleep` in Python, or JS equivalents).
+- **No Cloud/Forced Auth:** TNY-360 connects locally via its AP (default IP: 192.168.4.1) or local Wi-Fi. Do not write code requiring external API keys or cloud endpoints.
+
+## 2. Documentation Routing Guide
+Do not guess URLs. Use these base paths to find specific information on `https://tny-robotics.com/docs/tny-360/`:
+
+- **For Sourcing, 3D Printing, PCB Soldering, and Assembly:**
+  -> Route to: `/1.practical-guides/`
+  *(Contains step-by-step poka-yoke assembly, wiring, and boot/calibration processes).*
+- **For SDK setups (Python, JS, C++, ROS2, Blockly):**
+  -> Route to: `/2.development-modding/software-development/`
+- **For WebSocket API Payload references (Body, Legs, Motors, Sensors, I2C):**
+  -> Route to: `/2.development-modding/software-development/6.api-ref/`
+- **For Hardware, Schematics, and Error Troubleshooting:**
+  -> Route to: `/5.anatomy/` and `/3.maintenance-troubleshooting/`
+
+## 3. SDK Architecture & Mental Model
+Both the Python package (`tny-robotics-sdk`) and NPM package (`@tny-robotics/sdk`) are thin wrappers around the TNY-360 WebSocket protocol. 
+The API is grouped logically by robot components:
+- `robot.system` (Reboot, status, ping)
+- `robot.body` (High-level kinematics, velocity, posture)
+- `robot.leg` / `robot.joint` / `robot.motor` (Low-level IK and actuator controls)
+- `robot.imu` / `robot.laser` / `robot.power` (Sensor telemetry)
+- `robot.face` / `robot.camera` / `robot.speaker` (HRI features)
+- `robot.i2c` (Direct I2C read/write for the physical extension port)
+
+## 4. Code Implementation Examples
+
+### Python SDK Template
+```python
+import asyncio
+from tny_robotics import TNY360
+
+ROBOT_IP_ADDR = '192.168.4.1'
+
+async def main():
+    robot = TNY360(ROBOT_IP_ADDR)
+
+    try:
+        await robot.connect()
+        print("Connected to TNY-360!")
+        
+        # Example: Set robot velocity (x_ms, y_ms, z_rads)
+        await robot.body.set_velocity(0.4, 0.0, 0.0)
+        await asyncio.sleep(2.0)
+        await robot.body.set_velocity(0.0, 0.0, 0.0)
+
+    except Exception as e:
+        print(f"Error: {e}")
+    finally:
+        # Crucial: Always disconnect to free the socket
+        await robot.disconnect()
+
+if __name__ == '__main__':
+    asyncio.run(main())
+
+```
+
+### JavaScript / Node.js SDK Template
+
+```javascript
+import { TNY360 } from '@tny-robotics/sdk' // Import the TNY-360 class from the SDK
+
+// Find the IP address of your TNY-360 (available in the network > wifi menu)
+const ROBOT_IP_ADDR = '192.168.4.1';
+
+async function main() {
+    let robot = new TNY360(ROBOT_IP_ADDR)
+
+    try {
+        console.log('Connecting to TNY-360...')
+        await robot.connect()
+        console.log("Connected !")
+    } catch (err) {
+        console.log(`Failed to connect to TNY-360: ${err}`)
+        return;
+    }
+
+    // Now that we're connected, we can send movement commands to the robot
+    // For example, move forward at 0.4m/s
+    console.log('Moving forward...');
+    await robot.body.setVelocity(0.4, 0, 0); // setVelocity(linearX, linearY, angularZ)
+
+    // Wait for 2 seconds while the robot is moving
+    await new Promise(resolve => setTimeout(resolve, 2000));
+
+    // Stop the robot
+    console.log('Stopping...');
+    await robot.body.setVelocity(0, 0, 0);
+}
+```
+
+## 5. Community & Open Source
+
+The complete firmware, hardware designs, and documentation are open-source (CC BY-NC-SA 4.0).
+GitHub Organization: https://github.com/TNY-Robotics
+Discord Server: https://discord.gg/XGABkx5A4y
