@@ -12,7 +12,6 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import mermaid from 'mermaid'
 
 const slotContainer = ref(null)
 const svgContent = ref('')
@@ -25,9 +24,15 @@ onMounted(async () => {
         const rawText = slotContainer.value.textContent || '';
 
         if (rawText.trim() !== '') {
-            mermaid.initialize({ startOnLoad: false, theme: isDark ? 'dark' : 'neutral' });
-
             try {
+                // NOTE: Import here to reduce compile time and make it a separated JS chunk (better loading time)
+                const { default: mermaid } = await import('mermaid')
+
+                mermaid.initialize({ 
+                    startOnLoad: false, 
+                    theme: isDark ? 'dark' : 'neutral' 
+                });
+
                 const id = `mermaid-${Math.round(Math.random() * 100000)}`;
 
                 const { svg } = await mermaid.render(id, rawText.trim());

@@ -32,4 +32,4 @@ Here's a quick overview of the sections in this chapter:
 
 Ready to make your first leg ? Let's get started !
 
-:nav-buttons{left="Finishing the Head" left-link="../head/final" left-icon="i-lucide-chevron-left" right="Bottom Assembly" right-link="./bottom" right-icon="i-lucide-chevron-right"}
+:nav-buttons{left="Finishing the Head" left-link="../head/final" left-icon="lucide:chevron-left" right="Bottom Assembly" right-link="./bottom" right-icon="lucide:chevron-right"}

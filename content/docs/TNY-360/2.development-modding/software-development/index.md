@@ -63,5 +63,5 @@ This makes all SDKs structured in a similar way. So we built a dedicated [API Re
 <br>
 
 ::center
-:big-button{label="API Reference" href="./api-ref" icon="i-lucide-chevron-right" inline}
+:big-button{label="API Reference" href="./api-ref" icon="lucide:chevron-right" inline}
 ::

@@ -28,4 +28,4 @@ Here's a quick overview of the sections in this chapter:
 
 Ready to give your robot a head ? Let's get started !
 
-:nav-buttons{left="Wiring Everything" left-link="../torso/wiring" left-icon="i-lucide-chevron-left" right="Assembling the Visor" right-link="./visor" right-icon="i-lucide-chevron-right"}
+:nav-buttons{left="Wiring Everything" left-link="../torso/wiring" left-icon="lucide:chevron-left" right="Assembling the Visor" right-link="./visor" right-icon="lucide:chevron-right"}

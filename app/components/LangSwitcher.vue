@@ -1,6 +1,6 @@
 <template>
     <div class="flex w-fit h-fit">
-        <USelect icon="i-heroicons-globe-alt" v-model="locale" :items="localesOptions" /> 
+        <USelect icon="lucide:globe" v-model="locale" :items="localesOptions" /> 
     </div>
 </template>
 

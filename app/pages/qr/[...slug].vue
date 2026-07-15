@@ -17,7 +17,7 @@
             <template #footer>
                 <div class="flex justify-between w-full">
                     <UButton href="/" variant="ghost" color="neutral">Accueil</UButton>
-                    <UButton href="/docs" variant="solid" icon="i-lucide-chevron-right" trailing>Documentation</UButton>
+                    <UButton href="/docs" variant="solid" icon="lucide:chevron-right" trailing>Documentation</UButton>
                 </div>
             </template>
         </UModal>

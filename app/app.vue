@@ -9,19 +9,6 @@
         </UApp>
         <TNYFooter />
 
-        <UModal :title="$t('disclaimer.title')" v-model:open="WIPModal">
-            <template #body>
-                <div class="flex flex-col justify-start items-start">
-                    <p> <RichText path="disclaimer.content" class="space-y-4" /> </p>
-                </div>
-            </template>
-            <template #footer>
-                <div class="flex w-full justify-end">
-                    <UButton label="Oki doki" size="lg" @click="WIPModal = false" />
-                </div>
-            </template>
-        </UModal>
-
         <UModal v-model:open="modalOpenModel" :title="$t('newsletter.title')">
             <template #body>
                 <div class="flex flex-col justify-start items-start space-y-4">
@@ -36,15 +23,15 @@
                         <UFormField name="email" label="" class="">
                             <UInput v-model="emailFormState.email" type="email" :placeholder="$t('newsletter.emailPlaceholder')" :disabled="emailButtonDisabled" />
                         </UFormField>
-                        <UAlert v-show="emailSent" variant="subtle" color="success" icon="i-heroicons-check-circle-20-solid" class="flex text-start justify-center items-center"
+                        <UAlert v-show="emailSent" variant="subtle" color="success" icon="lucide:check-circle" class="flex text-start justify-center items-center"
                             :title="$t('newsletter.success.title')"
                             :description="$t('newsletter.success.content')">
                         </UAlert>
-                        <UAlert v-show="emailError" variant="subtle" color="error" icon="i-heroicons-exclamation-circle-20-solid" class="flex text-start justify-center items-center"
+                        <UAlert v-show="emailError" variant="subtle" color="error" icon="lucide:exclamation-circle" class="flex text-start justify-center items-center"
                             :title="$t('newsletter.error.title')"
                             :description="$t('newsletter.error.content')">
                         </UAlert>
-                        <UAlert v-show="emailAlreadySent" variant="subtle" color="warning" icon="i-heroicons-exclamation-triangle-20-solid" class="flex text-start justify-center items-center"
+                        <UAlert v-show="emailAlreadySent" variant="subtle" color="warning" icon="lucide:alert-triangle" class="flex text-start justify-center items-center"
                             :title="$t('newsletter.already.title')"
                             :description="$t('newsletter.already.content')">
                         </UAlert>
@@ -59,9 +46,6 @@
 <script lang="ts" setup>
 import type { FormSubmitEvent } from '@nuxt/ui';
 import { object, string, type InferType } from 'yup';
-
-// const WIPModal = ref(true);
-const WIPModal = ref(false); // Disabling the WIP modal by default, this thing annoys the sh*t out of me
 
 const { modalOpenModel } = useNewsletter();
 

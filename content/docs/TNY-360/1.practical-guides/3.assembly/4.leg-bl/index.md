@@ -32,4 +32,4 @@ Here's a quick overview of the sections in this chapter:
 
 Ready to make your second leg ? Let's get started !
 
-:nav-buttons{left="The Plastic Covers" left-link="../leg-fl/covers" left-icon="i-lucide-chevron-left" right="Bottom Assembly" right-link="./bottom" right-icon="i-lucide-chevron-right"}
+:nav-buttons{left="The Plastic Covers" left-link="../leg-fl/covers" left-icon="lucide:chevron-left" right="Bottom Assembly" right-link="./bottom" right-icon="lucide:chevron-right"}

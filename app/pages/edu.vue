@@ -182,8 +182,8 @@
             </div>
         </div>
         <div class="flex w-full pt-32 justify-evenly flex-col lg:flex-row">
-            <UButton disabled size="xl" :label="$t('education.cta.devis')" trailing icon="i-lucide-mail" variant="ghost" />
-            <UButton disabled size="xl" :label="$t('education.cta.download')" trailing icon="i-lucide-download" variant="ghost" />
+            <UButton disabled size="xl" :label="$t('education.cta.devis')" trailing icon="lucide:mail" variant="ghost" />
+            <UButton disabled size="xl" :label="$t('education.cta.download')" trailing icon="lucide:download" variant="ghost" />
         </div>
         <div class="flex space-x-4 mt-16 mx-auto mb-32 text-slate-500 dark:text-slate-400 justify-center items-center px-2">
             <UIcon name="i-lucide-info" size="24" class="min-w-6"/>

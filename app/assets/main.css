@@ -1,4 +1,3 @@
-@import url('./poppins.css');
 @import 'tailwindcss';
 @import '@nuxt/ui';
 
@@ -15,7 +14,7 @@ body {
 }
 
 * {
-    font-family: 'PoppinsWeb', Helvetica, sans-serif;
+    font-family: 'Poppins', Helvetica, sans-serif;
 }
 
 button[disabled] {

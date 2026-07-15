@@ -39,13 +39,13 @@ If you're here for guides on how to print, assemble, and set up your TNY-360, he
 
 ::columns
 
-::big-button{href="./practical-guide/fabrication" label="3D print your TNY-360" icon="i-lucide-box"}
+::big-button{href="./practical-guide/fabrication" label="3D print your TNY-360" icon="lucide:box"}
 ::
 
-::big-button{href="./practical-guide/assembly" label="Assemble your TNY-360" icon="i-lucide-hammer"}
+::big-button{href="./practical-guide/assembly" label="Assemble your TNY-360" icon="lucide:hammer"}
 ::
 
-::big-button{href="./practical-guide/startup" label="Start up your TNY-360" icon="i-lucide-rocket"}
+::big-button{href="./practical-guide/startup" label="Start up your TNY-360" icon="lucide:rocket"}
 ::
 
 ::

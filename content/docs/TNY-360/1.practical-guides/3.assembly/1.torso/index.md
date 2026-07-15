@@ -27,4 +27,4 @@ Here's a quick overview of the sections in this chapter:
 
 Ready to get started ? Let's dive into the torso assembly process!
 
-:nav-buttons{left="Assembly" left-link="../" left-icon="i-lucide-chevron-left" right="Adding the Components" right-link="./components" right-icon="i-lucide-chevron-right"}
+:nav-buttons{left="Assembly" left-link="../" left-icon="lucide:chevron-left" right="Adding the Components" right-link="./components" right-icon="lucide:chevron-right"}

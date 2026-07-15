@@ -1,3 +1,5 @@
+import { visualizer } from 'rollup-plugin-visualizer';
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
@@ -10,7 +12,14 @@ export default defineNuxtConfig({
   vite: {
     build: {
       cssCodeSplit: true
-    }
+    },
+    plugins: [
+      visualizer({
+        filename: './stats.html',
+        open: true,
+        gzipSize: true
+      })
+    ],
   },
   ssr: true,
   i18n: {
@@ -31,7 +40,11 @@ export default defineNuxtConfig({
       ],
     }
   },
-  // Configuration du parser Markdown (MDC) utilisé par Content v3
+  fonts: {
+    families: [
+      { name: 'Poppins', weights: ['300', '400', '500', '700'], styles: ['normal', 'italic'] },
+    ]
+  },
   mdc: {
     highlight: {
       theme: {
@@ -46,9 +59,7 @@ export default defineNuxtConfig({
         'cpp',
         'c',
         'json'
-      ],
-      
-      // Optionnel : active les wrappers pour pouvoir styliser le nom du fichier etc.
+      ],      
       wrapperStyle: true 
     }
   },

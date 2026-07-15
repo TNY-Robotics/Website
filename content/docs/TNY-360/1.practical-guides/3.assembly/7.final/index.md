@@ -23,4 +23,4 @@ Here's a quick overview of the sections in this chapter:
 
 Alright, let's finish this robot !
 
-:nav-buttons{left="Wiring the Leg" left-link="../leg-fr/wiring" left-icon="i-lucide-chevron-left" right="The Power Management" right-link="./power" right-icon="i-lucide-chevron-right"}
+:nav-buttons{left="Wiring the Leg" left-link="../leg-fr/wiring" left-icon="lucide:chevron-left" right="The Power Management" right-link="./power" right-icon="lucide:chevron-right"}

@@ -79,4 +79,4 @@ Here's a list of the parts you'll be working on in this section:
 
 Feeling ready ? Let's start putting some heat inserts in the robot !
 
-:nav-buttons{right="The Back" right-link="./back" right-icon="i-lucide-chevron-right"}
+:nav-buttons{right="The Back" right-link="./back" right-icon="lucide:chevron-right"}

@@ -54,5 +54,5 @@ All clear ? Let's get started with the assembly process!
 <br>
 
 ::center
-:big-button{href="./torso" label="Start Assembly" icon="i-lucide-chevron-right" inline=true}
+:big-button{href="./torso" label="Start Assembly" icon="lucide:chevron-right" inline=true}
 ::

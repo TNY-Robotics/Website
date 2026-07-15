@@ -24,5 +24,5 @@ Alright, let's get started with the fabrication of your TNY-360 robot !
 <br>
 
 ::center
-:big-button{href="./printing" label="Start Fabrication" icon="i-lucide-chevron-right" inline=true}
+:big-button{href="./printing" label="Start Fabrication" icon="lucide:chevron-right" inline=true}
 ::

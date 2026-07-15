@@ -5,7 +5,7 @@
             <div class="flex flex-col w-full h-full max-h-full min-h-0 p-2 space-y-4">
                 <div>
                     <h1 class="text-xl font-semibold pt-2 text-center"> {{ $t('docs.table') }} </h1>
-                    <UButton icon="i-lucide-x" variant="ghost" color="neutral" class="absolute top-3 right-2" @click="closeSidebar" /> 
+                    <UButton icon="lucide:x" variant="ghost" color="neutral" class="absolute top-3 right-2" @click="closeSidebar" /> 
                 </div>
                 <div class="h-full max-h-full overflow-y-auto">
                     <DocTreeView :tree="(tree.children[0] as DocFolder)" :root="true" :current-path="page?.path" />
@@ -25,7 +25,7 @@
         <div class="flex flex-col grow w-full space-y-4">
             <div v-if="page" class="flex flex-wrap w-full h-fit rounded-lg bg-white dark:bg-slate-900 p-4">
                 <div class="flex items-center pr-4">
-                    <UButton icon="i-lucide-list-indent-increase" variant="ghost" color="neutral" class="lg:hidden" @click="openSidebar" />
+                    <UButton icon="lucide:list-indent-increase" variant="ghost" color="neutral" class="lg:hidden" @click="openSidebar" />
                 </div>
                 <div class="flex flex-wrap min-w-fit pr-4">
                     <div v-for="(part, index) in filePathArray" class="flex justify-center items-center">
@@ -39,7 +39,7 @@
                     </div>
                 </div>
                 <div class="items-center justify-end grow hidden lg:flex">
-                    <UInput ref="searchInput" type="text" :placeholder="$t('docs.search')" icon="i-lucide-search" :class="searchFocused? 'w-96': 'w-64'"
+                    <UInput ref="searchInput" type="text" :placeholder="$t('docs.search')" icon="lucide:search" :class="searchFocused? 'w-96': 'w-64'"
                         class="transition-all max-w-full" @focus="searchFocused = true" @blur="onSearchBlur"
                         v-model:model-value="searchQuery" :loading="searchLoading"
                     >
@@ -90,7 +90,7 @@
                 <div v-else class="w-full p-4 text-center">
                     <h1 class="text-2xl font-semibold"> {{ $t('docs.docNotFound.title') }} </h1>
                     <p class="mt-2 text-lg"> {{ $t('docs.docNotFound.description') }} </p>
-                    <UButton @click="router.back()" :label="$t('docs.back')" class="mt-8" icon="i-lucide-chevron-left" />
+                    <UButton @click="router.back()" :label="$t('docs.back')" class="mt-8" icon="lucide:chevron-left" />
                 </div>
                 <div v-if="fileVersions.length > 0" class="absolute right-0">
                     <USelect :items="fileVersions.map(v => ({label: v.version, value: v.path}))" class="w-32 lg:w-48" @update:model-value="onVersionChange" :model-value="page?.path" />

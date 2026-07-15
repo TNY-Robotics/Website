@@ -4,10 +4,10 @@
             <div v-if="item.isFolder" class="flex flex-col min-w-0 max-w-full w-full">
                 <NuxtLink
                     :to="item.path"
-                    class="flex space-x-4 w-full items-center justify-between min-w-0 max-w-full w-full"
+                    class="flex space-x-4 w-full items-center justify-between min-w-0 max-w-full"
                 >
                     <h2 class="whitespace-nowrap text-ellipsis min-w-0 max-w-full w-full overflow-hidden hover:underline" :class="otherStyle(item) + ' ' + (root? 'font-extrabold text-xl' : 'font-medium')">{{ item.name }}</h2>
-                    <UButton v-if="item.children.length" icon="i-lucide-chevron-down" color="neutral"
+                    <UButton v-if="item.children.length" icon="lucide:chevron-down" color="neutral"
                         @click="ev => onItemExpandClicked(ev, item)" size="xl" variant="link"
                         class="w-6 h-6 p-0 transition-all" :class="item.expanded?.value? '': 'rotate-90'" />
                 </NuxtLink>

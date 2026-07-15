@@ -82,4 +82,4 @@ Here's all the PCBs you'll be working on in this section:
 
 Now that you know how to solder the PCBs, let's solder the boards!
 
-::nav-buttons{right="The Plug PCB" right-link="./plug" right-icon="i-lucide-chevron-right"}
+::nav-buttons{right="The Plug PCB" right-link="./plug" right-icon="lucide:chevron-right"}

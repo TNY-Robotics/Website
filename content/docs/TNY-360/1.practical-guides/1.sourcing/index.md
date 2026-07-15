@@ -41,5 +41,5 @@ Ready to start ? Let's dive into the sourcing and preparation process !
 <br>
 
 ::center
-:big-button{href="./components" label="Start Sourcing" icon="i-lucide-chevron-right" inline=true}
+:big-button{href="./components" label="Start Sourcing" icon="lucide:chevron-right" inline=true}
 ::

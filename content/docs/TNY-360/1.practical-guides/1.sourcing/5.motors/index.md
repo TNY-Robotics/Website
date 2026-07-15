@@ -39,4 +39,4 @@ This section will be splitted in 2 parts :
 
 All clear ? Well, let's do it !
 
-:nav-buttons{left="Preparing the components" left-link="./preparing" left-icon="i-lucide-chevron-left" right="Soldering the PCBs" right-link="./soldering" right-icon="i-lucide-chevron-right"}
+:nav-buttons{left="Preparing the components" left-link="./preparing" left-icon="lucide:chevron-left" right="Soldering the PCBs" right-link="./soldering" right-icon="lucide:chevron-right"}
