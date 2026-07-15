@@ -4,7 +4,7 @@ FROM base as build
 ENV PORT=3000
 WORKDIR /app
 COPY . .
-RUN npm install
+RUN npm install --force
 RUN npm run build
 RUN npm prune
 

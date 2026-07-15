@@ -32,8 +32,6 @@ This documentation is organized into several main sections to help you understan
 [Maintenance & Troubleshooting](./maintenance-troubleshooting) - Keep your TNY-360 in top shape with routine maintenance and troubleshooting guides.
 ::
 
-Text test [Practical Guides](./practical-guides) here.
-
 ## Printing / Assembly / Setup - Manuals
 
 If you're here for guides on how to print, assemble, and set up your TNY-360, here are the direct links to the relevant sections:
@@ -52,7 +50,7 @@ If you're here for guides on how to print, assemble, and set up your TNY-360, he
 ::
 
 ::center
-[I am building it from scratch (no kit)](./practical-guide/sourcing)
+[I am building it from scratch (no kit)](./practical-guides/sourcing)
 ::
 
 ---
