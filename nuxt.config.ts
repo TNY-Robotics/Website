@@ -4,6 +4,15 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxt/content', '@nuxt/ui', '@nuxtjs/i18n'],
   css: [ '~/assets/main.css' ],
+  features: {
+    inlineStyles: true
+  },
+  vite: {
+    build: {
+      cssCodeSplit: true
+    }
+  },
+  ssr: true,
   i18n: {
     baseUrl: 'https://tny-robotics.com/',
     locales: [
