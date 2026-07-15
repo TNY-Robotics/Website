@@ -13,25 +13,26 @@ Welcome on the TNY-360 documentation !
 This documentation is organized into several main sections to help you understand and work with your TNY-360:
 
 ::chevron
-[Practical Guide](./practical-guide/index.md) - Get started with your TNY-360, from fabrication and assembly to first power up and daily operations.
+[Practical Guides](./practical-guides) - Get started with your TNY-360, from fabrication and assembly to first power up and daily operations.
 ::
 
 ::chevron
-[Development & Modding](./development-modding/index.md) - Learn how to control your TNY-360 through code, and how to create extensions to customize it.
+[Development & Modding](./development-modding) - Learn how to control your TNY-360 through code, and how to create extensions to customize it.
 ::
 
 ::chevron
-[Anatomy](./anatomy/index.md) - Deep dive into the hardware, electronics, and firmware that make up your TNY-360.
+[Anatomy](./anatomy) - Deep dive into the hardware, electronics, and firmware that make up your TNY-360.
 ::
 
 ::chevron
-[Dashboard & Control](./dashboard-control/index.md) - Learn how to use the built-in web dashboard to control your robot.
+[Dashboard & Control](./dashboard-control) - Learn how to use the built-in web dashboard to control your robot.
 ::
 
 ::chevron
-[Maintenance & Troubleshooting](./maintenance-troubleshooting/index.md) - Keep your TNY-360 in top shape with routine maintenance and troubleshooting guides.
+[Maintenance & Troubleshooting](./maintenance-troubleshooting) - Keep your TNY-360 in top shape with routine maintenance and troubleshooting guides.
 ::
 
+Text test [Practical Guides](./practical-guides) here.
 
 ## Printing / Assembly / Setup - Manuals
 
@@ -39,13 +40,13 @@ If you're here for guides on how to print, assemble, and set up your TNY-360, he
 
 ::columns
 
-::big-button{href="./practical-guide/fabrication" label="3D print your TNY-360" icon="lucide:box"}
+::big-button{href="./practical-guides/fabrication" label="3D print your TNY-360" icon="lucide:box"}
 ::
 
-::big-button{href="./practical-guide/assembly" label="Assemble your TNY-360" icon="lucide:hammer"}
+::big-button{href="./practical-guides/assembly" label="Assemble your TNY-360" icon="lucide:hammer"}
 ::
 
-::big-button{href="./practical-guide/startup" label="Start up your TNY-360" icon="lucide:rocket"}
+::big-button{href="./practical-guides/startup" label="Start up your TNY-360" icon="lucide:rocket"}
 ::
 
 ::
