@@ -11,6 +11,11 @@ export default defineNuxtConfig({
   features: {
     inlineStyles: true
   },
+  runtimeConfig: {
+    public: {
+      downtimeMode: process.env.NUXT_PUBLIC_DOWNTIME_MODE || 'false'
+    }
+  },
   vite: {
     build: {
       cssCodeSplit: true

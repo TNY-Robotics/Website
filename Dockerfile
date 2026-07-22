@@ -4,7 +4,7 @@ FROM base as build
 ENV PORT=3000
 WORKDIR /app
 COPY . .
-RUN npm install --force
+RUN npm install
 RUN npm run build
 
 FROM base as prod

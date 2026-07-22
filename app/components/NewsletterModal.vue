@@ -9,7 +9,10 @@
                         <p class="text-lg" style="font-family: monospace;"> {{ $t('newsletter.release.date') }} </p>
                     </div>
                 </div>
-                <UForm :schema="emailFormSchema" :state="emailFormState" @submit="onEmailFormSubmit" class="w-fit mx-auto text-center py-8 space-y-4">
+                <div v-if="isDowntime" class="p-4 rounded-lg border-2 border-orange-500/40 bg-orange-500/20 w-full text-center">
+                    <RichText path="newsletter.downtime" class="space-y-2" />
+                </div>
+                <UForm v-else :schema="emailFormSchema" :state="emailFormState" @submit="onEmailFormSubmit" class="w-fit mx-auto text-center py-8 space-y-4">
                     <UFormField name="email" label="" class="">
                         <UInput v-model="emailFormState.email" type="email" :placeholder="$t('newsletter.emailPlaceholder')" :disabled="emailButtonDisabled" />
                     </UFormField>
@@ -37,9 +40,11 @@ import type { FormSubmitEvent } from '@nuxt/ui';
 import { object, string, type InferType } from 'yup';
 
 const open = defineModel<boolean>('open', { default: false });
+const runtimeConfig = useRuntimeConfig()
+const isDowntime = runtimeConfig.public.downtimeMode === 'true'
 
 const emailFormSchema = object({
-    email: string().email('Veuillez entrer une adresse e-mail valide').required('L\'adresse e-mail est requise'),
+    email: string().email('Please enter a valid email address').required('Email is required'),
 });
 const emailFormState = reactive({
     email: '',

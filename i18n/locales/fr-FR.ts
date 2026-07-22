@@ -43,6 +43,7 @@ export default defineI18nLocale(async (locale) => ({
             title: 'Date de sortie estimée',
             date: 'Fin Juillet 2026',
         },
+        downtime: 'Désolé, l\'inscription à la liste d\'attente est temporairement désactivée.\nRevenez plus tard pour la rejoindre !'
     },
     qr: {
         invalid: {
