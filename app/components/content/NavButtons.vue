@@ -1,11 +1,11 @@
 <template>
     <div class="flex w-full justify-between items">
-        <UButton v-if="props.left" :href="props.leftLink" variant="outline" size="md">
+        <UButton v-if="props.left" :to="props.leftLink" variant="outline" size="md">
             <UIcon v-if="props.leftIcon" :name="props.leftIcon" class="w-4 h-4 mr-1" />
             {{ props.left }}
         </UButton>
         <span v-if="!props.left" />
-        <UButton v-if="props.right" :href="props.rightLink" variant="outline" size="md">
+        <UButton v-if="props.right" :to="props.rightLink" variant="outline" size="md">
             {{ props.right }}
             <UIcon v-if="props.rightIcon" :name="props.rightIcon" class="w-4 h-4 ml-1" />
         </UButton>

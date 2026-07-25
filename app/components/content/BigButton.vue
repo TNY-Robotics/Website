@@ -1,5 +1,5 @@
 <template>
-    <NuxtLink :to="href" class="flex justify-center items-center w-fit border-2 border-primary rounded-lg p-4 bg-transparent hover:bg-primary/10 transition-colors" :class="inline ? 'flex-row space-x-2' : 'flex-col space-y-2'">
+    <NuxtLink :to="href" class="flex justify-center items-center w-fit border-2 border-primary rounded-lg p-4 bg-transparent hover:bg-primary/10 transition-colors" :class="isInline ? 'flex-row space-x-2' : 'flex-col space-y-2'">
         <div v-if="icon" class="flex justify-center">
             <UIcon :name="icon" class="w-8 h-8" />
         </div>
@@ -12,8 +12,14 @@ const props = defineProps<{
     label: string
     href?: string
     icon?: string
-    inline?: boolean
+    inline?: boolean|string
 }>();
+
+const isInline = computed(() => {
+    if (props.inline === undefined) return false;
+    if (typeof props.inline === 'boolean') return props.inline;
+    return props.inline === 'true';
+});
 </script>
 
 <style></style>

@@ -105,6 +105,10 @@ const { t, locale } = useI18n();
 const route = useRoute();
 const router = useRouter();
 
+definePageMeta({
+    middleware: ['docs-routing'],
+});
+
 const vKeys = useCookie('docs-vkeys', { path: '/', default: () => ({}) });
 
 const VERSION_REGEX = /v(\d+\.)+\d+$/;
@@ -126,49 +130,49 @@ const { data: allPages } = await useAsyncData('all-docs', () => {
 });
 
 // Little fix to avoid weird inconsistencies with links : ensure end slash for folders and no end slash for files
-if (page.value) {
-    const isFolder = page.value.id.endsWith('index.md'); // we always read index.md when reading a folder root
-    if (isFolder && !route.path.endsWith('/')) {
-        await router.replace(route.path + '/');
-    } else if (!isFolder && route.path.endsWith('/')) {
-        await router.replace(route.path.slice(0, -1));
-    }
-    // save the vkey of the page if it has one
-    const vKey = page.value.meta['v-key'] as string | undefined;
-    if (vKey) {
-        const version = page.value.path.match(VERSION_REGEX)?.[0] || null;
-        if (version) {
-            vKeys.value[vKey] = version;
-        }
-    }
-} else {
-    // page not found ? check for versions
-    const allVersions = findVersionedFiles(path);
-    if (allVersions.length === 0) {
-        // console.warn(`Path ${path} is detected as versioned, but no versions found.`);
-    } else {
-        const page = allVersions[0]?.page || null;
-        const vKey = page.meta['v-key'] as string | undefined;
-        const storedVersion = vKey ? vKeys.value[vKey] : null;
+// if (page.value) {
+//     const isFolder = page.value.id.endsWith('index.md'); // we always read index.md when reading a folder root
+//     if (isFolder && !route.path.endsWith('/')) {
+//         await router.replace(route.path + '/');
+//     } else if (!isFolder && route.path.endsWith('/')) {
+//         await router.replace(route.path.slice(0, -1));
+//     }
+//     // save the vkey of the page if it has one
+//     const vKey = page.value.meta['v-key'] as string | undefined;
+//     if (vKey) {
+//         const version = page.value.path.match(VERSION_REGEX)?.[0] || null;
+//         if (version) {
+//             vKeys.value[vKey] = version;
+//         }
+//     }
+// } else {
+//     // page not found ? check for versions
+//     const allVersions = findVersionedFiles(path);
+//     if (allVersions.length === 0) {
+//         // console.warn(`Path ${path} is detected as versioned, but no versions found.`);
+//     } else {
+//         const page = allVersions[0]?.page || null;
+//         const vKey = page.meta['v-key'] as string | undefined;
+//         const storedVersion = vKey ? vKeys.value[vKey] : null;
 
-        let targetPath = '';
+//         let targetPath = '';
 
-        if (storedVersion) {
-            const versionedPage = allVersions.find(v => v.version === storedVersion);
-            if (versionedPage) {
-                targetPath = versionedPage.path;
-            } else {
-                targetPath = allVersions[allVersions.length - 1]?.path ?? page.path;
-            }
-        } else {
-            targetPath = allVersions[allVersions.length - 1]?.path ?? page.path;
-        }
+//         if (storedVersion) {
+//             const versionedPage = allVersions.find(v => v.version === storedVersion);
+//             if (versionedPage) {
+//                 targetPath = versionedPage.path;
+//             } else {
+//                 targetPath = allVersions[allVersions.length - 1]?.path ?? page.path;
+//             }
+//         } else {
+//             targetPath = allVersions[allVersions.length - 1]?.path ?? page.path;
+//         }
 
-        if (targetPath && targetPath !== path) {
-            await navigateTo(targetPath, { redirectCode: 302 });
-        }
-    }
-}
+//         if (targetPath && targetPath !== path) {
+//             await navigateTo(targetPath, { redirectCode: 302 });
+//         }
+//     }
+// }
 
 useSeoMeta({
     title: `${page.value?.seo.title || ''} - Documentation`,

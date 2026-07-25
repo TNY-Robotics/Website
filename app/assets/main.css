@@ -1,6 +1,8 @@
 @import 'tailwindcss';
 @import '@nuxt/ui';
 
+@source "../../../content/**/*";
+
 #__nuxt {
     @apply w-full min-h-full;
 }

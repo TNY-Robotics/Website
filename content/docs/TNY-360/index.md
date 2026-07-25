@@ -7,6 +7,25 @@ description: Explore TNY-360 docs — guides for assembly, programming, setup, m
 
 Welcome on the TNY-360 documentation !
 
+---
+
+## Printing / Assembly / Setup - Manuals
+
+If you're here for guides on how to print, assemble, and set up your TNY-360, here are the direct links to the relevant sections:
+
+::columns
+:big-button{href="./practical-guides/fabrication" label="3D print your TNY-360" icon="lucide:box"}
+:big-button{href="./practical-guides/assembly" label="Assemble your TNY-360" icon="lucide:hammer"}
+:big-button{href="./practical-guides/startup" label="Start up your TNY-360" icon="lucide:rocket"}
+::
+
+### Are you building it from scratch (no kit) ?
+
+::center
+:big-button{href="./practical-guides/sourcing" label="Source your TNY-360 parts" icon="lucide:package-search"}
+::
+
+---
 
 ## Sections overview
 
@@ -30,27 +49,6 @@ This documentation is organized into several main sections to help you understan
 
 ::chevron
 [Maintenance & Troubleshooting](./maintenance-troubleshooting) - Keep your TNY-360 in top shape with routine maintenance and troubleshooting guides.
-::
-
-## Printing / Assembly / Setup - Manuals
-
-If you're here for guides on how to print, assemble, and set up your TNY-360, here are the direct links to the relevant sections:
-
-::columns
-
-::big-button{href="./practical-guides/fabrication" label="3D print your TNY-360" icon="lucide:box"}
-::
-
-::big-button{href="./practical-guides/assembly" label="Assemble your TNY-360" icon="lucide:hammer"}
-::
-
-::big-button{href="./practical-guides/startup" label="Start up your TNY-360" icon="lucide:rocket"}
-::
-
-::
-
-::center
-[I am building it from scratch (no kit)](./practical-guides/sourcing)
 ::
 
 ---

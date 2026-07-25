@@ -39,12 +39,12 @@
                         </UButton>
                     </div>
                 </div>
-                <UButton :href="lastReleaseLink??''" :disabled="!lastReleaseLink" :label="$t('software.coder.downloadForOthers')" target="_blank" variant="link" color="neutral" />
+                <UButton :to="lastReleaseLink??''" :disabled="!lastReleaseLink" :label="$t('software.coder.downloadForOthers')" target="_blank" variant="link" color="neutral" />
                 <div v-if="latestVersion === null" class="space-y-4 absolute w-full h-full bg-slate-200/50 dark:bg-slate-900/50 backdrop-blur-sm rounded-lg flex flex-col justify-center items-center">
                     <p class="text-center px-4">
                         <RichText path="software.coder.downloadError" />
                     </p>
-                    <UButton href="https://github.com/TNY-Robotics/TNY-Coder/releases" target="_blank" :label="$t('software.coder.githubReleaseLink')" variant="solid" class="mt-4"/>
+                    <UButton to="https://github.com/TNY-Robotics/TNY-Coder/releases" target="_blank" :label="$t('software.coder.githubReleaseLink')" variant="solid" class="mt-4"/>
                 </div>
             </div>
         </div>

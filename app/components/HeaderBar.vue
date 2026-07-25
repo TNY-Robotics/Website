@@ -10,7 +10,7 @@
                     <span class="flex grow w-1 rounded-full bg-slate-200 dark:bg-slate-500" />
                 </div>
                 <div class="items-center space-x-8 hidden lg:flex">
-                    <UButton v-for="btn in buttons" :key="btn.label" :label="btn.label" variant="ghost" color="neutral" class="dark:text-slate-200" size="lg" :href="btn.href" />
+                    <UButton v-for="btn in buttons" :key="btn.label" :label="btn.label" variant="ghost" color="neutral" class="dark:text-slate-200" size="lg" :to="btn.href" />
                 </div>
                 <div class="flex lg:hidden justify-center items-center space-x-6" :class="floating ? 'pl-2' : 'pr-0'">
                     <UButton icon="lucide:menu" size="xl" class="p-0 text-slate-700 dark:text-slate-200" variant="link" @click="toggleMobileMenu" />
@@ -23,7 +23,7 @@
             </div>
             <div ref="mobileMenu" class="overflow-hidden w-full transition-all" style="max-height: 0px;">
                 <div class="flex flex-col space-y-2 min-h-fit w-full pt-4">
-                    <UButton v-for="btn in buttons" :key="btn.label" :label="btn.label" variant="soft" color="neutral" class="dark:text-slate-200" size="lg" :href="btn.href" />
+                    <UButton v-for="btn in buttons" :key="btn.label" :label="btn.label" variant="soft" color="neutral" class="dark:text-slate-200" size="lg" :to="btn.href" />
                 </div>
             </div>
         </div>
