@@ -1,6 +1,6 @@
 <template>
-    <div class="flex flex-col grow pt-24 px-2 lg:px-4 pb-32 space-y-32">
-        <div class="flex flex-col flex-col-reverse lg:flex-row space-x-8 w-full h-fit">
+    <div class="flex flex-col grow px-2 lg:px-4 pb-32 space-y-32">
+        <div class="flex flex-col lg:flex-row space-x-8 w-full h-fit">
             <div class="flex lg:w-1/2 justify-center items-center lg:p-4">
                 <div class="space-y-8 w-fit h-fit">
                     <h1 class="text-5xl font-extrabold">

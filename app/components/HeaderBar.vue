@@ -1,11 +1,11 @@
 <template>
-    <div ref="parent" class="w-full h-fit">
-        <div class="fixed flex flex-col w-full bg-white dark:bg-slate-700 transition-all z-50" :class="floating ? 'top-0 left-4 rounded-b-lg shadow-lg w-full-8 p-4 py-3' : 'top-0 left-0 p-6'">
+    <div ref="parent" class="w-full h-21">
+        <div class="fixed flex flex-col w-full h-fit bg-white dark:bg-slate-700 transition-all z-50" :class="floating ? 'top-0 left-4 rounded-b-lg shadow-lg w-full-8 p-4 py-3' : 'top-0 left-0 p-6'">
             <div class="flex">
-                <div class="w-fit items-center min-w-fit pr-3 transition-all xl:space-x-6 hidden lg:flex" :class="floating? 'pl-2': ''">
+                <NuxtLink to="/" class="w-fit items-center min-w-fit pr-3 transition-all xl:space-x-6 hidden lg:flex hover:text-primary" :class="floating? 'pl-2': ''">
                     <TNYLogo class="transition-all h-8 w-8" />
                     <h1 class="text-xl font-extrabold hidden xl:flex">TNY Robotics</h1>
-                </div>
+                </NuxtLink>
                 <div class="grow w-fit px-4 hidden lg:flex">
                     <span class="flex grow w-1 rounded-full bg-slate-200 dark:bg-slate-500" />
                 </div>

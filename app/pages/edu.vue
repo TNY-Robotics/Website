@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col grow pt-24">
+    <div class="flex flex-col grow">
         <div class="relative flex w-full h-fit px-4 lg:px-24 pt-8 bg-white dark:bg-slate-900">
             <div class="absolute top-0 left-0 w-full h-full bg-header-gradient"></div>
             <div class="flex flex-col w-full space-y-16 justify-center items-center py-24 lg:py-32 z-20">

@@ -2,7 +2,7 @@
     <div class="flex flex-col space-y-32 pb-32">
 
         <!-- TNY PROMO HEADER -->
-        <div class="flex flex-col justify-center items-center space-y-4 pt-32 lg:pt-64 py-16 lg:py-48 px-16 bg-white dark:bg-slate-900 overflow-hidden relative inset-shadow">
+        <div class="flex flex-col justify-center items-center space-y-4  py-16 lg:py-48 px-16 bg-white dark:bg-slate-900 overflow-hidden relative inset-shadow">
             <div ref="headerBg" class="absolute top-0 left-0 w-full h-full bg-header-gradient overflow-hidden">
                 <div
                     v-for="(particle, index) in hexParticles"

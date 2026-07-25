@@ -1,5 +1,5 @@
 <template>
-    <div class="flex grow pt-24 px-2 pb-2 space-x-2">
+    <div class="flex grow px-2 pb-2 space-x-2">
         <!-- mobile side bar -->
         <div class="absolute top-22 w-full h-full-22 bg-slate-700 z-20 transition-all" :style="sideBarOpen? 'left: 0px; opacity: 1;': 'left: -100%; opacity: 0;'">
             <div class="flex flex-col w-full h-full max-h-full min-h-0 p-2 space-y-4">
@@ -13,7 +13,7 @@
             </div>
         </div>
 
-        <div class="w-1/4 min-w-64 hidden lg:flex">
+        <div class="w-1/4 min-w-64 hidden lg:flex pt-3">
             <div class="flex flex-col w-full h-fit p-2 space-y-4">
                 <h1 class="text-xl font-semibold pt-2 text-center"> {{ $t('docs.table') }} </h1>
                 <div>
@@ -22,7 +22,7 @@
             </div>
         </div>
         <Divider vertical class="hidden lg:flex" />
-        <div class="flex flex-col grow w-full space-y-4">
+        <div class="flex flex-col grow w-full space-y-4 p-2">
             <div v-if="page" class="flex flex-wrap w-full h-fit rounded-lg bg-white dark:bg-slate-900 p-4">
                 <div class="flex items-center pr-4">
                     <UButton icon="lucide:list-indent-increase" variant="ghost" color="neutral" class="lg:hidden" @click="openSidebar" />
@@ -85,7 +85,7 @@
                     </UInput>
                 </div>
             </div>
-            <div class="relative flex w-full max-w-[64em] mx-auto pb-8">
+            <div class="relative flex flex-col w-full max-w-[64em] mx-auto pb-8">
                 <ContentRenderer v-if="page" :value="page" :prose="true" class="w-full" />
                 <div v-else class="w-full p-4 text-center">
                     <h1 class="text-2xl font-semibold"> {{ $t('docs.docNotFound.title') }} </h1>
@@ -95,8 +95,14 @@
                 <div v-if="fileVersions.length > 0" class="absolute right-0">
                     <USelect :items="fileVersions.map(v => ({label: v.version, value: v.path}))" class="w-32 lg:w-48" @update:model-value="onVersionChange" :model-value="page?.path" />
                 </div>
+
+                <!-- <Divider v-if="surround?.filter(Boolean).length" horizontal />
+                <UContentSurround :surround="(surround as any)" prev-icon="lucide:chevron-left" next-icon="lucide:chevron-right" /> -->
             </div>
         </div>
+        <!-- <div class="min-w-fit">
+            <UContentToc :links="page?.body?.toc?.links" :highlight="true" highlight-variant="circuit" />
+        </div> -->
     </div>
 </template>
 
