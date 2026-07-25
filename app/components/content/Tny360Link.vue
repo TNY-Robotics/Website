@@ -1,7 +1,7 @@
 <template>
-    <NuxtLink to="/docs/tny-360" class="flex rounded-lg p-4 bg-primary/5 border-primary/50 border-2">
+    <NuxtLink to="/docs/tny-360" class="flex flex-col md:flex-row justify-center items-center rounded-lg p-4 space-x-4 bg-primary/5 border-primary/50 border-2">
         <div class="flex grow w-fit justify-center items-center">
-            <img src="/tny-360.png" alt="TNY-360" class="h-42" />
+            <img src="/tny-360.png" alt="TNY-360" class="h-42 min-w-fit" />
         </div>
         <div class="flex grow flex-col justify-center items-left">
             <ProseH2 class="m-0 p-0">TNY-360 Documentation</ProseH2>
