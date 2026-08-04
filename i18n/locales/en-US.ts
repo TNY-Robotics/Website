@@ -41,7 +41,7 @@ export default defineI18nLocale(async (locale) => ({
         },
         release: {
             title: 'Estimated Release Date',
-            date: 'End of July 2026',
+            date: 'End of August 2026',
         },
         downtime: 'Sorry, waitlist registration is temporarily disabled.\nCome back later to join it!'
     },
