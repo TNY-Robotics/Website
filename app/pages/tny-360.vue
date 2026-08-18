@@ -209,7 +209,7 @@
                         <RichText path="tny360.start.barebones.desc" />
                     </p>
                     <div class="flex flex-col grow w-full items-center py-4 space-y-8">
-                        <p class="text-4xl font-extrabold"> <span class="text-primary">{{ prices['barebones'] }}</span> €
+                        <p class="text-4xl font-extrabold"> <span class="text-primary">{{ prices['barebones'] ?? '---' }}</span> €
                         </p>
                         <div class="flex flex-col space-y-2">
                             <div v-for="feature in features['barebones']" class="flex items-center space-x-2">
@@ -221,7 +221,7 @@
                     </div>
                     <div class="flex w-full justify-center pt-4">
                         <UTooltip :text="$t('tny360.start.restock')">
-                            <UButton class="w-fit" variant="subtle" size="xl" to="https://store.tny-robotics.com/products/tny-360-barebones-kit">
+                            <UButton class="w-fit" variant="subtle" size="xl" :to="links['barebones']">
                                 <RichText path="tny360.start.barebones.button" />
                                 <!-- <RichText path="tny360.start.outOfStock" /> -->
                             </UButton>
@@ -249,7 +249,7 @@
                             <RichText path="tny360.start.maker.desc" />
                         </p>
                         <div class="flex flex-col grow w-full items-center py-4 space-y-8">
-                            <p class="text-4xl font-extrabold"> <span class="text-primary">{{ prices['maker'] }}</span> € </p>
+                            <p class="text-4xl font-extrabold"> <span class="text-primary">{{ prices['maker'] ?? '---' }}</span> € </p>
                             <div class="flex flex-col space-y-2">
                                 <div v-for="feature in features['maker']"
                                     class="flex items-center w-full justify-start space-x-2">
@@ -261,7 +261,7 @@
                         </div>
                         <div class="flex w-full justify-center pt-4">
                             <UTooltip :text="$t('tny360.start.restock')">
-                                <UButton class="w-fit" variant="subtle" size="xl" to="https://store.tny-robotics.com/products/tny-360-maker-kit">
+                                <UButton class="w-fit" variant="subtle" size="xl" :to="links['maker']">
                                     <RichText path="tny360.start.maker.button" />
                                     <!-- <RichText path="tny360.start.outOfStock" /> -->
                                 </UButton>
@@ -280,7 +280,7 @@
                         <RichText path="tny360.start.r2r.desc" />
                     </p>
                     <div class="flex flex-col grow w-full items-center py-4 space-y-8">
-                        <p class="text-4xl font-extrabold"> <span class="text-primary">{{ prices['r2r'] }}</span> €
+                        <p class="text-4xl font-extrabold"> <span class="text-primary">{{ prices['r2r'] ?? '---' }}</span> €
                         </p>
                         <div class="flex flex-col space-y-2">
                             <div v-for="feature in features['r2r']" class="flex items-center space-x-2">
@@ -290,9 +290,8 @@
                         </div>
                     </div>
                     <div class="flex w-full justify-center pt-4">
-                        <UButton disabled class="w-fit" variant="subtle" size="xl">
-                            <!-- <RichText path="tny360.start.r2r.button" /> -->
-                            <RichText path="tny360.start.notYetAvailable" />
+                        <UButton class="w-fit" variant="subtle" size="xl" :to="links['r2r']">
+                            <RichText path="tny360.start.r2r.button" />
                         </UButton>
                     </div>
                 </div>
@@ -356,9 +355,9 @@ async function setCarouselIndex(index: number) {
 }
 
 const prices = computed(() => ({
-    barebones: 219,
-    maker: 349,
-    r2r: 499,
+    barebones: undefined,
+    maker: undefined,
+    r2r: undefined,
 }));
 
 const features = computed(() => ({
@@ -380,8 +379,29 @@ const features = computed(() => ({
     ],
 }));
 
+const links = computed(() => ({
+    barebones: 'https://store.tny-robotics.com/products/tny-360-barebones-kit',
+    maker: 'https://store.tny-robotics.com/products/tny-360-maker-kit',
+    r2r: 'https://store.tny-robotics.com/products/tny-360-ready2run-kit',
+}));
+
+function fetchPrices() {
+    for (const key of Object.keys(prices.value)) {
+        fetch(links.value[key] + '.json')
+            .then((response) => response.json())
+            .then((data) => {
+                const priceTxt = data.product.variants[0].price;
+                prices.value[key] = parseInt(data.product.variants[0].price).toString().replace('.', ',');
+            })
+            .catch((error) => {
+                console.error(`Error fetching price for ${key}:`, error);
+            });
+    }
+} 
+
 onMounted(() => {
     setCarouselIndex(0);
+    fetchPrices();
 });
 
 onUnmounted(() => {
