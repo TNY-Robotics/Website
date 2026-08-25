@@ -314,6 +314,22 @@
     },
     {
       "args": [],
+      "result": null,
+      "desc": "Reboots the robot in normal mode.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "diagnostic",
+        "id": 20
+      },
+      "action": {
+        "name": "RebootInNormalMode",
+        "id": 2
+      }
+    },
+    {
+      "args": [],
       "result": [
         {
           "name": "result",
@@ -331,7 +347,7 @@
       },
       "action": {
         "name": "checkLED",
-        "id": 2
+        "id": 3
       }
     },
     {
@@ -353,7 +369,7 @@
       },
       "action": {
         "name": "checkI2C",
-        "id": 3
+        "id": 4
       }
     },
     {
@@ -375,7 +391,7 @@
       },
       "action": {
         "name": "checkSpeaker",
-        "id": 4
+        "id": 5
       }
     },
     {
@@ -397,7 +413,7 @@
       },
       "action": {
         "name": "checkMicrophone",
-        "id": 5
+        "id": 6
       }
     },
     {
@@ -419,7 +435,7 @@
       },
       "action": {
         "name": "checkCamera",
-        "id": 6
+        "id": 7
       }
     },
     {
@@ -441,7 +457,7 @@
       },
       "action": {
         "name": "checkLaser",
-        "id": 7
+        "id": 8
       }
     },
     {
@@ -463,7 +479,7 @@
       },
       "action": {
         "name": "checkIMU",
-        "id": 8
+        "id": 9
       }
     },
     {
@@ -485,7 +501,7 @@
       },
       "action": {
         "name": "checkPower",
-        "id": 9
+        "id": 10
       }
     },
     {
@@ -507,7 +523,7 @@
       },
       "action": {
         "name": "checkMotorDriver",
-        "id": 10
+        "id": 11
       }
     },
     {
@@ -529,7 +545,7 @@
       },
       "action": {
         "name": "checkAnalogReader",
-        "id": 11
+        "id": 12
       }
     },
     {
@@ -551,7 +567,7 @@
       },
       "action": {
         "name": "checkControlLoop",
-        "id": 12
+        "id": 13
       }
     },
     {
@@ -573,7 +589,7 @@
       },
       "action": {
         "name": "checkDecisionLoop",
-        "id": 13
+        "id": 14
       }
     }
   ],
@@ -719,6 +735,242 @@
       "action": {
         "name": "getType",
         "id": 1
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "frequency",
+          "type": "float",
+          "desc": "Step frequency in Hz.",
+          "required": true
+        }
+      ],
+      "result": null,
+      "desc": "Sets the step frequency for the robot's gait.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "gait",
+        "id": 2
+      },
+      "action": {
+        "name": "setFrequency",
+        "id": 2
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "frequency",
+          "type": "float",
+          "desc": "Step frequency in Hz."
+        }
+      ],
+      "desc": "Gets the step frequency of the robot's gait.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "gait",
+        "id": 2
+      },
+      "action": {
+        "name": "getFrequency",
+        "id": 3
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "value",
+          "type": "float",
+          "desc": "Duty factor.",
+          "required": true
+        }
+      ],
+      "result": null,
+      "desc": "Sets the duty factor for the robot's gait.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "gait",
+        "id": 2
+      },
+      "action": {
+        "name": "setDutyFactor",
+        "id": 4
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "value",
+          "type": "float",
+          "desc": "Duty factor."
+        }
+      ],
+      "desc": "Gets the duty factor of the robot's gait.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "gait",
+        "id": 2
+      },
+      "action": {
+        "name": "getDutyFactor",
+        "id": 5
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "value",
+          "type": "float",
+          "desc": "Step height in meters.",
+          "required": true
+        }
+      ],
+      "result": null,
+      "desc": "Sets the step height for the robot's gait.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "gait",
+        "id": 2
+      },
+      "action": {
+        "name": "setStepHeight",
+        "id": 6
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "value",
+          "type": "float",
+          "desc": "Step height in meters."
+        }
+      ],
+      "desc": "Gets the step height of the robot's gait.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "gait",
+        "id": 2
+      },
+      "action": {
+        "name": "getStepHeight",
+        "id": 7
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "value",
+          "type": "float",
+          "desc": "Stance depth in meters.",
+          "required": true
+        }
+      ],
+      "result": null,
+      "desc": "Sets the stance depth for the robot's gait.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "gait",
+        "id": 2
+      },
+      "action": {
+        "name": "setStanceDepth",
+        "id": 8
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "value",
+          "type": "float",
+          "desc": "Stance depth in meters."
+        }
+      ],
+      "desc": "Gets the stance depth of the robot's gait.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "gait",
+        "id": 2
+      },
+      "action": {
+        "name": "getStanceDepth",
+        "id": 9
+      }
+    },
+    {
+      "args": [
+        {
+          "name": "spread_x",
+          "type": "float",
+          "desc": "Spread in the X direction (meters).",
+          "required": true
+        },
+        {
+          "name": "spread_y",
+          "type": "float",
+          "desc": "Spread in the Y direction (meters).",
+          "required": true
+        }
+      ],
+      "result": null,
+      "desc": "Sets the leg spread for the robot's gait.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "gait",
+        "id": 2
+      },
+      "action": {
+        "name": "setLegSpread",
+        "id": 10
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "spread_x",
+          "type": "float",
+          "desc": "Spread in the X direction (meters)."
+        },
+        {
+          "name": "spread_y",
+          "type": "float",
+          "desc": "Spread in the Y direction (meters)."
+        }
+      ],
+      "desc": "Gets the leg spread of the robot's gait.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "gait",
+        "id": 2
+      },
+      "action": {
+        "name": "getLegSpread",
+        "id": 11
       }
     }
   ],
@@ -2145,18 +2397,18 @@
         {
           "name": "ssid",
           "type": "string",
-          "desc": "SSID of the Wi-Fi network.",
+          "desc": "The SSID of the access point to connect to.",
           "required": true
         },
         {
           "name": "password",
           "type": "string",
-          "desc": "Password of the Wi-Fi network.",
+          "desc": "The password of the access point to connect to.",
           "required": true
         }
       ],
       "result": null,
-      "desc": "Connects the robot to a Wi-Fi access point.",
+      "desc": "Connects to a Wi-Fi access point with the given SSID and password.",
       "impl": "done",
       "payload": [],
       "values": [],
@@ -2165,8 +2417,204 @@
         "id": 16
       },
       "action": {
-        "name": "connectToAP",
+        "name": "ConnectToAP",
         "id": 0
+      }
+    },
+    {
+      "args": [],
+      "result": null,
+      "desc": "Disconnects from the currently connected access point.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "wifi",
+        "id": 16
+      },
+      "action": {
+        "name": "DisconnectFromAP",
+        "id": 1
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "has_credentials",
+          "type": "bool",
+          "desc": "Whether a known access point is stored in the robot's memory"
+        }
+      ],
+      "desc": "Returns whether a known access point is stored in the robot's memory.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "wifi",
+        "id": 16
+      },
+      "action": {
+        "name": "HasStoredAPCredentials",
+        "id": 2
+      }
+    },
+    {
+      "args": [],
+      "result": null,
+      "desc": "Forgets the stored access point credentials in the robot's memory.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "wifi",
+        "id": 16
+      },
+      "action": {
+        "name": "ForgetStoredAPCredentials",
+        "id": 3
+      }
+    },
+    {
+      "args": [],
+      "result": null,
+      "desc": "Starts the robot's access point.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "wifi",
+        "id": 16
+      },
+      "action": {
+        "name": "StartAP",
+        "id": 4
+      }
+    },
+    {
+      "args": [],
+      "result": null,
+      "desc": "Stops the robot's access point.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "wifi",
+        "id": 16
+      },
+      "action": {
+        "name": "StopAP",
+        "id": 5
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "state",
+          "type": "uint8",
+          "desc": "Current state of the WiFiManager."
+        }
+      ],
+      "desc": "Returns the current state of the WiFiManager, see WiFiManager::State for more details.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "wifi",
+        "id": 16
+      },
+      "action": {
+        "name": "GetState",
+        "id": 6
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "mode",
+          "type": "uint8",
+          "desc": "Current mode of the WiFiManager, deduced from the current state."
+        }
+      ],
+      "desc": "Returns the current mode of the WiFiManager, see WiFiManager::Mode for more details.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "wifi",
+        "id": 16
+      },
+      "action": {
+        "name": "GetMode",
+        "id": 7
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "ssid",
+          "type": "string",
+          "desc": "The SSID of the currently connected WiFi network."
+        }
+      ],
+      "desc": "Returns the SSID of the currently connected WiFi network.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "wifi",
+        "id": 16
+      },
+      "action": {
+        "name": "GetSSID",
+        "id": 8
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "ip_addr",
+          "type": "string",
+          "desc": "The IP address of the robot."
+        }
+      ],
+      "desc": "Returns the IP address of the robot on the currently connected WiFi network.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "wifi",
+        "id": 16
+      },
+      "action": {
+        "name": "GetIPAddr",
+        "id": 9
+      }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "mac_addr",
+          "type": "string",
+          "desc": "The MAC address of the robot."
+        }
+      ],
+      "desc": "Returns the MAC address of the robot.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "wifi",
+        "id": 16
+      },
+      "action": {
+        "name": "GetMACAddr",
+        "id": 10
       }
     }
   ]
