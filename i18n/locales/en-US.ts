@@ -40,8 +40,11 @@ export default defineI18nLocale(async (locale) => ({
             content: 'It seems this email address is already on the waitlist. No need to sign up again!',
         },
         release: {
-            title: 'Estimated Release Date',
-            date: 'End of August 2026',
+            title: 'Release Date',
+            days: 'Days',
+            hours: 'Hours',
+            minutes: 'Minutes',
+            seconds: 'Seconds',
         },
         downtime: 'Sorry, waitlist registration is temporarily disabled.\nCome back later to join it!'
     },

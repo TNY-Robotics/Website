@@ -216,14 +216,12 @@
                                 <UIcon name="i-lucide-check" size="1em" class="text-primary" />
                                 <span> {{ feature }} </span>
                             </div>
-                            <UButton variant="link" class="w-fit p-0" to="/docs/tny-robotics/products/tny-360-barebones-kit-founders-edition" trailing icon="lucide:arrow-right"> {{ $t('tny360.start.completeList') }} </UButton>
                         </div>
                     </div>
                     <div class="flex w-full justify-center pt-4">
                         <UTooltip :text="$t('tny360.start.restock')">
                             <UButton class="w-fit" variant="subtle" size="xl" :to="links['barebones']">
                                 <RichText path="tny360.start.barebones.button" />
-                                <!-- <RichText path="tny360.start.outOfStock" /> -->
                             </UButton>
                         </UTooltip>
                     </div>
@@ -256,14 +254,12 @@
                                     <UIcon name="i-lucide-check" size="1em" class="text-primary" />
                                     <span> {{ feature }} </span>
                                 </div>
-                                <UButton variant="link" class="w-fit p-0" to="/docs/tny-robotics/products/tny-360-maker-kit-founders-edition" trailing icon="lucide:arrow-right"> {{ $t('tny360.start.completeList') }} </UButton>
                             </div>
                         </div>
                         <div class="flex w-full justify-center pt-4">
                             <UTooltip :text="$t('tny360.start.restock')">
                                 <UButton class="w-fit" variant="subtle" size="xl" :to="links['maker']">
                                     <RichText path="tny360.start.maker.button" />
-                                    <!-- <RichText path="tny360.start.outOfStock" /> -->
                                 </UButton>
                             </UTooltip>
                         </div>

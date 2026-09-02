@@ -138,39 +138,38 @@ export default {
             desc: 'Print your own parts at home and only order what you need!',
             button: 'Get the components',
             features: {
-                1: 'Custom PCBs assembled',
-                2: 'Components & Custom Motors',
-                3: 'Screws & Cables',
+                1: 'Complete PCB Ecosystem',
+                2: 'Custom High-Quality Motors',
+                3: 'Screws, Cables, Components',
             }
         },
         maker: {
             title: 'Feeling [hl](adventurous)?',
-            desc: 'You can build your own TNY-360 by receiving the spare parts and the assembly guide!',
+            desc: 'Build your own TNY-360 by receiving all the necessary parts!',
             button: 'Start the adventure',
             features: {
-                1: 'Custom PCBs assembled',
-                2: 'Components & Custom Motors',
-                3: '3D printed and prepared parts',
-                4: 'Screws & Cables',
+                1: 'Complete PCB Ecosystem',
+                2: 'Custom High-Quality Motors',
+                3: 'Screws, Cables, Components',
+                4: 'Strong & Lightweight Mechanical Parts',
             }
         },
         r2r: {
             title: 'Wanna start [hl](now)?',
-            desc: 'Order your TNY-360 now and receive it at home, fully assembled and calibrated!',
+            desc: 'Order your TNY-360 and receive it at home, fully assembled and calibrated!',
             button: 'Order now',
             features: {
                 1: 'Robot assembled & calibrated',
                 2: 'Quick start guide',
-                3: 'Assembly & Repair guide',
+                3: 'Maintenance guide',
             }
         },
-        completeList: 'Complete list',
         notYetAvailable: 'Not yet available',
         outOfStock: 'Out of stock',
         restock: 'Join the waitlist to be informed of restocks!',
     },
     info: {
-        title: 'Our TNY-360 is still under development.\nBe among the first to receive it by',
+        title: 'Our TNY-360 V2 is still under development.\nBe among the first to receive it by',
         button: 'joining our waiting list.'
     }
 };

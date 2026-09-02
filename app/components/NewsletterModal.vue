@@ -3,10 +3,28 @@
         <template #body>
             <div class="flex flex-col justify-start items-start space-y-4">
                 <p> <RichText path="newsletter.content" class="space-y-4" /> </p>
-                <div class="flex flex-col justify-center items-center w-full space-y-1">
+                <div class="flex flex-col justify-center items-center w-full space-y-2 py-4">
                     <p class="font-semibold"> {{ $t('newsletter.release.title') }} </p>
-                    <div class="bg-slate-200 dark:bg-slate-800 rounded py-2 px-4">
-                        <p class="text-lg" style="font-family: monospace;"> {{ $t('newsletter.release.date') }} </p>
+                    <div class="flex flex-col items-center bg-primary-300/15 dark:bg-primary-300/10 rounded-lg py-2 px-4 border-primary-500/50 border-2 shadow-xl shadow-primary-500/15">
+                        <p class="text-xl font-semibold p-2 text-primary-400"> {{ stringifiedReleaseDate }} </p>
+                        <div class="flex space-x-2 py-2">
+                            <div class="flex flex-col items-center bg-white dark:bg-slate-900 rounded py-0.5 px-2">
+                                <p class="text-sm font-semibold"> {{ $t('newsletter.release.days') }} </p>
+                                <p class="text-lg" style="font-family: monospace;">{{ counter?.days }}</p>
+                            </div>
+                            <div class="flex flex-col items-center bg-white dark:bg-slate-900 rounded py-0.5 px-2">
+                                <p class="text-sm font-semibold"> {{ $t('newsletter.release.hours') }} </p>
+                                <p class="text-lg" style="font-family: monospace;">{{ counter?.hours }}</p>
+                            </div>
+                            <div class="flex flex-col items-center bg-white dark:bg-slate-900 rounded py-0.5 px-2">
+                                <p class="text-sm font-semibold"> {{ $t('newsletter.release.minutes') }} </p>
+                                <p class="text-lg" style="font-family: monospace;">{{ counter?.minutes }}</p>
+                            </div>
+                            <div class="flex flex-col items-center bg-white dark:bg-slate-900 rounded py-0.5 px-2">
+                                <p class="text-sm font-semibold"> {{ $t('newsletter.release.seconds') }} </p>
+                                <p class="text-lg" style="font-family: monospace;">{{ counter?.seconds }}</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div v-if="isDowntime" class="p-4 rounded-lg border-2 border-orange-500/40 bg-orange-500/20 w-full text-center">
@@ -39,6 +57,7 @@
 import type { FormSubmitEvent } from '@nuxt/ui';
 import { object, string, type InferType } from 'yup';
 
+const { locale } = useI18n();
 const open = defineModel<boolean>('open', { default: false });
 const runtimeConfig = useRuntimeConfig()
 const isDowntime = runtimeConfig.public.downtimeMode === 'true'
@@ -87,4 +106,27 @@ async function onEmailFormSubmit(event: FormSubmitEvent<EmailFFormSchema>) {
         emailButtonLoading.value = false;
     }
 }
+
+const releaseDate = new Date('2026-10-01');
+
+const stringifiedReleaseDate = computed(() => releaseDate.toLocaleDateString(
+    locale.value === 'fr' ? 'fr-FR' : 'en-US',
+    locale.value === 'fr' ? { year: 'numeric', month: 'long', day: 'numeric' } : { year: 'numeric', month: 'long', day: 'numeric' }
+));
+const counter = ref<{ days: number; hours: number; minutes: number; seconds: number }>({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+onMounted(() => {
+    setInterval(() => {
+        const now = new Date();
+        const diff = releaseDate.getTime() - now.getTime();
+        if (diff <= 0) {
+            return null;
+        }
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+        counter.value = { days, hours, minutes, seconds };
+    }, 1000);
+})
+
 </script>

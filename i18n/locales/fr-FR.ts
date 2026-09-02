@@ -40,8 +40,11 @@ export default defineI18nLocale(async (locale) => ({
             content: 'Il semble que cette adresse e-mail soit déjà inscrite à la liste d\'attente. Pas besoin de s\'inscrire à nouveau !',
         },
         release: {
-            title: 'Date de sortie estimée',
-            date: 'Fin Août 2026',
+            title: 'Date de sortie',
+            days: 'Jours',
+            hours: 'Heures',
+            minutes: 'Minutes',
+            seconds: 'Secondes',
         },
         downtime: 'Désolé, l\'inscription à la liste d\'attente est temporairement désactivée.\nRevenez plus tard pour la rejoindre !'
     },

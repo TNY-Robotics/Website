@@ -133,42 +133,41 @@ export default {
         best: 'Meilleure offre',
         barebones: {
             title: '[hl](Bidouilleur) dans l\'âme ?',
-            desc: 'Imprime tes propres pièces à la maison et commande seulement ce dont tu as besoin !',
+            desc: 'Imprime tes propres pièces à la maison et ne commande que ce dont tu as besoin !',
             button: 'Obtenir les composants',
             features: {
-                1: 'Circuits imprimés assemblés',
-                2: 'Composants & Moteurs sur-mesure',
-                3: 'Visserie et câbles',
+                1: 'Écosystème PCB Complet',
+                2: 'Moteurs Sur-Mesure Haute Qualité',
+                3: 'Visserie, câbles, composants',
             }
         },
         maker: {
             title: 'Tu te sens [hl](aventurier) ?',
-            desc: 'Tu peux construire ton propre TNY-360 en recevant les pièces détachées et le guide d\'assemblage !',
+            desc: 'Construis ton propre TNY-360 en recevant toutes les pièces nécessaires !',
             button: 'Se lancer dans l\'aventure',
             features: {
-                1: 'Circuits imprimés assemblés',
-                2: 'Composants & Moteurs sur-mesure',
-                3: 'Pièces 3D imprimées et préparées',
-                4: 'Visserie et câbles',
+                1: 'Écosystème PCB Complet',
+                2: 'Moteurs Sur-Mesure Haute Qualité',
+                3: 'Visserie, câbles, composants',
+                4: 'Pièces mécaniques solides et légères',
             }
         },
         r2r: {
             title: 'Tu veux commencer [hl](direct) ?',
-            desc: 'Commandes ton TNY-360 maintenant et reçois-le chez toi, entièrement assemblé et calibré !',
+            desc: 'Commandes ton TNY-360 et reçois-le chez toi, entièrement assemblé et calibré !',
             button: 'Commander maintenant',
             features: {
                 1: 'Robot assemblé et calibré',
                 2: 'Guide de démarrage rapide',
-                3: 'Guide d\'assemblage & de réparation',
+                3: 'Guide d\'entretien',
             }
         },
-        completeList: 'Liste complète',
         notYetAvailable: 'Pas encore disponible',
         outOfStock: 'Rupture de stock',
         restock: 'Rejoingnez la liste d\'attente pour être informé du retour en stock !',
     },
     info: {
-        title: 'Notre TNY-360 est encore en cours de développement.\nSoyez parmi les premiers à le recevoir en',
+        title: 'Notre TNY-360 V2 est encore en cours de développement.\nSoyez parmi les premiers à le recevoir en',
         button: 'vous inscrivant à notre liste d\'attente.'
     }
 };
