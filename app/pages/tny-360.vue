@@ -355,9 +355,9 @@ async function setCarouselIndex(index: number) {
 }
 
 const prices = computed(() => ({
-    barebones: undefined,
-    maker: undefined,
-    r2r: undefined,
+    barebones: 289,
+    maker: 399,
+    r2r: 599,
 }));
 
 const features = computed(() => ({
@@ -385,23 +385,8 @@ const links = computed(() => ({
     r2r: 'https://store.tny-robotics.com/products/tny-360-ready2run-kit',
 }));
 
-function fetchPrices() {
-    for (const key of Object.keys(prices.value)) {
-        fetch(links.value[key] + '.json')
-            .then((response) => response.json())
-            .then((data) => {
-                const priceTxt = data.product.variants[0].price;
-                prices.value[key] = parseInt(data.product.variants[0].price).toString().replace('.', ',');
-            })
-            .catch((error) => {
-                console.error(`Error fetching price for ${key}:`, error);
-            });
-    }
-} 
-
 onMounted(() => {
     setCarouselIndex(0);
-    fetchPrices();
 });
 
 onUnmounted(() => {
