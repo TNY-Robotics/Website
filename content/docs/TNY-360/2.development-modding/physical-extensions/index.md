@@ -28,5 +28,5 @@ While the TNY-360 is mechanically robust, adding physical extensions changes its
 
 ::info-box{title="Payload Limits" type="danger"}
 It is critical that you respect the robot's payload limits.<br>
-Exceeding the **1kg limit** will negatively impact the kinematics and may trigger the mechanical fuses or overheat the motors.
+Exceeding the **500g limit** will negatively impact the kinematics and may trigger the mechanical fuses or overheat the motors.
 ::

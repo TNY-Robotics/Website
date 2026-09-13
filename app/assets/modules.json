@@ -2616,6 +2616,33 @@
         "name": "GetMACAddr",
         "id": 10
       }
+    },
+    {
+      "args": [],
+      "result": [
+        {
+          "name": "nb_aps",
+          "type": "uint16",
+          "desc": "The number of access points found."
+        },
+        {
+          "name": "aps",
+          "type": "APDescription[]",
+          "desc": "An array of APDescription structures, each containing the SSID, RSSI, and encryption type of an access point."
+        }
+      ],
+      "desc": "Scans for available Wi-Fi access points and returns them as a list.",
+      "impl": "done",
+      "payload": [],
+      "values": [],
+      "module": {
+        "name": "wifi",
+        "id": 16
+      },
+      "action": {
+        "name": "ScanAP",
+        "id": 11
+      }
     }
   ]
 }

@@ -1,4 +1,11 @@
 {
+  "APAuthMode": {
+    "desc": "The authentication mode used by a Wi-Fi access point.",
+    "fields": [],
+    "payload": [],
+    "values": [],
+    "name": "APAuthMode"
+  },
   "APDescription": {
     "desc": "A description of a Wi-Fi access point.",
     "fields": [
@@ -17,10 +24,10 @@
         "indent": 0
       },
       {
-        "name": "encryption_type",
-        "fullName": "encryption_type",
-        "type": "uint8_t",
-        "desc": "The type of encryption used by the access point.",
+        "name": "authmode",
+        "fullName": "authmode",
+        "type": "APAuthMode",
+        "desc": "The authentication mode used by the access point.",
         "indent": 0
       }
     ],
