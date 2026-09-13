@@ -1,12 +1,81 @@
 {
-  "APAuthMode": {
+  "WiFi::APAuthMode": {
     "desc": "The authentication mode used by a Wi-Fi access point.",
     "fields": [],
     "payload": [],
-    "values": [],
-    "name": "APAuthMode"
+    "values": [
+      {
+        "name": "OPEN",
+        "desc": "No authentication."
+      },
+      {
+        "name": "WEP",
+        "desc": "WEP authentication."
+      },
+      {
+        "name": "WPA_PSK",
+        "desc": "WPA-PSK authentication."
+      },
+      {
+        "name": "WPA2_PSK",
+        "desc": "WPA2-PSK authentication."
+      },
+      {
+        "name": "WPA_WPA2_PSK",
+        "desc": "WPA/WPA2-PSK authentication."
+      },
+      {
+        "name": "ENTERPRISE",
+        "desc": "Enterprise authentication (WPA/WPA2-Enterprise)."
+      },
+      {
+        "name": "WPA2_ENTERPRISE",
+        "desc": "WPA2-Enterprise authentication."
+      },
+      {
+        "name": "WPA3_PSK",
+        "desc": "WPA3-PSK authentication."
+      },
+      {
+        "name": "WPA2_WPA3_PSK",
+        "desc": "WPA2/WPA3-PSK authentication."
+      },
+      {
+        "name": "WAPI_PSK",
+        "desc": "WAPI-PSK authentication."
+      },
+      {
+        "name": "OWE",
+        "desc": "OWE authentication."
+      },
+      {
+        "name": "WPA3_ENT_192",
+        "desc": "WPA3-Enterprise 192-bit authentication."
+      },
+      {
+        "name": "WPA3_EXT_PSK",
+        "desc": "WPA3-PSK with external authentication."
+      },
+      {
+        "name": "WPA3_EXT_PSK_MIXED_MODE",
+        "desc": "WPA3-PSK with external authentication in mixed mode."
+      },
+      {
+        "name": "DPP",
+        "desc": "DPP authentication."
+      },
+      {
+        "name": "WPA3_ENTERPRISE",
+        "desc": "WPA3-Enterprise authentication."
+      },
+      {
+        "name": "WPA2_WPA3_ENTERPRISE",
+        "desc": "WPA2/WPA3-Enterprise authentication."
+      }
+    ],
+    "name": "WiFi::APAuthMode"
   },
-  "APDescription": {
+  "WiFi::APDescription": {
     "desc": "A description of a Wi-Fi access point.",
     "fields": [
       {
@@ -19,21 +88,93 @@
       {
         "name": "rssi",
         "fullName": "rssi",
-        "type": "int8_t",
+        "type": "int8",
         "desc": "The signal strength of the access point.",
         "indent": 0
       },
       {
         "name": "authmode",
         "fullName": "authmode",
-        "type": "APAuthMode",
+        "type": "WiFi::APAuthMode",
         "desc": "The authentication mode used by the access point.",
         "indent": 0
       }
     ],
     "payload": [],
     "values": [],
-    "name": "APDescription"
+    "name": "WiFi::APDescription"
+  },
+  "WiFi::State": {
+    "desc": "The current state of the WiFiManager.",
+    "fields": [],
+    "payload": [],
+    "values": [
+      {
+        "name": "Initializing",
+        "desc": "The WiFiManager is initializing. Will transition to Initialized or Error state after initialization."
+      },
+      {
+        "name": "Initialized",
+        "desc": "The WiFiManager is ready to be used, no STA or AP configured."
+      },
+      {
+        "name": "Error",
+        "desc": "The WiFiManager is in an error state."
+      },
+      {
+        "name": "Connecting",
+        "desc": "The WiFiManager is attempting to connect to an AP. Will transition to Connected or ConnectFailed state after attempting to connect."
+      },
+      {
+        "name": "Connected",
+        "desc": "The WiFiManager is connected to an AP."
+      },
+      {
+        "name": "ConnectFailed",
+        "desc": "The WiFiManager failed to connect to an AP."
+      },
+      {
+        "name": "Disconnecting",
+        "desc": "The WiFiManager is disconnecting from an AP. Will transition to Initialized state after disconnecting."
+      },
+      {
+        "name": "Starting",
+        "desc": "The WiFiManager is starting an AP. Will transition to Started or StartFailed state after attempting to start."
+      },
+      {
+        "name": "Started",
+        "desc": "The WiFiManager has started an AP."
+      },
+      {
+        "name": "StartFailed",
+        "desc": "The WiFiManager failed to start an AP."
+      },
+      {
+        "name": "Stopping",
+        "desc": "The WiFiManager is stopping an AP. Will transition to Initialized state after stopping."
+      }
+    ],
+    "name": "WiFi::State"
+  },
+  "WiFi::Mode": {
+    "desc": "The current mode of the WiFiManager, deduced from the current state.",
+    "fields": [],
+    "payload": [],
+    "values": [
+      {
+        "name": "STA",
+        "desc": "The WiFiManager is in Station mode. connecting, connected, or disconnecting from an AP (or in failure state)."
+      },
+      {
+        "name": "AP",
+        "desc": "The WiFiManager is in Access Point mode. Starting, started, or stopping his AP (or in failure state)."
+      },
+      {
+        "name": "None",
+        "desc": "The WiFiManager is in an unknown mode, in case of error or uninitialized state."
+      }
+    ],
+    "name": "WiFi::Mode"
   },
   "IMUController::CalibrationData": {
     "desc": "Calibration data for the IMU controller.",

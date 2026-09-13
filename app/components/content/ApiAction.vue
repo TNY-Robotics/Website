@@ -35,7 +35,7 @@
                     <li v-for="arg in args" :key="arg.name" class="space-x-2">
                         <strong>{{ arg.name }}</strong>
                         <ProseCode>
-                            <NuxtLink v-if="!isTypeNative(arg.type)" :to="`#type-${getBaseType(arg.type).toLowerCase()}`">
+                            <NuxtLink v-if="!isTypeNative(arg.type)" :to="`#type-${getBaseType(arg.type).toLowerCase()}`"  class="hover:underline hover:text-primary-400">
                                 {{ arg.type }}
                             </NuxtLink>
                             <span v-else>{{ arg.type }}</span>
@@ -87,7 +87,7 @@ type Arg = { name: string; type: string; desc: string; required: boolean };
 type Res = { name: string; type: string; desc: string };
 type ImplState = 'done' | 'partial' | 'nope';
 
-const nativeTypes: string[] = ['uint32', 'uint16', 'uint8', 'int32', 'int16', 'int8', 'float32', 'bool', 'string'];
+const nativeTypes: string[] = ['uint32', 'uint16', 'uint8', 'int32', 'int16', 'int8', 'float32', 'bool', 'string', 'char'];
 
 function getBaseType(typeStr: string) {
     return typeStr.replace(/\[.*?\]/g, '');

@@ -145,39 +145,15 @@
     {
       "args": [
         {
-          "name": "x_pos",
-          "type": "float32",
-          "desc": "X position in meters.",
+          "name": "pos",
+          "type": "Vec3f",
+          "desc": "position in meters.",
           "required": true
         },
         {
-          "name": "y_pos",
-          "type": "float32",
-          "desc": "Y position in meters.",
-          "required": true
-        },
-        {
-          "name": "z_pos",
-          "type": "float32",
-          "desc": "Z position in meters.",
-          "required": true
-        },
-        {
-          "name": "x_rot",
-          "type": "float32",
-          "desc": "X rotation in radians (Euler XYZ).",
-          "required": true
-        },
-        {
-          "name": "y_rot",
-          "type": "float32",
-          "desc": "Y rotation in radians (Euler XYZ).",
-          "required": true
-        },
-        {
-          "name": "z_rot",
-          "type": "float32",
-          "desc": "Z rotation in radians (Euler XYZ).",
+          "name": "rot",
+          "type": "Vec3f",
+          "desc": "rotation in radians (Euler XYZ).",
           "required": true
         },
         {
@@ -2512,7 +2488,7 @@
       "result": [
         {
           "name": "state",
-          "type": "uint8",
+          "type": "WiFi::State",
           "desc": "Current state of the WiFiManager."
         }
       ],
@@ -2534,7 +2510,7 @@
       "result": [
         {
           "name": "mode",
-          "type": "uint8",
+          "type": "WiFi::Mode",
           "desc": "Current mode of the WiFiManager, deduced from the current state."
         }
       ],
@@ -2627,8 +2603,8 @@
         },
         {
           "name": "aps",
-          "type": "APDescription[]",
-          "desc": "An array of APDescription structures, each containing the SSID, RSSI, and encryption type of an access point."
+          "type": "WiFi::APDescription[]",
+          "desc": "An array of WiFi::APDescription structures, each containing the SSID, RSSI, and encryption type of an access point."
         }
       ],
       "desc": "Scans for available Wi-Fi access points and returns them as a list.",

@@ -28,15 +28,12 @@
                             nested
                         </span>
 
-                        <ProseCode v-else-if="isTypeNative(field.type)">{{ field.type }}</ProseCode>
-                        
-                        <NuxtLink 
-                            v-else 
-                            :to="`#type-${getBaseType(field.type).toLowerCase()}`" 
-                            class="inline-block px-1.5 py-0.5 rounded-md bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 font-mono text-sm hover:underline"
-                        >
-                            {{ field.type }}
-                        </NuxtLink>
+                        <ProseCode>
+                            <NuxtLink v-if="!isTypeNative(field.type)" :to="`#type-${getBaseType(field.type).toLowerCase()}`" class="hover:underline hover:text-primary-400">
+                                {{ field.type }}
+                            </NuxtLink>
+                            <span v-else>{{ field.type }}</span>
+                        </ProseCode>
                         
                         <template v-if="field.desc">
                             <p class="inline"> - </p>
@@ -72,7 +69,7 @@
 </template>
 
 <script setup lang="ts">
-const nativeTypes: string[] = ['uint32', 'uint16', 'uint8', 'int32', 'int16', 'int8', 'float32', 'bool', 'string'];
+const nativeTypes: string[] = ['uint32', 'uint16', 'uint8', 'int32', 'int16', 'int8', 'float32', 'bool', 'string', 'char'];
 
 function getBaseType(typeStr: string) {
     return typeStr.replace(/\[.*?\]/g, '');
