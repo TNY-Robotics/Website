@@ -5,14 +5,17 @@
                 <img src="/tny-360/header.webp" alt="TNY-360" class="object-cover w-full h-full" />
             </div>
             <div class="flex flex-col w-full space-y-4 justify-center items-center lg:items-start py-32 lg:py-48 z-20 px-4 lg:px-24">
-                <h1 class="show-up whitespace-nowrap text-5xl lg:text-7xl font-extrabold text-center lg:text-start text-white">
-                    <RichText path="tny360.header.title" />
-                </h1>
-                <p class="show-up delay-200 text-xl lg:text-4xl text-center lg:text-start text-white max-w-192">
+                <div class="show-up text-5xl lg:text-7xl font-extrabold text-center lg:text-start text-slate-900 dark:text-white">
+                    <h1 class="inline whitespace-nowrap bg-white dark:bg-slate-900 rounded-xl overflow-hidden pl-4 pr-2 py-2 space-x-6">
+                        <RichText path="tny360.header.title" />
+                        <h1 class="silver-text inline p-0 m-0 w-fit h-fit bg-primary-500 rounded-lg px-3 text-white">V2</h1>
+                    </h1>
+                </div>
+                <p class="show-up delay-200 text-xl lg:text-4xl text-center lg:text-start text-white max-w-2xl drop-shadow-xl pt-8">
                     <RichText path="tny360.header.desc" />
                 </p>
                 <div class="show-up delay-400 pt-8">
-                    <UButton :label="$t('tny360.header.button')" size="xl" @click="openModal()" />
+                    <UButton :label="$t('tny360.header.button')" size="xl" @click="openModal()" icon="lucide:arrow-right" class="drop-shadow-xl" />
                 </div>
             </div>
         </header>
@@ -455,52 +458,6 @@ onUnmounted(() => {
 
     100% {
         background-position: 130% 50%;
-    }
-}
-
-/* Container de la grille */
-.bento-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-auto-rows: minmax(220px, auto);
-    gap: 20px;
-    max-width: 1250px;
-    margin: 0 auto;
-}
-
-/* Style de base des cartes (Glassmorphism) */
-.bento-card {
-    @apply flex flex-col p-4 space-y-2 rounded-xl justify-center items-center bg-white dark:bg-slate-700/12 border-2 border-slate-100 dark:border-slate-700 shadow-lg;
-    @apply hover:bg-fuchsia-500/5 hover:border-fuchsia-400 hover:scale-102 hover:shadow-fuchsia-500/10 transition-all;
-}
-
-.bento-card-large {
-    grid-column: span 2;
-    grid-row: span 2;
-}
-
-.bento-card-wide {
-    grid-column: span 2;
-}
-
-.bento-card-tall {
-    grid-row: span 2;
-}
-
-@media (max-width: 768px) {
-    .bento-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .bento-small-hidden {
-        display: none !important;
-    }
-
-    .bento-card-large,
-    .bento-card-wide,
-    .bento-card-tall {
-        grid-column: span 2;
-        grid-row: auto;
     }
 }
 
