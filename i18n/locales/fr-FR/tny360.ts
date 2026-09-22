@@ -155,7 +155,7 @@ export default {
         r2r: {
             title: 'Tu veux commencer [hl](direct) ?',
             desc: 'Commandes ton TNY-360 et reçois-le chez toi, entièrement assemblé et calibré !',
-            button: 'Commander maintenant',
+            button: 'Bientôt disponible',
             features: {
                 1: 'Robot assemblé et calibré',
                 2: 'Guide de démarrage rapide',

@@ -157,7 +157,7 @@ export default {
         r2r: {
             title: 'Wanna start [hl](now)?',
             desc: 'Order your TNY-360 and receive it at home, fully assembled and calibrated!',
-            button: 'Order now',
+            button: 'Soon available',
             features: {
                 1: 'Robot assembled & calibrated',
                 2: 'Quick start guide',

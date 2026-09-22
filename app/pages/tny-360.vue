@@ -286,7 +286,7 @@
                         </div>
                     </div>
                     <div class="flex w-full justify-center pt-4">
-                        <UButton class="w-fit" variant="subtle" size="xl" :to="links['r2r']">
+                        <UButton class="w-fit" variant="subtle" size="xl" :to="links['r2r']" disabled>
                             <RichText path="tny360.start.r2r.button" />
                         </UButton>
                     </div>
