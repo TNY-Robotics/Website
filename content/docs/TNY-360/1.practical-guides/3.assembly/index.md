@@ -5,7 +5,7 @@ description: Step-by-step mechanical and electrical assembly guide for the TNY-3
 
 # Assembly
 
-Welcome to the core of the TNY-360 build process! Whether you are a buyer of the ***Adventurous Kit*** (with all 3D parts included) or you are continuing straight from *Fabrication*, this section is for you.
+Welcome to the core of the TNY-360 build process! Whether you are a buyer of the ***Maker Kit*** or you are continuing straight from *Fabrication*, this section is for you.
 
 The objective of this phase is to guide you through the mechanical and electrical assembly of your robot, ensuring everything goes smoothly without any fatal errors.
 

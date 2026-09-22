@@ -2,7 +2,7 @@
 
 Welcome to the first step of building your TNY-360 quadruped robot!
 
-This guide is designed specifically for builders starting with the ***Maker Kit*** (hardware only, no 3D printed parts) or people who have already sourced their materials from the [Sourcing & Preparation](../sourcing) section.
+This guide is designed specifically for builders starting with the ***Barebones Kit*** or people who have already sourced their materials from the [Sourcing & Preparation](../sourcing) section.
 
 ---
 

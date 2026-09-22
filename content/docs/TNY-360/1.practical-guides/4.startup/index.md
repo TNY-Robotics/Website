@@ -7,7 +7,7 @@ description: Power up, calibrate, and configure your TNY-360 robot with this ste
 
 Welcome to the final step of the practical guide!
 
-This section is designed for users who purchased the fully assembled robot, as well as makers who have successfully completed the *Assembly* phase.
+This section is designed for users who purchased the ***Ready2Run Kit***, as well as makers who have successfully completed the *Assembly* phase.
 Our objective here is to guide you through safely powering up your TNY-360, setting it up for use, and operating it on a daily basis.
 
 ---
