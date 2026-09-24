@@ -1,4 +1,4 @@
-# Error System
+# Diagnostics and Error Handling
 
 The TNY-360 robot has an advanced error handling and diagnostic system which allows it to detect and report various issues that may arise during operation.
 
@@ -10,7 +10,9 @@ This system is designed to help users quickly identify and resolve problems, ens
 
 Depending on the severity of the error, the TNY-360 robot may or may not report the errors directly to the user (using its screen).
 
-If you want to get a complete list of all the errors that have occurred, you can use the [Error module](../../development-modding/software-development/api-ref/error) of the TNY-360 API.
+If you want to get a complete list of all the errors that have occurred, go to the Error page on your TNY-360 web interface.
+
+Alternatively, you can use the [Error module](../../development-modding/software-development/api-ref/error) of the TNY-360 API to access the error information programmatically.
 
 ## Error structure
 

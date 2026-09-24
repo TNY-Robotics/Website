@@ -11,5 +11,12 @@ This guide will walk you through common troubleshooting steps and maintenance pr
 
 ---
 
-::in-progress
+Here's a quick overview of the sections available in this documentation:
+
+::chevron
+[Maintenance](./maintenance/) - Learn how to perform routine maintenance on your TNY-360 to keep it in optimal condition.
+::
+
+::chevron
+[Diagnostics](./diagnostic/) - Understand the TNY-360's diagnostic system and how to interpret error messages for effective troubleshooting.
 ::

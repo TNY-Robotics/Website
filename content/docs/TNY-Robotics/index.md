@@ -25,11 +25,3 @@ We are here to help and ensure that you have a clear understanding of our polici
 ::chevron
 [Terms of Service](/docs/TNY-Robotics/terms-of-service/) - Read the rules and guidelines for using our services and products.
 ::
-
-::chevron
-[Return Policy](/docs/TNY-Robotics/return-policy/) - Learn about our return process and how to request a return for your TNY Robotics products.
-::
-
-::chevron
-[Terms of Sale](/docs/TNY-Robotics/terms-of-sale/) - Understand the terms and conditions that govern the sale of our products.
-::
