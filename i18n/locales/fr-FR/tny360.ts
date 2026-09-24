@@ -4,8 +4,9 @@ export default {
     description: 'Découvrez notre robot chien TNY-360 ! Un concentré de technologie pour permettre à tous de comprendre, apprendre, et explorer le monde de la robotique.',
     header: {
         title: 'TNY - 360',
-        desc: 'Un condensé de technologie pour [hl](comprendre), [hl](interagir) et [hl](apprendre) !',
-        button: 'S\'inscrire à la liste d\'attente',
+        desc: 'Le robot chien open-source [hl](que vous pouvez réellement construire).',
+        subdesc: 'Construisez-le de A à Z, partez d\'un kit, ou modifiez chaque pièce.',
+        button: 'Rejoindre le lancement',
     },
     readable: {
         title: 'La [hl](robotique avancée), enfin lisible',
@@ -167,7 +168,8 @@ export default {
         restock: 'Rejoingnez la liste d\'attente pour être informé du retour en stock !',
     },
     info: {
-        title: 'Notre TNY-360 V2 est encore en cours de développement.\nSoyez parmi les premiers à le recevoir en',
-        button: 'vous inscrivant à notre liste d\'attente.'
+        title: 'Le TNY-360 V2 sera lancé le 1er octobre.',
+        subtitle: 'pour avoir accès aux précommandes dès leur ouverture.',
+        button: 'Rejoignez la liste'
     }
 };

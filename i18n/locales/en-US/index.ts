@@ -3,9 +3,9 @@ export default {
     title : 'Home Page - TNY Robotics',
     description: 'Welcome to the TNY Robotics website.',
     tny360: {
-        title: 'Our flagship quadruped: [hl](The TNY-360)',
-        desc: 'Closed-loop control at [hl](200Hz), [hl](Dual-Core) architecture, [hl](modular) ecosystem.\nThe new standard for [hl](learning) and [hl](innovating) in robotics.',
-        button: 'Learn more',
+        title: 'Build your own robot dog.',
+        desc: 'TNY-360 is an [hl](open-source quadruped) you can [hl](build), [hl](repair), [hl](modify) and [hl](program) yourself.\n[bd](TNY-360 V2 launches October 1.)',
+        button: 'Join the launch',
     },
     values: {
         title: 'Our [hl](three core values)',

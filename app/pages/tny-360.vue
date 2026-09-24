@@ -11,11 +11,26 @@
                         <h1 class="silver-text inline p-0 m-0 w-fit h-fit bg-primary-500 rounded-lg px-3 text-white">V2</h1>
                     </h1>
                 </div>
-                <p class="show-up delay-200 text-xl lg:text-4xl text-center lg:text-start text-white max-w-2xl drop-shadow-xl pt-8">
+                <p class="show-up delay-200 text-2xl lg:text-4xl text-center lg:text-start text-white max-w-2xl drop-shadow-xl pt-8">
                     <RichText path="tny360.header.desc" />
+                </p>
+                <p class="show-up delay-300 text-lg lg:text-2xl text-center lg:text-start text-white max-w-2xl drop-shadow-xl">
+                    <RichText path="tny360.header.subdesc" />
                 </p>
                 <div class="show-up delay-400 pt-8">
                     <UButton :label="$t('tny360.header.button')" size="xl" @click="openModal()" icon="lucide:arrow-right" class="drop-shadow-xl" />
+                </div>
+            </div>
+            <div class="absolute bottom-0 left-0 w-full flex justify-center items-center pb-4">
+                <div class="flex justify-center items-center w-fit bg-slate-900 rounded-md shadow-xl overflow-hidden">
+                    <div class="flex justify-center items-center py-2 px-3">
+                        <UIcon name="lucide:github" class="w-6 h-6 text-white" />
+                        <p class="text-white pl-2">GitHub</p>
+                    </div>
+                    <div class="flex justify-center items-center px-3 py-2 space-x-2 bg-slate-800 min-w-fit">
+                        <p> {{ repoJSON.stargazers_count }} </p>
+                        <UIcon name="lucide:star" class="w-4 h-4 text-yellow-500" />
+                    </div>
                 </div>
             </div>
         </header>
@@ -302,9 +317,11 @@
                 <div class="flex">
                     <p class="space-x-1.5">
                         <RichText path="tny360.info.title" />
+                        <br />
                         <NuxtLink to="?newsletter=true" class="text-primary underline">
                             <RichText path="tny360.info.button" />
                         </NuxtLink>
+                        <RichText path="tny360.info.subtitle" />
                     </p>
                 </div>
             </div>
@@ -340,6 +357,8 @@ onMounted(() => {
         darkMode.value = e.matches;
     });
 });
+
+const repoJSON: any = await $fetch('https://api.github.com/repos/TNY-Robotics/TNY-360');
 
 const carouselIndex = ref(0);
 let carouselInterval: number | null = null;

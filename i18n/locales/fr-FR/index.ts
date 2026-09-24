@@ -3,9 +3,9 @@ export default {
     title: 'Page d\'accueil - TNY Robotics',
     description: 'Bienvenue sur le site de TNY Robotics.',
     tny360: {
-        title: 'Notre quadrupède de référence : [hl](Le TNY-360)',
-        desc: 'Contrôle en boucle fermée à [hl](200Hz), architecture [hl](Dual-Core), écosystème [hl](modulaire).\nLa nouvelle norme pour [hl](apprendre) et [hl](innover) en robotique.',
-        button: 'En savoir plus',
+        title: 'Construisez votre propre chien robot.',
+        desc: 'TNY-360 est un [hl](quadrupède open-source) que vous pouvez [hl](construire), [hl](réparer), [hl](modifier) et [hl](programmer) vous-même.\n[bd](Lancement du TNY-360 V2 le 1er octobre.)',
+        button: 'Rejoindre le lancement',
     },
     values: {
         title: 'Nos [hl](trois grandes valeurs)',

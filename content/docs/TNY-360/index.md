@@ -27,6 +27,22 @@ If you're here for guides on how to print, assemble, and set up your TNY-360, he
 
 ---
 
+## Development / Modding - Guides
+
+If you want to learn how to program your TNY-360 or create mods and extensions, check out these sections:
+
+::center
+::columns
+:big-button{href="./development-modding/physical-extensions" label="Modify your TNY-360" icon="lucide:wrench"}
+
+<div class="w-16"></div>
+
+:big-button{href="./development-modding/software-development" label="Program your TNY-360" icon="lucide:gantt-chart"}
+::
+::
+
+---
+
 ## Sections overview
 
 This documentation is organized into several main sections to help you understand and work with your TNY-360:

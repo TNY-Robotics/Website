@@ -6,8 +6,9 @@ export default {
     description: 'Discover our TNY-360 robot dog! A concentration of technology to enable everyone to understand, learn, and explore the world of robotics.',
     header: {
         title: 'TNY - 360',
-        desc: 'A powerhouse of technology to [hl](understand), [hl](interact) and [hl](learn)!',
-        button: 'Join the waiting list',
+        desc: 'The open-source robot dog [hl](you can actually build).',
+        subdesc: 'Build it from scratch, start from a kit, or modify every part of it.',
+        button: 'Join the launch',
     },
     readable: {
         title: '[hl](Advanced robotics), finally readable',
@@ -169,7 +170,8 @@ export default {
         restock: 'Join the waitlist to be informed of restocks!',
     },
     info: {
-        title: 'Our TNY-360 V2 is still under development.\nBe among the first to receive it by',
-        button: 'joining our waiting list.'
+        title: 'TNY-360 V2 launches October 1st.',
+        subtitle: 'to get access when pre-orders open.',
+        button: 'Join the launch list'
     }
 };
