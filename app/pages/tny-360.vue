@@ -8,7 +8,7 @@
                 <div class="show-up text-5xl lg:text-7xl font-extrabold text-center lg:text-start text-slate-900 dark:text-white">
                     <h1 class="inline whitespace-nowrap bg-white dark:bg-slate-900 rounded-xl overflow-hidden pl-4 pr-2 py-2 space-x-6">
                         <RichText path="tny360.header.title" />
-                        <h1 class="silver-text inline p-0 m-0 w-fit h-fit bg-primary-500 rounded-lg px-3 text-white">V2</h1>
+                        <span class="silver-text inline p-0 m-0 w-fit h-fit bg-primary-500 rounded-lg px-3 text-white">V2</span>
                     </h1>
                 </div>
                 <p class="show-up delay-200 text-2xl lg:text-4xl text-center lg:text-start text-white max-w-2xl drop-shadow-xl pt-8">
@@ -18,7 +18,8 @@
                     <RichText path="tny360.header.subdesc" />
                 </p>
                 <div class="show-up delay-400 pt-8">
-                    <UButton :label="$t('tny360.header.button')" size="xl" @click="openModal()" icon="lucide:arrow-right" class="drop-shadow-xl" />
+                    <UButton :label="$t('tny360.get')" size="xl" href="https://store.tny-robotics.com" target="_blank" icon="lucide:arrow-right" class="drop-shadow-xl" />
+                    <!-- <UButton :label="$t('tny360.header.button')" size="xl" @click="openModal()" icon="lucide:arrow-right" class="drop-shadow-xl" /> -->
                 </div>
             </div>
             <div class="absolute bottom-0 left-0 w-full flex justify-center items-center pb-4">
@@ -28,7 +29,7 @@
                         <p class="text-white pl-2">GitHub</p>
                     </div>
                     <div class="flex justify-center items-center px-3 py-2 space-x-2 bg-slate-800 min-w-fit">
-                        <p> {{ repoJSON.stargazers_count }} </p>
+                        <p class="text-white"> {{ repoJSON.stargazers_count }} </p>
                         <UIcon name="lucide:star" class="w-4 h-4 text-yellow-500" />
                     </div>
                 </div>
@@ -318,7 +319,7 @@
                     <p class="space-x-1.5">
                         <RichText path="tny360.info.title" />
                         <br />
-                        <NuxtLink to="?newsletter=true" class="text-primary underline">
+                        <NuxtLink to="https://store.tny-robotics.com" class="text-primary underline" target="_blank">
                             <RichText path="tny360.info.button" />
                         </NuxtLink>
                         <RichText path="tny360.info.subtitle" />

@@ -38,7 +38,7 @@
                         :title="$t('newsletter.success.title')"
                         :description="$t('newsletter.success.content')">
                     </UAlert>
-                    <UAlert v-show="emailError" variant="subtle" color="error" icon="lucide:exclamation-circle" class="flex text-start justify-center items-center"
+                <UAlert v-show="emailError" variant="subtle" color="error" icon="lucide:exclamation-circle" class="flex text-start justify-center items-center"
                         :title="$t('newsletter.error.title')"
                         :description="$t('newsletter.error.content')">
                     </UAlert>
@@ -60,6 +60,7 @@ import { object, string, type InferType } from 'yup';
 const { locale } = useI18n();
 const open = defineModel<boolean>('open', { default: false });
 const runtimeConfig = useRuntimeConfig()
+
 const isDowntime = runtimeConfig.public.downtimeMode === 'true'
 
 const emailFormSchema = object({

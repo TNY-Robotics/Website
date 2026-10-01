@@ -1,9 +1,8 @@
-import { en } from "@nuxt/ui/runtime/locale/index.js";
-
 export default {
     name: 'TNY - 360',
     title: 'Discover our TNY-360 Robot Dog',
     description: 'Discover our TNY-360 robot dog! A concentration of technology to enable everyone to understand, learn, and explore the world of robotics.',
+    get: 'Pre-order your TNY-360',
     header: {
         title: 'TNY - 360',
         desc: 'The open-source robot dog [hl](you can actually build).',
@@ -170,8 +169,8 @@ export default {
         restock: 'Join the waitlist to be informed of restocks!',
     },
     info: {
-        title: 'TNY-360 V2 launches October 1st.',
-        subtitle: 'to get access when pre-orders open.',
-        button: 'Join the launch list'
+        title: 'The TNY-360 is available for pre-order!',
+        button: 'Get it now',
+        subtitle: 'to get it before the holidays!',
     }
 };

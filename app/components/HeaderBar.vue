@@ -18,7 +18,8 @@
                 </div>
                 <div class="flex w-full items-center justify-end space-x-4 transition-all" :class="floating ? 'pr-2' : 'pr-0'">
                     <LangSwitcher class="hidden xl:flex" />
-                    <UButton :label="$t('newsletter.name')" size="lg" class="transition-all" @click="openModal()" />
+                    <UButton :label="$t('tny360.get')" size="lg" class="transition-all" href="https://store.tny-robotics.com" target="_blank" />
+                    <!-- <UButton :label="$t('newsletter.name')" size="lg" class="transition-all" @click="openModal()" /> -->
                 </div>
             </div>
             <div ref="mobileMenu" class="overflow-hidden w-full transition-all" style="max-height: 0px;">
