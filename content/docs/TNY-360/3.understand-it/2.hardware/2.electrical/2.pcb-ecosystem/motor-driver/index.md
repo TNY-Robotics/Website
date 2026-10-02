@@ -1,6 +1,24 @@
+---
+title: Motor Driver
+---
+
+::split{side="right"}
+
+#left
 # Motor driver
 
 The motor driver connects the control electronics to the robot's actuators. It carries motor commands, supplies the relevant power path, and returns feedback needed by the control loop.
+
+#right
+<img src="/docs/images/V2/PCBs/Motor-Driver.png" alt="Motor driver board" class="w-42 h-42" />
+
+::
+
+---
+
+## Useful links
+
+:section-button{href="./" icon="lucide:hammer" title="Go to the Assembly Step" desc="Go to the assembly step where the analog reader is being installed."}
 
 ---
 

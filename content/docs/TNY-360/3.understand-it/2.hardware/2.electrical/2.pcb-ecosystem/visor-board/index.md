@@ -1,6 +1,24 @@
+---
+title: Visor Board
+---
+
+::split{side="right"}
+
+#left
 # Visor board
 
 The visor board carries the head display, distance sensor, microphone, and capacitive buttons, and connects them to the main board.
+
+#right
+<img src="/docs/images/V2/PCBs/Visor-Board.png" alt="Visor board" class="w-42 h-42" />
+
+::
+
+---
+
+## Useful links
+
+:section-button{href="./" icon="lucide:hammer" title="Go to the Assembly Step" desc="Go to the assembly step where the analog reader is being installed."}
 
 ---
 

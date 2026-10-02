@@ -1,6 +1,24 @@
+---
+title: Analog Reader
+---
+
+::split{side="right"}
+
+#left
 # Analog reader
 
 The analog reader is a `74HC4067` analog multiplexer. It lets the ESP32-S3 read the position feedback of the 12 body motors and the four contact switches through a shared ADC path.
+
+#right
+<img src="/docs/images/V2/PCBs/Analog-Reader.png" alt="Analog reader board" class="w-42 h-42" />
+
+::
+
+---
+
+## Useful links
+
+:section-button{href="./" icon="lucide:hammer" title="Go to the Assembly Step" desc="Go to the assembly step where the analog reader is being installed."}
 
 ---
 

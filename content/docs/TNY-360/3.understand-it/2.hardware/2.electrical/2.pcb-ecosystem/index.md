@@ -6,7 +6,7 @@ This page is the overview and navigation hub for the complete PCB reference.
 
 ---
 
-<img src="/docs/images/PCBs/PCBs-overview.png" alt="PCB ecosystem overview" class="max-w-2xl mx-auto" />
+<img src="/docs/images/V2/PCBs/PCBs-overview.webp" alt="PCB ecosystem overview" class="max-w-2xl mx-auto" />
 
 ::center
 Overview of the TNY-360 PCB ecosystem.

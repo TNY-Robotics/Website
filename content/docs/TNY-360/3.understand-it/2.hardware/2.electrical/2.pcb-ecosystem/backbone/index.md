@@ -1,6 +1,24 @@
+---
+title: Backbone
+---
+
+::split{side="right"}
+
+#left
 # Backbone
 
 The backbone is the central connection board for the torso electronics. It brings together power, buses, and subsystem connections so that the robot can be assembled as a coordinated electrical system.
+
+#right
+<img src="/docs/images/V2/PCBs/Backbone.png" alt="Backbone board" class="w-42 h-42" />
+
+::
+
+---
+
+## Useful links
+
+:section-button{href="./" icon="lucide:hammer" title="Go to the Assembly Step" desc="Go to the assembly step where the analog reader is being installed."}
 
 ---
 

@@ -1,6 +1,24 @@
+---
+title: IMU Board
+---
+
+::split{side="right"}
+
+#left
 # IMU board
 
 The IMU board carries the six-axis inertial sensor used to estimate the robot's orientation and movement.
+
+#right
+<img src="/docs/images/V2/PCBs/IMU.png" alt="IMU board" class="w-42 h-42" />
+
+::
+
+---
+
+## Useful links
+
+:section-button{href="./" icon="lucide:hammer" title="Go to the Assembly Step" desc="Go to the assembly step where the analog reader is being installed."}
 
 ---
 

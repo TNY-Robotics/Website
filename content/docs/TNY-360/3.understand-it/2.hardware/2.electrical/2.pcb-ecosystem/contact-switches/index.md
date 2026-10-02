@@ -1,6 +1,24 @@
+---
+title: Contact Switches
+---
+
+::split{side="right"}
+
+#left
 # Contact switches
 
 The four contact switches detect when a foot is pressed against the ground. Each switch combines a magnet in the foot with a Hall-effect sensor connected to the robot's analog-reading system.
+
+#right
+<img src="/docs/images/V2/PCBs/Contact-Switch.png" alt="Contact switch board" class="w-42 h-42" />
+
+::
+
+---
+
+## Useful links
+
+:section-button{href="./" icon="lucide:hammer" title="Go to the Assembly Step" desc="Go to the assembly step where the analog reader is being installed."}
 
 ---
 

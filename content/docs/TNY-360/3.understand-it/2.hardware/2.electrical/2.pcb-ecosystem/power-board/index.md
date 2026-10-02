@@ -1,6 +1,24 @@
+---
+title: Power Board
+---
+
+::split{side="right"}
+
+#left
 # Power board
 
 The power board is the entry point for the robot's electrical power path. It receives the battery supply, applies the available protection, and distributes power to the parts of the robot that need it.
+
+#right
+<img src="/docs/images/V2/PCBs/Power-Board.png" alt="Power board" class="w-42 h-42" />
+
+::
+
+---
+
+## Useful links
+
+:section-button{href="./" icon="lucide:hammer" title="Go to the Assembly Step" desc="Go to the assembly step where the analog reader is being installed."}
 
 ---
 

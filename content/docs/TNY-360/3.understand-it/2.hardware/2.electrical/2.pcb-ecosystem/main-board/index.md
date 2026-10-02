@@ -1,6 +1,24 @@
+---
+title: Main Board
+---
+
+::split{side="right"}
+
+#left
 # Main board
 
 The main board contains the robot's central processing and control electronics. It is the point where firmware execution connects to the hardware buses and higher-level peripherals.
+
+#right
+<img src="/docs/images/V2/PCBs/Main-Board.png" alt="Main board" class="w-42 h-42" />
+
+::
+
+---
+
+## Useful links
+
+:section-button{href="./" icon="lucide:hammer" title="Go to the Assembly Step" desc="Go to the assembly step where the analog reader is being installed."}
 
 ---
 

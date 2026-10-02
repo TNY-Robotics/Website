@@ -1,6 +1,24 @@
+---
+title: Buck Converter
+---
+
+::split{side="right"}
+
+#left
 # Buck converter
 
 The buck converter creates the two main regulated voltage buses used by the robot from the battery supply.
+
+#right
+<img src="/docs/images/V2/PCBs/Buck-Converter.png" alt="Buck converter board" class="w-42 h-42" />
+
+::
+
+---
+
+## Useful links
+
+:section-button{href="./" icon="lucide:hammer" title="Go to the Assembly Step" desc="Go to the assembly step where the analog reader is being installed."}
 
 ---
 

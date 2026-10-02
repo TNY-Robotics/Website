@@ -1,6 +1,18 @@
+---
+title: Extension Board
+---
+
+::split{side="right"}
+
+#left
 # Extension board
 
 The extension board exposes an expansion port on the back of the TNY-360. It gives external hardware a way to connect to the robot without requiring modifications to the main body or directly accessing the internal boards.
+
+#right
+<img src="/docs/images/V2/PCBs/Extension-Board.png" alt="Extension board" class="w-42 h-42" />
+
+::
 
 The port is intended for addons such as:
 
@@ -8,6 +20,12 @@ The port is intended for addons such as:
 - a robotic arm;
 - a Raspberry Pi or another companion computer;
 - future sensors and custom hardware.
+
+---
+
+## Useful links
+
+:section-button{href="./" icon="lucide:hammer" title="Go to the Assembly Step" desc="Go to the assembly step where the analog reader is being installed."}
 
 ---
 
