@@ -12,14 +12,9 @@
                 <div class="items-center space-x-8 hidden lg:flex">
                     <UButton v-for="btn in buttons" :key="btn.label" :label="btn.label" variant="ghost" color="neutral" class="dark:text-slate-200" size="lg" :to="btn.href" />
                 </div>
-                <div class="flex lg:hidden justify-center items-center space-x-6" :class="floating ? 'pl-2' : 'pr-0'">
-                    <UButton icon="lucide:menu" size="xl" class="p-0 text-slate-700 dark:text-slate-200" variant="link" @click="toggleMobileMenu" />
+                <div class="flex justify-between lg:justify-end items-center space-x-6 w-full" :class="floating ? 'pl-2' : 'pr-0'">
+                    <UButton icon="lucide:menu" size="xl" class="p-0 text-slate-700 dark:text-slate-200 lg:hidden" variant="link" @click="toggleMobileMenu" />
                     <LangSwitcher />
-                </div>
-                <div class="flex w-full items-center justify-end space-x-4 transition-all" :class="floating ? 'pr-2' : 'pr-0'">
-                    <LangSwitcher class="hidden xl:flex" />
-                    <UButton :label="$t('tny360.get')" size="lg" class="transition-all" href="https://store.tny-robotics.com" target="_blank" />
-                    <!-- <UButton :label="$t('newsletter.name')" size="lg" class="transition-all" @click="openModal()" /> -->
                 </div>
             </div>
             <div ref="mobileMenu" class="overflow-hidden w-full transition-all" style="max-height: 0px;">

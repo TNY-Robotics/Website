@@ -1,71 +1,20 @@
----
-title: TNY-360 Documentation
-description: Explore TNY-360 docs — guides for assembly, programming, setup, maintenance & troubleshooting.
----
-
 # TNY-360 Documentation
 
 Welcome on the TNY-360 documentation !
 
----
-
-## Printing / Assembly / Setup - Manuals
-
-If you're here for guides on how to print, assemble, and set up your TNY-360, here are the direct links to the relevant sections:
-
-::columns
-:big-button{href="./practical-guides/fabrication" label="3D print your TNY-360" icon="lucide:box"}
-:big-button{href="./practical-guides/assembly" label="Assemble your TNY-360" icon="lucide:hammer"}
-:big-button{href="./practical-guides/startup" label="Start up your TNY-360" icon="lucide:rocket"}
-::
-
-### Are you building it from scratch (no kit) ?
-
-::center
-:big-button{href="./practical-guides/sourcing" label="Source your TNY-360 parts" icon="lucide:package-search"}
-::
-
----
-
-## Development / Modding - Guides
-
-If you want to learn how to program your TNY-360 or create mods and extensions, check out these sections:
-
-::center
-::columns
-:big-button{href="./development-modding/physical-extensions" label="Modify your TNY-360" icon="lucide:wrench"}
-
-<div class="w-16"></div>
-
-:big-button{href="./development-modding/software-development" label="Program your TNY-360" icon="lucide:gantt-chart"}
-::
-::
+Here you'll find all the information you need for your TNY-360 : How to build it, use it, understand it, and build on it!
 
 ---
 
 ## Sections overview
 
-This documentation is organized into several main sections to help you understand and work with your TNY-360:
-
-::chevron
-[Practical Guides](./practical-guides) - Get started with your TNY-360, from fabrication and assembly to first power up and daily operations.
-::
-
-::chevron
-[Development & Modding](./development-modding) - Learn how to control your TNY-360 through code, and how to create extensions to customize it.
-::
-
-::chevron
-[Anatomy](./anatomy) - Deep dive into the hardware, electronics, and firmware that make up your TNY-360.
-::
-
-::chevron
-[Dashboard & Control](./dashboard-control) - Learn how to use the built-in web dashboard to control your robot.
-::
-
-::chevron
-[Maintenance & Troubleshooting](./maintenance-troubleshooting) - Keep your TNY-360 in top shape with routine maintenance and troubleshooting guides.
-::
+:index-button{href="./build-it" icon="lucide:hammer" title="Build it" desc="Starting from scratch or from a kit, we'll guide you through the entire process of building your robot!"}
+:index-arrow
+:index-button{href="./use-it" icon="lucide:gamepad-2" title="Use it" desc="Get started with the basics, explore its features, and see how to make the most of your TNY-360!"}
+:index-arrow
+:index-button{href="./understand-it" icon="lucide:brain" title="Understand it" desc="Dive deep into the mechanics and design of your TNY-360 to truly understand how it works!"}
+:index-arrow
+:index-button{href="./build-on-it" icon="lucide:blocks" title="Build on it" desc="Learn how to extend, modify, and customize your TNY-360!"}
 
 ---
 
