@@ -16,8 +16,6 @@
                     <NuxtLink class="p-4 hover:underline text-center" to="/docs/tny-robotics/legal-notice">{{ $t('footer.legalNotice') }}</NuxtLink>
                     <NuxtLink class="p-4 hover:underline text-center" to="/docs/tny-robotics/terms-of-service">{{ $t('footer.termsService') }}</NuxtLink>
                     <NuxtLink class="p-4 hover:underline text-center" to="/docs/tny-robotics/privacy-policy">{{ $t('footer.privacyPolicy') }}</NuxtLink>
-                    <NuxtLink class="p-4 hover:underline text-center" to="/docs/tny-robotics/terms-of-sale">{{ $t('footer.termsSale') }}</NuxtLink>
-                    <NuxtLink class="p-4 hover:underline text-center" to="/docs/tny-robotics/return-policy">{{ $t('footer.returnPolicy') }}</NuxtLink>
                 </div>
             </div>
         </div>

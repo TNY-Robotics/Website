@@ -4,7 +4,7 @@ export default {
     description: 'Welcome to the TNY Robotics website.',
     tny360: {
         title: 'Build your own robot dog.',
-        desc: 'TNY-360 is an [hl](open-source quadruped) you can [hl](build), [hl](repair), [hl](modify) and [hl](program) yourself.\n[bd](TNY-360 V2 launches October 1.)',
+        desc: 'TNY-360 is an [hl](open-source quadruped) you can [hl](build), [hl](repair), [hl](modify) and [hl](program) yourself.\n[bd](Preorder now, shipping early December.)',
         button: 'Join the launch',
     },
     values: {

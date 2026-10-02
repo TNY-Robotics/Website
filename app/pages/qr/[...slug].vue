@@ -30,14 +30,25 @@ const slug = route.params.slug as string[];
 const qrID = slug[0]? slug[0].toLowerCase() : null;
 
 const redirections = {
-    'main-v1': '/docs/tny-360/anatomy/electronics/pcbs/main.v1.0',
-    'reader-v1': '/docs/tny-360/anatomy/electronics/pcbs/reader.v1.0',
-    'driver-v1': '/docs/tny-360/anatomy/electronics/pcbs/driver.v1.0',
-    'plug-v1': '/docs/tny-360/anatomy/electronics/pcbs/plug.v1.0',
-    'power-v1': '/docs/tny-360/anatomy/electronics/pcbs/power.v1.0',
-    'paw-v1': '/docs/tny-360/anatomy/electronics/pcbs/paw.v1.0',
-    'main-v1.2': '/docs/tny-360/anatomy/electronics/pcbs/main.v1.2',
-    'driver-v1.1': '/docs/tny-360/anatomy/electronics/pcbs/driver.v1.1',
+    // V2 links
+    'reader-v2': '/docs/tny-360/understand-it/hardware/electrical/pcb-ecosystem/analog-reader/',
+    'driver-v2': '/docs/tny-360/understand-it/hardware/electrical/pcb-ecosystem/motor-driver/',
+    'main-v2': '/docs/tny-360/understand-it/hardware/electrical/pcb-ecosystem/main-board/',
+    'backbone-v2': '/docs/tny-360/understand-it/hardware/electrical/pcb-ecosystem/backbone/',
+    'power-v2': '/docs/tny-360/understand-it/hardware/electrical/pcb-ecosystem/power/',
+    'buck-v2': '/docs/tny-360/understand-it/hardware/electrical/pcb-ecosystem/buck-converter/',
+    'ext-v2': '/docs/tny-360/understand-it/hardware/electrical/pcb-ecosystem/extension-board/',
+    'visor-v2': '/docs/tny-360/understand-it/hardware/electrical/pcb-ecosystem/visor-board/',
+
+    // V1 links
+    'main-v1': '/docs/tny-360/archive/v1/practical-guides/assembling/head/final.v1.2',
+    'reader-v1': '/docs/tny-360/archive/v1/practical-guides/assembling/torso/components.v1.1',
+    'driver-v1': '/docs/tny-360/archive/v1/practical-guides/assembling/torso/components.v1.1',
+    'plug-v1': '/docs/tny-360/archive/v1/practical-guides/assembling/final/universal-mount',
+    'power-v1': '/docs/tny-360/archive/v1/practical-guides/assembling/final/power',
+    'paw-v1': '/docs/tny-360/archive/v1/practical-guides/assembling/torso/components.v1.1',
+    'main-v1.2': '/docs/tny-360/archive/v1/practical-guides/assembling/head/final.v1.2',
+    'driver-v1.1': '/docs/tny-360/archive/v1/practical-guides/assembling/torso/components.v1.1',
 };
 
 const qrIDInvalidModalOpen = ref(false);

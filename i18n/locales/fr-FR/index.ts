@@ -4,7 +4,7 @@ export default {
     description: 'Bienvenue sur le site de TNY Robotics.',
     tny360: {
         title: 'Construisez votre propre chien robot.',
-        desc: 'TNY-360 est un [hl](quadrupède open-source) que vous pouvez [hl](construire), [hl](réparer), [hl](modifier) et [hl](programmer) vous-même.\n[bd](Lancement du TNY-360 V2 le 1er octobre.)',
+        desc: 'TNY-360 est un [hl](quadrupède open-source) que vous pouvez [hl](construire), [hl](réparer), [hl](modifier) et [hl](programmer) vous-même.\n[bd](Disponible en précommande, livraison début décembre.)',
         button: 'Rejoindre le lancement',
     },
     values: {
