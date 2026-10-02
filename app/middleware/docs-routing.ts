@@ -4,7 +4,7 @@ export default defineNuxtRouteMiddleware(async (to) => {
     const page = await queryCollection('docs').path(path).first();
         
     if (!page) {
-        throw new Error(`Page not found`);
+        return; // will display 404 page
     }
     
     const isFolder = page.id.endsWith('index.md');
