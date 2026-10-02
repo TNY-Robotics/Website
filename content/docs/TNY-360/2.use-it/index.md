@@ -14,6 +14,6 @@ Here's what you'll find in this section:
 
 :section-button{href="./teleoperation" icon="lucide:gamepad-2" title="First Steps" desc="Make your TNY-360 do its first steps using the teleoperation mode, and learn how to control it with a gamepad or a keyboard."}
 
-:section-button{href="./block-code" icon="lucide:text-quote" title="Block Code" desc="Create your first custom behavior for your TNY-360 using the block-based programming interface, and make it do what you want."}
+:section-button{href="./block-code" icon="lucide:text-quote" title="Block Coding" desc="Create your first custom behavior for your TNY-360 using the block-based programming interface, and make it do what you want."}
 
 :section-button{href="./programming" icon="lucide:code" title="Programming" desc="Learn how to program your TNY-360 using Python, and create more complex behaviors and functionalities for your robot."}

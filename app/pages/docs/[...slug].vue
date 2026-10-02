@@ -92,17 +92,8 @@
                     <p class="mt-2 text-lg"> {{ $t('docs.docNotFound.description') }} </p>
                     <UButton @click="router.back()" :label="$t('docs.back')" class="mt-8" icon="lucide:chevron-left" />
                 </div>
-                <div v-if="fileVersions.length > 0" class="absolute right-0">
-                    <USelect :items="fileVersions.map(v => ({label: v.version, value: v.path}))" class="w-32 lg:w-48" @update:model-value="onVersionChange" :model-value="page?.path" />
-                </div>
-
-                <!-- <Divider v-if="surround?.filter(Boolean).length" horizontal />
-                <UContentSurround :surround="(surround as any)" prev-icon="lucide:chevron-left" next-icon="lucide:chevron-right" /> -->
             </div>
         </div>
-        <!-- <div class="min-w-fit">
-            <UContentToc :links="page?.body?.toc?.links" :highlight="true" highlight-variant="circuit" />
-        </div> -->
     </div>
 </template>
 
@@ -115,16 +106,6 @@ definePageMeta({
     middleware: ['docs-routing'],
 });
 
-const vKeys = useCookie('docs-vkeys', { path: '/', default: () => ({}) });
-
-const VERSION_REGEX = /v(\d+\.)+\d+$/;
-
-interface FileVersionResult {
-    page: any;
-    path: string;
-    version: string;
-}
-
 let path = route.path.toLowerCase();
 
 const { data: page } = await useAsyncData(path, () => {
@@ -134,51 +115,6 @@ const { data: page } = await useAsyncData(path, () => {
 const { data: allPages } = await useAsyncData('all-docs', () => {
     return queryCollection('docs').all()
 });
-
-// Little fix to avoid weird inconsistencies with links : ensure end slash for folders and no end slash for files
-// if (page.value) {
-//     const isFolder = page.value.id.endsWith('index.md'); // we always read index.md when reading a folder root
-//     if (isFolder && !route.path.endsWith('/')) {
-//         await router.replace(route.path + '/');
-//     } else if (!isFolder && route.path.endsWith('/')) {
-//         await router.replace(route.path.slice(0, -1));
-//     }
-//     // save the vkey of the page if it has one
-//     const vKey = page.value.meta['v-key'] as string | undefined;
-//     if (vKey) {
-//         const version = page.value.path.match(VERSION_REGEX)?.[0] || null;
-//         if (version) {
-//             vKeys.value[vKey] = version;
-//         }
-//     }
-// } else {
-//     // page not found ? check for versions
-//     const allVersions = findVersionedFiles(path);
-//     if (allVersions.length === 0) {
-//         // console.warn(`Path ${path} is detected as versioned, but no versions found.`);
-//     } else {
-//         const page = allVersions[0]?.page || null;
-//         const vKey = page.meta['v-key'] as string | undefined;
-//         const storedVersion = vKey ? vKeys.value[vKey] : null;
-
-//         let targetPath = '';
-
-//         if (storedVersion) {
-//             const versionedPage = allVersions.find(v => v.version === storedVersion);
-//             if (versionedPage) {
-//                 targetPath = versionedPage.path;
-//             } else {
-//                 targetPath = allVersions[allVersions.length - 1]?.path ?? page.path;
-//             }
-//         } else {
-//             targetPath = allVersions[allVersions.length - 1]?.path ?? page.path;
-//         }
-
-//         if (targetPath && targetPath !== path) {
-//             await navigateTo(targetPath, { redirectCode: 302 });
-//         }
-//     }
-// }
 
 useSeoMeta({
     title: `${page.value?.seo.title || ''} - Documentation`,
@@ -207,42 +143,6 @@ const filePathArray = computed(() => {
     }));
     return formattedParts.splice(1);
 });
-
-// Get file infos and find if there's different versions
-const fileVersions = ref<Array<FileVersionResult>>([]);
-if (isVersionedFile(path)) {
-    fileVersions.value = findVersionedFiles(path);
-}
-
-function onVersionChange(newPath: string) {
-    const meta = page.value?.meta || {};
-    if (meta['v-key']) {
-        const vKey = meta['v-key'] as string;
-        const version = fileVersions.value.find(v => v.path === newPath)?.version || null;
-        if (version) {
-            vKeys.value[vKey] = version;
-        } else {
-            delete vKeys.value[vKey];
-        }
-    }
-    router.push(newPath);
-}
-
-/// FUNCTIONS AND METHODS
-
-function isVersionedFile(path: string) {
-    return VERSION_REGEX.test(path);
-}
-
-function fileNameWithoutVersion(path: string) {
-    return path.replace(VERSION_REGEX, '');
-}
-
-function findVersionedFiles(path: string) {
-    const filepath = isVersionedFile(path) ? fileNameWithoutVersion(path) : path;
-    const results = allPages.value?.filter(p => p.path.startsWith(filepath) && isVersionedFile(p.path));
-    return results ? results.map(p => ({page: p, path: p.path, version: p.path.match(VERSION_REGEX) ? p.path.match(VERSION_REGEX)![0] : 'No version'} as FileVersionResult)) : [];
-}
 
 function buildDocTree(pages: Array<any>) : DocFolder {
     const root: DocFolder = {
@@ -286,24 +186,6 @@ function buildDocTree(pages: Array<any>) : DocFolder {
 
         // now that we have the folder in currentFolder, create the file in it (if it's not the folder's index file)
         if (!page.id.endsWith('index.md')) {
-            // Versioning system
-            if (isVersionedFile(page.path)) {
-                const allVersions = findVersionedFiles(page.path);
-                if (allVersions.length === 0) {
-                    // console.warn(`File ${page.path} is detected as versioned, but no versions found.`);
-                }
-                const vKey = page.meta['v-key'] as string | undefined;
-                const storedVersion = vKey ? vKeys.value[vKey] : null;
-
-                if (storedVersion) {
-                    const pageVersion = page.path.match(VERSION_REGEX)?.[0] || '';
-                    if (pageVersion !== storedVersion) return;
-                } else {
-                    const lastVersion = allVersions.length > 0 ? allVersions[allVersions.length - 1]?.path : page.path;
-                    if (lastVersion !== page.path) return; // not the last version. skip
-                }
-            }
-
             currentFolder.children.push({
                 isFolder: false,
                 name: page.title,
@@ -353,11 +235,8 @@ function findNodeByPath(node: DocFolder, path: string): DocFolder | DocFile | nu
             }
         } else if (child.path?.toLowerCase() === path.toLowerCase()) {
             return child;
-        } else if (fileNameWithoutVersion(child.path?.toLowerCase() || '') === fileNameWithoutVersion(path.toLowerCase())) {
-            return child;
         }
     }
-    // console.groupEnd();
     return null;
 }
 
@@ -415,12 +294,6 @@ watch(searchQuery, (newVal) => {
                 const title = page.title?.toString().toLowerCase() || '';
                 const description = page.description?.toString().toLowerCase() || '';
                 if (!title.includes(query) && !description.includes(query)) return false;
-                // keep last version only
-                if (isVersionedFile(page.path)) {
-                    const allVersions = findVersionedFiles(page.path);
-                    const lastVersion = allVersions.length > 0 ? allVersions[allVersions.length - 1]?.path : page.path;
-                    return lastVersion === page.path;
-                }
                 return true;
             });
             searchResults.value = results?.map(page => ({
