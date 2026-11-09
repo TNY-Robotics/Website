@@ -8,7 +8,6 @@ This section is designed for those who want to build their TNY-360 **from scratc
 Here, you will find detailed instructions on how to source all the necessary components, flash the firmware onto the microcontroller, and prepare for the fabrication and assembly phases.
 
 ---
-:in-progress
 
 ## Section overview
 
@@ -16,7 +15,7 @@ Here's what you'll find in this section:
 
 :section-button{href="./components" icon="lucide:box" title="Sourcing the components" desc="You'll learn how to source all the electronic and mechanical components needed for the TNY-360."}
 
-:section-button{href="./pcbs" icon="lucide:shopping-cart" title="Ordering the PCBs" desc="You'll learn how to order the printed circuit boards for the TNY-360 along with the necessary components to solder on them."}
+:section-button{href="./pcb-ordering" icon="lucide:shopping-cart" title="Ordering the PCBs" desc="You'll learn how to order the printed circuit boards for the TNY-360 along with the necessary components to solder on them."}
 
 :section-button{href="./pcb-soldering" icon="lucide:pen" title="Soldering the PCBs" desc="You'll see what components need to be soldered on each PCB, where to solder them, and how to do it."}
 

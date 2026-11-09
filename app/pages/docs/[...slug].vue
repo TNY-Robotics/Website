@@ -92,6 +92,21 @@
                     <p class="mt-2 text-lg"> {{ $t('docs.docNotFound.description') }} </p>
                     <UButton @click="router.back()" :label="$t('docs.back')" class="mt-8" icon="lucide:chevron-left" />
                 </div>
+                <div v-if="page && (page.meta.next || page.meta.prev)">
+                    <Divider class="m-0" />
+                    <div class="flex flex-wrap items-center w-full mt-8 gap-4" :class="page?.meta.prev ? 'justify-between' : 'justify-end'">
+                        <NuxtLink v-if="page?.meta.prev" :to="page?.meta.prev"
+                            class="flex items-center space-x-2 border-2 rounded-md bg-slate-900 border-slate-600 hover:border-primary p-2 text-slate-200 hover:text-primary-400 transition-all pr-4">
+                            <UIcon name="lucide:chevron-left" class="w-8 h-8 text-slate-200" />
+                            <span> {{ getPageTitle(page, page.meta.prev as string) }} </span>
+                        </NuxtLink>
+                        <NuxtLink v-if="page?.meta.next" :to="page?.meta.next"
+                            class="flex items-center space-x-2 border-2 rounded-md bg-slate-900 border-slate-600 hover:border-primary p-2 text-slate-200 hover:text-primary-400 transition-all pl-4">
+                            <span> {{ getPageTitle(page, page.meta.next as string) }} </span>
+                            <UIcon name="lucide:chevron-right" class="w-8 h-8 text-slate-200" />
+                        </NuxtLink>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -250,6 +265,22 @@ if (filePathArray.value) {
             currentNode = nextNode;
         }
     });
+}
+
+function getPageTitle(currentPage: any, path: string) {
+    const isPathRelative = !path.startsWith('/');
+    if (!isPathRelative) {
+        const page = allPages.value?.find(page => page.path.toLowerCase() === path.toLowerCase());
+        return page?.title || '';
+    }
+
+    const nbGoBacks = path.split('/').filter(part => part === '..').length;
+    const currentPathParts = currentPage.path.split('/').filter((part: any) => part.length > 0);
+    const newPathParts = currentPathParts.slice(0, currentPathParts.length - nbGoBacks - 1).concat(path.split('/').filter(part => part !== '..' && part !== '.'));
+
+    const newPath = '/' + newPathParts.join('/');
+    const page = allPages.value?.find(page => page.path.toLowerCase() === newPath.toLowerCase());
+    return page?.title || '';
 }
 
 const searchInput = ref<any>(null);
