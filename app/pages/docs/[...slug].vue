@@ -274,9 +274,9 @@ function getPageTitle(currentPage: any, path: string) {
         return page?.title || '';
     }
 
-    const nbGoBacks = path.split('/').filter(part => part === '..').length;
+    const nbGoBacks = path.split('/').filter(part => part === '..').length + (currentPage.stem.endsWith('index') ? 0 : 1);
     const currentPathParts = currentPage.path.split('/').filter((part: any) => part.length > 0);
-    const newPathParts = currentPathParts.slice(0, currentPathParts.length - nbGoBacks - 1).concat(path.split('/').filter(part => part !== '..' && part !== '.'));
+    const newPathParts = currentPathParts.slice(0, currentPathParts.length - nbGoBacks).concat(path.split('/').filter(part => part !== '..' && part !== '.'));
 
     const newPath = '/' + newPathParts.join('/');
     const page = allPages.value?.find(page => page.path.toLowerCase() === newPath.toLowerCase());

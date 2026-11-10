@@ -1,5 +1,5 @@
 <template>
-    <div class="my-6 h-[calc(100vh-12em)] md:h-[calc(100vh-16em)] min-h-0 overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm dark:border-slate-700 dark:bg-slate-900">
+    <div class="my-6 h-[calc(100vh-12em)] md:h-[calc(100vh-16em)] min-h-0 overflow-hidden rounded-xl bg-white  dark:bg-slate-900">
         <div v-if="loading" class="flex min-h-48 items-center justify-center gap-2 p-6 text-slate-500">
             <UIcon name="i-lucide-loader-circle" class="animate-spin" />
             Loading BOM...
