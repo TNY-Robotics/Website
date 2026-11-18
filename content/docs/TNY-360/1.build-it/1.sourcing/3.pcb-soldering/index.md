@@ -25,7 +25,7 @@ The TNY-360 contains 10 custom PCBs. Here's a list of the boards you'll have to 
 
 :section-button{href="./imu-board" title="The IMU Board" desc="The PCB that measures your TNY-360's orientation, and plugs into the backbone."}
 
-:section-button{href="./contact-switches" title="The Contact Switches" desc="The PCBs that detect contact with the ground, placed in the feet."}
+:section-button{href="./ground-sensors" title="The Ground Sensors" desc="The PCBs that detect contact with the ground, placed in the feet."}
 
 :section-button{href="./main-board" title="The Main Board" desc="The central PCB that powers your TNY-360 brain with its ESP32-S3."}
 

@@ -32,7 +32,7 @@ Overview of the TNY-360 PCB ecosystem.
 
 :section-button{href="./imu-board" icon="lucide:compass" title="IMU board" desc="Explore the inertial sensor and its bus connection."}
 
-:section-button{href="./contact-switches" icon="lucide:toggle-right" title="Contact switches" desc="Learn how the four Hall-effect contact switches detect contact at the feet."}
+:section-button{href="./ground-sensors" icon="lucide:toggle-right" title="Ground Sensors" desc="Learn how the four Hall-effect ground sensors detect contact at the feet."}
 
 ## How the boards work together
 
@@ -49,7 +49,7 @@ flowchart TB
     Analog[Analog reader]
     IMU[IMU board]
     Visor[Visor board]
-    Contacts[Contact switches]
+    Contacts[Ground Sensors]
     Extension[Extension Board]
 
     Power --> Buck
