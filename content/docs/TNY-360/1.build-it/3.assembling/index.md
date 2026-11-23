@@ -7,4 +7,7 @@ The objective of this phase is to guide you through the mechanical and electrica
 Take your time, follow the steps carefully, and let's put your quadruped together!
 
 ---
+
 :in-progress
+
+<!-- :assembly{root="tny-360-v2"} -->

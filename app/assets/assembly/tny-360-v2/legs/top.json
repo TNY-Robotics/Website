@@ -1,0 +1,13 @@
+{
+    "name": "Top Assembly",
+    "steps": [
+        {
+            "name": "Screw servomotor to Top (4 screws)",
+            "content": [
+                "Screw servomotor to Top (4 screws)",
+                "Screw Bottom to Top (align markings)",
+                "Add extension cable to servomotor (! connector orientation)"
+            ]
+        }
+    ]
+}

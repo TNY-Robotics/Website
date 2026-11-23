@@ -1,0 +1,90 @@
+{
+    "name": "Assemblage de la Tête",
+    "steps": [
+        {
+            "name": "Platine Visor",
+            "content": [
+                {
+                    "component": "p",
+                    "text": "Placer la Caméra dans le support de caméra"
+                },
+                {
+                    "component": "p",
+                    "text": "Placer le support de caméra dans la Platine Visor"
+                },
+                {
+                    "component": "p",
+                    "text": "Ajouter le FPC 8P à la Platine Visor"
+                },
+                {
+                    "component": "p",
+                    "text": "Placer la Platine Visor dans le Visor (étaler + pousser dans le clip)"
+                }
+            ]
+        },
+        {
+            "name": "Cache Haut",
+            "content": [
+                {
+                    "component": "p",
+                    "text": "Visser le Cache Haut à la Platine Visor (2 Vis)"
+                }
+            ]
+        },
+        {
+            "name": "Carte Principale",
+            "content": [
+                {
+                    "component": "p",
+                    "text": "Placer la Carte Principale dans le Visor (placer en haut, glisser et pousser dans le clip)"
+                },
+                {
+                    "component": "p",
+                    "text": "Connecter le FPC 8P à la Carte Principale"
+                },
+                {
+                    "component": "p",
+                    "text": "Connecter le FPC de la Caméra à la Carte Principale"
+                }
+            ]
+        },
+        {
+            "name": "Plaque Arrière",
+            "content": [
+                {
+                    "component": "p",
+                    "text": "Placer le haut-parleur sur la Plaque Arrière (retirer le film protecteur + coller sur la plaque arrière, !câble vers le bas)"
+                },
+                {
+                    "component": "p",
+                    "text": "Placer les moteurs d'oreille sur la Plaque Arrière (2x 2 vis, axe vers le haut)"
+                },
+                {
+                    "component": "p",
+                    "text": "Visser la plaque arrière au torse (4 vis)"
+                }
+            ]
+        },
+        {
+            "name": "Finalisation de la Tête",
+            "content": [
+                {
+                    "component": "p",
+                    "text": "Connecter le FPC 14P du dos à la Carte Principale (! orientation)"
+                },
+                {
+                    "component": "p",
+                    "text": "Visser le Cache Haut à la Plaque Arrière (2 vis)"
+                },
+                {
+                    "component": "p",
+                    "text": "Double vérification : vous allez fermer la tête, double vérifier chaque connexion, chaque vis, chaque carte."
+                },
+                {
+                    "component": "p",
+                    "text": "Visser le Fond de Tête au Torse (4 vis, !vérifier que le FPC n'est pas pincé)"
+                }
+            ]
+        }
+    ]
+}

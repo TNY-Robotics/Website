@@ -1,0 +1,48 @@
+{
+    "name": "Extension Port Assembly",
+    "steps": [
+        {
+            "name": "Decoration",
+            "content": [
+                {
+                    "component": "p",
+                    "text": "Place the clips in the 6 wings"
+                },
+                {
+                    "component": "p",
+                    "text": "Clip the wings to the Extension Port"
+                },
+                {
+                    "component": "p",
+                    "text": "Place the clips in the logo"
+                },
+                {
+                    "component": "p",
+                    "text": "Clip the logo to the Extension Port"
+                }
+            ]
+        },
+        {
+            "name": "PCB",
+            "content": [
+                {
+                    "component": "p",
+                    "text": "Place the PCB in the Extension Port (check orientation using the silicon)"
+                },
+                {
+                    "component": "p",
+                    "text": "Screw the PCB to the Extension Port (4 screws)"
+                }
+            ]
+        },
+        {
+            "name": "Closing",
+            "content": [
+                {
+                    "component": "p",
+                    "text": "Screw the Extension Port Cover to the Extension Port (4 screws)"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "name": "Assembly Steps (General)",
+    "steps": [
+        {
+            "name": "Bottom Assembly",
+            "content": [
+                {
+                    "component": "p",
+                    "text": "See guide: legs/bottom.json"
+                }
+            ]
+        },
+        {
+            "name": "Decoration Assembly",
+            "content": [
+                {
+                    "component": "p",
+                    "text": "Place clips in Bottom Deco Top & Bottom Deco Bottom"
+                },
+                {
+                    "component": "p",
+                    "text": "Clip Bottom Deco Top & Bottom to Bottom Deco Base"
+                },
+                {
+                    "component": "p",
+                    "text": "Place clips in Bottom Deco Base"
+                },
+                {
+                    "component": "p",
+                    "text": "Clip Bottom Deco Base to Bottom"
+                }
+            ]
+        },
+        {
+            "name": "Paw Assembly",
+            "content": [
+                {
+                    "component": "p",
+                    "text": "Place magnet in Paw"
+                },
+                {
+                    "component": "p",
+                    "text": "Attach Paw to Bottom"
+                }
+            ]
+        }
+    ]
+}

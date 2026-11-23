@@ -1,0 +1,27 @@
+{
+    "name": "Bottom Assembly",
+    "steps": [
+        {
+            "name": "Screw round horn in Bottom (4 screws)",
+            "content": [
+                {
+                    "component": "p",
+                    "text": "Screw round horn in Bottom (4 screws)"
+                }
+            ]
+        },
+        {
+            "name": "Connect cable to ground sensor (! connector orientation)",
+            "content": [
+                {
+                    "component": "p",
+                    "text": "Connect cable to ground sensor (! connector orientation)"
+                },
+                {
+                    "component": "p",
+                    "text": "Place ground sensor in Bottom and route cable"
+                }
+            ]
+        }
+    ]
+}

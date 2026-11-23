@@ -1,0 +1,32 @@
+{
+    "name": "TNY-360 V2",
+    "steps": [
+        {
+            "name": "Welcome",
+            "content": [
+                "# Welcome to the TNY-360 V2 assembly guide!",
+                "This guide is split into multiple sections, each focusing on a specific part of the assembly process.\n",
+                "Use the `Prev` and `Next` buttons to navigate through the steps, and refer to the images for visual guidance."
+            ],
+            "image": "/tny-360.png"
+        },
+        { "link": "./legs" },
+        { "link": "./torso" },
+        { "link": "./head" },
+        { "link": "./extension_port" },
+        { "link": "./final_assembly" },
+        {
+            "name": "Final Assembly",
+            "content": [
+                {
+                    "component": "p",
+                    "text": "Congratulations! You have completed the assembly of your TNY-360 V2 🥳 !",
+                    "props": {
+                        "class": "text-xl font-bold"
+                    }
+                }
+            ],
+            "image": ""
+        }
+    ]
+}

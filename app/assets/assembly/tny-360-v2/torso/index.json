@@ -1,0 +1,136 @@
+{
+    "name": "Torso Assembly",
+    "steps": [
+        {
+            "name": "Motor Installation (Repeat x4)",
+            "content": [
+                {
+                    "component": "p",
+                    "text": "Screw round horn + shoulder horn onto the motor (4+1 screws)"
+                },
+                {
+                    "component": "p",
+                    "text": "Screw the motors into the body (Axis to the side, cable under the motor, 4 screws)"
+                }
+            ]
+        },
+        {
+            "name": "Electronic Boards (PCBs) Installation",
+            "content": [
+                {
+                    "component": "p",
+                    "text": "Half-Connect the Bus Converter to the Back"
+                },
+                {
+                    "component": "p",
+                    "text": "Place the PCBs in the Torso (with motor cables clear)"
+                },
+                {
+                    "component": "p",
+                    "text": "Fully connect the PCBs to secure them in place"
+                }
+            ]
+        },
+        {
+            "name": "Leg Installation (Repeat x4)",
+            "content": [
+                {
+                    "component": "p",
+                    "text": "Add the Shoulder Axis piece to the other side of the shoulder"
+                },
+                {
+                    "component": "p",
+                    "text": "Screw the servo motor to the Shoulder Axis and the Horn (4 screws)"
+                },
+                {
+                    "component": "p",
+                    "text": "Add the upper part of the Shoulder (check orientation)"
+                },
+                {
+                    "component": "p",
+                    "text": "Screw the upper part of the Shoulder in place"
+                }
+            ]
+        },
+        {
+            "name": "Leg Wiring",
+            "content": [
+                {
+                    "component": "p",
+                    "text": "Wire the ground sensors to the ground sensor connectors"
+                },
+                {
+                    "component": "p",
+                    "text": "Wire the HR motors to the HR connectors"
+                },
+                {
+                    "component": "p",
+                    "text": "Wire the KP motors to the KP connectors"
+                },
+                {
+                    "component": "p",
+                    "text": "Wire the HP motors to the HP connectors"
+                }
+            ]
+        },
+        {
+            "name": "Torso Wiring",
+            "content": [
+                {
+                    "component": "p",
+                    "text": "Add the Back 14P FPC"
+                },
+                {
+                    "component": "p",
+                    "text": "Add the Extension Board 4P cable"
+                },
+                {
+                    "component": "p",
+                    "text": "Add the Extension Board 2x3P cable"
+                },
+                {
+                    "component": "p",
+                    "text": "Add the Power Board cable"
+                }
+            ]
+        },
+        {
+            "name": "Child Boards Installation",
+            "content": [
+                {
+                    "component": "p",
+                    "text": "Add the motor controller (! orientation & Position)"
+                },
+                {
+                    "component": "p",
+                    "text": "Add the Analog Reader (! orientation & Position)"
+                },
+                {
+                    "component": "p",
+                    "text": "Add the IMU card (! orientation & Position)"
+                }
+            ]
+        },
+        {
+            "name": "Back",
+            "content": [
+                {
+                    "component": "p",
+                    "text": "Place the PCB in the back part"
+                },
+                {
+                    "component": "p",
+                    "text": "Place the board on top"
+                },
+                {
+                    "component": "p",
+                    "text": "Connect the Back to the bus converter"
+                },
+                {
+                    "component": "p",
+                    "text": "Screw in place"
+                }
+            ]
+        }
+    ]
+}

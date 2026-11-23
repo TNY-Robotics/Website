@@ -1,0 +1,82 @@
+{
+    "name": "Final Assembly",
+    "steps": [
+        {
+            "name": "Final double-check",
+            "content": [
+                {
+                    "component": "p",
+                    "text": "Double check! You are about to close your robot, double-check every connection, every screw, every cable orientation, every board."
+                }
+            ]
+        },
+        {
+            "name": "Adding Leg Top Decoration",
+            "content": [
+                {
+                    "component": "p",
+                    "text": "Place the decoration on the top of the legs (step to confirm)"
+                }
+            ]
+        },
+        {
+            "name": "Torso Closure",
+            "content": [
+                {
+                    "component": "p",
+                    "text": "Place the Torso Top (with 2 extension cables through the central hole, ! check that no cable is pinched)"
+                },
+                {
+                    "component": "p",
+                    "text": "Screw the Torso Top to the Torso (8 screws)"
+                }
+            ]
+        },
+        {
+            "name": "Adding the Extension Port",
+            "content": [
+                {
+                    "component": "p",
+                    "text": "Connect the 2 Extension Port cables to the Extension Port PCB (! orientation)"
+                },
+                {
+                    "component": "p",
+                    "text": "Place the Extension Port on the Torso (twist the cables and push them into the torso)"
+                },
+                {
+                    "component": "p",
+                    "text": "Screw the Extension Port to the Torso (4 screws)"
+                }
+            ]
+        },
+        {
+            "name": "Construction and addition of ears",
+            "content": [
+                {
+                    "component": "p",
+                    "text": "Build the ears (Repeat x2)"
+                },
+                {
+                    "component": "p",
+                    "text": "Place the ear wings in the top of the ears"
+                },
+                {
+                    "component": "p",
+                    "text": "Place the ear motor arm in the top of the ears"
+                },
+                {
+                    "component": "p",
+                    "text": "Add clips to the bottom of the ears"
+                },
+                {
+                    "component": "p",
+                    "text": "Clip the bottom of the ears to the top of the ears"
+                },
+                {
+                    "component": "p",
+                    "text": "Place the ears on the head (! 45° angle)"
+                }
+            ]
+        }
+    ]
+}
